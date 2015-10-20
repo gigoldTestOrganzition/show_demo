@@ -1,0 +1,779 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C394BFC1BCF597E009AC0AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C394BFA1BCF597E009AC0AC /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		5C394C001BCF5BF5009AC0AC /* RegisterRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C394BFF1BCF5BF5009AC0AC /* RegisterRequest.m */; settings = {ASSET_TAGS = (); }; };
+		5C5A2D5E1BD5CFC600C4AE1D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D501BD5CFC600C4AE1D /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C5A2D5F1BD5CFC600C4AE1D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2D511BD5CFC600C4AE1D /* LoginViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		5C5A2D601BD5CFC600C4AE1D /* RegisterAgreementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D531BD5CFC600C4AE1D /* RegisterAgreementViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C5A2D611BD5CFC600C4AE1D /* RegisterAgreementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2D541BD5CFC600C4AE1D /* RegisterAgreementViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		5C5A2D621BD5CFC600C4AE1D /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D561BD5CFC600C4AE1D /* RegisterViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C5A2D631BD5CFC600C4AE1D /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2D571BD5CFC600C4AE1D /* RegisterViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		5C5A2D641BD5CFC600C4AE1D /* SetUpPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D591BD5CFC600C4AE1D /* SetUpPasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C5A2D651BD5CFC600C4AE1D /* SetUpPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2D5A1BD5CFC600C4AE1D /* SetUpPasswordViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		5C5A2D661BD5CFC600C4AE1D /* ValidateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D5C1BD5CFC600C4AE1D /* ValidateViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C5A2D671BD5CFC600C4AE1D /* ValidateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2D5D1BD5CFC600C4AE1D /* ValidateViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		5C5A2D6D1BD5D48400C4AE1D /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D6A1BD5D48400C4AE1D /* HelpViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C5A2D6E1BD5D48400C4AE1D /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D6C1BD5D48400C4AE1D /* MyViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C5A2D791BD5D51200C4AE1D /* MyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D711BD5D51200C4AE1D /* MyAccountViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C5A2D7A1BD5D51200C4AE1D /* MyAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2D721BD5D51200C4AE1D /* MyAccountViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		5C5A2D7B1BD5D51200C4AE1D /* PasswordManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D741BD5D51200C4AE1D /* PasswordManagerViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C5A2D7C1BD5D51200C4AE1D /* PasswordManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2D751BD5D51200C4AE1D /* PasswordManagerViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		5C5A2D7D1BD5D51200C4AE1D /* ResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D771BD5D51200C4AE1D /* ResetPasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C5A2D7E1BD5D51200C4AE1D /* ResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2D781BD5D51200C4AE1D /* ResetPasswordViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		5CA41C481BC8E688000A3484 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41C471BC8E688000A3484 /* main.m */; };
+		5CA41C4B1BC8E688000A3484 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41C4A1BC8E688000A3484 /* AppDelegate.m */; };
+		5CA41C4E1BC8E688000A3484 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41C4D1BC8E688000A3484 /* ViewController.m */; };
+		5CA41C511BC8E688000A3484 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CA41C4F1BC8E688000A3484 /* Main.storyboard */; };
+		5CA41C531BC8E688000A3484 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CA41C521BC8E688000A3484 /* Assets.xcassets */; };
+		5CA41C611BC8E688000A3484 /* gigoldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41C601BC8E688000A3484 /* gigoldTests.m */; };
+		5CA41C6C1BC8E688000A3484 /* gigoldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41C6B1BC8E688000A3484 /* gigoldUITests.m */; };
+		5CA41C8B1BC8E7A8000A3484 /* AppUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41C7D1BC8E7A8000A3484 /* AppUtils.m */; settings = {ASSET_TAGS = (); }; };
+		5CA41C9D1BC90A8D000A3484 /* FMNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41C9C1BC90A8D000A3484 /* FMNetWorkManager.m */; settings = {ASSET_TAGS = (); }; };
+		5CAC0BE41BCDE840006CF3FD /* LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAC0BE31BCDE840006CF3FD /* LoginRequest.m */; settings = {ASSET_TAGS = (); }; };
+		5CEDDEA01BCF8F7800CE63C7 /* UserInfoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CEDDE9F1BCF8F7800CE63C7 /* UserInfoRequest.m */; settings = {ASSET_TAGS = (); }; };
+		DCB348EA5503450DD424BB4D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA29EA734CC24C2A6E7B458A /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5CA41C5D1BC8E688000A3484 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CA41C3B1BC8E688000A3484 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CA41C421BC8E688000A3484;
+			remoteInfo = gigold;
+		};
+		5CA41C681BC8E688000A3484 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5CA41C3B1BC8E688000A3484 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5CA41C421BC8E688000A3484;
+			remoteInfo = gigold;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05C9FF4D315E838F911D2C11 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		5C394BFB1BCF597E009AC0AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5C394BFE1BCF5BF5009AC0AC /* RegisterRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterRequest.h; sourceTree = "<group>"; };
+		5C394BFF1BCF5BF5009AC0AC /* RegisterRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterRequest.m; sourceTree = "<group>"; };
+		5C5A2D4F1BD5CFC600C4AE1D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		5C5A2D501BD5CFC600C4AE1D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		5C5A2D511BD5CFC600C4AE1D /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		5C5A2D521BD5CFC600C4AE1D /* RegisterAgreementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterAgreementViewController.h; sourceTree = "<group>"; };
+		5C5A2D531BD5CFC600C4AE1D /* RegisterAgreementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterAgreementViewController.m; sourceTree = "<group>"; };
+		5C5A2D541BD5CFC600C4AE1D /* RegisterAgreementViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterAgreementViewController.xib; sourceTree = "<group>"; };
+		5C5A2D551BD5CFC600C4AE1D /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		5C5A2D561BD5CFC600C4AE1D /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		5C5A2D571BD5CFC600C4AE1D /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		5C5A2D581BD5CFC600C4AE1D /* SetUpPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetUpPasswordViewController.h; sourceTree = "<group>"; };
+		5C5A2D591BD5CFC600C4AE1D /* SetUpPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetUpPasswordViewController.m; sourceTree = "<group>"; };
+		5C5A2D5A1BD5CFC600C4AE1D /* SetUpPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetUpPasswordViewController.xib; sourceTree = "<group>"; };
+		5C5A2D5B1BD5CFC600C4AE1D /* ValidateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidateViewController.h; sourceTree = "<group>"; };
+		5C5A2D5C1BD5CFC600C4AE1D /* ValidateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidateViewController.m; sourceTree = "<group>"; };
+		5C5A2D5D1BD5CFC600C4AE1D /* ValidateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ValidateViewController.xib; sourceTree = "<group>"; };
+		5C5A2D691BD5D48400C4AE1D /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		5C5A2D6A1BD5D48400C4AE1D /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
+		5C5A2D6B1BD5D48400C4AE1D /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		5C5A2D6C1BD5D48400C4AE1D /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		5C5A2D701BD5D51200C4AE1D /* MyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountViewController.h; sourceTree = "<group>"; };
+		5C5A2D711BD5D51200C4AE1D /* MyAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountViewController.m; sourceTree = "<group>"; };
+		5C5A2D721BD5D51200C4AE1D /* MyAccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAccountViewController.xib; sourceTree = "<group>"; };
+		5C5A2D731BD5D51200C4AE1D /* PasswordManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordManagerViewController.h; sourceTree = "<group>"; };
+		5C5A2D741BD5D51200C4AE1D /* PasswordManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordManagerViewController.m; sourceTree = "<group>"; };
+		5C5A2D751BD5D51200C4AE1D /* PasswordManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordManagerViewController.xib; sourceTree = "<group>"; };
+		5C5A2D761BD5D51200C4AE1D /* ResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPasswordViewController.h; sourceTree = "<group>"; };
+		5C5A2D771BD5D51200C4AE1D /* ResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordViewController.m; sourceTree = "<group>"; };
+		5C5A2D781BD5D51200C4AE1D /* ResetPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResetPasswordViewController.xib; sourceTree = "<group>"; };
+		5CA41C431BC8E688000A3484 /* gigold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gigold.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CA41C471BC8E688000A3484 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5CA41C491BC8E688000A3484 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5CA41C4A1BC8E688000A3484 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5CA41C4C1BC8E688000A3484 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5CA41C4D1BC8E688000A3484 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5CA41C501BC8E688000A3484 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5CA41C521BC8E688000A3484 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5CA41C571BC8E688000A3484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CA41C5C1BC8E688000A3484 /* gigoldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gigoldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CA41C601BC8E688000A3484 /* gigoldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gigoldTests.m; sourceTree = "<group>"; };
+		5CA41C621BC8E688000A3484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CA41C671BC8E688000A3484 /* gigoldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gigoldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CA41C6B1BC8E688000A3484 /* gigoldUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gigoldUITests.m; sourceTree = "<group>"; };
+		5CA41C6D1BC8E688000A3484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CA41C7C1BC8E7A8000A3484 /* AppUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppUtils.h; sourceTree = "<group>"; };
+		5CA41C7D1BC8E7A8000A3484 /* AppUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppUtils.m; sourceTree = "<group>"; };
+		5CA41C941BC8E85D000A3484 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		5CA41C9A1BC90A8D000A3484 /* FMMacro_URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMMacro_URL.h; sourceTree = "<group>"; };
+		5CA41C9B1BC90A8D000A3484 /* FMNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FMNetWorkManager.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5CA41C9C1BC90A8D000A3484 /* FMNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FMNetWorkManager.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5CAC0BE21BCDE840006CF3FD /* LoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginRequest.h; sourceTree = "<group>"; };
+		5CAC0BE31BCDE840006CF3FD /* LoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginRequest.m; sourceTree = "<group>"; };
+		5CEDDE9E1BCF8F7800CE63C7 /* UserInfoRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoRequest.h; sourceTree = "<group>"; };
+		5CEDDE9F1BCF8F7800CE63C7 /* UserInfoRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoRequest.m; sourceTree = "<group>"; };
+		660292318B52F537CA48DCED /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		AA29EA734CC24C2A6E7B458A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5CA41C401BC8E688000A3484 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCB348EA5503450DD424BB4D /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CA41C591BC8E688000A3484 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CA41C641BC8E688000A3484 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		28F086AA7D8B2850FCCE67C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA29EA734CC24C2A6E7B458A /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2ECE5F7CEE0A0EA2871F5234 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				660292318B52F537CA48DCED /* Pods.debug.xcconfig */,
+				05C9FF4D315E838F911D2C11 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5C5A2D4E1BD5CFC600C4AE1D /* loginRegister */ = {
+			isa = PBXGroup;
+			children = (
+				5C5A2D4F1BD5CFC600C4AE1D /* LoginViewController.h */,
+				5C5A2D501BD5CFC600C4AE1D /* LoginViewController.m */,
+				5C5A2D511BD5CFC600C4AE1D /* LoginViewController.xib */,
+				5C5A2D521BD5CFC600C4AE1D /* RegisterAgreementViewController.h */,
+				5C5A2D531BD5CFC600C4AE1D /* RegisterAgreementViewController.m */,
+				5C5A2D541BD5CFC600C4AE1D /* RegisterAgreementViewController.xib */,
+				5C5A2D551BD5CFC600C4AE1D /* RegisterViewController.h */,
+				5C5A2D561BD5CFC600C4AE1D /* RegisterViewController.m */,
+				5C5A2D571BD5CFC600C4AE1D /* RegisterViewController.xib */,
+				5C5A2D581BD5CFC600C4AE1D /* SetUpPasswordViewController.h */,
+				5C5A2D591BD5CFC600C4AE1D /* SetUpPasswordViewController.m */,
+				5C5A2D5A1BD5CFC600C4AE1D /* SetUpPasswordViewController.xib */,
+				5C5A2D5B1BD5CFC600C4AE1D /* ValidateViewController.h */,
+				5C5A2D5C1BD5CFC600C4AE1D /* ValidateViewController.m */,
+				5C5A2D5D1BD5CFC600C4AE1D /* ValidateViewController.xib */,
+			);
+			path = loginRegister;
+			sourceTree = "<group>";
+		};
+		5C5A2D681BD5D48400C4AE1D /* common */ = {
+			isa = PBXGroup;
+			children = (
+				5C5A2D691BD5D48400C4AE1D /* HelpViewController.h */,
+				5C5A2D6A1BD5D48400C4AE1D /* HelpViewController.m */,
+				5C5A2D6B1BD5D48400C4AE1D /* MyViewController.h */,
+				5C5A2D6C1BD5D48400C4AE1D /* MyViewController.m */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		5C5A2D6F1BD5D51200C4AE1D /* accountManager */ = {
+			isa = PBXGroup;
+			children = (
+				5C5A2D701BD5D51200C4AE1D /* MyAccountViewController.h */,
+				5C5A2D711BD5D51200C4AE1D /* MyAccountViewController.m */,
+				5C5A2D721BD5D51200C4AE1D /* MyAccountViewController.xib */,
+				5C5A2D731BD5D51200C4AE1D /* PasswordManagerViewController.h */,
+				5C5A2D741BD5D51200C4AE1D /* PasswordManagerViewController.m */,
+				5C5A2D751BD5D51200C4AE1D /* PasswordManagerViewController.xib */,
+				5C5A2D761BD5D51200C4AE1D /* ResetPasswordViewController.h */,
+				5C5A2D771BD5D51200C4AE1D /* ResetPasswordViewController.m */,
+				5C5A2D781BD5D51200C4AE1D /* ResetPasswordViewController.xib */,
+			);
+			name = accountManager;
+			path = gigold/ViewControllers/accountManager;
+			sourceTree = SOURCE_ROOT;
+		};
+		5CA41C3A1BC8E688000A3484 = {
+			isa = PBXGroup;
+			children = (
+				5CA41C451BC8E688000A3484 /* gigold */,
+				5CA41C5F1BC8E688000A3484 /* gigoldTests */,
+				5CA41C6A1BC8E688000A3484 /* gigoldUITests */,
+				5CA41C441BC8E688000A3484 /* Products */,
+				2ECE5F7CEE0A0EA2871F5234 /* Pods */,
+				28F086AA7D8B2850FCCE67C4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5CA41C441BC8E688000A3484 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5CA41C431BC8E688000A3484 /* gigold.app */,
+				5CA41C5C1BC8E688000A3484 /* gigoldTests.xctest */,
+				5CA41C671BC8E688000A3484 /* gigoldUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5CA41C451BC8E688000A3484 /* gigold */ = {
+			isa = PBXGroup;
+			children = (
+				5CA41C491BC8E688000A3484 /* AppDelegate.h */,
+				5CA41C4A1BC8E688000A3484 /* AppDelegate.m */,
+				5CA41C4C1BC8E688000A3484 /* ViewController.h */,
+				5CA41C4D1BC8E688000A3484 /* ViewController.m */,
+				5CA41C4F1BC8E688000A3484 /* Main.storyboard */,
+				5C394BFA1BCF597E009AC0AC /* LaunchScreen.storyboard */,
+				5CA41C521BC8E688000A3484 /* Assets.xcassets */,
+				5CA41C571BC8E688000A3484 /* Info.plist */,
+				5CA41C981BC90A8D000A3484 /* httpManager */,
+				5CA41C7B1BC8E7A8000A3484 /* CustomClass */,
+				5CA41C7E1BC8E7A8000A3484 /* ViewControllers */,
+				5CA41C461BC8E688000A3484 /* Supporting Files */,
+			);
+			path = gigold;
+			sourceTree = "<group>";
+		};
+		5CA41C461BC8E688000A3484 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5CA41C471BC8E688000A3484 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5CA41C5F1BC8E688000A3484 /* gigoldTests */ = {
+			isa = PBXGroup;
+			children = (
+				5CA41C601BC8E688000A3484 /* gigoldTests.m */,
+				5CA41C621BC8E688000A3484 /* Info.plist */,
+			);
+			path = gigoldTests;
+			sourceTree = "<group>";
+		};
+		5CA41C6A1BC8E688000A3484 /* gigoldUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5CA41C6B1BC8E688000A3484 /* gigoldUITests.m */,
+				5CA41C6D1BC8E688000A3484 /* Info.plist */,
+			);
+			path = gigoldUITests;
+			sourceTree = "<group>";
+		};
+		5CA41C7B1BC8E7A8000A3484 /* CustomClass */ = {
+			isa = PBXGroup;
+			children = (
+				5CA41C7C1BC8E7A8000A3484 /* AppUtils.h */,
+				5CA41C7D1BC8E7A8000A3484 /* AppUtils.m */,
+				5CA41C941BC8E85D000A3484 /* PrefixHeader.pch */,
+			);
+			path = CustomClass;
+			sourceTree = "<group>";
+		};
+		5CA41C7E1BC8E7A8000A3484 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5C5A2D4E1BD5CFC600C4AE1D /* loginRegister */,
+				5C5A2D6F1BD5D51200C4AE1D /* accountManager */,
+				5C5A2D681BD5D48400C4AE1D /* common */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5CA41C981BC90A8D000A3484 /* httpManager */ = {
+			isa = PBXGroup;
+			children = (
+				5CA41C991BC90A8D000A3484 /* network */,
+			);
+			name = httpManager;
+			path = gigold/httpManager;
+			sourceTree = SOURCE_ROOT;
+		};
+		5CA41C991BC90A8D000A3484 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				5CA41C9A1BC90A8D000A3484 /* FMMacro_URL.h */,
+				5CA41C9B1BC90A8D000A3484 /* FMNetWorkManager.h */,
+				5CA41C9C1BC90A8D000A3484 /* FMNetWorkManager.m */,
+				5CAC0BE21BCDE840006CF3FD /* LoginRequest.h */,
+				5CAC0BE31BCDE840006CF3FD /* LoginRequest.m */,
+				5C394BFE1BCF5BF5009AC0AC /* RegisterRequest.h */,
+				5C394BFF1BCF5BF5009AC0AC /* RegisterRequest.m */,
+				5CEDDE9E1BCF8F7800CE63C7 /* UserInfoRequest.h */,
+				5CEDDE9F1BCF8F7800CE63C7 /* UserInfoRequest.m */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5CA41C421BC8E688000A3484 /* gigold */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CA41C701BC8E688000A3484 /* Build configuration list for PBXNativeTarget "gigold" */;
+			buildPhases = (
+				9AA863AF3D4FD1A97E2D78EE /* Check Pods Manifest.lock */,
+				5CA41C3F1BC8E688000A3484 /* Sources */,
+				5CA41C401BC8E688000A3484 /* Frameworks */,
+				5CA41C411BC8E688000A3484 /* Resources */,
+				1D1931D61D8731B3D06DCB91 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = gigold;
+			productName = gigold;
+			productReference = 5CA41C431BC8E688000A3484 /* gigold.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5CA41C5B1BC8E688000A3484 /* gigoldTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CA41C731BC8E688000A3484 /* Build configuration list for PBXNativeTarget "gigoldTests" */;
+			buildPhases = (
+				5CA41C581BC8E688000A3484 /* Sources */,
+				5CA41C591BC8E688000A3484 /* Frameworks */,
+				5CA41C5A1BC8E688000A3484 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5CA41C5E1BC8E688000A3484 /* PBXTargetDependency */,
+			);
+			name = gigoldTests;
+			productName = gigoldTests;
+			productReference = 5CA41C5C1BC8E688000A3484 /* gigoldTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5CA41C661BC8E688000A3484 /* gigoldUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5CA41C761BC8E688000A3484 /* Build configuration list for PBXNativeTarget "gigoldUITests" */;
+			buildPhases = (
+				5CA41C631BC8E688000A3484 /* Sources */,
+				5CA41C641BC8E688000A3484 /* Frameworks */,
+				5CA41C651BC8E688000A3484 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5CA41C691BC8E688000A3484 /* PBXTargetDependency */,
+			);
+			name = gigoldUITests;
+			productName = gigoldUITests;
+			productReference = 5CA41C671BC8E688000A3484 /* gigoldUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5CA41C3B1BC8E688000A3484 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = wsc;
+				TargetAttributes = {
+					5CA41C421BC8E688000A3484 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					5CA41C5B1BC8E688000A3484 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 5CA41C421BC8E688000A3484;
+					};
+					5CA41C661BC8E688000A3484 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 5CA41C421BC8E688000A3484;
+					};
+				};
+			};
+			buildConfigurationList = 5CA41C3E1BC8E688000A3484 /* Build configuration list for PBXProject "gigold" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5CA41C3A1BC8E688000A3484;
+			productRefGroup = 5CA41C441BC8E688000A3484 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5CA41C421BC8E688000A3484 /* gigold */,
+				5CA41C5B1BC8E688000A3484 /* gigoldTests */,
+				5CA41C661BC8E688000A3484 /* gigoldUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5CA41C411BC8E688000A3484 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C5A2D611BD5CFC600C4AE1D /* RegisterAgreementViewController.xib in Resources */,
+				5C5A2D7E1BD5D51200C4AE1D /* ResetPasswordViewController.xib in Resources */,
+				5C5A2D651BD5CFC600C4AE1D /* SetUpPasswordViewController.xib in Resources */,
+				5CA41C531BC8E688000A3484 /* Assets.xcassets in Resources */,
+				5C5A2D7C1BD5D51200C4AE1D /* PasswordManagerViewController.xib in Resources */,
+				5CA41C511BC8E688000A3484 /* Main.storyboard in Resources */,
+				5C5A2D7A1BD5D51200C4AE1D /* MyAccountViewController.xib in Resources */,
+				5C5A2D631BD5CFC600C4AE1D /* RegisterViewController.xib in Resources */,
+				5C394BFC1BCF597E009AC0AC /* LaunchScreen.storyboard in Resources */,
+				5C5A2D671BD5CFC600C4AE1D /* ValidateViewController.xib in Resources */,
+				5C5A2D5F1BD5CFC600C4AE1D /* LoginViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CA41C5A1BC8E688000A3484 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CA41C651BC8E688000A3484 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D1931D61D8731B3D06DCB91 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9AA863AF3D4FD1A97E2D78EE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5CA41C3F1BC8E688000A3484 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CEDDEA01BCF8F7800CE63C7 /* UserInfoRequest.m in Sources */,
+				5CA41C4E1BC8E688000A3484 /* ViewController.m in Sources */,
+				5CA41C9D1BC90A8D000A3484 /* FMNetWorkManager.m in Sources */,
+				5C5A2D5E1BD5CFC600C4AE1D /* LoginViewController.m in Sources */,
+				5C5A2D661BD5CFC600C4AE1D /* ValidateViewController.m in Sources */,
+				5C5A2D7B1BD5D51200C4AE1D /* PasswordManagerViewController.m in Sources */,
+				5C5A2D621BD5CFC600C4AE1D /* RegisterViewController.m in Sources */,
+				5C5A2D7D1BD5D51200C4AE1D /* ResetPasswordViewController.m in Sources */,
+				5C5A2D791BD5D51200C4AE1D /* MyAccountViewController.m in Sources */,
+				5CA41C4B1BC8E688000A3484 /* AppDelegate.m in Sources */,
+				5C5A2D641BD5CFC600C4AE1D /* SetUpPasswordViewController.m in Sources */,
+				5C5A2D601BD5CFC600C4AE1D /* RegisterAgreementViewController.m in Sources */,
+				5C394C001BCF5BF5009AC0AC /* RegisterRequest.m in Sources */,
+				5C5A2D6E1BD5D48400C4AE1D /* MyViewController.m in Sources */,
+				5CAC0BE41BCDE840006CF3FD /* LoginRequest.m in Sources */,
+				5CA41C481BC8E688000A3484 /* main.m in Sources */,
+				5C5A2D6D1BD5D48400C4AE1D /* HelpViewController.m in Sources */,
+				5CA41C8B1BC8E7A8000A3484 /* AppUtils.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CA41C581BC8E688000A3484 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CA41C611BC8E688000A3484 /* gigoldTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5CA41C631BC8E688000A3484 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CA41C6C1BC8E688000A3484 /* gigoldUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5CA41C5E1BC8E688000A3484 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5CA41C421BC8E688000A3484 /* gigold */;
+			targetProxy = 5CA41C5D1BC8E688000A3484 /* PBXContainerItemProxy */;
+		};
+		5CA41C691BC8E688000A3484 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5CA41C421BC8E688000A3484 /* gigold */;
+			targetProxy = 5CA41C681BC8E688000A3484 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5C394BFA1BCF597E009AC0AC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C394BFB1BCF597E009AC0AC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5CA41C4F1BC8E688000A3484 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5CA41C501BC8E688000A3484 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5CA41C6E1BC8E688000A3484 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: yinyan wen (9Y9J9E2VL9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yinyan wen (9Y9J9E2VL9)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5CA41C6F1BC8E688000A3484 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: yinyan wen (9Y9J9E2VL9)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yinyan wen (9Y9J9E2VL9)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5CA41C711BC8E688000A3484 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 660292318B52F537CA48DCED /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: yinyan wen (9Y9J9E2VL9)";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/gigold/customClass/PrefixHeader.pch";
+				INFOPLIST_FILE = gigold/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = www.gigold.com;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5CA41C721BC8E688000A3484 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05C9FF4D315E838F911D2C11 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: yinyan wen (9Y9J9E2VL9)";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/gigold/customClass/PrefixHeader.pch";
+				INFOPLIST_FILE = gigold/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = www.gigold.com;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5CA41C741BC8E688000A3484 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = gigoldTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = testdemo.gigoldTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gigold.app/gigold";
+			};
+			name = Debug;
+		};
+		5CA41C751BC8E688000A3484 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = gigoldTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = testdemo.gigoldTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gigold.app/gigold";
+			};
+			name = Release;
+		};
+		5CA41C771BC8E688000A3484 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = gigoldUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = testdemo.gigoldUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = gigold;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		5CA41C781BC8E688000A3484 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = gigoldUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = testdemo.gigoldUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = gigold;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5CA41C3E1BC8E688000A3484 /* Build configuration list for PBXProject "gigold" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CA41C6E1BC8E688000A3484 /* Debug */,
+				5CA41C6F1BC8E688000A3484 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CA41C701BC8E688000A3484 /* Build configuration list for PBXNativeTarget "gigold" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CA41C711BC8E688000A3484 /* Debug */,
+				5CA41C721BC8E688000A3484 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CA41C731BC8E688000A3484 /* Build configuration list for PBXNativeTarget "gigoldTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CA41C741BC8E688000A3484 /* Debug */,
+				5CA41C751BC8E688000A3484 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5CA41C761BC8E688000A3484 /* Build configuration list for PBXNativeTarget "gigoldUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CA41C771BC8E688000A3484 /* Debug */,
+				5CA41C781BC8E688000A3484 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5CA41C3B1BC8E688000A3484 /* Project object */;
+}
