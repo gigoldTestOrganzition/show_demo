@@ -8,25 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		5C394BFC1BCF597E009AC0AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C394BFA1BCF597E009AC0AC /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
-		5C394C001BCF5BF5009AC0AC /* RegisterRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C394BFF1BCF5BF5009AC0AC /* RegisterRequest.m */; settings = {ASSET_TAGS = (); }; };
-		5C5A2D5E1BD5CFC600C4AE1D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D501BD5CFC600C4AE1D /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5C5A2D5F1BD5CFC600C4AE1D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2D511BD5CFC600C4AE1D /* LoginViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		5C5A2D601BD5CFC600C4AE1D /* RegisterAgreementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D531BD5CFC600C4AE1D /* RegisterAgreementViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5C5A2D611BD5CFC600C4AE1D /* RegisterAgreementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2D541BD5CFC600C4AE1D /* RegisterAgreementViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		5C5A2D621BD5CFC600C4AE1D /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D561BD5CFC600C4AE1D /* RegisterViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5C5A2D631BD5CFC600C4AE1D /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2D571BD5CFC600C4AE1D /* RegisterViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		5C5A2D641BD5CFC600C4AE1D /* SetUpPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D591BD5CFC600C4AE1D /* SetUpPasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5C5A2D651BD5CFC600C4AE1D /* SetUpPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2D5A1BD5CFC600C4AE1D /* SetUpPasswordViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		5C5A2D661BD5CFC600C4AE1D /* ValidateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D5C1BD5CFC600C4AE1D /* ValidateViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5C5A2D671BD5CFC600C4AE1D /* ValidateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2D5D1BD5CFC600C4AE1D /* ValidateViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		5C5A2D6D1BD5D48400C4AE1D /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D6A1BD5D48400C4AE1D /* HelpViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5C5A2D6E1BD5D48400C4AE1D /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D6C1BD5D48400C4AE1D /* MyViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5C5A2D791BD5D51200C4AE1D /* MyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D711BD5D51200C4AE1D /* MyAccountViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5C5A2D7A1BD5D51200C4AE1D /* MyAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2D721BD5D51200C4AE1D /* MyAccountViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		5C5A2D7B1BD5D51200C4AE1D /* PasswordManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D741BD5D51200C4AE1D /* PasswordManagerViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5C5A2D7C1BD5D51200C4AE1D /* PasswordManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2D751BD5D51200C4AE1D /* PasswordManagerViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		5C5A2D7D1BD5D51200C4AE1D /* ResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D771BD5D51200C4AE1D /* ResetPasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5C5A2D7E1BD5D51200C4AE1D /* ResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2D781BD5D51200C4AE1D /* ResetPasswordViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		5C5A2DC41BD6115D00C4AE1D /* AppUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D871BD6115D00C4AE1D /* AppUtils.m */; settings = {ASSET_TAGS = (); }; };
+		5C5A2DC51BD6115D00C4AE1D /* FMNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D8B1BD6115D00C4AE1D /* FMNetWorkManager.m */; settings = {ASSET_TAGS = (); }; };
+		5C5A2DC61BD6115D00C4AE1D /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D8F1BD6115D00C4AE1D /* MyViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C5A2DC71BD6115D00C4AE1D /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D961BD6115D00C4AE1D /* HelpViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C5A2DC81BD6115D00C4AE1D /* LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D9B1BD6115D00C4AE1D /* LoginRequest.m */; settings = {ASSET_TAGS = (); }; };
+		5C5A2DC91BD6115D00C4AE1D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D9F1BD6115D00C4AE1D /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C5A2DCA1BD6115D00C4AE1D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2DA01BD6115D00C4AE1D /* LoginViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		5C5A2DCB1BD6115D00C4AE1D /* RegisterRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2DA51BD6115D00C4AE1D /* RegisterRequest.m */; settings = {ASSET_TAGS = (); }; };
+		5C5A2DCC1BD6115D00C4AE1D /* RegisterAgreementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2DA91BD6115D00C4AE1D /* RegisterAgreementViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C5A2DCD1BD6115D00C4AE1D /* RegisterAgreementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2DAA1BD6115D00C4AE1D /* RegisterAgreementViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		5C5A2DCE1BD6115D00C4AE1D /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2DAC1BD6115D00C4AE1D /* RegisterViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C5A2DCF1BD6115D00C4AE1D /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2DAD1BD6115D00C4AE1D /* RegisterViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		5C5A2DD01BD6115D00C4AE1D /* SetUpPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2DAF1BD6115D00C4AE1D /* SetUpPasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C5A2DD11BD6115D00C4AE1D /* SetUpPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2DB01BD6115D00C4AE1D /* SetUpPasswordViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		5C5A2DD21BD6115D00C4AE1D /* ValidateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2DB21BD6115D00C4AE1D /* ValidateViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C5A2DD31BD6115D00C4AE1D /* ValidateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2DB31BD6115D00C4AE1D /* ValidateViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		5C5A2DD41BD6115D00C4AE1D /* UserInfoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2DB81BD6115D00C4AE1D /* UserInfoRequest.m */; settings = {ASSET_TAGS = (); }; };
+		5C5A2DD51BD6115D00C4AE1D /* MyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2DBC1BD6115D00C4AE1D /* MyAccountViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C5A2DD61BD6115D00C4AE1D /* MyAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2DBD1BD6115D00C4AE1D /* MyAccountViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		5C5A2DD71BD6115D00C4AE1D /* PasswordManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2DBF1BD6115D00C4AE1D /* PasswordManagerViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C5A2DD81BD6115D00C4AE1D /* PasswordManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2DC01BD6115D00C4AE1D /* PasswordManagerViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		5C5A2DD91BD6115D00C4AE1D /* ResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2DC21BD6115D00C4AE1D /* ResetPasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C5A2DDA1BD6115D00C4AE1D /* ResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2DC31BD6115D00C4AE1D /* ResetPasswordViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		5CA41C481BC8E688000A3484 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41C471BC8E688000A3484 /* main.m */; };
 		5CA41C4B1BC8E688000A3484 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41C4A1BC8E688000A3484 /* AppDelegate.m */; };
 		5CA41C4E1BC8E688000A3484 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41C4D1BC8E688000A3484 /* ViewController.m */; };
@@ -34,10 +38,6 @@
 		5CA41C531BC8E688000A3484 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CA41C521BC8E688000A3484 /* Assets.xcassets */; };
 		5CA41C611BC8E688000A3484 /* gigoldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41C601BC8E688000A3484 /* gigoldTests.m */; };
 		5CA41C6C1BC8E688000A3484 /* gigoldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41C6B1BC8E688000A3484 /* gigoldUITests.m */; };
-		5CA41C8B1BC8E7A8000A3484 /* AppUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41C7D1BC8E7A8000A3484 /* AppUtils.m */; settings = {ASSET_TAGS = (); }; };
-		5CA41C9D1BC90A8D000A3484 /* FMNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41C9C1BC90A8D000A3484 /* FMNetWorkManager.m */; settings = {ASSET_TAGS = (); }; };
-		5CAC0BE41BCDE840006CF3FD /* LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CAC0BE31BCDE840006CF3FD /* LoginRequest.m */; settings = {ASSET_TAGS = (); }; };
-		5CEDDEA01BCF8F7800CE63C7 /* UserInfoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CEDDE9F1BCF8F7800CE63C7 /* UserInfoRequest.m */; settings = {ASSET_TAGS = (); }; };
 		DCB348EA5503450DD424BB4D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA29EA734CC24C2A6E7B458A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -61,36 +61,46 @@
 /* Begin PBXFileReference section */
 		05C9FF4D315E838F911D2C11 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5C394BFB1BCF597E009AC0AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5C394BFE1BCF5BF5009AC0AC /* RegisterRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterRequest.h; sourceTree = "<group>"; };
-		5C394BFF1BCF5BF5009AC0AC /* RegisterRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterRequest.m; sourceTree = "<group>"; };
-		5C5A2D4F1BD5CFC600C4AE1D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		5C5A2D501BD5CFC600C4AE1D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		5C5A2D511BD5CFC600C4AE1D /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		5C5A2D521BD5CFC600C4AE1D /* RegisterAgreementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterAgreementViewController.h; sourceTree = "<group>"; };
-		5C5A2D531BD5CFC600C4AE1D /* RegisterAgreementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterAgreementViewController.m; sourceTree = "<group>"; };
-		5C5A2D541BD5CFC600C4AE1D /* RegisterAgreementViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterAgreementViewController.xib; sourceTree = "<group>"; };
-		5C5A2D551BD5CFC600C4AE1D /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
-		5C5A2D561BD5CFC600C4AE1D /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		5C5A2D571BD5CFC600C4AE1D /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
-		5C5A2D581BD5CFC600C4AE1D /* SetUpPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetUpPasswordViewController.h; sourceTree = "<group>"; };
-		5C5A2D591BD5CFC600C4AE1D /* SetUpPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetUpPasswordViewController.m; sourceTree = "<group>"; };
-		5C5A2D5A1BD5CFC600C4AE1D /* SetUpPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetUpPasswordViewController.xib; sourceTree = "<group>"; };
-		5C5A2D5B1BD5CFC600C4AE1D /* ValidateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidateViewController.h; sourceTree = "<group>"; };
-		5C5A2D5C1BD5CFC600C4AE1D /* ValidateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidateViewController.m; sourceTree = "<group>"; };
-		5C5A2D5D1BD5CFC600C4AE1D /* ValidateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ValidateViewController.xib; sourceTree = "<group>"; };
-		5C5A2D691BD5D48400C4AE1D /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
-		5C5A2D6A1BD5D48400C4AE1D /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
-		5C5A2D6B1BD5D48400C4AE1D /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
-		5C5A2D6C1BD5D48400C4AE1D /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
-		5C5A2D701BD5D51200C4AE1D /* MyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountViewController.h; sourceTree = "<group>"; };
-		5C5A2D711BD5D51200C4AE1D /* MyAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountViewController.m; sourceTree = "<group>"; };
-		5C5A2D721BD5D51200C4AE1D /* MyAccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAccountViewController.xib; sourceTree = "<group>"; };
-		5C5A2D731BD5D51200C4AE1D /* PasswordManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordManagerViewController.h; sourceTree = "<group>"; };
-		5C5A2D741BD5D51200C4AE1D /* PasswordManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordManagerViewController.m; sourceTree = "<group>"; };
-		5C5A2D751BD5D51200C4AE1D /* PasswordManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordManagerViewController.xib; sourceTree = "<group>"; };
-		5C5A2D761BD5D51200C4AE1D /* ResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPasswordViewController.h; sourceTree = "<group>"; };
-		5C5A2D771BD5D51200C4AE1D /* ResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordViewController.m; sourceTree = "<group>"; };
-		5C5A2D781BD5D51200C4AE1D /* ResetPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResetPasswordViewController.xib; sourceTree = "<group>"; };
+		5C5A2D861BD6115D00C4AE1D /* AppUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppUtils.h; sourceTree = "<group>"; };
+		5C5A2D871BD6115D00C4AE1D /* AppUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppUtils.m; sourceTree = "<group>"; };
+		5C5A2D891BD6115D00C4AE1D /* FMMacro_URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMMacro_URL.h; sourceTree = "<group>"; };
+		5C5A2D8A1BD6115D00C4AE1D /* FMNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMNetWorkManager.h; sourceTree = "<group>"; };
+		5C5A2D8B1BD6115D00C4AE1D /* FMNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMNetWorkManager.m; sourceTree = "<group>"; };
+		5C5A2D8E1BD6115D00C4AE1D /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		5C5A2D8F1BD6115D00C4AE1D /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
+		5C5A2D951BD6115D00C4AE1D /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		5C5A2D961BD6115D00C4AE1D /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
+		5C5A2D9A1BD6115D00C4AE1D /* LoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginRequest.h; sourceTree = "<group>"; };
+		5C5A2D9B1BD6115D00C4AE1D /* LoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginRequest.m; sourceTree = "<group>"; };
+		5C5A2D9E1BD6115D00C4AE1D /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		5C5A2D9F1BD6115D00C4AE1D /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		5C5A2DA01BD6115D00C4AE1D /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		5C5A2DA41BD6115D00C4AE1D /* RegisterRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterRequest.h; sourceTree = "<group>"; };
+		5C5A2DA51BD6115D00C4AE1D /* RegisterRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterRequest.m; sourceTree = "<group>"; };
+		5C5A2DA81BD6115D00C4AE1D /* RegisterAgreementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterAgreementViewController.h; sourceTree = "<group>"; };
+		5C5A2DA91BD6115D00C4AE1D /* RegisterAgreementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterAgreementViewController.m; sourceTree = "<group>"; };
+		5C5A2DAA1BD6115D00C4AE1D /* RegisterAgreementViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterAgreementViewController.xib; sourceTree = "<group>"; };
+		5C5A2DAB1BD6115D00C4AE1D /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		5C5A2DAC1BD6115D00C4AE1D /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		5C5A2DAD1BD6115D00C4AE1D /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		5C5A2DAE1BD6115D00C4AE1D /* SetUpPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetUpPasswordViewController.h; sourceTree = "<group>"; };
+		5C5A2DAF1BD6115D00C4AE1D /* SetUpPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetUpPasswordViewController.m; sourceTree = "<group>"; };
+		5C5A2DB01BD6115D00C4AE1D /* SetUpPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetUpPasswordViewController.xib; sourceTree = "<group>"; };
+		5C5A2DB11BD6115D00C4AE1D /* ValidateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidateViewController.h; sourceTree = "<group>"; };
+		5C5A2DB21BD6115D00C4AE1D /* ValidateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidateViewController.m; sourceTree = "<group>"; };
+		5C5A2DB31BD6115D00C4AE1D /* ValidateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ValidateViewController.xib; sourceTree = "<group>"; };
+		5C5A2DB71BD6115D00C4AE1D /* UserInfoRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoRequest.h; sourceTree = "<group>"; };
+		5C5A2DB81BD6115D00C4AE1D /* UserInfoRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoRequest.m; sourceTree = "<group>"; };
+		5C5A2DBB1BD6115D00C4AE1D /* MyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountViewController.h; sourceTree = "<group>"; };
+		5C5A2DBC1BD6115D00C4AE1D /* MyAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountViewController.m; sourceTree = "<group>"; };
+		5C5A2DBD1BD6115D00C4AE1D /* MyAccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAccountViewController.xib; sourceTree = "<group>"; };
+		5C5A2DBE1BD6115D00C4AE1D /* PasswordManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordManagerViewController.h; sourceTree = "<group>"; };
+		5C5A2DBF1BD6115D00C4AE1D /* PasswordManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordManagerViewController.m; sourceTree = "<group>"; };
+		5C5A2DC01BD6115D00C4AE1D /* PasswordManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordManagerViewController.xib; sourceTree = "<group>"; };
+		5C5A2DC11BD6115D00C4AE1D /* ResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPasswordViewController.h; sourceTree = "<group>"; };
+		5C5A2DC21BD6115D00C4AE1D /* ResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordViewController.m; sourceTree = "<group>"; };
+		5C5A2DC31BD6115D00C4AE1D /* ResetPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResetPasswordViewController.xib; sourceTree = "<group>"; };
+		5C5A2DDB1BD6118D00C4AE1D /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = gigold/PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
 		5CA41C431BC8E688000A3484 /* gigold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gigold.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA41C471BC8E688000A3484 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5CA41C491BC8E688000A3484 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -106,16 +116,6 @@
 		5CA41C671BC8E688000A3484 /* gigoldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gigoldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA41C6B1BC8E688000A3484 /* gigoldUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gigoldUITests.m; sourceTree = "<group>"; };
 		5CA41C6D1BC8E688000A3484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5CA41C7C1BC8E7A8000A3484 /* AppUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppUtils.h; sourceTree = "<group>"; };
-		5CA41C7D1BC8E7A8000A3484 /* AppUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppUtils.m; sourceTree = "<group>"; };
-		5CA41C941BC8E85D000A3484 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		5CA41C9A1BC90A8D000A3484 /* FMMacro_URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMMacro_URL.h; sourceTree = "<group>"; };
-		5CA41C9B1BC90A8D000A3484 /* FMNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = FMNetWorkManager.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		5CA41C9C1BC90A8D000A3484 /* FMNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FMNetWorkManager.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		5CAC0BE21BCDE840006CF3FD /* LoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginRequest.h; sourceTree = "<group>"; };
-		5CAC0BE31BCDE840006CF3FD /* LoginRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginRequest.m; sourceTree = "<group>"; };
-		5CEDDE9E1BCF8F7800CE63C7 /* UserInfoRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoRequest.h; sourceTree = "<group>"; };
-		5CEDDE9F1BCF8F7800CE63C7 /* UserInfoRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoRequest.m; sourceTree = "<group>"; };
 		660292318B52F537CA48DCED /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AA29EA734CC24C2A6E7B458A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -163,55 +163,240 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		5C5A2D4E1BD5CFC600C4AE1D /* loginRegister */ = {
+		5C5A2D841BD6115C00C4AE1D /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				5C5A2D4F1BD5CFC600C4AE1D /* LoginViewController.h */,
-				5C5A2D501BD5CFC600C4AE1D /* LoginViewController.m */,
-				5C5A2D511BD5CFC600C4AE1D /* LoginViewController.xib */,
-				5C5A2D521BD5CFC600C4AE1D /* RegisterAgreementViewController.h */,
-				5C5A2D531BD5CFC600C4AE1D /* RegisterAgreementViewController.m */,
-				5C5A2D541BD5CFC600C4AE1D /* RegisterAgreementViewController.xib */,
-				5C5A2D551BD5CFC600C4AE1D /* RegisterViewController.h */,
-				5C5A2D561BD5CFC600C4AE1D /* RegisterViewController.m */,
-				5C5A2D571BD5CFC600C4AE1D /* RegisterViewController.xib */,
-				5C5A2D581BD5CFC600C4AE1D /* SetUpPasswordViewController.h */,
-				5C5A2D591BD5CFC600C4AE1D /* SetUpPasswordViewController.m */,
-				5C5A2D5A1BD5CFC600C4AE1D /* SetUpPasswordViewController.xib */,
-				5C5A2D5B1BD5CFC600C4AE1D /* ValidateViewController.h */,
-				5C5A2D5C1BD5CFC600C4AE1D /* ValidateViewController.m */,
-				5C5A2D5D1BD5CFC600C4AE1D /* ValidateViewController.xib */,
+				5C5A2D851BD6115D00C4AE1D /* Data */,
+				5C5A2D881BD6115D00C4AE1D /* HttpRequest */,
+				5C5A2D8C1BD6115D00C4AE1D /* Images */,
+				5C5A2D8D1BD6115D00C4AE1D /* UI */,
 			);
-			path = loginRegister;
+			path = Common;
 			sourceTree = "<group>";
 		};
-		5C5A2D681BD5D48400C4AE1D /* common */ = {
+		5C5A2D851BD6115D00C4AE1D /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				5C5A2D691BD5D48400C4AE1D /* HelpViewController.h */,
-				5C5A2D6A1BD5D48400C4AE1D /* HelpViewController.m */,
-				5C5A2D6B1BD5D48400C4AE1D /* MyViewController.h */,
-				5C5A2D6C1BD5D48400C4AE1D /* MyViewController.m */,
+				5C5A2D861BD6115D00C4AE1D /* AppUtils.h */,
+				5C5A2D871BD6115D00C4AE1D /* AppUtils.m */,
+				5C5A2DDB1BD6118D00C4AE1D /* PrefixHeader.pch */,
 			);
-			path = common;
+			path = Data;
 			sourceTree = "<group>";
 		};
-		5C5A2D6F1BD5D51200C4AE1D /* accountManager */ = {
+		5C5A2D881BD6115D00C4AE1D /* HttpRequest */ = {
 			isa = PBXGroup;
 			children = (
-				5C5A2D701BD5D51200C4AE1D /* MyAccountViewController.h */,
-				5C5A2D711BD5D51200C4AE1D /* MyAccountViewController.m */,
-				5C5A2D721BD5D51200C4AE1D /* MyAccountViewController.xib */,
-				5C5A2D731BD5D51200C4AE1D /* PasswordManagerViewController.h */,
-				5C5A2D741BD5D51200C4AE1D /* PasswordManagerViewController.m */,
-				5C5A2D751BD5D51200C4AE1D /* PasswordManagerViewController.xib */,
-				5C5A2D761BD5D51200C4AE1D /* ResetPasswordViewController.h */,
-				5C5A2D771BD5D51200C4AE1D /* ResetPasswordViewController.m */,
-				5C5A2D781BD5D51200C4AE1D /* ResetPasswordViewController.xib */,
+				5C5A2D891BD6115D00C4AE1D /* FMMacro_URL.h */,
+				5C5A2D8A1BD6115D00C4AE1D /* FMNetWorkManager.h */,
+				5C5A2D8B1BD6115D00C4AE1D /* FMNetWorkManager.m */,
 			);
-			name = accountManager;
-			path = gigold/ViewControllers/accountManager;
-			sourceTree = SOURCE_ROOT;
+			path = HttpRequest;
+			sourceTree = "<group>";
+		};
+		5C5A2D8C1BD6115D00C4AE1D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		5C5A2D8D1BD6115D00C4AE1D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5C5A2D8E1BD6115D00C4AE1D /* MyViewController.h */,
+				5C5A2D8F1BD6115D00C4AE1D /* MyViewController.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		5C5A2D901BD6115D00C4AE1D /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				5C5A2D911BD6115D00C4AE1D /* Data */,
+				5C5A2D921BD6115D00C4AE1D /* HttpRequest */,
+				5C5A2D931BD6115D00C4AE1D /* Images */,
+				5C5A2D941BD6115D00C4AE1D /* UI */,
+			);
+			path = Help;
+			sourceTree = "<group>";
+		};
+		5C5A2D911BD6115D00C4AE1D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5C5A2D921BD6115D00C4AE1D /* HttpRequest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HttpRequest;
+			sourceTree = "<group>";
+		};
+		5C5A2D931BD6115D00C4AE1D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		5C5A2D941BD6115D00C4AE1D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5C5A2D951BD6115D00C4AE1D /* HelpViewController.h */,
+				5C5A2D961BD6115D00C4AE1D /* HelpViewController.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		5C5A2D971BD6115D00C4AE1D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5C5A2D981BD6115D00C4AE1D /* Data */,
+				5C5A2D991BD6115D00C4AE1D /* HttpRequest */,
+				5C5A2D9C1BD6115D00C4AE1D /* Images */,
+				5C5A2D9D1BD6115D00C4AE1D /* UI */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		5C5A2D981BD6115D00C4AE1D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5C5A2D991BD6115D00C4AE1D /* HttpRequest */ = {
+			isa = PBXGroup;
+			children = (
+				5C5A2D9A1BD6115D00C4AE1D /* LoginRequest.h */,
+				5C5A2D9B1BD6115D00C4AE1D /* LoginRequest.m */,
+			);
+			path = HttpRequest;
+			sourceTree = "<group>";
+		};
+		5C5A2D9C1BD6115D00C4AE1D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		5C5A2D9D1BD6115D00C4AE1D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5C5A2D9E1BD6115D00C4AE1D /* LoginViewController.h */,
+				5C5A2D9F1BD6115D00C4AE1D /* LoginViewController.m */,
+				5C5A2DA01BD6115D00C4AE1D /* LoginViewController.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		5C5A2DA11BD6115D00C4AE1D /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				5C5A2DA21BD6115D00C4AE1D /* Data */,
+				5C5A2DA31BD6115D00C4AE1D /* HttpRequest */,
+				5C5A2DA61BD6115D00C4AE1D /* Images */,
+				5C5A2DA71BD6115D00C4AE1D /* UI */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		5C5A2DA21BD6115D00C4AE1D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5C5A2DA31BD6115D00C4AE1D /* HttpRequest */ = {
+			isa = PBXGroup;
+			children = (
+				5C5A2DA41BD6115D00C4AE1D /* RegisterRequest.h */,
+				5C5A2DA51BD6115D00C4AE1D /* RegisterRequest.m */,
+			);
+			path = HttpRequest;
+			sourceTree = "<group>";
+		};
+		5C5A2DA61BD6115D00C4AE1D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		5C5A2DA71BD6115D00C4AE1D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5C5A2DA81BD6115D00C4AE1D /* RegisterAgreementViewController.h */,
+				5C5A2DA91BD6115D00C4AE1D /* RegisterAgreementViewController.m */,
+				5C5A2DAA1BD6115D00C4AE1D /* RegisterAgreementViewController.xib */,
+				5C5A2DAB1BD6115D00C4AE1D /* RegisterViewController.h */,
+				5C5A2DAC1BD6115D00C4AE1D /* RegisterViewController.m */,
+				5C5A2DAD1BD6115D00C4AE1D /* RegisterViewController.xib */,
+				5C5A2DAE1BD6115D00C4AE1D /* SetUpPasswordViewController.h */,
+				5C5A2DAF1BD6115D00C4AE1D /* SetUpPasswordViewController.m */,
+				5C5A2DB01BD6115D00C4AE1D /* SetUpPasswordViewController.xib */,
+				5C5A2DB11BD6115D00C4AE1D /* ValidateViewController.h */,
+				5C5A2DB21BD6115D00C4AE1D /* ValidateViewController.m */,
+				5C5A2DB31BD6115D00C4AE1D /* ValidateViewController.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		5C5A2DB41BD6115D00C4AE1D /* UserManager */ = {
+			isa = PBXGroup;
+			children = (
+				5C5A2DB51BD6115D00C4AE1D /* Data */,
+				5C5A2DB61BD6115D00C4AE1D /* HttpRequest */,
+				5C5A2DB91BD6115D00C4AE1D /* Images */,
+				5C5A2DBA1BD6115D00C4AE1D /* UI */,
+			);
+			path = UserManager;
+			sourceTree = "<group>";
+		};
+		5C5A2DB51BD6115D00C4AE1D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5C5A2DB61BD6115D00C4AE1D /* HttpRequest */ = {
+			isa = PBXGroup;
+			children = (
+				5C5A2DB71BD6115D00C4AE1D /* UserInfoRequest.h */,
+				5C5A2DB81BD6115D00C4AE1D /* UserInfoRequest.m */,
+			);
+			path = HttpRequest;
+			sourceTree = "<group>";
+		};
+		5C5A2DB91BD6115D00C4AE1D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		5C5A2DBA1BD6115D00C4AE1D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5C5A2DBB1BD6115D00C4AE1D /* MyAccountViewController.h */,
+				5C5A2DBC1BD6115D00C4AE1D /* MyAccountViewController.m */,
+				5C5A2DBD1BD6115D00C4AE1D /* MyAccountViewController.xib */,
+				5C5A2DBE1BD6115D00C4AE1D /* PasswordManagerViewController.h */,
+				5C5A2DBF1BD6115D00C4AE1D /* PasswordManagerViewController.m */,
+				5C5A2DC01BD6115D00C4AE1D /* PasswordManagerViewController.xib */,
+				5C5A2DC11BD6115D00C4AE1D /* ResetPasswordViewController.h */,
+				5C5A2DC21BD6115D00C4AE1D /* ResetPasswordViewController.m */,
+				5C5A2DC31BD6115D00C4AE1D /* ResetPasswordViewController.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
 		};
 		5C73554A1BD5E57D00B94C44 /* login */ = {
 			isa = PBXGroup;
@@ -370,9 +555,11 @@
 				5C394BFA1BCF597E009AC0AC /* LaunchScreen.storyboard */,
 				5CA41C521BC8E688000A3484 /* Assets.xcassets */,
 				5CA41C571BC8E688000A3484 /* Info.plist */,
-				5CA41C981BC90A8D000A3484 /* httpManager */,
-				5CA41C7B1BC8E7A8000A3484 /* CustomClass */,
-				5CA41C7E1BC8E7A8000A3484 /* ViewControllers */,
+				5C5A2D841BD6115C00C4AE1D /* Common */,
+				5C5A2D901BD6115D00C4AE1D /* Help */,
+				5C5A2D971BD6115D00C4AE1D /* Login */,
+				5C5A2DA11BD6115D00C4AE1D /* Register */,
+				5C5A2DB41BD6115D00C4AE1D /* UserManager */,
 				5CA41C461BC8E688000A3484 /* Supporting Files */,
 			);
 			path = gigold;
@@ -402,51 +589,6 @@
 				5CA41C6D1BC8E688000A3484 /* Info.plist */,
 			);
 			path = gigoldUITests;
-			sourceTree = "<group>";
-		};
-		5CA41C7B1BC8E7A8000A3484 /* CustomClass */ = {
-			isa = PBXGroup;
-			children = (
-				5CA41C7C1BC8E7A8000A3484 /* AppUtils.h */,
-				5CA41C7D1BC8E7A8000A3484 /* AppUtils.m */,
-				5CA41C941BC8E85D000A3484 /* PrefixHeader.pch */,
-			);
-			path = CustomClass;
-			sourceTree = "<group>";
-		};
-		5CA41C7E1BC8E7A8000A3484 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				5C5A2D4E1BD5CFC600C4AE1D /* loginRegister */,
-				5C5A2D6F1BD5D51200C4AE1D /* accountManager */,
-				5C5A2D681BD5D48400C4AE1D /* common */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		5CA41C981BC90A8D000A3484 /* httpManager */ = {
-			isa = PBXGroup;
-			children = (
-				5CA41C991BC90A8D000A3484 /* network */,
-			);
-			name = httpManager;
-			path = gigold/httpManager;
-			sourceTree = SOURCE_ROOT;
-		};
-		5CA41C991BC90A8D000A3484 /* network */ = {
-			isa = PBXGroup;
-			children = (
-				5CA41C9A1BC90A8D000A3484 /* FMMacro_URL.h */,
-				5CA41C9B1BC90A8D000A3484 /* FMNetWorkManager.h */,
-				5CA41C9C1BC90A8D000A3484 /* FMNetWorkManager.m */,
-				5CAC0BE21BCDE840006CF3FD /* LoginRequest.h */,
-				5CAC0BE31BCDE840006CF3FD /* LoginRequest.m */,
-				5C394BFE1BCF5BF5009AC0AC /* RegisterRequest.h */,
-				5C394BFF1BCF5BF5009AC0AC /* RegisterRequest.m */,
-				5CEDDE9E1BCF8F7800CE63C7 /* UserInfoRequest.h */,
-				5CEDDE9F1BCF8F7800CE63C7 /* UserInfoRequest.m */,
-			);
-			path = network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -554,17 +696,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C5A2D611BD5CFC600C4AE1D /* RegisterAgreementViewController.xib in Resources */,
-				5C5A2D7E1BD5D51200C4AE1D /* ResetPasswordViewController.xib in Resources */,
-				5C5A2D651BD5CFC600C4AE1D /* SetUpPasswordViewController.xib in Resources */,
+				5C5A2DCA1BD6115D00C4AE1D /* LoginViewController.xib in Resources */,
+				5C5A2DDA1BD6115D00C4AE1D /* ResetPasswordViewController.xib in Resources */,
 				5CA41C531BC8E688000A3484 /* Assets.xcassets in Resources */,
-				5C5A2D7C1BD5D51200C4AE1D /* PasswordManagerViewController.xib in Resources */,
+				5C5A2DCD1BD6115D00C4AE1D /* RegisterAgreementViewController.xib in Resources */,
+				5C5A2DD81BD6115D00C4AE1D /* PasswordManagerViewController.xib in Resources */,
+				5C5A2DD11BD6115D00C4AE1D /* SetUpPasswordViewController.xib in Resources */,
+				5C5A2DD61BD6115D00C4AE1D /* MyAccountViewController.xib in Resources */,
+				5C5A2DD31BD6115D00C4AE1D /* ValidateViewController.xib in Resources */,
 				5CA41C511BC8E688000A3484 /* Main.storyboard in Resources */,
-				5C5A2D7A1BD5D51200C4AE1D /* MyAccountViewController.xib in Resources */,
-				5C5A2D631BD5CFC600C4AE1D /* RegisterViewController.xib in Resources */,
 				5C394BFC1BCF597E009AC0AC /* LaunchScreen.storyboard in Resources */,
-				5C5A2D671BD5CFC600C4AE1D /* ValidateViewController.xib in Resources */,
-				5C5A2D5F1BD5CFC600C4AE1D /* LoginViewController.xib in Resources */,
+				5C5A2DCF1BD6115D00C4AE1D /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,24 +764,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CEDDEA01BCF8F7800CE63C7 /* UserInfoRequest.m in Sources */,
+				5C5A2DD01BD6115D00C4AE1D /* SetUpPasswordViewController.m in Sources */,
+				5C5A2DC61BD6115D00C4AE1D /* MyViewController.m in Sources */,
+				5C5A2DD21BD6115D00C4AE1D /* ValidateViewController.m in Sources */,
 				5CA41C4E1BC8E688000A3484 /* ViewController.m in Sources */,
-				5CA41C9D1BC90A8D000A3484 /* FMNetWorkManager.m in Sources */,
-				5C5A2D5E1BD5CFC600C4AE1D /* LoginViewController.m in Sources */,
-				5C5A2D661BD5CFC600C4AE1D /* ValidateViewController.m in Sources */,
-				5C5A2D7B1BD5D51200C4AE1D /* PasswordManagerViewController.m in Sources */,
-				5C5A2D621BD5CFC600C4AE1D /* RegisterViewController.m in Sources */,
-				5C5A2D7D1BD5D51200C4AE1D /* ResetPasswordViewController.m in Sources */,
-				5C5A2D791BD5D51200C4AE1D /* MyAccountViewController.m in Sources */,
+				5C5A2DCC1BD6115D00C4AE1D /* RegisterAgreementViewController.m in Sources */,
+				5C5A2DD71BD6115D00C4AE1D /* PasswordManagerViewController.m in Sources */,
+				5C5A2DCB1BD6115D00C4AE1D /* RegisterRequest.m in Sources */,
+				5C5A2DD91BD6115D00C4AE1D /* ResetPasswordViewController.m in Sources */,
+				5C5A2DD51BD6115D00C4AE1D /* MyAccountViewController.m in Sources */,
 				5CA41C4B1BC8E688000A3484 /* AppDelegate.m in Sources */,
-				5C5A2D641BD5CFC600C4AE1D /* SetUpPasswordViewController.m in Sources */,
-				5C5A2D601BD5CFC600C4AE1D /* RegisterAgreementViewController.m in Sources */,
-				5C394C001BCF5BF5009AC0AC /* RegisterRequest.m in Sources */,
-				5C5A2D6E1BD5D48400C4AE1D /* MyViewController.m in Sources */,
-				5CAC0BE41BCDE840006CF3FD /* LoginRequest.m in Sources */,
+				5C5A2DC81BD6115D00C4AE1D /* LoginRequest.m in Sources */,
 				5CA41C481BC8E688000A3484 /* main.m in Sources */,
-				5C5A2D6D1BD5D48400C4AE1D /* HelpViewController.m in Sources */,
-				5CA41C8B1BC8E7A8000A3484 /* AppUtils.m in Sources */,
+				5C5A2DD41BD6115D00C4AE1D /* UserInfoRequest.m in Sources */,
+				5C5A2DCE1BD6115D00C4AE1D /* RegisterViewController.m in Sources */,
+				5C5A2DC91BD6115D00C4AE1D /* LoginViewController.m in Sources */,
+				5C5A2DC71BD6115D00C4AE1D /* HelpViewController.m in Sources */,
+				5C5A2DC51BD6115D00C4AE1D /* FMNetWorkManager.m in Sources */,
+				5C5A2DC41BD6115D00C4AE1D /* AppUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -784,7 +926,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: yinyan wen (9Y9J9E2VL9)";
-				GCC_PREFIX_HEADER = "$(SRCROOT)/gigold/customClass/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/gigold/Common/Data/PrefixHeader.pch";
 				INFOPLIST_FILE = gigold/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -800,7 +942,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: yinyan wen (9Y9J9E2VL9)";
-				GCC_PREFIX_HEADER = "$(SRCROOT)/gigold/customClass/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/gigold/Common/Data/PrefixHeader.pch";
 				INFOPLIST_FILE = gigold/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
