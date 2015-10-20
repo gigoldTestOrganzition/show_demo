@@ -19,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    dataArray = [[NSMutableArray alloc] initWithObjects:@"银行卡管理",@"收支明细",@"密码管理", nil];
+    
     self.mTableView.delegate = self;
     self.mTableView.dataSource = self;
     
@@ -32,7 +34,10 @@
     
     UIButton* logoutBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     logoutBtn.frame = CGRectMake(40, 10, footerView.frame.size.width-2*40, 30);
-    logoutBtn.backgroundColor = [UIColor grayColor];
+    logoutBtn.layer.borderWidth = 1;
+    logoutBtn.layer.borderColor = [UIColor blackColor].CGColor;
+    logoutBtn.layer.cornerRadius = 5;
+    [logoutBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [logoutBtn setTitle:@"退出登录" forState:UIControlStateNormal];
     [logoutBtn addTarget:self action:@selector(logoutBtnPress) forControlEvents:UIControlEventTouchUpInside];
     
@@ -48,7 +53,7 @@
 #pragma mark ---- UITableViewDataSource,UITableViewDelegate --------
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 3;
+    return dataArray.count;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -64,16 +69,23 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellString];
     }
     
-    cell.textLabel.text = @"密码管理";
+    cell.textLabel.text = [dataArray objectAtIndex:indexPath.row];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    PasswordManagerViewController* passwordManagerView = [[PasswordManagerViewController alloc] init];
-    [passwordManagerView setHidesBottomBarWhenPushed:YES];
-    [self.navigationController pushViewController:passwordManagerView animated:YES];
+    if (indexPath.row == 0) {
+        
+    }else if (indexPath.row == 1){
+        
+    }else if (indexPath.row == 2){
+        PasswordManagerViewController* passwordManagerView = [[PasswordManagerViewController alloc] init];
+        [passwordManagerView setHidesBottomBarWhenPushed:YES];
+        [self.navigationController pushViewController:passwordManagerView animated:YES];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

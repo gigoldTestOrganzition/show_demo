@@ -45,6 +45,10 @@
     self.accountTextField.delegate = self;
     self.passwordTextField.delegate = self;
     
+    //测试数据
+    self.accountTextField.text = @"12345678900";
+    self.passwordTextField.text = @"1324";
+    
     NSLog(@"md5%@",[[AppUtils shareAppUtils] md5:@"13511407383+yyyyyyyyy"]);
 }
 

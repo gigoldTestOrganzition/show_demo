@@ -398,127 +398,6 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		5C73554A1BD5E57D00B94C44 /* login */ = {
-			isa = PBXGroup;
-			children = (
-				5C7355561BD5E60A00B94C44 /* image */,
-				5C7355511BD5E5CC00B94C44 /* data */,
-				5C7355501BD5E5C600B94C44 /* http */,
-				5C73554F1BD5E5C100B94C44 /* ui */,
-			);
-			path = login;
-			sourceTree = "<group>";
-		};
-		5C73554B1BD5E58D00B94C44 /* user */ = {
-			isa = PBXGroup;
-			children = (
-				5C7355551BD5E60500B94C44 /* image */,
-				5C7355541BD5E5E500B94C44 /* http */,
-				5C7355531BD5E5DE00B94C44 /* data */,
-				5C7355521BD5E5D500B94C44 /* ui */,
-			);
-			path = user;
-			sourceTree = "<group>";
-		};
-		5C73554C1BD5E5AF00B94C44 /* ui */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = ui;
-			path = ../../../../Desktop/ui;
-			sourceTree = "<group>";
-		};
-		5C73554D1BD5E5B400B94C44 /* data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = data;
-			path = ../../../../Desktop/data;
-			sourceTree = "<group>";
-		};
-		5C73554E1BD5E5BA00B94C44 /* http */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = http;
-			path = ../../../../Desktop/http;
-			sourceTree = "<group>";
-		};
-		5C73554F1BD5E5C100B94C44 /* ui */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ui;
-			sourceTree = "<group>";
-		};
-		5C7355501BD5E5C600B94C44 /* http */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = http;
-			sourceTree = "<group>";
-		};
-		5C7355511BD5E5CC00B94C44 /* data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = data;
-			sourceTree = "<group>";
-		};
-		5C7355521BD5E5D500B94C44 /* ui */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ui;
-			sourceTree = "<group>";
-		};
-		5C7355531BD5E5DE00B94C44 /* data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = data;
-			sourceTree = "<group>";
-		};
-		5C7355541BD5E5E500B94C44 /* http */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = http;
-			sourceTree = "<group>";
-		};
-		5C7355551BD5E60500B94C44 /* image */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = image;
-			sourceTree = "<group>";
-		};
-		5C7355561BD5E60A00B94C44 /* image */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = image;
-			sourceTree = "<group>";
-		};
-		5C7355571BD5E61100B94C44 /* image */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = image;
-			path = ../../../../Desktop/image;
-			sourceTree = "<group>";
-		};
-		5C9AE5141BD5E332001EFEBA /* topup */ = {
-			isa = PBXGroup;
-			children = (
-				5C7355571BD5E61100B94C44 /* image */,
-				5C73554E1BD5E5BA00B94C44 /* http */,
-				5C73554D1BD5E5B400B94C44 /* data */,
-				5C73554C1BD5E5AF00B94C44 /* ui */,
-			);
-			path = topup;
-			sourceTree = "<group>";
-		};
 		5CA41C3A1BC8E688000A3484 = {
 			isa = PBXGroup;
 			children = (
@@ -544,9 +423,6 @@
 		5CA41C451BC8E688000A3484 /* gigold */ = {
 			isa = PBXGroup;
 			children = (
-				5C73554B1BD5E58D00B94C44 /* user */,
-				5C73554A1BD5E57D00B94C44 /* login */,
-				5C9AE5141BD5E332001EFEBA /* topup */,
 				5CA41C491BC8E688000A3484 /* AppDelegate.h */,
 				5CA41C4A1BC8E688000A3484 /* AppDelegate.m */,
 				5CA41C4C1BC8E688000A3484 /* ViewController.h */,

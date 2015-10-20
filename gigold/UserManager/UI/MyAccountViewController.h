@@ -9,6 +9,9 @@
 #import "MyViewController.h"
 
 @interface MyAccountViewController : MyViewController <UITableViewDataSource,UITableViewDelegate>
+{
+    NSMutableArray* dataArray;
+}
 
 @property (weak, nonatomic) IBOutlet UITableView *mTableView;
 
