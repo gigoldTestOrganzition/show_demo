@@ -6,9 +6,9 @@
 //  Copyright © 2015年 wsc. All rights reserved.
 //
 
-#import "MyViewController.h"
+#import "BaseViewController.h"
 
-@interface MyAccountViewController : MyViewController <UITableViewDataSource,UITableViewDelegate>
+@interface MyAccountViewController : BaseViewController <UITableViewDataSource,UITableViewDelegate>
 {
     NSMutableArray* dataArray;
 }

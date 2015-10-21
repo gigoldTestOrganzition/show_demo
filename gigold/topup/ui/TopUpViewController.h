@@ -6,8 +6,8 @@
 //  Copyright © 2015年 wsc. All rights reserved.
 //
 
-#import "SXPViewController.h"
+#import "BaseViewController.h"
 
-@interface TopUpViewController : SXPViewController
+@interface TopUpViewController : BaseViewController
 
 @end

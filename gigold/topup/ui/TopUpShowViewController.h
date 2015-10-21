@@ -8,8 +8,8 @@
  *充值详情
  */
 
-#import "SXPViewController.h"
+#import "BaseViewController.h"
 
-@interface TopUpShowViewController : SXPViewController
+@interface TopUpShowViewController : BaseViewController
 @property(nonatomic,copy)NSString* amount;
 @end

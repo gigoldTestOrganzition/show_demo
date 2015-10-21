@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年wsc. All rights reserved.
 //
 
-#import "MyViewController.h"
+#import "BaseViewController.h"
 
-@interface RegisterAgreementViewController : MyViewController <UITableViewDelegate,UITableViewDataSource>
+@interface RegisterAgreementViewController : BaseViewController <UITableViewDelegate,UITableViewDataSource>
 {
     NSMutableArray* titleArray;
     NSMutableArray* contenctArray;

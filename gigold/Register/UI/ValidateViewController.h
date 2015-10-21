@@ -6,7 +6,7 @@
 //  Copyright © 2015年 wsc. All rights reserved.
 //
 
-#import "MyViewController.h"
+#import "BaseViewController.h"
 #import "RegisterRequest.h"
 
 typedef enum _ValidateType
@@ -15,7 +15,7 @@ typedef enum _ValidateType
     RegisterValidate
 } ValidateType;
 
-@interface ValidateViewController : MyViewController<UITextFieldDelegate>
+@interface ValidateViewController : BaseViewController<UITextFieldDelegate>
 {
     NSTimer* timer;
     NSInteger timeCount;

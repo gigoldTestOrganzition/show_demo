@@ -6,9 +6,9 @@
 //  Copyright © 2015年 wsc. All rights reserved.
 //
 
-#import "MyViewController.h"
+#import "BaseViewController.h"
 
-@interface BankCardManagerViewController : MyViewController <UITableViewDataSource,UITableViewDelegate>
+@interface BankCardManagerViewController : BaseViewController <UITableViewDataSource,UITableViewDelegate>
 {
     NSMutableArray* dataArray;
 }

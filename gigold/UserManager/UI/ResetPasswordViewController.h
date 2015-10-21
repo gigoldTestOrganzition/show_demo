@@ -6,9 +6,9 @@
 //  Copyright © 2015年 wsc. All rights reserved.
 //
 
-#import "MyViewController.h"
+#import "BaseViewController.h"
 
-@interface ResetPasswordViewController : MyViewController <UITextFieldDelegate>
+@interface ResetPasswordViewController : BaseViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *showView1;
 @property (weak, nonatomic) IBOutlet UIView *showView2;

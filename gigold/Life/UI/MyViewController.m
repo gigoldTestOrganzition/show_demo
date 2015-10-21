@@ -21,7 +21,6 @@
 @end
 
 @implementation MyViewController
-@synthesize delegate;
 
 
 -(void)viewWillAppear:(BOOL)animated{

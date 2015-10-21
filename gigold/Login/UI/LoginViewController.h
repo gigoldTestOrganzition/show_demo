@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年wsc. All rights reserved.
 //
 
-#import "MyViewController.h"
+#import "BaseViewController.h"
 
-@interface LoginViewController : MyViewController <UITextFieldDelegate>
+@interface LoginViewController : BaseViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *showView;
 @property (weak, nonatomic) IBOutlet UIView *shadowView;

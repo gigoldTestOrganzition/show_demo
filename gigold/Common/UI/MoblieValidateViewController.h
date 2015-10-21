@@ -6,8 +6,8 @@
 //  Copyright © 2015年 wsc. All rights reserved.
 //
 
-#import "MyViewController.h"
+#import "BaseViewController.h"
 
-@interface MoblieValidateViewController : MyViewController
+@interface MoblieValidateViewController : BaseViewController
 
 @end

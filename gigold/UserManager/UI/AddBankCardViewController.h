@@ -6,9 +6,9 @@
 //  Copyright © 2015年 wsc. All rights reserved.
 //
 
-#import "MyViewController.h"
+#import "BaseViewController.h"
 
-@interface AddBankCardViewController : MyViewController
+@interface AddBankCardViewController : BaseViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *nextBtn;
 
