@@ -10,7 +10,7 @@
  */
 #import <Foundation/Foundation.h>
 #import "JsonFactory.h"
-@interface FonctionDesc : NSObject<JsonData>
+@interface FonctionDesc : NSObject
 //图片路径
 @property(nonatomic,copy)NSString* imgPath;
 //描述

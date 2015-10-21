@@ -36,12 +36,12 @@
     NSLog(@"%f %f",mainScreenWidth,mainScreenHeight);
     
     
-    [self showHelpView];
-//    if ([[AppUtils shareAppUtils] getIsFirstRun]) {
-//        [self showHelpView];
-//    }else{
-//        [self showLoginView];
-//    }
+//    [self showHelpView];
+    if ([[AppUtils shareAppUtils] getIsFirstRun]) {
+        [self showHelpView];
+    }else{
+        [self showLoginView];
+    }
     
     //设置Window为主窗口并显示出来
     [self.window makeKeyAndVisible];
@@ -113,7 +113,6 @@
     
     
     MyAccountViewController *c3 = [[MyAccountViewController alloc]init];
-    c3.view.backgroundColor = [UIColor greenColor];
     c3.title = @"我的账户";
     c3.tabBarItem.image = [UIImage imageNamed:@"HomeShoppingCart"];
     

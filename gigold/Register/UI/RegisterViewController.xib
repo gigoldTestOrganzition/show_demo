@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController">
+            <connections>
+                <outlet property="loginPWDTextField" destination="gQg-wK-SZf" id="Ucq-xt-BcH"/>
+                <outlet property="payPWDTextField" destination="tLr-pz-eEY" id="A8U-an-n2k"/>
+                <outlet property="registerBtn" destination="CFJ-LL-t6K" id="bLJ-bZ-teC"/>
+                <outlet property="serviceLabel" destination="Vr4-CO-A2H" id="WSx-Vh-scl"/>
+                <outlet property="showView1" destination="X9s-bT-7tA" id="O1D-cd-Vla"/>
+                <outlet property="showView2" destination="fhx-sv-baN" id="O9N-J6-J5F"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X9s-bT-7tA" userLabel="subView">
+                    <rect key="frame" x="40" y="111" width="520" height="41"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="填写登录密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gQg-wK-SZf" userLabel="loginPWDTextField">
+                            <rect key="frame" x="8" y="6" width="504" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="gQg-wK-SZf" secondAttribute="bottom" constant="5" id="3dj-Yf-dtt"/>
+                        <constraint firstAttribute="trailing" secondItem="gQg-wK-SZf" secondAttribute="trailing" constant="8" id="8K9-jl-RUP"/>
+                        <constraint firstItem="gQg-wK-SZf" firstAttribute="leading" secondItem="X9s-bT-7tA" secondAttribute="leading" constant="8" id="RlP-9F-HvT"/>
+                        <constraint firstItem="gQg-wK-SZf" firstAttribute="top" secondItem="X9s-bT-7tA" secondAttribute="top" constant="6" id="fnE-qR-eEO"/>
+                        <constraint firstAttribute="height" constant="41" id="wIy-fp-S2b"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fhx-sv-baN" userLabel="subView">
+                    <rect key="frame" x="40" y="188" width="520" height="41"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="填写支付密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tLr-pz-eEY" userLabel="payPWDTextField">
+                            <rect key="frame" x="8" y="6" width="504" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="tLr-pz-eEY" firstAttribute="top" secondItem="fhx-sv-baN" secondAttribute="top" constant="6" id="7Cy-Zf-aVf"/>
+                        <constraint firstItem="tLr-pz-eEY" firstAttribute="leading" secondItem="fhx-sv-baN" secondAttribute="leading" constant="8" id="Qb0-zF-kXx"/>
+                        <constraint firstAttribute="trailing" secondItem="tLr-pz-eEY" secondAttribute="trailing" constant="8" id="T4E-Kz-3k3"/>
+                        <constraint firstAttribute="bottom" secondItem="tLr-pz-eEY" secondAttribute="bottom" constant="5" id="jju-bB-Rru"/>
+                        <constraint firstAttribute="height" constant="41" id="mqo-FY-cmi"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFJ-LL-t6K">
+                    <rect key="frame" x="40" y="268" width="520" height="40"/>
+                    <color key="backgroundColor" red="0.40000000000000002" green="0.76078431369999999" blue="0.69019607839999997" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="lWW-5O-CXD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                    <state key="normal" title="注  册">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已经阅读并同意条款" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vr4-CO-A2H">
+                    <rect key="frame" x="440" y="325" width="120" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="6m2-oK-4xh"/>
+                        <constraint firstAttribute="width" constant="120" id="vxL-Sl-Hzv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="X9s-bT-7tA" secondAttribute="trailing" constant="40" id="2vG-4y-udL"/>
+                <constraint firstAttribute="trailing" secondItem="Vr4-CO-A2H" secondAttribute="trailing" constant="40" id="CL1-C9-WZo"/>
+                <constraint firstItem="CFJ-LL-t6K" firstAttribute="top" secondItem="fhx-sv-baN" secondAttribute="bottom" constant="39" id="HxT-gs-hfw"/>
+                <constraint firstItem="Vr4-CO-A2H" firstAttribute="top" secondItem="CFJ-LL-t6K" secondAttribute="bottom" constant="17" id="IW3-el-L8C"/>
+                <constraint firstAttribute="trailing" secondItem="CFJ-LL-t6K" secondAttribute="trailing" constant="40" id="LmV-nD-KV2"/>
+                <constraint firstItem="fhx-sv-baN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="QaW-wW-nci"/>
+                <constraint firstItem="tLr-pz-eEY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="48" id="WKK-ZP-eN5"/>
+                <constraint firstItem="fhx-sv-baN" firstAttribute="top" secondItem="X9s-bT-7tA" secondAttribute="bottom" constant="36" id="YoA-uV-omW"/>
+                <constraint firstAttribute="trailing" secondItem="fhx-sv-baN" secondAttribute="trailing" constant="40" id="b28-8Z-2aN"/>
+                <constraint firstItem="CFJ-LL-t6K" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="fSe-8b-J11"/>
+                <constraint firstItem="X9s-bT-7tA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="kpy-z8-SFM"/>
+                <constraint firstItem="X9s-bT-7tA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="111" id="nP2-Hq-2QC"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
