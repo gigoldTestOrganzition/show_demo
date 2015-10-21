@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5C394BFC1BCF597E009AC0AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C394BFA1BCF597E009AC0AC /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		5C447C6C1BD77A3700A049D9 /* BankCardValidateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C447C6A1BD77A3700A049D9 /* BankCardValidateViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C447C6D1BD77A3700A049D9 /* BankCardValidateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C447C6B1BD77A3700A049D9 /* BankCardValidateViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		5C5A2DC41BD6115D00C4AE1D /* AppUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D871BD6115D00C4AE1D /* AppUtils.m */; settings = {ASSET_TAGS = (); }; };
 		5C5A2DC51BD6115D00C4AE1D /* FMNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D8B1BD6115D00C4AE1D /* FMNetWorkManager.m */; settings = {ASSET_TAGS = (); }; };
 		5C5A2DC61BD6115D00C4AE1D /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D8F1BD6115D00C4AE1D /* MyViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -31,6 +33,8 @@
 		5C5A2DD81BD6115D00C4AE1D /* PasswordManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2DC01BD6115D00C4AE1D /* PasswordManagerViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		5C5A2DD91BD6115D00C4AE1D /* ResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2DC21BD6115D00C4AE1D /* ResetPasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5C5A2DDA1BD6115D00C4AE1D /* ResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2DC31BD6115D00C4AE1D /* ResetPasswordViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		5C746C871BD77EB0007A7DE6 /* MoblieValidateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C746C851BD77EB0007A7DE6 /* MoblieValidateViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C746C881BD77EB0007A7DE6 /* MoblieValidateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C746C861BD77EB0007A7DE6 /* MoblieValidateViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		5CA41C481BC8E688000A3484 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41C471BC8E688000A3484 /* main.m */; };
 		5CA41C4B1BC8E688000A3484 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41C4A1BC8E688000A3484 /* AppDelegate.m */; };
 		5CA41C4E1BC8E688000A3484 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41C4D1BC8E688000A3484 /* ViewController.m */; };
@@ -38,6 +42,10 @@
 		5CA41C531BC8E688000A3484 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CA41C521BC8E688000A3484 /* Assets.xcassets */; };
 		5CA41C611BC8E688000A3484 /* gigoldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41C601BC8E688000A3484 /* gigoldTests.m */; };
 		5CA41C6C1BC8E688000A3484 /* gigoldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41C6B1BC8E688000A3484 /* gigoldUITests.m */; };
+		5CBE16E81BD76D0400692B0A /* BankCardManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE16E61BD76D0400692B0A /* BankCardManagerViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5CBE16E91BD76D0400692B0A /* BankCardManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CBE16E71BD76D0400692B0A /* BankCardManagerViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		5CBE16ED1BD76F9F00692B0A /* AddBankCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE16EB1BD76F9F00692B0A /* AddBankCardViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5CBE16EE1BD76F9F00692B0A /* AddBankCardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CBE16EC1BD76F9F00692B0A /* AddBankCardViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		DCB348EA5503450DD424BB4D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA29EA734CC24C2A6E7B458A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +69,9 @@
 /* Begin PBXFileReference section */
 		05C9FF4D315E838F911D2C11 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		5C394BFB1BCF597E009AC0AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5C447C691BD77A3700A049D9 /* BankCardValidateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardValidateViewController.h; sourceTree = "<group>"; };
+		5C447C6A1BD77A3700A049D9 /* BankCardValidateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardValidateViewController.m; sourceTree = "<group>"; };
+		5C447C6B1BD77A3700A049D9 /* BankCardValidateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardValidateViewController.xib; sourceTree = "<group>"; };
 		5C5A2D861BD6115D00C4AE1D /* AppUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppUtils.h; sourceTree = "<group>"; };
 		5C5A2D871BD6115D00C4AE1D /* AppUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppUtils.m; sourceTree = "<group>"; };
 		5C5A2D891BD6115D00C4AE1D /* FMMacro_URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMMacro_URL.h; sourceTree = "<group>"; };
@@ -101,6 +112,9 @@
 		5C5A2DC21BD6115D00C4AE1D /* ResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordViewController.m; sourceTree = "<group>"; };
 		5C5A2DC31BD6115D00C4AE1D /* ResetPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResetPasswordViewController.xib; sourceTree = "<group>"; };
 		5C5A2DDB1BD6118D00C4AE1D /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = gigold/PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
+		5C746C841BD77EB0007A7DE6 /* MoblieValidateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoblieValidateViewController.h; sourceTree = "<group>"; };
+		5C746C851BD77EB0007A7DE6 /* MoblieValidateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoblieValidateViewController.m; sourceTree = "<group>"; };
+		5C746C861BD77EB0007A7DE6 /* MoblieValidateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoblieValidateViewController.xib; sourceTree = "<group>"; };
 		5CA41C431BC8E688000A3484 /* gigold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gigold.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA41C471BC8E688000A3484 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5CA41C491BC8E688000A3484 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -116,6 +130,12 @@
 		5CA41C671BC8E688000A3484 /* gigoldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gigoldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA41C6B1BC8E688000A3484 /* gigoldUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gigoldUITests.m; sourceTree = "<group>"; };
 		5CA41C6D1BC8E688000A3484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CBE16E51BD76D0400692B0A /* BankCardManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardManagerViewController.h; sourceTree = "<group>"; };
+		5CBE16E61BD76D0400692B0A /* BankCardManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardManagerViewController.m; sourceTree = "<group>"; };
+		5CBE16E71BD76D0400692B0A /* BankCardManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardManagerViewController.xib; sourceTree = "<group>"; };
+		5CBE16EA1BD76F9F00692B0A /* AddBankCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBankCardViewController.h; sourceTree = "<group>"; };
+		5CBE16EB1BD76F9F00692B0A /* AddBankCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBankCardViewController.m; sourceTree = "<group>"; };
+		5CBE16EC1BD76F9F00692B0A /* AddBankCardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddBankCardViewController.xib; sourceTree = "<group>"; };
 		660292318B52F537CA48DCED /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AA29EA734CC24C2A6E7B458A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -163,6 +183,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5C447C6E1BD77A4600A049D9 /* BankCardManager */ = {
+			isa = PBXGroup;
+			children = (
+				5CBE16E51BD76D0400692B0A /* BankCardManagerViewController.h */,
+				5CBE16E61BD76D0400692B0A /* BankCardManagerViewController.m */,
+				5CBE16E71BD76D0400692B0A /* BankCardManagerViewController.xib */,
+				5CBE16EA1BD76F9F00692B0A /* AddBankCardViewController.h */,
+				5CBE16EB1BD76F9F00692B0A /* AddBankCardViewController.m */,
+				5CBE16EC1BD76F9F00692B0A /* AddBankCardViewController.xib */,
+				5C447C691BD77A3700A049D9 /* BankCardValidateViewController.h */,
+				5C447C6A1BD77A3700A049D9 /* BankCardValidateViewController.m */,
+				5C447C6B1BD77A3700A049D9 /* BankCardValidateViewController.xib */,
+			);
+			name = BankCardManager;
+			sourceTree = "<group>";
+		};
 		5C5A2D841BD6115C00C4AE1D /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +242,9 @@
 			children = (
 				5C5A2D8E1BD6115D00C4AE1D /* MyViewController.h */,
 				5C5A2D8F1BD6115D00C4AE1D /* MyViewController.m */,
+				5C746C841BD77EB0007A7DE6 /* MoblieValidateViewController.h */,
+				5C746C851BD77EB0007A7DE6 /* MoblieValidateViewController.m */,
+				5C746C861BD77EB0007A7DE6 /* MoblieValidateViewController.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -388,6 +427,7 @@
 				5C5A2DBB1BD6115D00C4AE1D /* MyAccountViewController.h */,
 				5C5A2DBC1BD6115D00C4AE1D /* MyAccountViewController.m */,
 				5C5A2DBD1BD6115D00C4AE1D /* MyAccountViewController.xib */,
+				5C447C6E1BD77A4600A049D9 /* BankCardManager */,
 				5C5A2DBE1BD6115D00C4AE1D /* PasswordManagerViewController.h */,
 				5C5A2DBF1BD6115D00C4AE1D /* PasswordManagerViewController.m */,
 				5C5A2DC01BD6115D00C4AE1D /* PasswordManagerViewController.xib */,
@@ -574,11 +614,15 @@
 			files = (
 				5C5A2DCA1BD6115D00C4AE1D /* LoginViewController.xib in Resources */,
 				5C5A2DDA1BD6115D00C4AE1D /* ResetPasswordViewController.xib in Resources */,
+				5C447C6D1BD77A3700A049D9 /* BankCardValidateViewController.xib in Resources */,
+				5CBE16E91BD76D0400692B0A /* BankCardManagerViewController.xib in Resources */,
 				5CA41C531BC8E688000A3484 /* Assets.xcassets in Resources */,
 				5C5A2DCD1BD6115D00C4AE1D /* RegisterAgreementViewController.xib in Resources */,
+				5C746C881BD77EB0007A7DE6 /* MoblieValidateViewController.xib in Resources */,
 				5C5A2DD81BD6115D00C4AE1D /* PasswordManagerViewController.xib in Resources */,
 				5C5A2DD11BD6115D00C4AE1D /* SetUpPasswordViewController.xib in Resources */,
 				5C5A2DD61BD6115D00C4AE1D /* MyAccountViewController.xib in Resources */,
+				5CBE16EE1BD76F9F00692B0A /* AddBankCardViewController.xib in Resources */,
 				5C5A2DD31BD6115D00C4AE1D /* ValidateViewController.xib in Resources */,
 				5CA41C511BC8E688000A3484 /* Main.storyboard in Resources */,
 				5C394BFC1BCF597E009AC0AC /* LaunchScreen.storyboard in Resources */,
@@ -641,6 +685,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C5A2DD01BD6115D00C4AE1D /* SetUpPasswordViewController.m in Sources */,
+				5C447C6C1BD77A3700A049D9 /* BankCardValidateViewController.m in Sources */,
 				5C5A2DC61BD6115D00C4AE1D /* MyViewController.m in Sources */,
 				5C5A2DD21BD6115D00C4AE1D /* ValidateViewController.m in Sources */,
 				5CA41C4E1BC8E688000A3484 /* ViewController.m in Sources */,
@@ -652,6 +697,9 @@
 				5CA41C4B1BC8E688000A3484 /* AppDelegate.m in Sources */,
 				5C5A2DC81BD6115D00C4AE1D /* LoginRequest.m in Sources */,
 				5CA41C481BC8E688000A3484 /* main.m in Sources */,
+				5CBE16ED1BD76F9F00692B0A /* AddBankCardViewController.m in Sources */,
+				5C746C871BD77EB0007A7DE6 /* MoblieValidateViewController.m in Sources */,
+				5CBE16E81BD76D0400692B0A /* BankCardManagerViewController.m in Sources */,
 				5C5A2DD41BD6115D00C4AE1D /* UserInfoRequest.m in Sources */,
 				5C5A2DCE1BD6115D00C4AE1D /* RegisterViewController.m in Sources */,
 				5C5A2DC91BD6115D00C4AE1D /* LoginViewController.m in Sources */,

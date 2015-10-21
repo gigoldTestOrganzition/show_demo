@@ -17,28 +17,11 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-//    self.navigationController.navigationBarHidden = YES;
+
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.backBarButtonItem = item;
 }
 
--(void)headImageViewCreat{
-    CGFloat itemCount = 8;
-    CGFloat itemWidth = self.view.frame.size.width/itemCount;
-    
-    for (NSInteger i = 0; i < itemCount; i++) {
-        UIView* itemView = [[UIView alloc] initWithFrame:CGRectMake(i*itemWidth, 44+STATUSBAR_OFFSET-itemWidth/2+5, itemWidth, itemWidth)];
-        if (i % 2 == 0) {
-            itemView.backgroundColor = tabBarColor;
-        }else{
-            itemView.backgroundColor = navigationBarBtnColor;
-        }
-        UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:itemView.bounds byRoundingCorners:UIRectCornerBottomLeft|UIRectCornerBottomRight  cornerRadii:CGSizeMake(itemWidth/2, itemWidth/2)];
-        CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
-        maskLayer.frame = itemView.bounds;
-        maskLayer.path = maskPath.CGPath;
-        itemView.layer.mask = maskLayer;
-        [self.view addSubview:itemView];
-    }
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

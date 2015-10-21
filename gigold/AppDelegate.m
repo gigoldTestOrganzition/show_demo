@@ -34,6 +34,12 @@
     
     NSLog(@"%f %f",mainScreenWidth,mainScreenHeight);
     
+    //设置NavigationBar背景颜色
+    [[UINavigationBar appearance] setBarTintColor:[UIColor redColor]];
+    //@{}代表Dictionary
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
     
 //    [self showHelpView];
     if ([[AppUtils shareAppUtils] getIsFirstRun]) {
@@ -73,6 +79,10 @@
 
 
 -(void)showMainView{
+    
+    
+    
+    
     //a.初始化一个tabBar控制器
     UITabBarController *tb= [[UITabBarController alloc]init];
     tb.tabBar.selectedImageTintColor = UIColorFromRGB(0xFFFFFF);
@@ -118,6 +128,7 @@
     UINavigationController* nav3 = [[UINavigationController alloc] initWithRootViewController:c3];
     
     tb.viewControllers=@[nav1,nav2,nav3];
+    
     
     self.window.rootViewController = tb;
 }

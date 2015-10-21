@@ -1,23 +1,24 @@
 //
-//  MyAccountViewController.m
+//  BankCardManagerViewController.m
 //  gigold
 //
-//  Created by wsc on 15/10/12.
+//  Created by wsc on 15/10/21.
 //  Copyright © 2015年 wsc. All rights reserved.
 //
 
-#import "MyAccountViewController.h"
-#import "PasswordManagerViewController.h"
 #import "BankCardManagerViewController.h"
+#import "AddBankCardViewController.h"
 
-@interface MyAccountViewController ()
+@interface BankCardManagerViewController ()
 
 @end
 
-@implementation MyAccountViewController
+@implementation BankCardManagerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"我的银行卡";
     
     dataArray = [[NSMutableArray alloc] initWithObjects:@"吉高宝",@"账户余额",@"银行卡管理",@"密码管理", nil];
     
@@ -25,29 +26,29 @@
     self.mTableView.dataSource = self;
     
     [self tableViewFooterViewCreat];
-    
     // Do any additional setup after loading the view from its nib.
 }
 
 -(void)tableViewFooterViewCreat{
     UIView* footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, mainScreenWidth, 50)];
     
-    UIButton* logoutBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    logoutBtn.frame = CGRectMake(40, 10, footerView.frame.size.width-2*40, 30);
-    logoutBtn.layer.borderWidth = 1;
-    logoutBtn.layer.borderColor = [UIColor blackColor].CGColor;
-    logoutBtn.layer.cornerRadius = 5;
-    [logoutBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [logoutBtn setTitle:@"退出登录" forState:UIControlStateNormal];
-    [logoutBtn addTarget:self action:@selector(logoutBtnPress) forControlEvents:UIControlEventTouchUpInside];
+    UIButton* addBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    addBtn.frame = CGRectMake(40, 10, footerView.frame.size.width-2*40, 30);
+    addBtn.layer.borderWidth = 1;
+    addBtn.layer.borderColor = [UIColor blackColor].CGColor;
+    addBtn.layer.cornerRadius = 5;
+    [addBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [addBtn setTitle:@"添加新的银行卡" forState:UIControlStateNormal];
+    [addBtn addTarget:self action:@selector(addBtnPress) forControlEvents:UIControlEventTouchUpInside];
     
-    [footerView addSubview:logoutBtn];
+    [footerView addSubview:addBtn];
     
     self.mTableView.tableFooterView = footerView;
 }
 
--(void)logoutBtnPress{
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"showLoginView" object:nil];
+-(void)addBtnPress{
+    AddBankCardViewController* addBankCardView = [[AddBankCardViewController alloc] init];
+    [self.navigationController pushViewController:addBankCardView animated:YES];
 }
 
 #pragma mark ---- UITableViewDataSource,UITableViewDelegate --------
@@ -74,25 +75,6 @@
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
-}
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 0) {
-        NSLog(@"去吉高宝");
-    }else if (indexPath.row == 1){
-        NSLog(@"去账户余额");
-    }
-    else if (indexPath.row == 2){
-        NSLog(@"去银行卡管理");
-        BankCardManagerViewController* bankCardView = [[BankCardManagerViewController alloc] init];
-        [bankCardView setHidesBottomBarWhenPushed:YES];
-        [self.navigationController pushViewController:bankCardView animated:YES];
-    }
-    else if (indexPath.row == 3){
-        PasswordManagerViewController* passwordManagerView = [[PasswordManagerViewController alloc] init];
-        [passwordManagerView setHidesBottomBarWhenPushed:YES];
-        [self.navigationController pushViewController:passwordManagerView animated:YES];
-    }
 }
 
 - (void)didReceiveMemoryWarning {
