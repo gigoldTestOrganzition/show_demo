@@ -12,6 +12,7 @@
 #import "SetUpPasswordViewController.h"
 #import "ResetPasswordViewController.h"
 #import "MyAccountViewController.h"
+#import "appliacation_attribute.h"
 
 @interface AppDelegate ()
 
@@ -106,7 +107,9 @@
     tb.tabBar.translucent = NO;
     
     //b.创建子控制器
-    MyViewController *c1 = [[MyViewController alloc]init];
+    //MyViewController *c1 = [[MyViewController alloc]init];
+    MyViewController *c1 = (MyViewController*)storyboard_controller(@"MyViewController");
+    
     c1.view.backgroundColor = [UIColor grayColor];
     c1.title = @"社区生活";
     c1.tabBarItem.image = [UIImage imageNamed:@"Home"];
@@ -128,8 +131,7 @@
     UINavigationController* nav3 = [[UINavigationController alloc] initWithRootViewController:c3];
     
     tb.viewControllers=@[nav1,nav2,nav3];
-    
-    
+
     self.window.rootViewController = tb;
 }
 

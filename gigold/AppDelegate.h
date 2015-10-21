@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SXPAppDelegate.h" 
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : SXPAppDelegate
 
-@property (strong, nonatomic) UIWindow *window;
 
 
 @end

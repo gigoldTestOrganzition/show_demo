@@ -23,8 +23,6 @@
 
 @interface MyViewController : UIViewController <MyViewControllerDelegate>
 
--(void)headImageViewCreat;
-
 @property (assign, nonatomic)id <MyViewControllerDelegate>delegate;
 
 @end
