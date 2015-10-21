@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.leftBtn addTarget:self action:@selector(leftBtnPress) forControlEvents:UIControlEventTouchUpInside];
+    self.title = @"密码管理";
     
     self.mTableView.delegate = self;
     self.mTableView.dataSource = self;
@@ -56,7 +56,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     ResetPasswordViewController* resetView = [[ResetPasswordViewController alloc] init];
-    resetView.titleLabel.text = @"重置密码";
+    resetView.title = @"重置密码";
     [self.navigationController pushViewController:resetView animated:YES];
 }
 

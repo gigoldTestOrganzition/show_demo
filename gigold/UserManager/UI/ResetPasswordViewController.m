@@ -21,8 +21,6 @@
     
     [self.view addGestureRecognizer:oneTap];
     
-    [self.leftBtn addTarget:self action:@selector(leftBtnPress) forControlEvents:UIControlEventTouchUpInside];
-    
     self.showView1.backgroundColor = [UIColor clearColor];
     self.showView1.layer.borderWidth = 1;
     self.showView1.layer.borderColor = UIColorFromRGB(0xAFC875).CGColor;

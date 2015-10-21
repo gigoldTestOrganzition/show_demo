@@ -21,8 +21,6 @@ typedef enum _ValidateType
     NSInteger timeCount;
 }
 @property (weak, nonatomic) IBOutlet UIButton *validateBtn;
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-@property (weak, nonatomic) IBOutlet UIButton *leftBtn;
 @property (weak, nonatomic) IBOutlet UIView *showView;
 @property (weak, nonatomic) IBOutlet UIView *shadowView;
 @property (weak, nonatomic) IBOutlet UITextField *accountTextField;

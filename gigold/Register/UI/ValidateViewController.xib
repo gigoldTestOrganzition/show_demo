@@ -8,11 +8,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ValidateViewController">
             <connections>
                 <outlet property="accountTextField" destination="xuV-UY-6je" id="FHt-yB-ztx"/>
-                <outlet property="leftBtn" destination="EMV-Kb-jhM" id="crf-tm-max"/>
                 <outlet property="shadowView" destination="SIF-Tm-lez" id="JUT-a3-YzB"/>
                 <outlet property="showView" destination="pre-3b-1go" id="tsw-rD-WgC"/>
                 <outlet property="sureBtn" destination="pAF-Se-Cjl" id="9ca-lc-ghg"/>
-                <outlet property="titleLabel" destination="6to-et-jvG" id="R5o-8g-T3X"/>
                 <outlet property="validateBtn" destination="ob9-nB-SVk" id="Kcs-FZ-Ygh"/>
                 <outlet property="validateTextField" destination="T1Q-vB-Z1Y" id="HLQ-5p-11Y"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -23,39 +21,6 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4sg-V4-2Bp" userLabel="headView">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="短信验证" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6to-et-jvG">
-                            <rect key="frame" x="261" y="20" width="79" height="44"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="79" id="StR-qw-pP7"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMV-Kb-jhM" userLabel="leftBtn">
-                            <rect key="frame" x="0.0" y="20" width="44" height="44"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="44" id="Jqw-0r-jmj"/>
-                                <constraint firstAttribute="width" constant="44" id="M9W-gB-3AC"/>
-                            </constraints>
-                            <state key="normal" image="nav_back">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" red="0.25882352939999997" green="0.3803921569" blue="0.56078431370000004" alpha="1" colorSpace="deviceRGB"/>
-                    <constraints>
-                        <constraint firstItem="6to-et-jvG" firstAttribute="top" secondItem="4sg-V4-2Bp" secondAttribute="top" constant="20" id="Jud-8g-XE0"/>
-                        <constraint firstAttribute="bottom" secondItem="6to-et-jvG" secondAttribute="bottom" id="Mqk-87-IXE"/>
-                        <constraint firstItem="EMV-Kb-jhM" firstAttribute="leading" secondItem="4sg-V4-2Bp" secondAttribute="leading" id="lYN-Ur-GMr"/>
-                        <constraint firstItem="EMV-Kb-jhM" firstAttribute="top" secondItem="4sg-V4-2Bp" secondAttribute="top" constant="20" id="oQg-Wh-4Js"/>
-                        <constraint firstAttribute="height" constant="64" id="uwv-k4-itI"/>
-                        <constraint firstAttribute="bottom" secondItem="EMV-Kb-jhM" secondAttribute="bottom" id="xdh-cO-unK"/>
-                    </constraints>
-                </view>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pre-3b-1go" userLabel="showView">
                     <rect key="frame" x="15" y="112" width="570" height="86"/>
                     <subviews>
@@ -149,22 +114,17 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="6to-et-jvG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="2WP-Zk-BNt"/>
                 <constraint firstAttribute="trailing" secondItem="pAF-Se-Cjl" secondAttribute="trailing" constant="15" id="8kw-uy-aBB"/>
                 <constraint firstItem="pre-3b-1go" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="112" id="DuP-Kp-73V"/>
                 <constraint firstItem="pre-3b-1go" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="IDc-g8-o4m"/>
                 <constraint firstItem="pAF-Se-Cjl" firstAttribute="top" secondItem="pre-3b-1go" secondAttribute="bottom" constant="18" id="Mv9-d9-Csg"/>
-                <constraint firstItem="4sg-V4-2Bp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QtO-hj-j9H"/>
-                <constraint firstAttribute="trailing" secondItem="4sg-V4-2Bp" secondAttribute="trailing" id="VEk-UT-l4E"/>
                 <constraint firstAttribute="trailing" secondItem="pre-3b-1go" secondAttribute="trailing" constant="15" id="Y0b-fM-dV5"/>
                 <constraint firstItem="pAF-Se-Cjl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="fKs-ht-yeP"/>
-                <constraint firstItem="4sg-V4-2Bp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yGL-8a-rBQ"/>
             </constraints>
         </view>
     </objects>
     <resources>
         <image name="login_account" width="44" height="44"/>
         <image name="login_password" width="44" height="44"/>
-        <image name="nav_back" width="44" height="44"/>
     </resources>
 </document>

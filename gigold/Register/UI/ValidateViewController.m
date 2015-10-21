@@ -18,11 +18,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"短信验证";
+    
     UITapGestureRecognizer* oneTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selfViewPress)];
     
     [self.view addGestureRecognizer:oneTap];
-    
-    [self.leftBtn addTarget:self action:@selector(leftBtnPress) forControlEvents:UIControlEventTouchUpInside];
     
     self.showView.backgroundColor = UIColorFromRGB(0xFFFFFF);
     self.showView.layer.cornerRadius = 5;

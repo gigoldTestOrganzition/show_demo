@@ -52,7 +52,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.leftBtn addTarget:self action:@selector(leftBtnPress) forControlEvents:UIControlEventTouchUpInside];
+    self.title = @"服务条款";
     
     titleArray = [[NSMutableArray alloc] initWithObjects:TITLE1,TITLE2,TITLE3,TITLE4,TITLE5,TITLE6,TITLE7,TITLE8,TITLE9,TITLE10,TITLE11, nil];
     contenctArray = [[NSMutableArray alloc] initWithObjects:CONTENT1,CONTENT2,CONTENT3,CONTENT4,CONTENT5,CONTENT6,CONTENT7,CONTENT8,CONTENT9,CONTENT10,CONTENT11, nil];

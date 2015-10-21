@@ -22,8 +22,7 @@
     UITapGestureRecognizer* oneTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selfViewPress)];
     
     [self.view addGestureRecognizer:oneTap];
-    
-    [self.leftBtn addTarget:self action:@selector(leftBtnPress) forControlEvents:UIControlEventTouchUpInside];
+
     
     self.showView.backgroundColor = UIColorFromRGB(0xFFFFFF);
     self.showView.layer.cornerRadius = 5;
@@ -48,6 +47,10 @@
     //测试数据
     self.accountTextField.text = @"12345678900";
     self.passwordTextField.text = @"1324";
+    
+    self.title = @"登录";
+    
+//    self.navigationControlle
     
     NSLog(@"md5%@",[[AppUtils shareAppUtils] md5:@"13511407383+yyyyyyyyy"]);
 }

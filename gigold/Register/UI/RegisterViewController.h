@@ -13,8 +13,6 @@
     BOOL isAgree;
 }
 
-@property (weak, nonatomic) IBOutlet UIButton *leftBtn;
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIView *showView1;
 @property (weak, nonatomic) IBOutlet UIView *showView2;
 @property (weak, nonatomic) IBOutlet UITextField *loginPWDTextField;

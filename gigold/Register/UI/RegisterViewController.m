@@ -16,13 +16,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"注册";
+    
     isAgree = YES;
     
     UITapGestureRecognizer* oneTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selfViewPress)];
     
     [self.view addGestureRecognizer:oneTap];
-    
-    [self.leftBtn addTarget:self action:@selector(leftBtnPress) forControlEvents:UIControlEventTouchUpInside];
     
     self.showView1.backgroundColor = [UIColor clearColor];
     self.showView1.layer.borderWidth = 1;

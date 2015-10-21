@@ -14,7 +14,7 @@
     NSMutableArray* contenctArray;
 }
 
-@property (weak, nonatomic) IBOutlet UIButton *leftBtn;
+
 @property (weak, nonatomic) IBOutlet UITableView *mTableView;
 
 @end
