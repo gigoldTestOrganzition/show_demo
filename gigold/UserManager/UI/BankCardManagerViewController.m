@@ -48,6 +48,7 @@
 
 -(void)addBtnPress{
     AddBankCardViewController* addBankCardView = [[AddBankCardViewController alloc] init];
+    addBankCardView.delegate = self;
     [self.navigationController pushViewController:addBankCardView animated:YES];
 }
 

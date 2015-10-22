@@ -115,7 +115,7 @@
     
     NSLog(@"historyDict%@",[[AppUtils shareAppUtils] getHistoricalAccount]);
     
-    [[AppUtils shareAppUtils] showHUD:@"登录成功"];
+    [[AppUtils shareAppUtils] showHUD:@"登录成功" andView:self.view];
     
     [self performSelector:@selector(delayMethod) withObject:nil afterDelay:1.0f];
     
@@ -133,7 +133,7 @@
 }
 -(void)LoginFailInData:(NSString*)message{
     NSLog(@"登录失败，原因是:%@",message);
-    [[AppUtils shareAppUtils] showHUD:message];
+    [[AppUtils shareAppUtils] showHUD:message andView:self.view];
 }
 
 #pragma mark ---- textFieldDelegate -----

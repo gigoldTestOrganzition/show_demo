@@ -30,8 +30,19 @@
 
 -(void)nextBtnPress{
     MoblieValidateViewController* moblieValidateView = [[MoblieValidateViewController alloc] init];
+    moblieValidateView.delegate = self;
     moblieValidateView.title = @"安全验证";
     [self.navigationController pushViewController:moblieValidateView animated:YES];
+}
+
+-(void)UIViewControllerBack:(BaseViewController *)baseViewController{
+    if ([baseViewController isKindOfClass:[MoblieValidateViewController class]]) {
+        [self.navigationController popViewControllerAnimated:NO];
+        if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
+            [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
+        }
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning {

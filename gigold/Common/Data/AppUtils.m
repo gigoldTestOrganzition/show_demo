@@ -269,17 +269,16 @@ NSUserDefaults *defaults = nil;
     [alert show];
 }
 
--(void)showHUD:(NSString*)text
+-(void)showHUD:(NSString*)text andView:(UIView*)view
 {
-    UIViewController *vc = ((UINavigationController*)(Etappdelegate.window.rootViewController)).topViewController;
-    MBProgressHUD *hud = [[MBProgressHUD alloc]initWithView:vc.view];
-    [vc.view addSubview:hud];
+    
+    MBProgressHUD *hud = [[MBProgressHUD alloc]initWithView:view];
+    [view addSubview:hud];
     hud.customView = [[UIView alloc] init] ;
     hud.mode = MBProgressHUDModeCustomView;
     hud.labelText = text;
     [hud show:YES];
     [hud hide:YES afterDelay:0.3];
-    
 }
 
 

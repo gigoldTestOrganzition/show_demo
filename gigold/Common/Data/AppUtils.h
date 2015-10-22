@@ -48,7 +48,7 @@
 
 
 - (void)showAlert:(NSString*)text;
-- (void)showHUD:(NSString*)text;
+- (void)showHUD:(NSString*)text andView:(UIView*)view;
 
 - (void)openAppWithIdentifier:(NSString *)appId andOwner:(UIViewController*)vc;
 - (void)openAppGoCommentWithAppId:(NSString*)appId andOwner:(UIViewController*)vc;
