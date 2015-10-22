@@ -32,9 +32,21 @@
 -(void)initData{
     functionDatas = [NSMutableArray new];
     NSArray *desStr = @[@"充值",@"转账",@"话费充值",@"生活缴费",@"物业费",@"停车费",@"吉高宝"];
+    NSArray *selArray = [[NSArray alloc]initWithObjects:[NSValue valueWithPointer:@selector(topup)],
+        [NSValue valueWithPointer:@selector(transfer)],
+        [NSValue valueWithPointer:@selector(phoneTopup)],
+        [NSValue valueWithPointer:@selector(lifePay)],
+        [NSValue valueWithPointer:@selector(propertyPay)],
+            [NSValue valueWithPointer:@selector(stopCarPay)],
+        [NSValue valueWithPointer:@selector(gigoldTreasure)],nil];
+    
+    
+    
+    int i = 0;
     for (NSString* itemStr in desStr) {
         FonctionDesc* fonctionDesc = [FonctionDesc new];
         fonctionDesc.desc = itemStr;
+        fonctionDesc.action = [selArray[i++] pointerValue];
         [functionDatas addObject:fonctionDesc];
     }
  }
@@ -75,19 +87,21 @@
 }
 //转账
 -(void)transfer{
+    NSLog(@"转账");
     
 }
 //话费充值
 -(void)phoneTopup{
+    NSLog(@"话费充值");
     
 }
 // 生活缴费
 -(void)lifePay{
-    
+    NSLog(@"生活缴费");
 }
 //物业费
 -(void)propertyPay{
-    
+    NSLog(@"物业费");
 }
 //停车费
 -(void)stopCarPay{
@@ -123,10 +137,9 @@
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-   //FonctionDesc* funDesc =  functionDatas[indexPath.row];
-    if (indexPath.row == 0) {
-        [self performSelector:@selector(topup)];
-    }
+   FonctionDesc* funDesc =  functionDatas[indexPath.row];
+    [self performSelector:funDesc.action];
+    
 }
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     return CGSizeMake(screenWidth/3-1,screenWidth/4);

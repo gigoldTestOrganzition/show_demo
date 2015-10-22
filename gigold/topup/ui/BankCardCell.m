@@ -11,7 +11,7 @@
 @implementation BankCardCell
 @synthesize bankImg=_bankImg;
 @synthesize name=_name;
-@synthesize amount=_amount;
+@synthesize amountLable=_amountLable;
 
 - (void)awakeFromNib {
     // Initialization code
