@@ -9,6 +9,7 @@
 #import "MyAccountViewController.h"
 #import "PasswordManagerViewController.h"
 #import "BankCardManagerViewController.h"
+#import "IncomeAEViewController.h"
 
 @interface MyAccountViewController ()
 
@@ -81,6 +82,9 @@
         NSLog(@"去吉高宝");
     }else if (indexPath.row == 1){
         NSLog(@"去账户余额");
+        IncomeAEViewController* incomeAEView = [[IncomeAEViewController alloc] init];
+        [incomeAEView setHidesBottomBarWhenPushed:YES];
+        [self.navigationController pushViewController:incomeAEView animated:YES];
     }
     else if (indexPath.row == 2){
         NSLog(@"去银行卡管理");

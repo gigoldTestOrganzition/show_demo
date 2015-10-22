@@ -48,6 +48,8 @@
 		5C746CB61BD78FE4007A7DE6 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C746CB11BD78FE4007A7DE6 /* MyViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		5C746CBB1BD79015007A7DE6 /* libUPPayPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C746CB81BD79015007A7DE6 /* libUPPayPlugin.a */; settings = {ASSET_TAGS = (); }; };
 		5C746CBD1BD7903B007A7DE6 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C746CBC1BD7903B007A7DE6 /* libsqlite3.0.tbd */; };
+		5C93B8E01BD8913600E8A8AA /* IncomeAEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C93B8DE1BD8913600E8A8AA /* IncomeAEViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C93B8E11BD8913600E8A8AA /* IncomeAEViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C93B8DF1BD8913600E8A8AA /* IncomeAEViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		5CA41C481BC8E688000A3484 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41C471BC8E688000A3484 /* main.m */; };
 		5CA41C4B1BC8E688000A3484 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41C4A1BC8E688000A3484 /* AppDelegate.m */; };
 		5CA41C4E1BC8E688000A3484 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41C4D1BC8E688000A3484 /* ViewController.m */; };
@@ -151,6 +153,9 @@
 		5C746CB91BD79015007A7DE6 /* UPPayPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPPayPlugin.h; sourceTree = "<group>"; };
 		5C746CBA1BD79015007A7DE6 /* UPPayPluginDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPPayPluginDelegate.h; sourceTree = "<group>"; };
 		5C746CBC1BD7903B007A7DE6 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		5C93B8DD1BD8913600E8A8AA /* IncomeAEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncomeAEViewController.h; sourceTree = "<group>"; };
+		5C93B8DE1BD8913600E8A8AA /* IncomeAEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncomeAEViewController.m; sourceTree = "<group>"; };
+		5C93B8DF1BD8913600E8A8AA /* IncomeAEViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IncomeAEViewController.xib; sourceTree = "<group>"; };
 		5CA41C431BC8E688000A3484 /* gigold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gigold.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA41C471BC8E688000A3484 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5CA41C491BC8E688000A3484 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -468,12 +473,8 @@
 				5C5A2DBC1BD6115D00C4AE1D /* MyAccountViewController.m */,
 				5C5A2DBD1BD6115D00C4AE1D /* MyAccountViewController.xib */,
 				5C447C6E1BD77A4600A049D9 /* BankCardManager */,
-				5C5A2DBE1BD6115D00C4AE1D /* PasswordManagerViewController.h */,
-				5C5A2DBF1BD6115D00C4AE1D /* PasswordManagerViewController.m */,
-				5C5A2DC01BD6115D00C4AE1D /* PasswordManagerViewController.xib */,
-				5C5A2DC11BD6115D00C4AE1D /* ResetPasswordViewController.h */,
-				5C5A2DC21BD6115D00C4AE1D /* ResetPasswordViewController.m */,
-				5C5A2DC31BD6115D00C4AE1D /* ResetPasswordViewController.xib */,
+				5C93B8DB1BD88FBD00E8A8AA /* PasswordManager */,
+				5C93B8DC1BD8905100E8A8AA /* IncomeAndExpenditure */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -568,6 +569,29 @@
 				5C746CBA1BD79015007A7DE6 /* UPPayPluginDelegate.h */,
 			);
 			path = UPPayPlugin;
+			sourceTree = "<group>";
+		};
+		5C93B8DB1BD88FBD00E8A8AA /* PasswordManager */ = {
+			isa = PBXGroup;
+			children = (
+				5C5A2DBE1BD6115D00C4AE1D /* PasswordManagerViewController.h */,
+				5C5A2DBF1BD6115D00C4AE1D /* PasswordManagerViewController.m */,
+				5C5A2DC01BD6115D00C4AE1D /* PasswordManagerViewController.xib */,
+				5C5A2DC11BD6115D00C4AE1D /* ResetPasswordViewController.h */,
+				5C5A2DC21BD6115D00C4AE1D /* ResetPasswordViewController.m */,
+				5C5A2DC31BD6115D00C4AE1D /* ResetPasswordViewController.xib */,
+			);
+			name = PasswordManager;
+			sourceTree = "<group>";
+		};
+		5C93B8DC1BD8905100E8A8AA /* IncomeAndExpenditure */ = {
+			isa = PBXGroup;
+			children = (
+				5C93B8DD1BD8913600E8A8AA /* IncomeAEViewController.h */,
+				5C93B8DE1BD8913600E8A8AA /* IncomeAEViewController.m */,
+				5C93B8DF1BD8913600E8A8AA /* IncomeAEViewController.xib */,
+			);
+			name = IncomeAndExpenditure;
 			sourceTree = "<group>";
 		};
 		5CA41C3A1BC8E688000A3484 = {
@@ -758,6 +782,7 @@
 				5C5A2DD81BD6115D00C4AE1D /* PasswordManagerViewController.xib in Resources */,
 				5C746CB41BD78FE4007A7DE6 /* FunctionCell.xib in Resources */,
 				5C5A2DD11BD6115D00C4AE1D /* SetUpPasswordViewController.xib in Resources */,
+				5C93B8E11BD8913600E8A8AA /* IncomeAEViewController.xib in Resources */,
 				5C746CB51BD78FE4007A7DE6 /* MyViewController.storyboard in Resources */,
 				5C5A2DD61BD6115D00C4AE1D /* MyAccountViewController.xib in Resources */,
 				5C746CB61BD78FE4007A7DE6 /* MyViewController.xib in Resources */,
@@ -842,6 +867,7 @@
 				5C5A2DC81BD6115D00C4AE1D /* LoginRequest.m in Sources */,
 				5CA41C481BC8E688000A3484 /* main.m in Sources */,
 				5C746C951BD78A67007A7DE6 /* BankCard.m in Sources */,
+				5C93B8E01BD8913600E8A8AA /* IncomeAEViewController.m in Sources */,
 				5CBE16ED1BD76F9F00692B0A /* AddBankCardViewController.m in Sources */,
 				5C746C871BD77EB0007A7DE6 /* MoblieValidateViewController.m in Sources */,
 				5CBE16E81BD76D0400692B0A /* BankCardManagerViewController.m in Sources */,

@@ -78,6 +78,13 @@
     return cell;
 }
 
+-(void)UIViewControllerBack:(BaseViewController *)baseViewController{
+    if ([baseViewController isKindOfClass:[AddBankCardViewController class]]) {
+        [dataArray addObject:@"新加一张银行卡"];
+        [self.mTableView reloadData];
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

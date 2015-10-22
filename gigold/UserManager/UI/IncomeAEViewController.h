@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface IncomeAEViewController : UIViewController
+@interface IncomeAEViewController : BaseViewController<UITableViewDataSource,UITableViewDelegate>
+{
+    NSMutableArray* dataArray;
+}
+
+@property (weak, nonatomic) IBOutlet UITableView *mTableView;
 
 @end

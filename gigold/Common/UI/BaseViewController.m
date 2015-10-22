@@ -14,6 +14,12 @@
 
 @implementation BaseViewController
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.backBarButtonItem = item;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
