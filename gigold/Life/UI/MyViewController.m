@@ -11,6 +11,7 @@
 #import "FonctionCell.h"
 #import "appliacation_attribute.h"
 #import "TopUpViewController.h"
+#import "GigoldTreasureHomeViewController.h"
 
 @interface MyViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>{
     //功能描述
@@ -110,6 +111,9 @@
 //吉高宝
 -(void)gigoldTreasure{
     
+    GigoldTreasureHomeViewController* gigoldTreasureHomeViewController = (GigoldTreasureHomeViewController*)storyboard_controller(@"GigoldTreasureHome");
+    gigoldTreasureHomeViewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:gigoldTreasureHomeViewController animated:YES];
 }
 
 
