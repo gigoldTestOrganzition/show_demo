@@ -10,7 +10,9 @@
 #import "BankCard.h"
 #import "BankCardCell.h"
 #import "UPPayPlugin.h"
-
+#import "MBProgressHUDManager.h"
+#import "appliacation_attribute.h"
+#import "TopUpResultViewController.h"
 
 @interface TopUpShowViewController ()<UITableViewDataSource,UITableViewDelegate,UPPayPluginDelegate>{
     //充值金额
@@ -29,10 +31,18 @@
     __weak IBOutlet NSLayoutConstraint *nextToSelectPayBankLayoutConstraint;
     //到详情
     __weak IBOutlet NSLayoutConstraint *nextToBankDialogLayoutConstraint;
+    //dialog高度链接
+    __weak IBOutlet NSLayoutConstraint *bankDialogHeight;
+    
     //银行卡视图
     __weak IBOutlet UITableView *bankCardTableView;
     //银行卡
     NSMutableArray* bankCards;
+    //是否显示dialog
+    BOOL isShowBankDialog;
+    // dialog高度
+    CGFloat bandDialogHeight;
+    
 }
 
 @end
@@ -49,15 +59,24 @@
 }
 //初始化ui
 -(void)initUi{
-    //tableView 初始化
-    self.navigationItem.title=@"充值详情";
+    isShowBankDialog =  NO;
+    payBankDialog.hidden = YES;
+    payBankDialog.alpha = 0;
+    bandDialogHeight = payBankDialog.frame.size.height;
+    bankDialogHeight.constant = 0;
     
+    
+    
+    //tableView 初始化
     bankCardTableView.separatorInset = UIEdgeInsetsZero;
     bankCardTableView.layoutMargins = UIEdgeInsetsZero;
     bankCardTableView.tableFooterView = [UIView new];
     self.automaticallyAdjustsScrollViewInsets = NO;
     
+    
+    self.navigationItem.title=@"充值详情";
     amountLabel.text = _amountStr;
+    
     
     UITapGestureRecognizer* selectBankRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(selectBank)];
     [selectPayBank addGestureRecognizer:selectBankRecognizer];
@@ -96,14 +115,26 @@
 -(void)selectBank{
     if (payBankDialog.hidden) {
         payBankDialog.hidden = NO;
+    }
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:1];
+    [UIView setAnimationDelegate:self];
+    if (!isShowBankDialog) {
+        payBankDialog.alpha = 1.0;
+        bankDialogHeight.constant = bandDialogHeight;
         nextToBankDialogLayoutConstraint.priority = 750;
         nextToSelectPayBankLayoutConstraint.priority = 250;
+
     }else{
-        payBankDialog.hidden = YES;
+        payBankDialog.alpha = 0.0;
+         bankDialogHeight.constant = 0;
+        payBankDialog.bounds.size =CGSizeMake(payBankDialog.bounds.size.width,0);
         nextToBankDialogLayoutConstraint.priority = 250;
         nextToSelectPayBankLayoutConstraint.priority = 750;
     }
-
+    isShowBankDialog = !isShowBankDialog;
+    [self.view layoutIfNeeded];
+    [UIView commitAnimations];
 }
 //银联支付
 -(void)upPay{
@@ -149,5 +180,10 @@
 }
 
 -(void)UPPayPluginResult:(NSString *)result{
+    
+    TopUpResultViewController* topUpResultViewController = (TopUpResultViewController*)storyboard_controller_identity(@"topUpStoryboard", @"topupResult");
+    topUpResultViewController.isSuccess =[result isEqualToString:@"fail"]?NO:YES;
+    [self.navigationController pushViewController:topUpResultViewController animated:YES];
+    
 }
 @end
