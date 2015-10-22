@@ -27,7 +27,9 @@ static LoginRequest *loginRequest = nil;
                                         failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error, id responseObject))failure;
 {
     
-    return [[FMNetWorkManager sharedInstance] requestURL:LOGIN_URL httpMethod:@"POST" parameters:nil success:^(AFHTTPRequestOperation * operation, id responseObject) {
+    NSDictionary* params = [NSDictionary dictionaryWithObjectsAndKeys:mobileNum,@"mobileNum",pwd,@"pwd", nil];
+    
+    return [[FMNetWorkManager sharedInstance] requestURL:LOGIN_URL httpMethod:@"POST" parameters:params success:^(AFHTTPRequestOperation * operation, id responseObject) {
         success(operation, responseObject);
         
     }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {

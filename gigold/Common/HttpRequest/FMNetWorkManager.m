@@ -132,7 +132,7 @@
     //申明请求的数据是json类型
     manager.requestSerializer=[AFJSONRequestSerializer serializer];
     //如果报接受类型不一致请替换一致text/html或别的
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+//    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
 //    manager.requestSerializer.HTTPRequestHeaders
 //    [manager ]
     //传入的参数
@@ -141,6 +141,7 @@
     //发送请求
     __block AFHTTPRequestOperation *operation = [manager POST:[NSString stringWithFormat:@"%@%@",MF_URL_HOST,URLString] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
+        NSLog(@"allHTTPHeaderFields:%@ %@",operation.request.allHTTPHeaderFields,operation.response.allHeaderFields);
         success (operation,responseObject);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);

@@ -107,13 +107,17 @@
         return;
     }
     
+    [[LoginRequest sharedLoginRequest] loginRequestMobileNum:@"13511232" pwd:@"123"success:^(AFHTTPRequestOperation * operation, id responseObject) {
+        
+    }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
+        
+    }];
+    
     [[AppUtils shareAppUtils] saveIsLogin:YES];
     [[AppUtils shareAppUtils] saveAccount:self.accountTextField.text];
     [[AppUtils shareAppUtils] savePassword:self.passwordTextField.text];
     
     [[AppUtils shareAppUtils] saveHistoricalAccount:self.passwordTextField.text andKey:self.accountTextField.text];
-    
-    NSLog(@"historyDict%@",[[AppUtils shareAppUtils] getHistoricalAccount]);
     
     [[AppUtils shareAppUtils] showHUD:@"登录成功" andView:self.view];
     

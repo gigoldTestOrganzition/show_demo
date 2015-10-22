@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "LoginRequest.h"
 
 @interface LoginViewController : BaseViewController <UITextFieldDelegate>
 

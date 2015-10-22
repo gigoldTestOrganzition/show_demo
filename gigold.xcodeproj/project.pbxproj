@@ -50,6 +50,8 @@
 		5C746CBD1BD7903B007A7DE6 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C746CBC1BD7903B007A7DE6 /* libsqlite3.0.tbd */; };
 		5C93B8E01BD8913600E8A8AA /* IncomeAEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C93B8DE1BD8913600E8A8AA /* IncomeAEViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5C93B8E11BD8913600E8A8AA /* IncomeAEViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C93B8DF1BD8913600E8A8AA /* IncomeAEViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		5C93B8EA1BD8CB0500E8A8AA /* InfoFinishedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C93B8E81BD8CB0500E8A8AA /* InfoFinishedViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C93B8EB1BD8CB0500E8A8AA /* InfoFinishedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C93B8E91BD8CB0500E8A8AA /* InfoFinishedViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		5CA41C481BC8E688000A3484 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41C471BC8E688000A3484 /* main.m */; };
 		5CA41C4B1BC8E688000A3484 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41C4A1BC8E688000A3484 /* AppDelegate.m */; };
 		5CA41C511BC8E688000A3484 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CA41C4F1BC8E688000A3484 /* Main.storyboard */; };
@@ -179,6 +181,9 @@
 		5C93B8DD1BD8913600E8A8AA /* IncomeAEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncomeAEViewController.h; sourceTree = "<group>"; };
 		5C93B8DE1BD8913600E8A8AA /* IncomeAEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncomeAEViewController.m; sourceTree = "<group>"; };
 		5C93B8DF1BD8913600E8A8AA /* IncomeAEViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IncomeAEViewController.xib; sourceTree = "<group>"; };
+		5C93B8E71BD8CB0500E8A8AA /* InfoFinishedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoFinishedViewController.h; sourceTree = "<group>"; };
+		5C93B8E81BD8CB0500E8A8AA /* InfoFinishedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoFinishedViewController.m; sourceTree = "<group>"; };
+		5C93B8E91BD8CB0500E8A8AA /* InfoFinishedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoFinishedViewController.xib; sourceTree = "<group>"; };
 		5CA41C431BC8E688000A3484 /* gigold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gigold.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA41C471BC8E688000A3484 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5CA41C491BC8E688000A3484 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -670,6 +675,57 @@
 			name = IncomeAndExpenditure;
 			sourceTree = "<group>";
 		};
+		5C93B8E21BD8CAD900E8A8AA /* GiGoldBao */ = {
+			isa = PBXGroup;
+			children = (
+				5C93B8E31BD8CAD900E8A8AA /* Data */,
+				5C93B8E41BD8CAD900E8A8AA /* HttpRequest */,
+				5C93B8E51BD8CAD900E8A8AA /* Images */,
+				5C93B8E61BD8CAD900E8A8AA /* UI */,
+			);
+			name = GiGoldBao;
+			path = gigold/GiGoldBao;
+			sourceTree = SOURCE_ROOT;
+		};
+		5C93B8E31BD8CAD900E8A8AA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5C93B8E41BD8CAD900E8A8AA /* HttpRequest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HttpRequest;
+			sourceTree = "<group>";
+		};
+		5C93B8E51BD8CAD900E8A8AA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		5C93B8E61BD8CAD900E8A8AA /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5C93B8EC1BD8CB3B00E8A8AA /* Open-minded */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		5C93B8EC1BD8CB3B00E8A8AA /* Open-minded */ = {
+			isa = PBXGroup;
+			children = (
+				5C93B8E71BD8CB0500E8A8AA /* InfoFinishedViewController.h */,
+				5C93B8E81BD8CB0500E8A8AA /* InfoFinishedViewController.m */,
+				5C93B8E91BD8CB0500E8A8AA /* InfoFinishedViewController.xib */,
+			);
+			name = "Open-minded";
+			sourceTree = "<group>";
+		};
 		5CA41C3A1BC8E688000A3484 = {
 			isa = PBXGroup;
 			children = (
@@ -710,6 +766,7 @@
 				5C5A2D971BD6115D00C4AE1D /* Login */,
 				5C5A2DA11BD6115D00C4AE1D /* Register */,
 				5C5A2DB41BD6115D00C4AE1D /* UserManager */,
+				5C93B8E21BD8CAD900E8A8AA /* GiGoldBao */,
 				5CA41C461BC8E688000A3484 /* Supporting Files */,
 			);
 			path = gigold;
@@ -994,6 +1051,7 @@
 				5C746CB61BD78FE4007A7DE6 /* MyViewController.xib in Resources */,
 				5CBE16EE1BD76F9F00692B0A /* AddBankCardViewController.xib in Resources */,
 				5C5A2DD31BD6115D00C4AE1D /* ValidateViewController.xib in Resources */,
+				5C93B8EB1BD8CB0500E8A8AA /* InfoFinishedViewController.xib in Resources */,
 				5CA41C511BC8E688000A3484 /* Main.storyboard in Resources */,
 				5C394BFC1BCF597E009AC0AC /* LaunchScreen.storyboard in Resources */,
 				5C5A2DCF1BD6115D00C4AE1D /* RegisterViewController.xib in Resources */,
@@ -1079,6 +1137,7 @@
 				5CC6BC191BD8A4E400660205 /* MBProgressHUD.m in Sources */,
 				5CC6BBFC1BD8993E00660205 /* STDbHandle.m in Sources */,
 				5C4B7A921BD7C222009D556E /* BaseViewController.m in Sources */,
+				5C93B8EA1BD8CB0500E8A8AA /* InfoFinishedViewController.m in Sources */,
 				5C746CB21BD78FE4007A7DE6 /* FonctionCell.m in Sources */,
 				5CC6BC071BD8993E00660205 /* StringUtil.mm in Sources */,
 				5CC6BC001BD8993E00660205 /* DeviceUtil.mm in Sources */,

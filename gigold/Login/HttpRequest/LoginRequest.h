@@ -18,7 +18,7 @@
 //"pwd":"" /*登录密码|*/,
 //"sign":"签名算法:将参数按ASII码排序，然后加上密钥串进行MD5加密，例如：sign=MD5(mobileNum=13576543876&pwd=abc123+MWD76D29KKAS8912SK)" /*签名*/
 
-#define LOGIN_URL  @"/user/login"
+#define LOGIN_URL  @"/user/login.do"
 
 - (AFHTTPRequestOperation *)loginRequestMobileNum:(NSString*)mobileNum pwd:(NSString*)pwd
                              success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
