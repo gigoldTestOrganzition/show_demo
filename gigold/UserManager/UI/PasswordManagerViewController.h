@@ -6,9 +6,9 @@
 //  Copyright © 2015年 wsc. All rights reserved.
 //
 
-#import "MyViewController.h"
+#import "BaseViewController.h"
 
-@interface PasswordManagerViewController : MyViewController <UITableViewDataSource,UITableViewDelegate>
+@interface PasswordManagerViewController : BaseViewController <UITableViewDataSource,UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *mTableView;
 

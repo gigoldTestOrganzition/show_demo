@@ -7,8 +7,6 @@
 //
 
 #import "TopUpViewController.h"
-#import "StringUtil.h"
-#import "MBProgressHUDManager.h"
 #import "TopUpShowViewController.h"
 #import "appliacation_attribute.h"
 
@@ -52,8 +50,8 @@
 #pragma mark - xib链接
 //下一步
 - (IBAction)next:(id)sender{
-    if ([StringUtil isEmpty:amountField.text]){
-        [MBProgressHUDManager showMessage:@"输入金额不能为空" view:self.view];
+    if (amountField.text.length == 0){
+        [[AppUtils shareAppUtils] showAlert:@"输入金额不能为空"];
     }else{
         TopUpShowViewController* topUpShowViewController = (TopUpShowViewController*)storyboard_controller_identity(@"topUpStoryboard",@"topupDetail");
         topUpShowViewController.amount = amountField.text;

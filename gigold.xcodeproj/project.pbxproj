@@ -10,9 +10,10 @@
 		5C394BFC1BCF597E009AC0AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C394BFA1BCF597E009AC0AC /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		5C447C6C1BD77A3700A049D9 /* BankCardValidateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C447C6A1BD77A3700A049D9 /* BankCardValidateViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5C447C6D1BD77A3700A049D9 /* BankCardValidateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C447C6B1BD77A3700A049D9 /* BankCardValidateViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		5C4B7A921BD7C222009D556E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B7A911BD7C222009D556E /* BaseViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C4B7A981BD7C33D009D556E /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B7A971BD7C33D009D556E /* MyViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5C5A2DC41BD6115D00C4AE1D /* AppUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D871BD6115D00C4AE1D /* AppUtils.m */; settings = {ASSET_TAGS = (); }; };
 		5C5A2DC51BD6115D00C4AE1D /* FMNetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D8B1BD6115D00C4AE1D /* FMNetWorkManager.m */; settings = {ASSET_TAGS = (); }; };
-		5C5A2DC61BD6115D00C4AE1D /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D8F1BD6115D00C4AE1D /* MyViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5C5A2DC71BD6115D00C4AE1D /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D961BD6115D00C4AE1D /* HelpViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5C5A2DC81BD6115D00C4AE1D /* LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D9B1BD6115D00C4AE1D /* LoginRequest.m */; settings = {ASSET_TAGS = (); }; };
 		5C5A2DC91BD6115D00C4AE1D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D9F1BD6115D00C4AE1D /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -40,7 +41,6 @@
 		5C746C971BD78A67007A7DE6 /* TopUpShowViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5C746C911BD78A67007A7DE6 /* TopUpShowViewController.mm */; settings = {ASSET_TAGS = (); }; };
 		5C746C981BD78A67007A7DE6 /* topUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C746C921BD78A67007A7DE6 /* topUpStoryboard.storyboard */; settings = {ASSET_TAGS = (); }; };
 		5C746C991BD78A67007A7DE6 /* TopUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C746C941BD78A67007A7DE6 /* TopUpViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5C746CA51BD78E1B007A7DE6 /* libsxp-ios-framework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C746CA01BD78DFE007A7DE6 /* libsxp-ios-framework.a */; };
 		5C746CB21BD78FE4007A7DE6 /* FonctionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C746CAC1BD78FE4007A7DE6 /* FonctionCell.m */; settings = {ASSET_TAGS = (); }; };
 		5C746CB31BD78FE4007A7DE6 /* FonctionDesc.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C746CAE1BD78FE4007A7DE6 /* FonctionDesc.m */; settings = {ASSET_TAGS = (); }; };
 		5C746CB41BD78FE4007A7DE6 /* FunctionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C746CAF1BD78FE4007A7DE6 /* FunctionCell.xib */; settings = {ASSET_TAGS = (); }; };
@@ -63,27 +63,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5C746C9F1BD78DFE007A7DE6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5C746C9A1BD78DFD007A7DE6 /* sxp-ios-framework.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5C3F2D8E1B550B930008E289;
-			remoteInfo = "sxp-ios-framework";
-		};
-		5C746CA11BD78DFE007A7DE6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5C746C9A1BD78DFD007A7DE6 /* sxp-ios-framework.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5C3F2D991B550B930008E289;
-			remoteInfo = "sxp-ios-frameworkTests";
-		};
-		5C746CA31BD78E13007A7DE6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5C746C9A1BD78DFD007A7DE6 /* sxp-ios-framework.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 5C3F2D8D1B550B930008E289;
-			remoteInfo = "sxp-ios-framework";
-		};
 		5CA41C5D1BC8E688000A3484 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5CA41C3B1BC8E688000A3484 /* Project object */;
@@ -106,13 +85,16 @@
 		5C447C691BD77A3700A049D9 /* BankCardValidateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardValidateViewController.h; sourceTree = "<group>"; };
 		5C447C6A1BD77A3700A049D9 /* BankCardValidateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardValidateViewController.m; sourceTree = "<group>"; };
 		5C447C6B1BD77A3700A049D9 /* BankCardValidateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardValidateViewController.xib; sourceTree = "<group>"; };
+		5C4B7A861BD7C046009D556E /* appliacation_attribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = appliacation_attribute.h; sourceTree = "<group>"; };
+		5C4B7A901BD7C222009D556E /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		5C4B7A911BD7C222009D556E /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		5C4B7A961BD7C33D009D556E /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
+		5C4B7A971BD7C33D009D556E /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		5C5A2D861BD6115D00C4AE1D /* AppUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppUtils.h; sourceTree = "<group>"; };
 		5C5A2D871BD6115D00C4AE1D /* AppUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppUtils.m; sourceTree = "<group>"; };
 		5C5A2D891BD6115D00C4AE1D /* FMMacro_URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMMacro_URL.h; sourceTree = "<group>"; };
 		5C5A2D8A1BD6115D00C4AE1D /* FMNetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMNetWorkManager.h; sourceTree = "<group>"; };
 		5C5A2D8B1BD6115D00C4AE1D /* FMNetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMNetWorkManager.m; sourceTree = "<group>"; };
-		5C5A2D8E1BD6115D00C4AE1D /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
-		5C5A2D8F1BD6115D00C4AE1D /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		5C5A2D951BD6115D00C4AE1D /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
 		5C5A2D961BD6115D00C4AE1D /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
 		5C5A2D9A1BD6115D00C4AE1D /* LoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginRequest.h; sourceTree = "<group>"; };
@@ -158,7 +140,6 @@
 		5C746C921BD78A67007A7DE6 /* topUpStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = topUpStoryboard.storyboard; sourceTree = "<group>"; };
 		5C746C931BD78A67007A7DE6 /* TopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopUpViewController.h; sourceTree = "<group>"; };
 		5C746C941BD78A67007A7DE6 /* TopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopUpViewController.m; sourceTree = "<group>"; };
-		5C746C9A1BD78DFD007A7DE6 /* sxp-ios-framework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "sxp-ios-framework.xcodeproj"; path = "../../sxp-ios-framework/sxp-ios-framework.xcodeproj"; sourceTree = "<group>"; };
 		5C746CAB1BD78FE4007A7DE6 /* FonctionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FonctionCell.h; sourceTree = "<group>"; };
 		5C746CAC1BD78FE4007A7DE6 /* FonctionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FonctionCell.m; sourceTree = "<group>"; };
 		5C746CAD1BD78FE4007A7DE6 /* FonctionDesc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FonctionDesc.h; sourceTree = "<group>"; };
@@ -201,7 +182,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C746CBD1BD7903B007A7DE6 /* libsqlite3.0.tbd in Frameworks */,
-				5C746CA51BD78E1B007A7DE6 /* libsxp-ios-framework.a in Frameworks */,
 				5C746CBB1BD79015007A7DE6 /* libUPPayPlugin.a in Frameworks */,
 				DCB348EA5503450DD424BB4D /* libPods.a in Frameworks */,
 			);
@@ -275,6 +255,7 @@
 				5C5A2D861BD6115D00C4AE1D /* AppUtils.h */,
 				5C5A2D871BD6115D00C4AE1D /* AppUtils.m */,
 				5C5A2DDB1BD6118D00C4AE1D /* PrefixHeader.pch */,
+				5C4B7A861BD7C046009D556E /* appliacation_attribute.h */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -299,8 +280,8 @@
 		5C5A2D8D1BD6115D00C4AE1D /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				5C5A2D8E1BD6115D00C4AE1D /* MyViewController.h */,
-				5C5A2D8F1BD6115D00C4AE1D /* MyViewController.m */,
+				5C4B7A901BD7C222009D556E /* BaseViewController.h */,
+				5C4B7A911BD7C222009D556E /* BaseViewController.m */,
 				5C746C841BD77EB0007A7DE6 /* MoblieValidateViewController.h */,
 				5C746C851BD77EB0007A7DE6 /* MoblieValidateViewController.m */,
 				5C746C861BD77EB0007A7DE6 /* MoblieValidateViewController.xib */,
@@ -530,15 +511,6 @@
 			path = ui;
 			sourceTree = "<group>";
 		};
-		5C746C9B1BD78DFD007A7DE6 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5C746CA01BD78DFE007A7DE6 /* libsxp-ios-framework.a */,
-				5C746CA21BD78DFE007A7DE6 /* sxp-ios-frameworkTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		5C746CA61BD78FE4007A7DE6 /* Life */ = {
 			isa = PBXGroup;
 			children = (
@@ -579,6 +551,8 @@
 				5C746CAC1BD78FE4007A7DE6 /* FonctionCell.m */,
 				5C746CAD1BD78FE4007A7DE6 /* FonctionDesc.h */,
 				5C746CAE1BD78FE4007A7DE6 /* FonctionDesc.m */,
+				5C4B7A961BD7C33D009D556E /* MyViewController.h */,
+				5C4B7A971BD7C33D009D556E /* MyViewController.m */,
 				5C746CAF1BD78FE4007A7DE6 /* FunctionCell.xib */,
 				5C746CB01BD78FE4007A7DE6 /* MyViewController.storyboard */,
 				5C746CB11BD78FE4007A7DE6 /* MyViewController.xib */,
@@ -622,7 +596,6 @@
 			isa = PBXGroup;
 			children = (
 				5C746CB71BD79015007A7DE6 /* UPPayPlugin */,
-				5C746C9A1BD78DFD007A7DE6 /* sxp-ios-framework.xcodeproj */,
 				5CA41C491BC8E688000A3484 /* AppDelegate.h */,
 				5CA41C4A1BC8E688000A3484 /* AppDelegate.m */,
 				5CA41C4C1BC8E688000A3484 /* ViewController.h */,
@@ -685,7 +658,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				5C746CA41BD78E13007A7DE6 /* PBXTargetDependency */,
 			);
 			name = gigold;
 			productName = gigold;
@@ -761,12 +733,6 @@
 			mainGroup = 5CA41C3A1BC8E688000A3484;
 			productRefGroup = 5CA41C441BC8E688000A3484 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 5C746C9B1BD78DFD007A7DE6 /* Products */;
-					ProjectRef = 5C746C9A1BD78DFD007A7DE6 /* sxp-ios-framework.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				5CA41C421BC8E688000A3484 /* gigold */,
@@ -775,23 +741,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		5C746CA01BD78DFE007A7DE6 /* libsxp-ios-framework.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = "libsxp-ios-framework.a";
-			remoteRef = 5C746C9F1BD78DFE007A7DE6 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		5C746CA21BD78DFE007A7DE6 /* sxp-ios-frameworkTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "sxp-ios-frameworkTests.xctest";
-			remoteRef = 5C746CA11BD78DFE007A7DE6 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5CA41C411BC8E688000A3484 /* Resources */ = {
@@ -877,14 +826,15 @@
 				5C746CB31BD78FE4007A7DE6 /* FonctionDesc.m in Sources */,
 				5C5A2DD01BD6115D00C4AE1D /* SetUpPasswordViewController.m in Sources */,
 				5C447C6C1BD77A3700A049D9 /* BankCardValidateViewController.m in Sources */,
-				5C5A2DC61BD6115D00C4AE1D /* MyViewController.m in Sources */,
 				5C746C971BD78A67007A7DE6 /* TopUpShowViewController.mm in Sources */,
+				5C4B7A921BD7C222009D556E /* BaseViewController.m in Sources */,
 				5C746CB21BD78FE4007A7DE6 /* FonctionCell.m in Sources */,
 				5C5A2DD21BD6115D00C4AE1D /* ValidateViewController.m in Sources */,
 				5CA41C4E1BC8E688000A3484 /* ViewController.m in Sources */,
 				5C5A2DCC1BD6115D00C4AE1D /* RegisterAgreementViewController.m in Sources */,
 				5C746C991BD78A67007A7DE6 /* TopUpViewController.m in Sources */,
 				5C5A2DD71BD6115D00C4AE1D /* PasswordManagerViewController.m in Sources */,
+				5C4B7A981BD7C33D009D556E /* MyViewController.m in Sources */,
 				5C5A2DCB1BD6115D00C4AE1D /* RegisterRequest.m in Sources */,
 				5C5A2DD91BD6115D00C4AE1D /* ResetPasswordViewController.m in Sources */,
 				5C5A2DD51BD6115D00C4AE1D /* MyAccountViewController.m in Sources */,
@@ -924,11 +874,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5C746CA41BD78E13007A7DE6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "sxp-ios-framework";
-			targetProxy = 5C746CA31BD78E13007A7DE6 /* PBXContainerItemProxy */;
-		};
 		5CA41C5E1BC8E688000A3484 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5CA41C421BC8E688000A3484 /* gigold */;
@@ -1062,7 +1007,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = www.gigold.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "/Users/wsc/Desktop/sxp-ios-framework/**";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -1083,7 +1028,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = www.gigold.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "/Users/wsc/Desktop/sxp-ios-framework/**";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};

@@ -14,6 +14,6 @@
 //银行姓名
 @property (weak, nonatomic) IBOutlet UILabel *name;
 //账户额度
-@property (weak, nonatomic) IBOutlet UILabel *amount;
+@property (weak, nonatomic) IBOutlet UILabel *amountLable;
 
 @end

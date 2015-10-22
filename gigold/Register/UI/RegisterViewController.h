@@ -6,9 +6,9 @@
 //  Copyright © 2015年 wsc. All rights reserved.
 //
 
-#import "MyViewController.h"
+#import "BaseViewController.h"
 
-@interface RegisterViewController : MyViewController <UITextFieldDelegate>
+@interface RegisterViewController : BaseViewController <UITextFieldDelegate>
 {
     BOOL isAgree;
 }

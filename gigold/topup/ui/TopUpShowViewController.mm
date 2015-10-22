@@ -168,7 +168,7 @@
     BankCardCell* cell =[tableView dequeueReusableCellWithIdentifier:@"cell"];
     BankCard* card = bankCards[indexPath.row];
     cell.name.text = card.name;
-    cell.amount.text = card.balance;
+    cell.amountLable.text = card.balance;
     cell.separatorInset = UIEdgeInsetsZero;
     cell.layoutMargins = UIEdgeInsetsZero;
     return cell;
@@ -180,7 +180,6 @@
 }
 
 -(void)UPPayPluginResult:(NSString *)result{
-    
     TopUpResultViewController* topUpResultViewController = (TopUpResultViewController*)storyboard_controller_identity(@"topUpStoryboard", @"topupResult");
     topUpResultViewController.isSuccess =[result isEqualToString:@"fail"]?NO:YES;
     [self.navigationController pushViewController:topUpResultViewController animated:YES];

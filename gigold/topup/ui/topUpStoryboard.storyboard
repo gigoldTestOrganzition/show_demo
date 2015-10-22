@@ -223,7 +223,7 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <outlet property="amount" destination="CHg-55-EfB" id="XIy-if-jeK"/>
+                                                    <outlet property="amountLable" destination="CHg-55-EfB" id="8Pk-Jr-OpG"/>
                                                     <outlet property="bankImg" destination="uc5-ZU-whZ" id="gzD-YQ-38o"/>
                                                     <outlet property="name" destination="fLc-Ek-dgC" id="hpI-tW-D1P"/>
                                                 </connections>
