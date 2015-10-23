@@ -62,4 +62,10 @@
 
 - (NSString *)md5:(NSString *)str;
 
+//加密手机号码
+- (NSString *)encryptMoblieNumber:(NSString*)str;
+
+//登录密码验证
+- (BOOL)validateLoginPassword:(NSString*)password;
+
 @end

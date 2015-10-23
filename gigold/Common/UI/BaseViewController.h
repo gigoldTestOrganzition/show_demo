@@ -10,6 +10,7 @@
 //#import "UIImageView+WebCache.h"
 #import "AppUtils.h"
 #import "AppDelegate.h"
+#import "UIViewController+RNSwipeViewController.h"
 
 @class BaseViewController;
 
@@ -20,6 +21,14 @@
 -(void)UIViewControllerBack:(BaseViewController *)baseViewController;
 
 @end
+
+//注册和重置密码界面共用
+typedef enum FlowType
+{
+    RegisterType = 0,
+    ResetPasswordType,
+    UpdataPayPWDType
+} FlowType;
 
 @interface BaseViewController : UIViewController <BaseViewControllerDelegate>
 

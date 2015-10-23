@@ -9,11 +9,10 @@
 #import "AppDelegate.h"
 #import "HelpViewController.h"
 #import "LoginViewController.h"
-#import "SetUpPasswordViewController.h"
-#import "ResetPasswordViewController.h"
 #import "MyAccountViewController.h"
 #import "appliacation_attribute.h"
 #import "MyViewController.h"
+#import "RootViewController.h"
 
 @interface AppDelegate ()
 
@@ -37,7 +36,7 @@
     NSLog(@"%f %f",mainScreenWidth,mainScreenHeight);
     
     //设置NavigationBar背景颜色
-    [[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0x456789)];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:74/255.0f green:202/255.f blue:226/255.f alpha:1]];
     //@{}代表Dictionary
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
@@ -81,10 +80,12 @@
 
 
 -(void)showMainView{
+    RootViewController* rootView = [[RootViewController alloc] init];
+    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:rootView];
+    self.window.rootViewController = nav;
     
     
-    
-    
+    return;
     //a.初始化一个tabBar控制器
     UITabBarController *tb= [[UITabBarController alloc]init];
     tb.tabBar.selectedImageTintColor = UIColorFromRGB(0xFFFFFF);

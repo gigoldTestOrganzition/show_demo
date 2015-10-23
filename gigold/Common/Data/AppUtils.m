@@ -417,4 +417,21 @@ NSUserDefaults *defaults = nil;
             ]; 
 }
 
+- (NSString *)encryptMoblieNumber:(NSString*)str{
+    if (str.length >= 11) {
+        NSMutableString* newMoblie = [NSMutableString stringWithString:str];
+        [newMoblie replaceCharactersInRange:NSMakeRange(3, 5) withString:@"***"];
+        return newMoblie;
+    }else{
+        return str;
+    }
+}
+
+- (BOOL)validateLoginPassword:(NSString*)password{
+    NSString * regex = @"^[A-Za-z0-9]{6,20}$";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    BOOL isMatch = [pred evaluateWithObject:password];
+    return isMatch;
+}
+
 @end

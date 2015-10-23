@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-#import "ValidateViewController.h"
+#import "MoblieWriteViewController.h"
 
 @interface LoginViewController ()
 
@@ -73,17 +73,19 @@
 //去找回密码
 -(void)forgetBtnPress{
     NSLog(@"去找回密码");
-    ValidateViewController* validateView = [[ValidateViewController alloc] init];
-    validateView.validateType = ResetPWDValidate;
-    [self.navigationController pushViewController:validateView animated:YES];
+    MoblieWriteViewController* moblieWriteView = [[MoblieWriteViewController alloc] init];
+    moblieWriteView.flowType = ResetPasswordType;
+    [self.navigationController pushViewController:moblieWriteView animated:YES];
 }
 
 //去注册
 -(void)registerBtnPress{
     NSLog(@"去注册");
-    ValidateViewController* validateView = [[ValidateViewController alloc] init];
-    validateView.validateType = RegisterValidate;
-    [self.navigationController pushViewController:validateView animated:YES];
+    
+    MoblieWriteViewController* moblieWriteView = [[MoblieWriteViewController alloc] init];
+    moblieWriteView.flowType = RegisterType;
+    [self.navigationController pushViewController:moblieWriteView animated:YES];
+
 }
 
 //去登录

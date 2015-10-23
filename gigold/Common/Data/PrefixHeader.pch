@@ -20,18 +20,6 @@
 
 #define BKMAPKEY @"VRBkamaeQc5E6K81IdxuuSGR" //个人版百度key
 
-//tabBar的高度
-#define tabBarHeight1 49.0f
-
-//tabbar的颜色
-#define tabBarColor UIColorFromRGB(0x66C1B1)
-
-//导航栏颜色
-#define navigationBarColor (UIColorFromRGB(0x42618F))
-
-//导航栏btn颜色
-#define navigationBarBtnColor (UIColorFromRGB(0x42618F))
-
 
 //屏幕尺寸
 #define mainScreenWidth [UIScreen mainScreen].bounds.size.width

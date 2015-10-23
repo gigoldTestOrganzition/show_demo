@@ -27,7 +27,7 @@
 #define tabBarColor UIColorFromRGB(0x66C1B1)
 
 //导航栏颜色
-#define navigationBarColor (UIColorFromRGB(0x42618F))
+#define navigationBarColor ([UIColor colorWithRed:74/255.0f green:202/255.f blue:226/255.f alpha:1])
 
 //导航栏btn颜色
 #define navigationBarBtnColor (UIColorFromRGB(0x42618F))
@@ -38,7 +38,8 @@
 #define mainScreenHeight [UIScreen mainScreen].bounds.size.height
 
 //十六进制的颜色值转化
-#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define UIColorFromRGB (rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 

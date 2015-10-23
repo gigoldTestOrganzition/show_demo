@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C1DFAFE1BDA195A00E0BB97 /* PayPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1DFAFC1BDA195A00E0BB97 /* PayPasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C1DFAFF1BDA195A00E0BB97 /* PayPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C1DFAFD1BDA195A00E0BB97 /* PayPasswordViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		5C394BFC1BCF597E009AC0AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C394BFA1BCF597E009AC0AC /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		5C447C6C1BD77A3700A049D9 /* BankCardValidateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C447C6A1BD77A3700A049D9 /* BankCardValidateViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5C447C6D1BD77A3700A049D9 /* BankCardValidateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C447C6B1BD77A3700A049D9 /* BankCardValidateViewController.xib */; settings = {ASSET_TAGS = (); }; };
@@ -19,21 +21,13 @@
 		5C5A2DC91BD6115D00C4AE1D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D9F1BD6115D00C4AE1D /* LoginViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5C5A2DCA1BD6115D00C4AE1D /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2DA01BD6115D00C4AE1D /* LoginViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		5C5A2DCB1BD6115D00C4AE1D /* RegisterRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2DA51BD6115D00C4AE1D /* RegisterRequest.m */; settings = {ASSET_TAGS = (); }; };
-		5C5A2DCC1BD6115D00C4AE1D /* RegisterAgreementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2DA91BD6115D00C4AE1D /* RegisterAgreementViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5C5A2DCD1BD6115D00C4AE1D /* RegisterAgreementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2DAA1BD6115D00C4AE1D /* RegisterAgreementViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		5C5A2DCE1BD6115D00C4AE1D /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2DAC1BD6115D00C4AE1D /* RegisterViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5C5A2DCF1BD6115D00C4AE1D /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2DAD1BD6115D00C4AE1D /* RegisterViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		5C5A2DD01BD6115D00C4AE1D /* SetUpPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2DAF1BD6115D00C4AE1D /* SetUpPasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5C5A2DD11BD6115D00C4AE1D /* SetUpPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2DB01BD6115D00C4AE1D /* SetUpPasswordViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		5C5A2DD21BD6115D00C4AE1D /* ValidateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2DB21BD6115D00C4AE1D /* ValidateViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5C5A2DD31BD6115D00C4AE1D /* ValidateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2DB31BD6115D00C4AE1D /* ValidateViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		5C5A2DD41BD6115D00C4AE1D /* UserInfoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2DB81BD6115D00C4AE1D /* UserInfoRequest.m */; settings = {ASSET_TAGS = (); }; };
 		5C5A2DD51BD6115D00C4AE1D /* MyAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2DBC1BD6115D00C4AE1D /* MyAccountViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5C5A2DD61BD6115D00C4AE1D /* MyAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2DBD1BD6115D00C4AE1D /* MyAccountViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		5C5A2DD71BD6115D00C4AE1D /* PasswordManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2DBF1BD6115D00C4AE1D /* PasswordManagerViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5C5A2DD81BD6115D00C4AE1D /* PasswordManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2DC01BD6115D00C4AE1D /* PasswordManagerViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		5C5A2DD91BD6115D00C4AE1D /* ResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2DC21BD6115D00C4AE1D /* ResetPasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5C5A2DDA1BD6115D00C4AE1D /* ResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2DC31BD6115D00C4AE1D /* ResetPasswordViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		5C71BD7F1BDA134500978CF4 /* UpdataPWDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C71BD7D1BDA134500978CF4 /* UpdataPWDViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C71BD801BDA134500978CF4 /* UpdataPWDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C71BD7E1BDA134500978CF4 /* UpdataPWDViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		5C746C871BD77EB0007A7DE6 /* MoblieValidateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C746C851BD77EB0007A7DE6 /* MoblieValidateViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5C746C881BD77EB0007A7DE6 /* MoblieValidateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C746C861BD77EB0007A7DE6 /* MoblieValidateViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		5C746C951BD78A67007A7DE6 /* BankCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C746C8C1BD78A67007A7DE6 /* BankCard.m */; settings = {ASSET_TAGS = (); }; };
@@ -52,12 +46,35 @@
 		5C93B8E11BD8913600E8A8AA /* IncomeAEViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C93B8DF1BD8913600E8A8AA /* IncomeAEViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		5C93B8EA1BD8CB0500E8A8AA /* InfoFinishedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C93B8E81BD8CB0500E8A8AA /* InfoFinishedViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5C93B8EB1BD8CB0500E8A8AA /* InfoFinishedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C93B8E91BD8CB0500E8A8AA /* InfoFinishedViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		5C93B8F01BD8D9BA00E8A8AA /* MoblieWriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C93B8EE1BD8D9BA00E8A8AA /* MoblieWriteViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C93B8F11BD8D9BA00E8A8AA /* MoblieWriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C93B8EF1BD8D9BA00E8A8AA /* MoblieWriteViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		5C93B8F51BD8DA3900E8A8AA /* VerificationCodeWriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C93B8F31BD8DA3900E8A8AA /* VerificationCodeWriteViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C93B8F61BD8DA3900E8A8AA /* VerificationCodeWriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C93B8F41BD8DA3900E8A8AA /* VerificationCodeWriteViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		5C93B8FA1BD8DA5A00E8A8AA /* PasswordWriteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C93B8F81BD8DA5A00E8A8AA /* PasswordWriteViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C93B8FB1BD8DA5A00E8A8AA /* PasswordWriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C93B8F91BD8DA5A00E8A8AA /* PasswordWriteViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		5CA41C481BC8E688000A3484 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41C471BC8E688000A3484 /* main.m */; };
 		5CA41C4B1BC8E688000A3484 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41C4A1BC8E688000A3484 /* AppDelegate.m */; };
 		5CA41C511BC8E688000A3484 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CA41C4F1BC8E688000A3484 /* Main.storyboard */; };
 		5CA41C531BC8E688000A3484 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CA41C521BC8E688000A3484 /* Assets.xcassets */; };
 		5CA41C611BC8E688000A3484 /* gigoldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41C601BC8E688000A3484 /* gigoldTests.m */; };
 		5CA41C6C1BC8E688000A3484 /* gigoldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA41C6B1BC8E688000A3484 /* gigoldUITests.m */; };
+		5CA673AC1BD9C61000BED35A /* RNDirectionPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA673A41BD9C61000BED35A /* RNDirectionPanGestureRecognizer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5CA673AD1BD9C61000BED35A /* RNSwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA673A61BD9C61000BED35A /* RNSwipeViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5CA673AE1BD9C61000BED35A /* UIView+Sizes.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA673A91BD9C61000BED35A /* UIView+Sizes.m */; settings = {ASSET_TAGS = (); }; };
+		5CA673AF1BD9C61000BED35A /* UIViewController+RNSwipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA673AB1BD9C61000BED35A /* UIViewController+RNSwipeViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5CA673B21BD9C65900BED35A /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CA673B11BD9C65900BED35A /* RootViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5CA673BF1BD9D63C00BED35A /* password_eye_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA673B31BD9D63C00BED35A /* password_eye_1@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5CA673C01BD9D63C00BED35A /* password_eye_1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA673B41BD9D63C00BED35A /* password_eye_1@3x.png */; settings = {ASSET_TAGS = (); }; };
+		5CA673C11BD9D63C00BED35A /* password_eye_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA673B51BD9D63C00BED35A /* password_eye_2@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5CA673C21BD9D63C00BED35A /* password_eye_2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA673B61BD9D63C00BED35A /* password_eye_2@3x.png */; settings = {ASSET_TAGS = (); }; };
+		5CA673C31BD9D63C00BED35A /* protocol_but_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA673B71BD9D63C00BED35A /* protocol_but_1@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5CA673C41BD9D63C00BED35A /* protocol_but_1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA673B81BD9D63C00BED35A /* protocol_but_1@3x.png */; settings = {ASSET_TAGS = (); }; };
+		5CA673C51BD9D63C00BED35A /* protocol_but_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA673B91BD9D63C00BED35A /* protocol_but_2@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5CA673C61BD9D63C00BED35A /* protocol_but_2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA673BA1BD9D63C00BED35A /* protocol_but_2@3x.png */; settings = {ASSET_TAGS = (); }; };
+		5CA673C71BD9D63C00BED35A /* top_return_but_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA673BB1BD9D63C00BED35A /* top_return_but_1@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5CA673C81BD9D63C00BED35A /* top_return_but_1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA673BC1BD9D63C00BED35A /* top_return_but_1@3x.png */; settings = {ASSET_TAGS = (); }; };
+		5CA673C91BD9D63C00BED35A /* top_return_but_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA673BD1BD9D63C00BED35A /* top_return_but_2@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5CA673CA1BD9D63C00BED35A /* top_return_but_2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA673BE1BD9D63C00BED35A /* top_return_but_2@3x.png */; settings = {ASSET_TAGS = (); }; };
 		5CBE16E81BD76D0400692B0A /* BankCardManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE16E61BD76D0400692B0A /* BankCardManagerViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5CBE16E91BD76D0400692B0A /* BankCardManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CBE16E71BD76D0400692B0A /* BankCardManagerViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		5CBE16ED1BD76F9F00692B0A /* AddBankCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE16EB1BD76F9F00692B0A /* AddBankCardViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -108,6 +125,9 @@
 
 /* Begin PBXFileReference section */
 		05C9FF4D315E838F911D2C11 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		5C1DFAFB1BDA195A00E0BB97 /* PayPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPasswordViewController.h; sourceTree = "<group>"; };
+		5C1DFAFC1BDA195A00E0BB97 /* PayPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayPasswordViewController.m; sourceTree = "<group>"; };
+		5C1DFAFD1BDA195A00E0BB97 /* PayPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PayPasswordViewController.xib; sourceTree = "<group>"; };
 		5C394BFB1BCF597E009AC0AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C447C691BD77A3700A049D9 /* BankCardValidateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardValidateViewController.h; sourceTree = "<group>"; };
 		5C447C6A1BD77A3700A049D9 /* BankCardValidateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardValidateViewController.m; sourceTree = "<group>"; };
@@ -131,18 +151,6 @@
 		5C5A2DA01BD6115D00C4AE1D /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		5C5A2DA41BD6115D00C4AE1D /* RegisterRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterRequest.h; sourceTree = "<group>"; };
 		5C5A2DA51BD6115D00C4AE1D /* RegisterRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterRequest.m; sourceTree = "<group>"; };
-		5C5A2DA81BD6115D00C4AE1D /* RegisterAgreementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterAgreementViewController.h; sourceTree = "<group>"; };
-		5C5A2DA91BD6115D00C4AE1D /* RegisterAgreementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterAgreementViewController.m; sourceTree = "<group>"; };
-		5C5A2DAA1BD6115D00C4AE1D /* RegisterAgreementViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterAgreementViewController.xib; sourceTree = "<group>"; };
-		5C5A2DAB1BD6115D00C4AE1D /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
-		5C5A2DAC1BD6115D00C4AE1D /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
-		5C5A2DAD1BD6115D00C4AE1D /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
-		5C5A2DAE1BD6115D00C4AE1D /* SetUpPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetUpPasswordViewController.h; sourceTree = "<group>"; };
-		5C5A2DAF1BD6115D00C4AE1D /* SetUpPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetUpPasswordViewController.m; sourceTree = "<group>"; };
-		5C5A2DB01BD6115D00C4AE1D /* SetUpPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetUpPasswordViewController.xib; sourceTree = "<group>"; };
-		5C5A2DB11BD6115D00C4AE1D /* ValidateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValidateViewController.h; sourceTree = "<group>"; };
-		5C5A2DB21BD6115D00C4AE1D /* ValidateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValidateViewController.m; sourceTree = "<group>"; };
-		5C5A2DB31BD6115D00C4AE1D /* ValidateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ValidateViewController.xib; sourceTree = "<group>"; };
 		5C5A2DB71BD6115D00C4AE1D /* UserInfoRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoRequest.h; sourceTree = "<group>"; };
 		5C5A2DB81BD6115D00C4AE1D /* UserInfoRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoRequest.m; sourceTree = "<group>"; };
 		5C5A2DBB1BD6115D00C4AE1D /* MyAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountViewController.h; sourceTree = "<group>"; };
@@ -151,10 +159,10 @@
 		5C5A2DBE1BD6115D00C4AE1D /* PasswordManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordManagerViewController.h; sourceTree = "<group>"; };
 		5C5A2DBF1BD6115D00C4AE1D /* PasswordManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordManagerViewController.m; sourceTree = "<group>"; };
 		5C5A2DC01BD6115D00C4AE1D /* PasswordManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordManagerViewController.xib; sourceTree = "<group>"; };
-		5C5A2DC11BD6115D00C4AE1D /* ResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPasswordViewController.h; sourceTree = "<group>"; };
-		5C5A2DC21BD6115D00C4AE1D /* ResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordViewController.m; sourceTree = "<group>"; };
-		5C5A2DC31BD6115D00C4AE1D /* ResetPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResetPasswordViewController.xib; sourceTree = "<group>"; };
 		5C5A2DDB1BD6118D00C4AE1D /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = gigold/PrefixHeader.pch; sourceTree = SOURCE_ROOT; };
+		5C71BD7C1BDA134500978CF4 /* UpdataPWDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdataPWDViewController.h; sourceTree = "<group>"; };
+		5C71BD7D1BDA134500978CF4 /* UpdataPWDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdataPWDViewController.m; sourceTree = "<group>"; };
+		5C71BD7E1BDA134500978CF4 /* UpdataPWDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdataPWDViewController.xib; sourceTree = "<group>"; };
 		5C746C841BD77EB0007A7DE6 /* MoblieValidateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoblieValidateViewController.h; sourceTree = "<group>"; };
 		5C746C851BD77EB0007A7DE6 /* MoblieValidateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoblieValidateViewController.m; sourceTree = "<group>"; };
 		5C746C861BD77EB0007A7DE6 /* MoblieValidateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoblieValidateViewController.xib; sourceTree = "<group>"; };
@@ -184,6 +192,15 @@
 		5C93B8E71BD8CB0500E8A8AA /* InfoFinishedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoFinishedViewController.h; sourceTree = "<group>"; };
 		5C93B8E81BD8CB0500E8A8AA /* InfoFinishedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoFinishedViewController.m; sourceTree = "<group>"; };
 		5C93B8E91BD8CB0500E8A8AA /* InfoFinishedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoFinishedViewController.xib; sourceTree = "<group>"; };
+		5C93B8ED1BD8D9BA00E8A8AA /* MoblieWriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoblieWriteViewController.h; sourceTree = "<group>"; };
+		5C93B8EE1BD8D9BA00E8A8AA /* MoblieWriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoblieWriteViewController.m; sourceTree = "<group>"; };
+		5C93B8EF1BD8D9BA00E8A8AA /* MoblieWriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoblieWriteViewController.xib; sourceTree = "<group>"; };
+		5C93B8F21BD8DA3900E8A8AA /* VerificationCodeWriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerificationCodeWriteViewController.h; sourceTree = "<group>"; };
+		5C93B8F31BD8DA3900E8A8AA /* VerificationCodeWriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerificationCodeWriteViewController.m; sourceTree = "<group>"; };
+		5C93B8F41BD8DA3900E8A8AA /* VerificationCodeWriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VerificationCodeWriteViewController.xib; sourceTree = "<group>"; };
+		5C93B8F71BD8DA5A00E8A8AA /* PasswordWriteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordWriteViewController.h; sourceTree = "<group>"; };
+		5C93B8F81BD8DA5A00E8A8AA /* PasswordWriteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordWriteViewController.m; sourceTree = "<group>"; };
+		5C93B8F91BD8DA5A00E8A8AA /* PasswordWriteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordWriteViewController.xib; sourceTree = "<group>"; };
 		5CA41C431BC8E688000A3484 /* gigold.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gigold.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA41C471BC8E688000A3484 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5CA41C491BC8E688000A3484 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -197,6 +214,29 @@
 		5CA41C671BC8E688000A3484 /* gigoldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gigoldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA41C6B1BC8E688000A3484 /* gigoldUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gigoldUITests.m; sourceTree = "<group>"; };
 		5CA41C6D1BC8E688000A3484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CA673A31BD9C61000BED35A /* RNDirectionPanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNDirectionPanGestureRecognizer.h; sourceTree = "<group>"; };
+		5CA673A41BD9C61000BED35A /* RNDirectionPanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNDirectionPanGestureRecognizer.m; sourceTree = "<group>"; };
+		5CA673A51BD9C61000BED35A /* RNSwipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSwipeViewController.h; sourceTree = "<group>"; };
+		5CA673A61BD9C61000BED35A /* RNSwipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNSwipeViewController.m; sourceTree = "<group>"; };
+		5CA673A71BD9C61000BED35A /* RNSwipeViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNSwipeViewControllerDelegate.h; sourceTree = "<group>"; };
+		5CA673A81BD9C61000BED35A /* UIView+Sizes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Sizes.h"; sourceTree = "<group>"; };
+		5CA673A91BD9C61000BED35A /* UIView+Sizes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Sizes.m"; sourceTree = "<group>"; };
+		5CA673AA1BD9C61000BED35A /* UIViewController+RNSwipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RNSwipeViewController.h"; sourceTree = "<group>"; };
+		5CA673AB1BD9C61000BED35A /* UIViewController+RNSwipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RNSwipeViewController.m"; sourceTree = "<group>"; };
+		5CA673B01BD9C65900BED35A /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		5CA673B11BD9C65900BED35A /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		5CA673B31BD9D63C00BED35A /* password_eye_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password_eye_1@2x.png"; sourceTree = "<group>"; };
+		5CA673B41BD9D63C00BED35A /* password_eye_1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password_eye_1@3x.png"; sourceTree = "<group>"; };
+		5CA673B51BD9D63C00BED35A /* password_eye_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password_eye_2@2x.png"; sourceTree = "<group>"; };
+		5CA673B61BD9D63C00BED35A /* password_eye_2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password_eye_2@3x.png"; sourceTree = "<group>"; };
+		5CA673B71BD9D63C00BED35A /* protocol_but_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "protocol_but_1@2x.png"; sourceTree = "<group>"; };
+		5CA673B81BD9D63C00BED35A /* protocol_but_1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "protocol_but_1@3x.png"; sourceTree = "<group>"; };
+		5CA673B91BD9D63C00BED35A /* protocol_but_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "protocol_but_2@2x.png"; sourceTree = "<group>"; };
+		5CA673BA1BD9D63C00BED35A /* protocol_but_2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "protocol_but_2@3x.png"; sourceTree = "<group>"; };
+		5CA673BB1BD9D63C00BED35A /* top_return_but_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_return_but_1@2x.png"; sourceTree = "<group>"; };
+		5CA673BC1BD9D63C00BED35A /* top_return_but_1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_return_but_1@3x.png"; sourceTree = "<group>"; };
+		5CA673BD1BD9D63C00BED35A /* top_return_but_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_return_but_2@2x.png"; sourceTree = "<group>"; };
+		5CA673BE1BD9D63C00BED35A /* top_return_but_2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_return_but_2@3x.png"; sourceTree = "<group>"; };
 		5CBE16E51BD76D0400692B0A /* BankCardManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardManagerViewController.h; sourceTree = "<group>"; };
 		5CBE16E61BD76D0400692B0A /* BankCardManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardManagerViewController.m; sourceTree = "<group>"; };
 		5CBE16E71BD76D0400692B0A /* BankCardManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardManagerViewController.xib; sourceTree = "<group>"; };
@@ -488,6 +528,18 @@
 		5C5A2DA61BD6115D00C4AE1D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				5CA673B31BD9D63C00BED35A /* password_eye_1@2x.png */,
+				5CA673B41BD9D63C00BED35A /* password_eye_1@3x.png */,
+				5CA673B51BD9D63C00BED35A /* password_eye_2@2x.png */,
+				5CA673B61BD9D63C00BED35A /* password_eye_2@3x.png */,
+				5CA673B71BD9D63C00BED35A /* protocol_but_1@2x.png */,
+				5CA673B81BD9D63C00BED35A /* protocol_but_1@3x.png */,
+				5CA673B91BD9D63C00BED35A /* protocol_but_2@2x.png */,
+				5CA673BA1BD9D63C00BED35A /* protocol_but_2@3x.png */,
+				5CA673BB1BD9D63C00BED35A /* top_return_but_1@2x.png */,
+				5CA673BC1BD9D63C00BED35A /* top_return_but_1@3x.png */,
+				5CA673BD1BD9D63C00BED35A /* top_return_but_2@2x.png */,
+				5CA673BE1BD9D63C00BED35A /* top_return_but_2@3x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -495,18 +547,15 @@
 		5C5A2DA71BD6115D00C4AE1D /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				5C5A2DA81BD6115D00C4AE1D /* RegisterAgreementViewController.h */,
-				5C5A2DA91BD6115D00C4AE1D /* RegisterAgreementViewController.m */,
-				5C5A2DAA1BD6115D00C4AE1D /* RegisterAgreementViewController.xib */,
-				5C5A2DAB1BD6115D00C4AE1D /* RegisterViewController.h */,
-				5C5A2DAC1BD6115D00C4AE1D /* RegisterViewController.m */,
-				5C5A2DAD1BD6115D00C4AE1D /* RegisterViewController.xib */,
-				5C5A2DAE1BD6115D00C4AE1D /* SetUpPasswordViewController.h */,
-				5C5A2DAF1BD6115D00C4AE1D /* SetUpPasswordViewController.m */,
-				5C5A2DB01BD6115D00C4AE1D /* SetUpPasswordViewController.xib */,
-				5C5A2DB11BD6115D00C4AE1D /* ValidateViewController.h */,
-				5C5A2DB21BD6115D00C4AE1D /* ValidateViewController.m */,
-				5C5A2DB31BD6115D00C4AE1D /* ValidateViewController.xib */,
+				5C93B8ED1BD8D9BA00E8A8AA /* MoblieWriteViewController.h */,
+				5C93B8EE1BD8D9BA00E8A8AA /* MoblieWriteViewController.m */,
+				5C93B8EF1BD8D9BA00E8A8AA /* MoblieWriteViewController.xib */,
+				5C93B8F21BD8DA3900E8A8AA /* VerificationCodeWriteViewController.h */,
+				5C93B8F31BD8DA3900E8A8AA /* VerificationCodeWriteViewController.m */,
+				5C93B8F41BD8DA3900E8A8AA /* VerificationCodeWriteViewController.xib */,
+				5C93B8F71BD8DA5A00E8A8AA /* PasswordWriteViewController.h */,
+				5C93B8F81BD8DA5A00E8A8AA /* PasswordWriteViewController.m */,
+				5C93B8F91BD8DA5A00E8A8AA /* PasswordWriteViewController.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -658,9 +707,12 @@
 				5C5A2DBE1BD6115D00C4AE1D /* PasswordManagerViewController.h */,
 				5C5A2DBF1BD6115D00C4AE1D /* PasswordManagerViewController.m */,
 				5C5A2DC01BD6115D00C4AE1D /* PasswordManagerViewController.xib */,
-				5C5A2DC11BD6115D00C4AE1D /* ResetPasswordViewController.h */,
-				5C5A2DC21BD6115D00C4AE1D /* ResetPasswordViewController.m */,
-				5C5A2DC31BD6115D00C4AE1D /* ResetPasswordViewController.xib */,
+				5C71BD7C1BDA134500978CF4 /* UpdataPWDViewController.h */,
+				5C71BD7D1BDA134500978CF4 /* UpdataPWDViewController.m */,
+				5C71BD7E1BDA134500978CF4 /* UpdataPWDViewController.xib */,
+				5C1DFAFB1BDA195A00E0BB97 /* PayPasswordViewController.h */,
+				5C1DFAFC1BDA195A00E0BB97 /* PayPasswordViewController.m */,
+				5C1DFAFD1BDA195A00E0BB97 /* PayPasswordViewController.xib */,
 			);
 			name = PasswordManager;
 			sourceTree = "<group>";
@@ -759,8 +811,9 @@
 				5C394BFA1BCF597E009AC0AC /* LaunchScreen.storyboard */,
 				5CA41C521BC8E688000A3484 /* Assets.xcassets */,
 				5CA41C571BC8E688000A3484 /* Info.plist */,
-				5C746C891BD78A67007A7DE6 /* topup */,
 				5C5A2D841BD6115C00C4AE1D /* Common */,
+				5C746C891BD78A67007A7DE6 /* topup */,
+				5CA6739A1BD9C5BB00BED35A /* RootView */,
 				5C746CA61BD78FE4007A7DE6 /* Life */,
 				5C5A2D901BD6115D00C4AE1D /* Help */,
 				5C5A2D971BD6115D00C4AE1D /* Login */,
@@ -796,6 +849,65 @@
 				5CA41C6D1BC8E688000A3484 /* Info.plist */,
 			);
 			path = gigoldUITests;
+			sourceTree = "<group>";
+		};
+		5CA6739A1BD9C5BB00BED35A /* RootView */ = {
+			isa = PBXGroup;
+			children = (
+				5CA6739B1BD9C5BB00BED35A /* Data */,
+				5CA6739C1BD9C5BB00BED35A /* HttpRequest */,
+				5CA6739D1BD9C5BB00BED35A /* Images */,
+				5CA6739E1BD9C5BB00BED35A /* UI */,
+			);
+			name = RootView;
+			path = gigold/RootView;
+			sourceTree = SOURCE_ROOT;
+		};
+		5CA6739B1BD9C5BB00BED35A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5CA673A21BD9C61000BED35A /* RNSwipeViewController */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5CA6739C1BD9C5BB00BED35A /* HttpRequest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HttpRequest;
+			sourceTree = "<group>";
+		};
+		5CA6739D1BD9C5BB00BED35A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		5CA6739E1BD9C5BB00BED35A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5CA673B01BD9C65900BED35A /* RootViewController.h */,
+				5CA673B11BD9C65900BED35A /* RootViewController.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		5CA673A21BD9C61000BED35A /* RNSwipeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5CA673A31BD9C61000BED35A /* RNDirectionPanGestureRecognizer.h */,
+				5CA673A41BD9C61000BED35A /* RNDirectionPanGestureRecognizer.m */,
+				5CA673A51BD9C61000BED35A /* RNSwipeViewController.h */,
+				5CA673A61BD9C61000BED35A /* RNSwipeViewController.m */,
+				5CA673A71BD9C61000BED35A /* RNSwipeViewControllerDelegate.h */,
+				5CA673A81BD9C61000BED35A /* UIView+Sizes.h */,
+				5CA673A91BD9C61000BED35A /* UIView+Sizes.m */,
+				5CA673AA1BD9C61000BED35A /* UIViewController+RNSwipeViewController.h */,
+				5CA673AB1BD9C61000BED35A /* UIViewController+RNSwipeViewController.m */,
+			);
+			path = RNSwipeViewController;
 			sourceTree = "<group>";
 		};
 		5CC6BBBD1BD8993E00660205 /* frame */ = {
@@ -1034,27 +1146,39 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CA673C61BD9D63C00BED35A /* protocol_but_2@3x.png in Resources */,
+				5CA673C31BD9D63C00BED35A /* protocol_but_1@2x.png in Resources */,
 				5C5A2DCA1BD6115D00C4AE1D /* LoginViewController.xib in Resources */,
-				5C5A2DDA1BD6115D00C4AE1D /* ResetPasswordViewController.xib in Resources */,
+				5C93B8F61BD8DA3900E8A8AA /* VerificationCodeWriteViewController.xib in Resources */,
 				5C746C981BD78A67007A7DE6 /* topUpStoryboard.storyboard in Resources */,
 				5C447C6D1BD77A3700A049D9 /* BankCardValidateViewController.xib in Resources */,
 				5CBE16E91BD76D0400692B0A /* BankCardManagerViewController.xib in Resources */,
 				5CA41C531BC8E688000A3484 /* Assets.xcassets in Resources */,
-				5C5A2DCD1BD6115D00C4AE1D /* RegisterAgreementViewController.xib in Resources */,
+				5CA673C51BD9D63C00BED35A /* protocol_but_2@2x.png in Resources */,
 				5C746C881BD77EB0007A7DE6 /* MoblieValidateViewController.xib in Resources */,
 				5C5A2DD81BD6115D00C4AE1D /* PasswordManagerViewController.xib in Resources */,
 				5C746CB41BD78FE4007A7DE6 /* FunctionCell.xib in Resources */,
-				5C5A2DD11BD6115D00C4AE1D /* SetUpPasswordViewController.xib in Resources */,
+				5C71BD801BDA134500978CF4 /* UpdataPWDViewController.xib in Resources */,
+				5CA673C91BD9D63C00BED35A /* top_return_but_2@2x.png in Resources */,
+				5CA673C11BD9D63C00BED35A /* password_eye_2@2x.png in Resources */,
 				5C93B8E11BD8913600E8A8AA /* IncomeAEViewController.xib in Resources */,
+				5CA673C71BD9D63C00BED35A /* top_return_but_1@2x.png in Resources */,
 				5C746CB51BD78FE4007A7DE6 /* MyViewController.storyboard in Resources */,
+				5CA673BF1BD9D63C00BED35A /* password_eye_1@2x.png in Resources */,
 				5C5A2DD61BD6115D00C4AE1D /* MyAccountViewController.xib in Resources */,
+				5CA673C21BD9D63C00BED35A /* password_eye_2@3x.png in Resources */,
 				5C746CB61BD78FE4007A7DE6 /* MyViewController.xib in Resources */,
 				5CBE16EE1BD76F9F00692B0A /* AddBankCardViewController.xib in Resources */,
-				5C5A2DD31BD6115D00C4AE1D /* ValidateViewController.xib in Resources */,
+				5C93B8F11BD8D9BA00E8A8AA /* MoblieWriteViewController.xib in Resources */,
+				5CA673C41BD9D63C00BED35A /* protocol_but_1@3x.png in Resources */,
+				5CA673C01BD9D63C00BED35A /* password_eye_1@3x.png in Resources */,
 				5C93B8EB1BD8CB0500E8A8AA /* InfoFinishedViewController.xib in Resources */,
+				5CA673CA1BD9D63C00BED35A /* top_return_but_2@3x.png in Resources */,
+				5CA673C81BD9D63C00BED35A /* top_return_but_1@3x.png in Resources */,
+				5C1DFAFF1BDA195A00E0BB97 /* PayPasswordViewController.xib in Resources */,
 				5CA41C511BC8E688000A3484 /* Main.storyboard in Resources */,
+				5C93B8FB1BD8DA5A00E8A8AA /* PasswordWriteViewController.xib in Resources */,
 				5C394BFC1BCF597E009AC0AC /* LaunchScreen.storyboard in Resources */,
-				5C5A2DCF1BD6115D00C4AE1D /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1131,7 +1255,7 @@
 				5C746CB31BD78FE4007A7DE6 /* FonctionDesc.m in Sources */,
 				5CC6BBFB1BD8993E00660205 /* STDb.m in Sources */,
 				5CC6BC011BD8993E00660205 /* FileUtil.m in Sources */,
-				5C5A2DD01BD6115D00C4AE1D /* SetUpPasswordViewController.m in Sources */,
+				5C93B8FA1BD8DA5A00E8A8AA /* PasswordWriteViewController.m in Sources */,
 				5C447C6C1BD77A3700A049D9 /* BankCardValidateViewController.m in Sources */,
 				5C746C971BD78A67007A7DE6 /* TopUpShowViewController.mm in Sources */,
 				5CC6BC191BD8A4E400660205 /* MBProgressHUD.m in Sources */,
@@ -1142,39 +1266,44 @@
 				5CC6BC071BD8993E00660205 /* StringUtil.mm in Sources */,
 				5CC6BC001BD8993E00660205 /* DeviceUtil.mm in Sources */,
 				5CC6BBBC1BD8933400660205 /* TopUpResultViewController.m in Sources */,
-				5C5A2DD21BD6115D00C4AE1D /* ValidateViewController.m in Sources */,
 				5CC6BBFA1BD8993E00660205 /* MessageCenter.m in Sources */,
 				5CC6BBFE1BD8993E00660205 /* SXPViewController.m in Sources */,
-				5C5A2DCC1BD6115D00C4AE1D /* RegisterAgreementViewController.m in Sources */,
 				5CC6BC061BD8993E00660205 /* Position.m in Sources */,
 				5C746C991BD78A67007A7DE6 /* TopUpViewController.m in Sources */,
 				5C5A2DD71BD6115D00C4AE1D /* PasswordManagerViewController.m in Sources */,
+				5CA673AE1BD9C61000BED35A /* UIView+Sizes.m in Sources */,
 				5C4B7A981BD7C33D009D556E /* MyViewController.m in Sources */,
 				5CC6BBF61BD8993E00660205 /* RuntimeContext.m in Sources */,
 				5CC6BC091BD8993E00660205 /* ViewUtil.m in Sources */,
 				5C5A2DCB1BD6115D00C4AE1D /* RegisterRequest.m in Sources */,
 				5CC6BC1A1BD8A4E400660205 /* MBProgressHUDManager.m in Sources */,
-				5C5A2DD91BD6115D00C4AE1D /* ResetPasswordViewController.m in Sources */,
+				5CA673AC1BD9C61000BED35A /* RNDirectionPanGestureRecognizer.m in Sources */,
 				5C5A2DD51BD6115D00C4AE1D /* MyAccountViewController.m in Sources */,
 				5CC6BC021BD8993E00660205 /* MathUtil.m in Sources */,
 				5CA41C4B1BC8E688000A3484 /* AppDelegate.m in Sources */,
+				5CA673AF1BD9C61000BED35A /* UIViewController+RNSwipeViewController.m in Sources */,
 				5C5A2DC81BD6115D00C4AE1D /* LoginRequest.m in Sources */,
 				5CC6BC041BD8993E00660205 /* NetworkUtil.m in Sources */,
 				5CA41C481BC8E688000A3484 /* main.m in Sources */,
+				5C93B8F01BD8D9BA00E8A8AA /* MoblieWriteViewController.m in Sources */,
 				5C746C951BD78A67007A7DE6 /* BankCard.m in Sources */,
 				5C93B8E01BD8913600E8A8AA /* IncomeAEViewController.m in Sources */,
+				5C71BD7F1BDA134500978CF4 /* UpdataPWDViewController.m in Sources */,
 				5CBE16ED1BD76F9F00692B0A /* AddBankCardViewController.m in Sources */,
 				5C746C871BD77EB0007A7DE6 /* MoblieValidateViewController.m in Sources */,
+				5CA673AD1BD9C61000BED35A /* RNSwipeViewController.m in Sources */,
 				5CC6BBF71BD8993E00660205 /* HttpClientManager.mm in Sources */,
 				5CBE16E81BD76D0400692B0A /* BankCardManagerViewController.m in Sources */,
 				5CC6BC031BD8993E00660205 /* MD5Util.m in Sources */,
 				5CC6BBF81BD8993E00660205 /* HttpEvent.m in Sources */,
 				5CC6BC051BD8993E00660205 /* NSString+Mobile.m in Sources */,
+				5C1DFAFE1BDA195A00E0BB97 /* PayPasswordViewController.m in Sources */,
 				5CC6BBFF1BD8993E00660205 /* CommonUtil.m in Sources */,
+				5CA673B21BD9C65900BED35A /* RootViewController.m in Sources */,
 				5CC6BBF51BD8993E00660205 /* SXPAppDelegate.m in Sources */,
 				5C5A2DD41BD6115D00C4AE1D /* UserInfoRequest.m in Sources */,
 				5CC6BBFD1BD8993E00660205 /* STDbObject.m in Sources */,
-				5C5A2DCE1BD6115D00C4AE1D /* RegisterViewController.m in Sources */,
+				5C93B8F51BD8DA3900E8A8AA /* VerificationCodeWriteViewController.m in Sources */,
 				5C5A2DC91BD6115D00C4AE1D /* LoginViewController.m in Sources */,
 				5C5A2DC71BD6115D00C4AE1D /* HelpViewController.m in Sources */,
 				5CC6BC081BD8993E00660205 /* TimeUtil.m in Sources */,

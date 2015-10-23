@@ -78,6 +78,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self.swipeController showLeft];
     if (indexPath.row == 0) {
         NSLog(@"去吉高宝");
     }else if (indexPath.row == 1){
