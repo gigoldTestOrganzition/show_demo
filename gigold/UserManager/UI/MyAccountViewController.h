@@ -7,10 +7,12 @@
 //
 
 #import "BaseViewController.h"
+#import "MyAccountTableViewCell.h"
 
 @interface MyAccountViewController : BaseViewController <UITableViewDataSource,UITableViewDelegate>
 {
-    NSMutableArray* dataArray;
+    NSMutableArray* titleArray;
+    NSMutableArray* imageArray;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *mTableView;

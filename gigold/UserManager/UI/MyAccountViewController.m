@@ -17,44 +17,34 @@
 
 @implementation MyAccountViewController
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    dataArray = [[NSMutableArray alloc] initWithObjects:@"吉高宝",@"账户余额",@"银行卡管理",@"密码管理", nil];
+    self.view.backgroundColor = [UIColor colorWithRed:72/255. green:202/255. blue:226/255. alpha:1];
     
+    titleArray = [[NSMutableArray alloc] initWithObjects:@"吉有钱",@"零钱",@"银行卡",@"交易记录",@"密码管理", nil];
+    imageArray = [[NSMutableArray alloc] initWithObjects:@"user_menu_ico_1",@"user_menu_ico_2",@"user_menu_ico_3",@"user_menu_ico_4",@"user_menu_ico_5", nil];
+    
+    self.mTableView.backgroundColor = [UIColor colorWithRed:72/255. green:202/255. blue:226/255. alpha:1];
     self.mTableView.delegate = self;
     self.mTableView.dataSource = self;
-    
-    [self tableViewFooterViewCreat];
     
     // Do any additional setup after loading the view from its nib.
 }
 
--(void)tableViewFooterViewCreat{
-    UIView* footerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, mainScreenWidth, 50)];
-    
-    UIButton* logoutBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    logoutBtn.frame = CGRectMake(40, 10, footerView.frame.size.width-2*40, 30);
-    logoutBtn.layer.borderWidth = 1;
-    logoutBtn.layer.borderColor = [UIColor blackColor].CGColor;
-    logoutBtn.layer.cornerRadius = 5;
-    [logoutBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [logoutBtn setTitle:@"退出登录" forState:UIControlStateNormal];
-    [logoutBtn addTarget:self action:@selector(logoutBtnPress) forControlEvents:UIControlEventTouchUpInside];
-    
-    [footerView addSubview:logoutBtn];
-    
-    self.mTableView.tableFooterView = footerView;
-}
-
--(void)logoutBtnPress{
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"showLoginView" object:nil];
-}
+//-(void)logoutBtnPress{
+//    [[NSNotificationCenter defaultCenter] postNotificationName:@"showLoginView" object:nil];
+//}
 
 #pragma mark ---- UITableViewDataSource,UITableViewDelegate --------
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return dataArray.count;
+    return titleArray.count;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -62,41 +52,39 @@
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSString* cellString = @"cell";
-    
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellString];
-    
+    NSString* cellString = @"MyAccountTableViewCell";
+    MyAccountTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:cellString];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellString];
+        NSLog(@"%@",[[NSBundle mainBundle]loadNibNamed:@"MyAccountTableViewCell" owner:nil options:nil] );
+        cell= [[[NSBundle mainBundle]loadNibNamed:@"MyAccountTableViewCell" owner:nil options:nil] firstObject];
     }
-    
-    cell.textLabel.text = [dataArray objectAtIndex:indexPath.row];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    
+    cell.menuTitleLabel.text = [titleArray objectAtIndex:indexPath.row];
+    cell.menuImageView.image = [UIImage imageNamed:[imageArray objectAtIndex:indexPath.row]];
+    cell.valueLabel.text = @"";
+
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self.swipeController showLeft];
-    if (indexPath.row == 0) {
-        NSLog(@"去吉高宝");
-    }else if (indexPath.row == 1){
-        NSLog(@"去账户余额");
+//    [self.swipeController showLeft];
+    NSString* menuTitle = [titleArray objectAtIndex:indexPath.row];
+    NSLog(@"去%@",menuTitle);
+    if ([menuTitle isEqualToString:@"吉有钱"]) {
+    }else if ([menuTitle isEqualToString:@"交易记录"]){
         IncomeAEViewController* incomeAEView = [[IncomeAEViewController alloc] init];
         [incomeAEView setHidesBottomBarWhenPushed:YES];
         [self.navigationController pushViewController:incomeAEView animated:YES];
     }
-    else if (indexPath.row == 2){
-        NSLog(@"去银行卡管理");
+    else if ([menuTitle isEqualToString:@"银行卡"]){
         BankCardManagerViewController* bankCardView = [[BankCardManagerViewController alloc] init];
         [bankCardView setHidesBottomBarWhenPushed:YES];
         [self.navigationController pushViewController:bankCardView animated:YES];
     }
-    else if (indexPath.row == 3){
+    else if ([menuTitle isEqualToString:@"密码管理"]){
         PasswordManagerViewController* passwordManagerView = [[PasswordManagerViewController alloc] init];
         [passwordManagerView setHidesBottomBarWhenPushed:YES];
         [self.navigationController pushViewController:passwordManagerView animated:YES];
+    }else if ([menuTitle isEqualToString:@"零钱"]){
     }
 }
 

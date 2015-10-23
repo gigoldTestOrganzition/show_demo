@@ -16,18 +16,48 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="piZ-4T-I5B">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="piZ-4T-I5B">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="555"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <color key="sectionIndexBackgroundColor" red="0.29019607843137252" green="0.792156862745098" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oNt-L6-eHU" userLabel="shadowView">
+                    <rect key="frame" x="15" y="555" width="585" height="1"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="vPq-iU-z8y"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1a-jY-W5l">
+                    <rect key="frame" x="15" y="555" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="6GS-gE-vcQ"/>
+                        <constraint firstAttribute="width" constant="44" id="fSA-kw-Hcf"/>
+                    </constraints>
+                    <state key="normal" image="user_menu_set_ico.png"/>
+                </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.29019607843137252" green="0.792156862745098" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="E1a-jY-W5l" secondAttribute="bottom" constant="1" id="5MJ-8f-zvO"/>
+                <constraint firstItem="E1a-jY-W5l" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="555" id="CxI-aB-8zR"/>
                 <constraint firstItem="piZ-4T-I5B" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LMl-VC-6ey"/>
                 <constraint firstAttribute="trailing" secondItem="piZ-4T-I5B" secondAttribute="trailing" id="Nn8-jj-x8d"/>
-                <constraint firstAttribute="bottom" secondItem="piZ-4T-I5B" secondAttribute="bottom" id="boA-mx-MFO"/>
+                <constraint firstAttribute="bottom" secondItem="oNt-L6-eHU" secondAttribute="bottom" constant="44" id="Trb-jI-wgN"/>
+                <constraint firstAttribute="trailing" secondItem="oNt-L6-eHU" secondAttribute="trailing" id="XlT-Gd-MYH"/>
+                <constraint firstAttribute="bottom" secondItem="piZ-4T-I5B" secondAttribute="bottom" constant="45" id="boA-mx-MFO"/>
+                <constraint firstItem="E1a-jY-W5l" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="cJS-Kv-cYW"/>
                 <constraint firstItem="piZ-4T-I5B" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jc1-AT-EJ1"/>
+                <constraint firstItem="oNt-L6-eHU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="ngN-uT-dQe"/>
             </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="CxI-aB-8zR"/>
+                </mask>
+            </variation>
         </view>
     </objects>
+    <resources>
+        <image name="user_menu_set_ico.png" width="20" height="20"/>
+    </resources>
 </document>
