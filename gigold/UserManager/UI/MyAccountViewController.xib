@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyAccountViewController">
             <connections>
                 <outlet property="mTableView" destination="piZ-4T-I5B" id="tqN-8g-eBG"/>
+                <outlet property="settingBtn" destination="E1a-jY-W5l" id="cN9-Qo-bOh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,7 +19,7 @@
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="piZ-4T-I5B">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="555"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="sectionIndexBackgroundColor" red="0.29019607843137252" green="0.792156862745098" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oNt-L6-eHU" userLabel="shadowView">
@@ -29,7 +30,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1a-jY-W5l">
-                    <rect key="frame" x="15" y="555" width="44" height="44"/>
+                    <rect key="frame" x="0.0" y="555" width="44" height="44"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="6GS-gE-vcQ"/>
                         <constraint firstAttribute="width" constant="44" id="fSA-kw-Hcf"/>
@@ -46,7 +47,7 @@
                 <constraint firstAttribute="bottom" secondItem="oNt-L6-eHU" secondAttribute="bottom" constant="44" id="Trb-jI-wgN"/>
                 <constraint firstAttribute="trailing" secondItem="oNt-L6-eHU" secondAttribute="trailing" id="XlT-Gd-MYH"/>
                 <constraint firstAttribute="bottom" secondItem="piZ-4T-I5B" secondAttribute="bottom" constant="45" id="boA-mx-MFO"/>
-                <constraint firstItem="E1a-jY-W5l" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="cJS-Kv-cYW"/>
+                <constraint firstItem="E1a-jY-W5l" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cJS-Kv-cYW"/>
                 <constraint firstItem="piZ-4T-I5B" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jc1-AT-EJ1"/>
                 <constraint firstItem="oNt-L6-eHU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="ngN-uT-dQe"/>
             </constraints>

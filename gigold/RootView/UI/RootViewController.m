@@ -29,7 +29,7 @@
     [self becomeFirstResponder];
     
     
-    MyAccountViewController* myAccountView= [[MyAccountViewController alloc] init];
+    BaseViewController* myAccountView= [[BaseViewController alloc] init];
     self.centerViewController = myAccountView;
     
     

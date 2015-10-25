@@ -60,12 +60,24 @@
         verificationCodeWriteView.title = self.title;
         verificationCodeWriteView.moblieNum = self.mobileTextField.text;
         verificationCodeWriteView.flowType = self.flowType;
+        verificationCodeWriteView.delegate = self;
         [self.navigationController pushViewController:verificationCodeWriteView animated:YES];
     }else{
         [[AppUtils shareAppUtils] showHUD:@"请输入正确的手机号码！" andView:self.view];
         [self.mobileTextField becomeFirstResponder];
     }
     
+}
+
+-(void)UIViewControllerBack:(BaseViewController *)baseViewController{
+    if ([baseViewController isKindOfClass:[VerificationCodeWriteViewController class]]) {
+        VerificationCodeWriteViewController* verificationCodeWriteView = (VerificationCodeWriteViewController*)baseViewController;
+        self.backType = verificationCodeWriteView.backType;
+        [self.navigationController popViewControllerAnimated:NO];
+        if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
+            [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {

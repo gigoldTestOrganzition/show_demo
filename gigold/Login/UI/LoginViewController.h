@@ -11,15 +11,12 @@
 
 @interface LoginViewController : BaseViewController <UITextFieldDelegate>
 
-@property (weak, nonatomic) IBOutlet UIView *showView;
-@property (weak, nonatomic) IBOutlet UIView *shadowView;
+@property (weak, nonatomic) IBOutlet UIButton *backBtn;
+
 @property (weak, nonatomic) IBOutlet UITextField *accountTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
-
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
-@property (weak, nonatomic) IBOutlet UIButton *registerBtn;
 @property (weak, nonatomic) IBOutlet UIButton *forgetBtn;
-
-@property (retain,nonatomic)NSString* typeString;
+@property (weak, nonatomic) IBOutlet UIButton *registerBtn;
 
 @end

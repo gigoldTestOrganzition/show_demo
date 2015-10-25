@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "UIImageView+WebCache.h"
+#import "UIImageView+WebCache.h"
 #import "AppUtils.h"
 #import "AppDelegate.h"
 #import "UIViewController+RNSwipeViewController.h"
@@ -29,6 +29,14 @@ typedef enum FlowType
     ResetPasswordType,
     UpdataPayPWDType
 } FlowType;
+
+//判断返回状态值
+typedef enum BackType
+{
+    NoneType = 0,
+    FinishType,
+    cancelType,
+} BackType;
 
 @interface BaseViewController : UIViewController <BaseViewControllerDelegate>
 

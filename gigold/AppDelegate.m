@@ -30,8 +30,6 @@
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(showMainViewNotification:)name:@"showMainView" object:nil];
     
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(showLoginViewNotification:)name:@"showLoginView" object:nil];
-    
     
     NSLog(@"%f %f",mainScreenWidth,mainScreenHeight);
     
@@ -43,11 +41,12 @@
     
     
 //    [self showHelpView];
-    if ([[AppUtils shareAppUtils] getIsFirstRun]) {
-        [self showHelpView];
-    }else{
-        [self showLoginView];
-    }
+//    if ([[AppUtils shareAppUtils] getIsFirstRun]) {
+//        [self showHelpView];
+//    }else{
+//        [self showLoginView];
+//    }
+    [self showMainView];
     
     //设置Window为主窗口并显示出来
     [self.window makeKeyAndVisible];
@@ -66,18 +65,12 @@
     [self showMainView];
 }
 
--(void)showLoginViewNotification:(NSNotification *)notification{
-    [self showLoginView];
-}
-
 //进入新手指导
 -(void)showHelpView{
     [[AppUtils shareAppUtils] saveIsFirstRun:NO];
     HelpViewController* helpView = [[HelpViewController alloc] init];
     self.window.rootViewController = helpView;
 }
-
-
 
 -(void)showMainView{
     RootViewController* rootView = [[RootViewController alloc] init];

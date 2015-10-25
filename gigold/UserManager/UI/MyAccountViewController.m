@@ -10,6 +10,8 @@
 #import "PasswordManagerViewController.h"
 #import "BankCardManagerViewController.h"
 #import "IncomeAEViewController.h"
+#import "SettingsViewController.h"
+#import "LoginViewController.h"
 
 @interface MyAccountViewController ()
 
@@ -22,24 +24,105 @@
     self.navigationController.navigationBarHidden = YES;
 }
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(LoginStateChangeNotification:)name:@"LoginStateChange" object:nil];
     
     self.view.backgroundColor = [UIColor colorWithRed:72/255. green:202/255. blue:226/255. alpha:1];
     
     titleArray = [[NSMutableArray alloc] initWithObjects:@"吉有钱",@"零钱",@"银行卡",@"交易记录",@"密码管理", nil];
     imageArray = [[NSMutableArray alloc] initWithObjects:@"user_menu_ico_1",@"user_menu_ico_2",@"user_menu_ico_3",@"user_menu_ico_4",@"user_menu_ico_5", nil];
     
+    [self.settingBtn addTarget:self action:@selector(settingBtnPress) forControlEvents:UIControlEventTouchUpInside];
+    
     self.mTableView.backgroundColor = [UIColor colorWithRed:72/255. green:202/255. blue:226/255. alpha:1];
     self.mTableView.delegate = self;
     self.mTableView.dataSource = self;
     
+    [self tableViewHeaderViewCreat];
+    
     // Do any additional setup after loading the view from its nib.
 }
 
-//-(void)logoutBtnPress{
-//    [[NSNotificationCenter defaultCenter] postNotificationName:@"showLoginView" object:nil];
-//}
+//监听登录状态改变
+-(void)LoginStateChangeNotification:(NSNotification *)notification{
+    if ([[AppUtils shareAppUtils] getIsLogin]) {
+        loginLabel.hidden = YES;
+        markLabel.hidden = NO;
+        moblieLabel.hidden = NO;
+    }else{
+        loginLabel.hidden = NO;
+        markLabel.hidden = YES;
+        moblieLabel.hidden = YES;
+    }
+}
+
+
+-(void)tableViewHeaderViewCreat{
+    UIView* headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 120)];
+    headerView.backgroundColor = self.view.backgroundColor;
+    
+    UIImageView* headImageView = [[UIImageView alloc] initWithFrame:CGRectMake(15, headerView.frame.size.height-55, 45, 45)];
+    headImageView.backgroundColor = [UIColor redColor];
+    headImageView.layer.cornerRadius = headImageView.frame.size.height/2;
+    
+    [headerView addSubview:headImageView];
+    
+    loginLabel = [[UILabel alloc] initWithFrame:CGRectMake(headImageView.frame.size.width+headImageView.frame.origin.x+10, headImageView.frame.origin.y, headerView.frame.size.width-(headImageView.frame.size.width+headImageView.frame.origin.x+10+10), 45)];
+    loginLabel.backgroundColor = [UIColor clearColor];
+    loginLabel.text = @"点击登录";
+    loginLabel.textColor = [UIColor whiteColor];
+    loginLabel.font = [UIFont systemFontOfSize:16];
+    [headerView addSubview:loginLabel];
+    
+    moblieLabel = [[UILabel alloc] initWithFrame:CGRectMake(headImageView.frame.size.width+headImageView.frame.origin.x+10, headImageView.frame.origin.y, headerView.frame.size.width-(headImageView.frame.size.width+headImageView.frame.origin.x+10+10), 22)];
+    moblieLabel.backgroundColor = [UIColor clearColor];
+    moblieLabel.font = [UIFont systemFontOfSize:16];
+    moblieLabel.textColor = [UIColor whiteColor];
+    moblieLabel.text = [[AppUtils shareAppUtils] encryptMoblieNumber:[[AppUtils shareAppUtils] getAccount]];
+    [headerView addSubview:moblieLabel];
+    
+    markLabel = [[UILabel alloc] initWithFrame:CGRectMake(headImageView.frame.size.width+headImageView.frame.origin.x+10, headImageView.frame.origin.y+22+6,60, 16)];
+    markLabel.textAlignment = NSTextAlignmentCenter;
+    markLabel.backgroundColor = [UIColor whiteColor];
+    markLabel.textColor = self.view.backgroundColor;
+    markLabel.font = [UIFont systemFontOfSize:10];
+    markLabel.text = @"未实名认证";
+    markLabel.clipsToBounds = YES;
+    markLabel.layer.cornerRadius = 8;
+    [headerView addSubview:markLabel];
+    
+    if ([[AppUtils shareAppUtils] getIsLogin]) {
+        loginLabel.hidden = YES;
+    }else{
+        markLabel.hidden = YES;
+        moblieLabel.hidden = YES;
+    }
+    
+    UITapGestureRecognizer* oneTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(headerPress)];
+    [headerView addGestureRecognizer:oneTap];
+    
+    self.mTableView.tableHeaderView = headerView;
+}
+
+-(void)headerPress{
+    if ([[AppUtils shareAppUtils] getIsLogin]) {
+        NSLog(@"去看个人界面");
+    }else{
+        NSLog(@"去登录");
+        LoginViewController* loginView = [[LoginViewController alloc] init];
+        [self.navigationController pushViewController:loginView animated:YES];
+    }
+}
+
+-(void)settingBtnPress{
+    SettingsViewController* settingView = [[SettingsViewController alloc] init];
+    [self.navigationController pushViewController:settingView animated:YES];
+}
+
+
 
 #pragma mark ---- UITableViewDataSource,UITableViewDelegate --------
 
@@ -61,6 +144,7 @@
     cell.menuTitleLabel.text = [titleArray objectAtIndex:indexPath.row];
     cell.menuImageView.image = [UIImage imageNamed:[imageArray objectAtIndex:indexPath.row]];
     cell.valueLabel.text = @"";
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
     return cell;
 }

@@ -18,5 +18,6 @@
 
 
 @property (assign, nonatomic) FlowType flowType;
+@property (assign, nonatomic) BackType backType;
 
 @end

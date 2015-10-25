@@ -65,9 +65,13 @@
 }
 
 -(void)nextBtnPress{
-   
     if ([[AppUtils shareAppUtils] validateLoginPassword:self.passwordTextField.text]) {
          NSLog(@"成功");
+        [self.navigationController popViewControllerAnimated:NO];
+        self.backType = FinishType;
+        if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
+            [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
+        }
     }else{
         [[AppUtils shareAppUtils] showHUD:@"请输入正确的密码！" andView:self.view];
         [self.passwordTextField becomeFirstResponder];

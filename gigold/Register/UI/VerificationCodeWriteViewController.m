@@ -101,6 +101,7 @@
     NSLog(@"下一步");
     if (self.flowType == UpdataPayPWDType) {
         PayPasswordViewController* payPasswordView = [[PayPasswordViewController alloc] init];
+        payPasswordView.delegate = self;
         payPasswordView.title = self.title;
         [self.navigationController pushViewController:payPasswordView animated:YES];
         return;
@@ -110,11 +111,23 @@
         PasswordWriteViewController* passwordWriteView = [[PasswordWriteViewController alloc] init];
         passwordWriteView.title = self.title;
         passwordWriteView.flowType = self.flowType;
+        passwordWriteView.delegate = self;
         [self.navigationController pushViewController:passwordWriteView animated:YES];
     }else{
         [[AppUtils shareAppUtils] showHUD:@"请先同意服务条款！" andView:self.view];
     }
     
+}
+
+-(void)UIViewControllerBack:(BaseViewController *)baseViewController{
+    if ([baseViewController isKindOfClass:[PasswordWriteViewController class]]) {
+        PasswordWriteViewController* passwordWirteView = (PasswordWriteViewController*)baseViewController;
+        self.backType = passwordWirteView.backType;
+        [self.navigationController popViewControllerAnimated:NO];
+        if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
+            [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {

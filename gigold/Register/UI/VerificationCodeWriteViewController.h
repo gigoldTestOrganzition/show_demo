@@ -28,6 +28,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *next_view_height;
 
 @property (assign, nonatomic) FlowType flowType;
+@property (assign, nonatomic) BackType backType;
 
 //用于显示手机号码
 @property (strong,nonatomic) NSString* moblieNum;

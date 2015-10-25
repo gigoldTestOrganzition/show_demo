@@ -13,8 +13,13 @@
 {
     NSMutableArray* titleArray;
     NSMutableArray* imageArray;
+    
+    UILabel* loginLabel;
+    UILabel* moblieLabel;
+    UILabel* markLabel;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *mTableView;
+@property (weak, nonatomic) IBOutlet UIButton *settingBtn;
 
 @end

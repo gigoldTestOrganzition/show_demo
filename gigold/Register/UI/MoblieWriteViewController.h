@@ -12,5 +12,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *mobileTextField;
 @property (weak, nonatomic) IBOutlet UIButton *nextBtn;
 @property (assign, nonatomic) FlowType flowType;
+@property (assign, nonatomic) BackType backType;
 
 @end
