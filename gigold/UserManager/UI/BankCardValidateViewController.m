@@ -35,6 +35,8 @@
     [self.navigationController pushViewController:moblieValidateView animated:YES];
 }
 
+#pragma mark ---- BaseViewControllerDelegate --------
+
 -(void)UIViewControllerBack:(BaseViewController *)baseViewController{
     if ([baseViewController isKindOfClass:[MoblieValidateViewController class]]) {
         [self.navigationController popViewControllerAnimated:NO];

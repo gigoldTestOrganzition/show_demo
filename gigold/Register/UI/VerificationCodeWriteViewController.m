@@ -49,10 +49,10 @@
     NSMutableString* textString = [NSMutableString stringWithString:textField.text];
     [textString replaceCharactersInRange:range withString:string];
     if (textString.length == 0) {
-        self.nextBtn.backgroundColor = [UIColor colorWithRed:206/255.0f green:206/255.f blue:206/255.f alpha:1];
+        self.nextBtn.backgroundColor = unable_tap_color;
         self.nextBtn.enabled = NO;
     }else{
-        self.nextBtn.backgroundColor = [UIColor colorWithRed:74/255.0f green:202/255.f blue:226/255.f alpha:1];
+        self.nextBtn.backgroundColor = theme_color;
         self.nextBtn.enabled = YES;
     }
     return YES;
@@ -74,12 +74,12 @@
     if (timeCount  == TimeInterval) {
         [self endTime];
         timeCount = 0;
-        self.sendLabel.textColor = [UIColor colorWithRed:74/255.0f green:202/255.f blue:226/255.f alpha:1];
+        self.sendLabel.textColor = theme_color;
         self.sendLabel.text = @"重新发送";
         self.sendLabel.userInteractionEnabled = YES;
     }else{
         self.sendLabel.userInteractionEnabled = NO;
-        self.sendLabel.textColor = [UIColor colorWithRed:214/255.0f green:214/255.f blue:214/255.f alpha:1];
+        self.sendLabel.textColor = input_hint_color;
     }
 }
 
@@ -128,6 +128,8 @@
     }
     
 }
+
+#pragma mark ---- BaseViewControllerDelegate --------
 
 -(void)UIViewControllerBack:(BaseViewController *)baseViewController{
     if ([baseViewController isKindOfClass:[PasswordWriteViewController class]]) {

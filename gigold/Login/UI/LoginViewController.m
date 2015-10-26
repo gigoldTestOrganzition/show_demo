@@ -151,6 +151,8 @@
     return YES;
 }
 
+#pragma mark ---- BaseViewControllerDelegate --------
+
 -(void)UIViewControllerBack:(BaseViewController *)baseViewController{
     if ([baseViewController isKindOfClass:[MoblieWriteViewController class]]) {
         MoblieWriteViewController* moblieWriteView = (MoblieWriteViewController*)baseViewController;

@@ -36,14 +36,14 @@
     [textString replaceCharactersInRange:range withString:string];
     if ((textField == self.passwordTextField1 && self.passwordTextField2.text.length > 0) || (textField == self.passwordTextField2 && self.passwordTextField1.text.length > 0)) {
         if (textString.length == 0) {
-            self.nextBtn.backgroundColor = [UIColor colorWithRed:206/255.0f green:206/255.f blue:206/255.f alpha:1];
+            self.nextBtn.backgroundColor = unable_tap_color;
             self.nextBtn.enabled = NO;
         }else{
-            self.nextBtn.backgroundColor = [UIColor colorWithRed:74/255.0f green:202/255.f blue:226/255.f alpha:1];
+            self.nextBtn.backgroundColor = theme_color;
             self.nextBtn.enabled = YES;
         }
     }else{
-        self.nextBtn.backgroundColor = [UIColor colorWithRed:206/255.0f green:206/255.f blue:206/255.f alpha:1];
+        self.nextBtn.backgroundColor = unable_tap_color;
         self.nextBtn.enabled = NO;
     }
     

@@ -58,7 +58,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellString];
     }
     cell.textLabel.font = [UIFont systemFontOfSize:15];
-    cell.textLabel.textColor = [UIColor colorWithRed:89/255. green:89/255. blue:89/255. alpha:1];
+    cell.textLabel.textColor = main_text_color;
     cell.textLabel.text = [dataArray objectAtIndex:indexPath.row];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -93,6 +93,8 @@
     }
     
 }
+
+#pragma mark ---- BaseViewControllerDelegate --------
 
 -(void)UIViewControllerBack:(BaseViewController *)baseViewController{
     if ([baseViewController isKindOfClass:[UpdataPWDViewController class]]) {

@@ -33,6 +33,8 @@
     [self.navigationController pushViewController:bankCardValidateView animated:YES];
 }
 
+#pragma mark ---- BaseViewControllerDelegate --------
+
 -(void)UIViewControllerBack:(BaseViewController *)baseViewController{
     if ([baseViewController isKindOfClass:[BankCardValidateViewController class]]) {
         [self.navigationController popViewControllerAnimated:NO];

@@ -78,6 +78,8 @@
     return cell;
 }
 
+#pragma mark ---- BaseViewControllerDelegate --------
+
 -(void)UIViewControllerBack:(BaseViewController *)baseViewController{
     if ([baseViewController isKindOfClass:[AddBankCardViewController class]]) {
         [dataArray addObject:@"新加一张银行卡"];

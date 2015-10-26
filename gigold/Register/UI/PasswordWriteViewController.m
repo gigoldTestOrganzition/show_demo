@@ -59,10 +59,10 @@
     NSMutableString* textString = [NSMutableString stringWithString:textField.text];
     [textString replaceCharactersInRange:range withString:string];
     if (textString.length == 0) {
-        self.nextBtn.backgroundColor = [UIColor colorWithRed:206/255.0f green:206/255.f blue:206/255.f alpha:1];
+        self.nextBtn.backgroundColor = unable_tap_color;
         self.nextBtn.enabled = NO;
     }else{
-        self.nextBtn.backgroundColor = [UIColor colorWithRed:74/255.0f green:202/255.f blue:226/255.f alpha:1];
+        self.nextBtn.backgroundColor = theme_color;
         self.nextBtn.enabled = YES;
     }
     return YES;

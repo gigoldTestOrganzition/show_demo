@@ -197,6 +197,8 @@
     }
 }
 
+#pragma mark ---- BaseViewControllerDelegate --------
+
 -(void)UIViewControllerBack:(BaseViewController *)baseViewController{
     if ([baseViewController isKindOfClass:[LoginViewController class]]) {
         LoginViewController* loginView = (LoginViewController*)baseViewController;

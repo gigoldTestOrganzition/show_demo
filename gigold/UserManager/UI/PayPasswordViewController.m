@@ -25,7 +25,7 @@
     
     self.payView.backgroundColor = [UIColor whiteColor];
     self.payView.layer.borderWidth = 0.5;
-    self.payView.layer.borderColor = [UIColor colorWithRed:199/255. green:199/255. blue:199/255. alpha:1].CGColor;
+    self.payView.layer.borderColor = gray_diver_color.CGColor;
     
     UITapGestureRecognizer* oneTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(textFieldResponder)];
     [self.payView addGestureRecognizer:oneTap];
@@ -87,10 +87,10 @@
         }
     }else{
         if (textString.length >= 6) {
-            self.nextBtn.backgroundColor = [UIColor colorWithRed:74/255.0f green:202/255.f blue:226/255.f alpha:1];
+            self.nextBtn.backgroundColor = theme_color;
             self.nextBtn.enabled = YES;
         }else{
-            self.nextBtn.backgroundColor = [UIColor colorWithRed:206/255.0f green:206/255.f blue:206/255.f alpha:1];
+            self.nextBtn.backgroundColor = unable_tap_color;
             self.nextBtn.enabled = NO;
         }
         
@@ -186,6 +186,7 @@
     [tempTextField becomeFirstResponder];
 }
 
+#pragma mark ---- BaseViewControllerDelegate --------
 
 -(void)UIViewControllerBack:(BaseViewController *)baseViewController{
     if ([baseViewController isKindOfClass:[PayPasswordViewController class]]) {

@@ -76,7 +76,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = UIColorFromRGB(0xF5F5F5);
+    self.view.backgroundColor = back_ground_color;
     // Do any additional setup after loading the view.
 }
 

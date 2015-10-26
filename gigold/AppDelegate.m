@@ -34,9 +34,9 @@
     NSLog(@"%f %f",mainScreenWidth,mainScreenHeight);
     
     //设置NavigationBar背景颜色
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:74/255.0f green:202/255.f blue:226/255.f alpha:1]];
+    [[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0x111)];
     //@{}代表Dictionary
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:18],
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName:title_or_btn_font,
                                                            
                                                            NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
