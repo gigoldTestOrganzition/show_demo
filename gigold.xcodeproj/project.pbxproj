@@ -375,6 +375,8 @@
 		5CC6BC161BD8A4E400660205 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		5CC6BC171BD8A4E400660205 /* MBProgressHUDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUDManager.h; sourceTree = "<group>"; };
 		5CC6BC181BD8A4E400660205 /* MBProgressHUDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUDManager.m; sourceTree = "<group>"; };
+		5CC9C2AD1BDDF02300C2269A /* GigoldColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GigoldColors.h; path = gigold/common/data/GigoldColors.h; sourceTree = SOURCE_ROOT; };
+		5CC9C2AE1BDDF04700C2269A /* GigoldFonts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GigoldFonts.h; path = gigold/common/data/GigoldFonts.h; sourceTree = SOURCE_ROOT; };
 		5CCCEE281BDDC4DC00336158 /* GigoldTreasureHome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GigoldTreasureHome.storyboard; sourceTree = "<group>"; };
 		5CCCEE291BDDC4DC00336158 /* GigoldTreasureHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GigoldTreasureHomeViewController.h; sourceTree = "<group>"; };
 		5CCCEE2A1BDDC4DC00336158 /* GigoldTreasureHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GigoldTreasureHomeViewController.m; sourceTree = "<group>"; };
@@ -496,6 +498,8 @@
 				5C5A2D871BD6115D00C4AE1D /* AppUtils.m */,
 				5C5A2DDB1BD6118D00C4AE1D /* PrefixHeader.pch */,
 				5C4B7A861BD7C046009D556E /* appliacation_attribute.h */,
+				5CC9C2AD1BDDF02300C2269A /* GigoldColors.h */,
+				5CC9C2AE1BDDF04700C2269A /* GigoldFonts.h */,
 			);
 			path = Data;
 			sourceTree = "<group>";

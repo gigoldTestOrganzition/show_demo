@@ -30,6 +30,7 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
+            <color key="backgroundColor" red="0.80784313725490198" green="0.80784313725490198" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="TVG-An-AG3" firstAttribute="centerX" secondItem="bOk-8B-OxE" secondAttribute="centerX" id="4PZ-KK-sCV"/>
                 <constraint firstItem="TVG-An-AG3" firstAttribute="top" secondItem="bRG-cG-Ozf" secondAttribute="bottom" constant="5" id="Cdj-fz-iCe"/>
