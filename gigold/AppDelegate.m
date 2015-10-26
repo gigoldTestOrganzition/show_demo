@@ -76,58 +76,7 @@
     RootViewController* rootView = [[RootViewController alloc] init];
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:rootView];
     self.window.rootViewController = nav;
-    
-    
-    
-    return;
-    //a.初始化一个tabBar控制器
-    UITabBarController *tb= [[UITabBarController alloc]init];
-    tb.tabBar.selectedImageTintColor = UIColorFromRGB(0xFFFFFF);
-    tb.tabBar.barTintColor = UIColorFromRGB(0x65BECB);
-    
-    // this will give selected icons and text your apps tint color
-    tb.tabBar.tintColor = [UIColor whiteColor]; // appTintColor is a UIColor *
-    
-//    [[UITabBarItem appearance] setTitleTextAttributes:
-//     [NSDictionary dictionaryWithObjectsAndKeys:
-//      [UIColor whiteColor], UITextAttributeTextColor,
-//      [UIFont fontWithName:@"ProximaNova-Semibold" size:20.0], UITextAttributeFont,
-//      nil]
-//                                             forState:UIControlStateNormal];
-    
-    //    UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, mainScreenWidth, 49)];
-    //    backView.backgroundColor = UIColorFromRGB(0x65BECB);
-    //    [tb.tabBar insertSubview:backView atIndex:0];
-    //    tb.tabBar.opaque = YES;
-    
-    tb.tabBar.translucent = NO;
-    
-//    b.创建子控制器
-    MyViewController *c1 = (MyViewController*)storyboard_controller(@"MyViewController");
-    
-    c1.view.backgroundColor = [UIColor grayColor];
-    c1.title = @"社区生活";
-    c1.tabBarItem.image = [UIImage imageNamed:@"Home"];
-
-    
-    BaseViewController *c2 = [[BaseViewController alloc]init];
-    c2.view.backgroundColor = [UIColor redColor];
-    c2.title = @"消息";
-    c2.tabBarItem.image = [UIImage imageNamed:@"HomeShoppingCenter"];
-    c2.tabBarItem.badgeValue = @"10";
-    
-    
-    MyAccountViewController *c3 = [[MyAccountViewController alloc]init];
-    c3.title = @"我的账户";
-    c3.tabBarItem.image = [UIImage imageNamed:@"HomeShoppingCart"];
-    
-    UINavigationController* nav1 = [[UINavigationController alloc] initWithRootViewController:c1];
-    UINavigationController* nav2 = [[UINavigationController alloc] initWithRootViewController:c2];
-    UINavigationController* nav3 = [[UINavigationController alloc] initWithRootViewController:c3];
-    
-    tb.viewControllers=@[nav1,nav2,nav3];
-
-    self.window.rootViewController = tb;
+  
 }
 
 

@@ -19,14 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-//    if ([((UINavigationController*)Etappdelegate.window.rootViewController) respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-//        ((UINavigationController*)Etappdelegate.window.rootViewController).interactivePopGestureRecognizer.delegate = self;
-//        ((UINavigationController*)Etappdelegate.window.rootViewController).interactivePopGestureRecognizer.enabled = NO;
-//    }
-    
-    //support shake
     [[UIApplication sharedApplication] setApplicationSupportsShakeToEdit:YES];
+
     [self becomeFirstResponder];
     
     
@@ -34,12 +28,16 @@
     UINavigationController* lifeNavigationController = [[UINavigationController alloc]initWithRootViewController:(MyViewController*)storyboard_controller(@"MyViewController")];
     self.centerViewController = lifeNavigationController;
     
+    [self becomeFirstResponder];
+    
+    
+
+    
     
     MyAccountViewController* myAccountView1= [[MyAccountViewController alloc] init];
     self.leftViewController = myAccountView1;
     self.leftVisibleWidth = self.view.bounds.size.width -50;
     
-  
     // Do any additional setup after loading the view.
 }
 
