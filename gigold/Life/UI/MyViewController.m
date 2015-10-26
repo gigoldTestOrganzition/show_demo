@@ -26,6 +26,8 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
+    
     //self.hidesBottomBarWhenPushed = NO;
 }
 
@@ -40,8 +42,6 @@
         [NSValue valueWithPointer:@selector(propertyPay)],
             [NSValue valueWithPointer:@selector(stopCarPay)],
         [NSValue valueWithPointer:@selector(gigoldTreasure)],nil];
-    
-    
     
     int i = 0;
     for (NSString* itemStr in desStr) {
@@ -111,7 +111,7 @@
 //吉高宝
 -(void)gigoldTreasure{
     
-    GigoldTreasureHomeViewController* gigoldTreasureHomeViewController = (GigoldTreasureHomeViewController*)storyboard_controller(@"GigoldTreasureHome");
+    GigoldTreasureHomeViewController* gigoldTreasureHomeViewController = (GigoldTreasureHomeViewController*)storyboard_controller_identity(@"GigoldTreasureHome",@"home");
     gigoldTreasureHomeViewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:gigoldTreasureHomeViewController animated:YES];
 }

@@ -9,11 +9,10 @@
 #import "AppDelegate.h"
 #import "HelpViewController.h"
 #import "LoginViewController.h"
-#import "SetUpPasswordViewController.h"
-#import "ResetPasswordViewController.h"
 #import "MyAccountViewController.h"
 #import "appliacation_attribute.h"
 #import "MyViewController.h"
+#import "RootViewController.h"
 
 @interface AppDelegate ()
 
@@ -31,24 +30,23 @@
     
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(showMainViewNotification:)name:@"showMainView" object:nil];
     
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(showLoginViewNotification:)name:@"showLoginView" object:nil];
-    
     
     NSLog(@"%f %f",mainScreenWidth,mainScreenHeight);
     
     //设置NavigationBar背景颜色
-    [[UINavigationBar appearance] setBarTintColor:[UIColor redColor]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:74/255.0f green:202/255.f blue:226/255.f alpha:1]];
     //@{}代表Dictionary
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
     
 //    [self showHelpView];
-    if ([[AppUtils shareAppUtils] getIsFirstRun]) {
-        [self showHelpView];
-    }else{
-        [self showLoginView];
-    }
+//    if ([[AppUtils shareAppUtils] getIsFirstRun]) {
+//        [self showHelpView];
+//    }else{
+//        [self showLoginView];
+//    }
+    [self showMainView];
     
     //设置Window为主窗口并显示出来
     [self.window makeKeyAndVisible];
@@ -67,10 +65,6 @@
     [self showMainView];
 }
 
--(void)showLoginViewNotification:(NSNotification *)notification{
-    [self showLoginView];
-}
-
 //进入新手指导
 -(void)showHelpView{
     [[AppUtils shareAppUtils] saveIsFirstRun:NO];
@@ -78,13 +72,14 @@
     self.window.rootViewController = helpView;
 }
 
-
-
 -(void)showMainView{
+    RootViewController* rootView = [[RootViewController alloc] init];
+    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:rootView];
+    self.window.rootViewController = nav;
     
     
     
-    
+    return;
     //a.初始化一个tabBar控制器
     UITabBarController *tb= [[UITabBarController alloc]init];
     tb.tabBar.selectedImageTintColor = UIColorFromRGB(0xFFFFFF);

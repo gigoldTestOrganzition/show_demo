@@ -9,5 +9,6 @@
 #import "BaseViewController.h"
 
 @interface MoblieValidateViewController : BaseViewController
+@property (weak, nonatomic) IBOutlet UIButton *nextBtn;
 
 @end

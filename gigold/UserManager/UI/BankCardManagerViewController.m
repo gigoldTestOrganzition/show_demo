@@ -48,6 +48,7 @@
 
 -(void)addBtnPress{
     AddBankCardViewController* addBankCardView = [[AddBankCardViewController alloc] init];
+    addBankCardView.delegate = self;
     [self.navigationController pushViewController:addBankCardView animated:YES];
 }
 
@@ -75,6 +76,13 @@
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
+}
+
+-(void)UIViewControllerBack:(BaseViewController *)baseViewController{
+    if ([baseViewController isKindOfClass:[AddBankCardViewController class]]) {
+        [dataArray addObject:@"新加一张银行卡"];
+        [self.mTableView reloadData];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

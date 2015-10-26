@@ -7,13 +7,18 @@
 //
 
 #import "LoginViewController.h"
-#import "ValidateViewController.h"
+#import "MoblieWriteViewController.h"
 
 @interface LoginViewController ()
 
 @end
 
 @implementation LoginViewController
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,41 +27,28 @@
     UITapGestureRecognizer* oneTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selfViewPress)];
     
     [self.view addGestureRecognizer:oneTap];
+    
+    [self.backBtn addTarget:self action:@selector(backBtnPress) forControlEvents:UIControlEventTouchUpInside];
 
-    
-    self.showView.backgroundColor = UIColorFromRGB(0xFFFFFF);
-    self.showView.layer.cornerRadius = 5;
-    self.showView.layer.borderWidth = 0.5;
-    self.showView.layer.borderColor = UIColorFromRGB(0xE5E5E5).CGColor;
-    
-    self.shadowView.backgroundColor = UIColorFromRGB(0xE5E5E5);
-    
-    self.loginBtn.backgroundColor = UIColorFromRGB(0x66C2B0);
-    self.loginBtn.layer.cornerRadius = 5;
     [self.loginBtn addTarget:self action:@selector(loginBtnPress) forControlEvents:UIControlEventTouchUpInside];
     
-    [self.registerBtn setTitleColor:UIColorFromRGB(0x666666) forState:UIControlStateNormal];
     [self.registerBtn addTarget:self action:@selector(registerBtnPress) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.forgetBtn setTitleColor:UIColorFromRGB(0x666666) forState:UIControlStateNormal];
     [self.forgetBtn addTarget:self action:@selector(forgetBtnPress) forControlEvents:UIControlEventTouchUpInside];
     
     self.accountTextField.delegate = self;
+    [self.accountTextField setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
     self.passwordTextField.delegate = self;
+    [self.passwordTextField setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
     
     //测试数据
     self.accountTextField.text = @"12345678900";
     self.passwordTextField.text = @"1324";
     
-    self.title = @"登录";
-    
-//    self.navigationControlle
-    
     NSLog(@"md5%@",[[AppUtils shareAppUtils] md5:@"13511407383+yyyyyyyyy"]);
 }
 
 
--(void)leftBtnPress{
+-(void)backBtnPress{
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -73,17 +65,21 @@
 //去找回密码
 -(void)forgetBtnPress{
     NSLog(@"去找回密码");
-    ValidateViewController* validateView = [[ValidateViewController alloc] init];
-    validateView.validateType = ResetPWDValidate;
-    [self.navigationController pushViewController:validateView animated:YES];
+    MoblieWriteViewController* moblieWriteView = [[MoblieWriteViewController alloc] init];
+    moblieWriteView.delegate = self;
+    moblieWriteView.flowType = ResetPasswordType;
+    [self.navigationController pushViewController:moblieWriteView animated:YES];
 }
 
 //去注册
 -(void)registerBtnPress{
     NSLog(@"去注册");
-    ValidateViewController* validateView = [[ValidateViewController alloc] init];
-    validateView.validateType = RegisterValidate;
-    [self.navigationController pushViewController:validateView animated:YES];
+    
+    MoblieWriteViewController* moblieWriteView = [[MoblieWriteViewController alloc] init];
+    moblieWriteView.delegate = self;
+    moblieWriteView.flowType = RegisterType;
+    [self.navigationController pushViewController:moblieWriteView animated:YES];
+
 }
 
 //去登录
@@ -107,22 +103,27 @@
         return;
     }
     
+    [[LoginRequest sharedLoginRequest] loginRequestMobileNum:@"13511232" pwd:@"123"success:^(AFHTTPRequestOperation * operation, id responseObject) {
+        
+    }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
+        
+    }];
+    
     [[AppUtils shareAppUtils] saveIsLogin:YES];
     [[AppUtils shareAppUtils] saveAccount:self.accountTextField.text];
     [[AppUtils shareAppUtils] savePassword:self.passwordTextField.text];
     
     [[AppUtils shareAppUtils] saveHistoricalAccount:self.passwordTextField.text andKey:self.accountTextField.text];
     
-    NSLog(@"historyDict%@",[[AppUtils shareAppUtils] getHistoricalAccount]);
-    
-    [[AppUtils shareAppUtils] showHUD:@"登录成功"];
+    [[AppUtils shareAppUtils] showHUD:@"登录成功" andView:self.view];
     
     [self performSelector:@selector(delayMethod) withObject:nil afterDelay:1.0f];
     
 }
 
 -(void)delayMethod{
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"showMainView" object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"LoginStateChange" object:nil];
+    [self backBtnPress];
 }
 
 #pragma mark ---- LoginDelegate -----
@@ -133,7 +134,7 @@
 }
 -(void)LoginFailInData:(NSString*)message{
     NSLog(@"登录失败，原因是:%@",message);
-    [[AppUtils shareAppUtils] showHUD:message];
+    [[AppUtils shareAppUtils] showHUD:message andView:self.view];
 }
 
 #pragma mark ---- textFieldDelegate -----
@@ -152,7 +153,17 @@
     return YES;
 }
 
-
+-(void)UIViewControllerBack:(BaseViewController *)baseViewController{
+    if ([baseViewController isKindOfClass:[MoblieWriteViewController class]]) {
+        MoblieWriteViewController* moblieWriteView = (MoblieWriteViewController*)baseViewController;
+        if (moblieWriteView.backType == FinishType) {
+            [self.navigationController popViewControllerAnimated:NO];
+            if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
+                [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
+            }
+        }
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

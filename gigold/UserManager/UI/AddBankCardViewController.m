@@ -29,7 +29,18 @@
 
 -(void)nextBtnPress{
     BankCardValidateViewController* bankCardValidateView = [[BankCardValidateViewController alloc] init];
+    bankCardValidateView.delegate = self;
     [self.navigationController pushViewController:bankCardValidateView animated:YES];
+}
+
+-(void)UIViewControllerBack:(BaseViewController *)baseViewController{
+    if ([baseViewController isKindOfClass:[BankCardValidateViewController class]]) {
+        [self.navigationController popViewControllerAnimated:NO];
+        if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
+            [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
+        }
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning {

@@ -269,17 +269,16 @@ NSUserDefaults *defaults = nil;
     [alert show];
 }
 
--(void)showHUD:(NSString*)text
+-(void)showHUD:(NSString*)text andView:(UIView*)view
 {
-    UIViewController *vc = ((UINavigationController*)(Etappdelegate.window.rootViewController)).topViewController;
-    MBProgressHUD *hud = [[MBProgressHUD alloc]initWithView:vc.view];
-    [vc.view addSubview:hud];
+    
+    MBProgressHUD *hud = [[MBProgressHUD alloc]initWithView:view];
+    [view addSubview:hud];
     hud.customView = [[UIView alloc] init] ;
     hud.mode = MBProgressHUDModeCustomView;
     hud.labelText = text;
     [hud show:YES];
     [hud hide:YES afterDelay:0.3];
-    
 }
 
 
@@ -416,6 +415,23 @@ NSUserDefaults *defaults = nil;
             result[8], result[9], result[10], result[11],
             result[12], result[13], result[14], result[15]
             ]; 
+}
+
+- (NSString *)encryptMoblieNumber:(NSString*)str{
+    if (str.length >= 11) {
+        NSMutableString* newMoblie = [NSMutableString stringWithString:str];
+        [newMoblie replaceCharactersInRange:NSMakeRange(3, 5) withString:@"***"];
+        return newMoblie;
+    }else{
+        return str;
+    }
+}
+
+- (BOOL)validateLoginPassword:(NSString*)password{
+    NSString * regex = @"^[A-Za-z0-9]{6,20}$";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    BOOL isMatch = [pred evaluateWithObject:password];
+    return isMatch;
 }
 
 @end

@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 //#import "UIImageView+WebCache.h"
 #import "AppUtils.h"
 #import "AppDelegate.h"
 
-@interface MyViewController : UIViewController
+@interface MyViewController : BaseViewController
 
 
 @end

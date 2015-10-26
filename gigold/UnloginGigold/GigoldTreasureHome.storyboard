@@ -8,7 +8,7 @@
         <!--Gigold Treasure Home View Controller-->
         <scene sceneID="ay3-4J-dB6">
             <objects>
-                <viewController id="iQE-Pd-8H3" customClass="GigoldTreasureHomeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home" id="iQE-Pd-8H3" customClass="GigoldTreasureHomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CTJ-GQ-rMj"/>
                         <viewControllerLayoutGuide type="bottom" id="RbR-Dm-RHW"/>
@@ -1593,13 +1593,13 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uez-PO-mqa">
                                 <rect key="frame" x="9" y="28" width="301" height="291"/>
-                                <mutableString key="text">       转入吉高宝的资金在第二个交易日由基金公司进行份额确认，对已确认的份额，基金公司产生收益的当天收益在次日下午15点之前在余额宝中显示。               
+                                <string key="text">       转入吉高宝的资金在第二个交易日由基金公司进行份额确认，对已确认的份额，基金公司产生收益的当天收益在次日下午15点之前在余额宝中显示。               
 
 温馨提示：15:00后转入的资金会顺延1个交易日确认，双休日及国家法定假期，基金公司不进行份额确认。
 
 转入时间 确认份额 首次发放收益时间 周四15:00(含15:00)～周五15:00 下周一 下周二 周五15:00(含15:00)～下周一15:00 下周二 下周三 周一15:00(含15:00)～周二15:00 周三 周四 周二15:00(含15:00)～周三15:00 周四 周五 周三15:00(含15:00)～周四15:00 周五 周六
 
-收益计算： 吉高宝每天的收益都不同，收益计算公式=（吉高宝确认金额/10000）X当天基金公司公布的每万份收益 点此进入计算器可查每天收益率</mutableString>
+收益计算： 吉高宝每天的收益都不同，收益计算公式=（吉高宝确认金额/10000）X当天基金公司公布的每万份收益 点此进入计算器可查每天收益率</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>

@@ -16,7 +16,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.nextBtn.layer.borderWidth = 0.5;
+    self.nextBtn.layer.borderColor = [UIColor blackColor].CGColor;
+    self.nextBtn.layer.cornerRadius = 5;
+    [self.nextBtn addTarget:self action:@selector(nextBtnPress) forControlEvents:UIControlEventTouchUpInside];
+    
     // Do any additional setup after loading the view from its nib.
+}
+
+-(void)nextBtnPress{
+    [[AppUtils shareAppUtils] showHUD:@"绑定成功" andView:self.view];
+
+    [self.navigationController popViewControllerAnimated:NO];
+    if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
+            [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {

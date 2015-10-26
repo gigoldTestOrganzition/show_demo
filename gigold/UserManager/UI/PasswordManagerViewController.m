@@ -7,7 +7,9 @@
 //
 
 #import "PasswordManagerViewController.h"
-#import "ResetPasswordViewController.h"
+#import "UpdataPWDViewController.h"
+#import "PayPasswordViewController.h"
+#import "VerificationCodeWriteViewController.h"
 
 @interface PasswordManagerViewController ()
 
@@ -47,17 +49,32 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellString];
     }
-
-    cell.textLabel.text = @"密码修改";
+    cell.textLabel.font = [UIFont systemFontOfSize:15];
+    cell.textLabel.textColor = [UIColor colorWithRed:89/255. green:89/255. blue:89/255. alpha:1];
+    if (indexPath.row == 0) {
+        cell.textLabel.text = @"修改登录密码";
+    }else{
+        cell.textLabel.text = @"修改支付密码";
+    }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    ResetPasswordViewController* resetView = [[ResetPasswordViewController alloc] init];
-    resetView.title = @"重置密码";
-    [self.navigationController pushViewController:resetView animated:YES];
+    if (indexPath.row == 0) {
+        UpdataPWDViewController* updataPWDView = [[UpdataPWDViewController alloc] init];
+        updataPWDView.title = @"修改登录密码";
+        [self.navigationController pushViewController:updataPWDView animated:YES];
+    }
+    else if (indexPath.row == 1){
+        VerificationCodeWriteViewController* verificationCodeWriteView = [[VerificationCodeWriteViewController alloc] init];
+        verificationCodeWriteView.title = @"修改支付密码";
+        verificationCodeWriteView.moblieNum = [[AppUtils shareAppUtils] getAccount];
+        verificationCodeWriteView.flowType = UpdataPayPWDType;
+        [self.navigationController pushViewController:verificationCodeWriteView animated:YES];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
