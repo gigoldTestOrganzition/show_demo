@@ -7,6 +7,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UpdataPWDViewController">
             <connections>
+                <outlet property="eyeBtn" destination="Zta-nM-FUa" id="BRE-ha-eGL"/>
+                <outlet property="nextBtn" destination="yLC-8H-0iE" id="YYH-lJ-zrr"/>
+                <outlet property="passwordLabel1" destination="qOs-dg-miw" id="zfu-WY-3gJ"/>
+                <outlet property="passwordLabel2" destination="5tz-DF-ncX" id="3h7-AR-QYL"/>
+                <outlet property="passwordTextField1" destination="JVT-GG-1K4" id="M46-rv-tcf"/>
+                <outlet property="passwordTextField2" destination="V8Y-u0-cbP" id="gLL-SS-B00"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,7 +28,7 @@
                             <rect key="frame" x="95" y="8" width="495" height="30"/>
                             <color key="textColor" red="0.34901960780000002" green="0.34901960780000002" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                         </textField>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61K-tl-eFy" userLabel="shadowView">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>

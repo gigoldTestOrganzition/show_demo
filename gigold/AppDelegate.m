@@ -36,16 +36,11 @@
     //设置NavigationBar背景颜色
     [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:74/255.0f green:202/255.f blue:226/255.f alpha:1]];
     //@{}代表Dictionary
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:18],
+                                                           
+                                                           NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
-    
-//    [self showHelpView];
-//    if ([[AppUtils shareAppUtils] getIsFirstRun]) {
-//        [self showHelpView];
-//    }else{
-//        [self showLoginView];
-//    }
     [self showMainView];
     
     //设置Window为主窗口并显示出来

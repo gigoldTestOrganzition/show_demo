@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *titleLabelWidth;
 
+@property (strong, nonatomic) NSString* moblieNum;
 
 @property (assign, nonatomic) FlowType flowType;
 @property (assign, nonatomic) BackType backType;

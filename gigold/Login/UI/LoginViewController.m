@@ -109,11 +109,7 @@
         
     }];
     
-    [[AppUtils shareAppUtils] saveIsLogin:YES];
-    [[AppUtils shareAppUtils] saveAccount:self.accountTextField.text];
-    [[AppUtils shareAppUtils] savePassword:self.passwordTextField.text];
-    
-    [[AppUtils shareAppUtils] saveHistoricalAccount:self.passwordTextField.text andKey:self.accountTextField.text];
+    [self loginRespond:self.accountTextField.text andPassword:self.passwordTextField.text];
     
     [[AppUtils shareAppUtils] showHUD:@"登录成功" andView:self.view];
     
@@ -122,8 +118,10 @@
 }
 
 -(void)delayMethod{
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"LoginStateChange" object:nil];
-    [self backBtnPress];
+    [self.navigationController popViewControllerAnimated:YES];
+    if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
+        [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
+    }
 }
 
 #pragma mark ---- LoginDelegate -----
@@ -156,7 +154,7 @@
 -(void)UIViewControllerBack:(BaseViewController *)baseViewController{
     if ([baseViewController isKindOfClass:[MoblieWriteViewController class]]) {
         MoblieWriteViewController* moblieWriteView = (MoblieWriteViewController*)baseViewController;
-        if (moblieWriteView.backType == FinishType) {
+        if (moblieWriteView.backType == FinishType && moblieWriteView.flowType == RegisterType) {
             [self.navigationController popViewControllerAnimated:NO];
             if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
                 [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];

@@ -27,7 +27,8 @@ typedef enum FlowType
 {
     RegisterType = 0,
     ResetPasswordType,
-    UpdataPayPWDType
+    UpdataPayPWDType,
+    SetPayPWDType
 } FlowType;
 
 //判断返回状态值
@@ -41,5 +42,12 @@ typedef enum BackType
 @interface BaseViewController : UIViewController <BaseViewControllerDelegate>
 
 @property (assign, nonatomic)id <BaseViewControllerDelegate>delegate;
+
+- (void)backBtnPress;
+
+//登出响应
+- (void)logoutRespond;
+//登录响应
+- (void)loginRespond:(NSString*)account andPassword:(NSString*)pwd;
 
 @end

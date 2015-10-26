@@ -33,7 +33,28 @@
     [self.nextBtn addTarget:self action:@selector(nextBtnPress) forControlEvents:UIControlEventTouchUpInside];
     self.nextBtn.enabled = NO;
 
-    
+    if (self.payPwdType == ValidatePayPwdType) {
+        self.nextBtn.hidden = NO;
+        if ([self.title isEqualToString:@"设置支付密码"]) {
+            self.titleLabel.text = @"请再次输入支付密码";
+        }else{
+            self.titleLabel.text = @"请再次输入新的支付密码";
+        }
+    }else{
+        self.nextBtn.hidden = YES;
+        if (self.payPwdType == SetOldPayPwdType) {
+            if ([self.title isEqualToString:@"设置支付密码"]) {
+            }else{
+                self.titleLabel.text = @"请输入6位数字旧支付密码";
+            }
+        }else{
+            if ([self.title isEqualToString:@"设置支付密码"]) {
+                self.titleLabel.text = @" 请输入6位数字支付密码";
+            }else{
+                self.titleLabel.text = @"请输入新的6位数字支付密码";
+            }
+        }
+    }
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -48,17 +69,34 @@
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     NSMutableString* textString = [NSMutableString stringWithString:textField.text];
     [textString replaceCharactersInRange:range withString:string];
-    if (textString.length >= 6) {
-        self.nextBtn.backgroundColor = [UIColor colorWithRed:74/255.0f green:202/255.f blue:226/255.f alpha:1];
-        self.nextBtn.enabled = YES;
-    }else{
-        self.nextBtn.backgroundColor = [UIColor colorWithRed:206/255.0f green:206/255.f blue:206/255.f alpha:1];
-        self.nextBtn.enabled = NO;
-    }
     
     [self showMarkView:string];
-    if (textString.length > 6) {
-        return NO;
+    
+    if (self.payPwdType == SetOldPayPwdType || self.payPwdType == SetNewPayPwdType) {
+        if (textString.length == 6){
+            PayPasswordViewController* payPasswordView = [[PayPasswordViewController alloc] init];
+            payPasswordView.delegate = self;
+            payPasswordView.title = self.title;
+            if (self.payPwdType == SetOldPayPwdType) {
+                payPasswordView.payPwdType = SetNewPayPwdType;
+            }else{
+                payPasswordView.payPwdType = ValidatePayPwdType;
+                payPasswordView.newpayPwd = textString;
+            }
+            [self.navigationController pushViewController:payPasswordView animated:YES];
+        }
+    }else{
+        if (textString.length >= 6) {
+            self.nextBtn.backgroundColor = [UIColor colorWithRed:74/255.0f green:202/255.f blue:226/255.f alpha:1];
+            self.nextBtn.enabled = YES;
+        }else{
+            self.nextBtn.backgroundColor = [UIColor colorWithRed:206/255.0f green:206/255.f blue:206/255.f alpha:1];
+            self.nextBtn.enabled = NO;
+        }
+        
+        if (textString.length > 6) {
+            return NO;
+        }
     }
     
     return YES;
@@ -121,7 +159,41 @@
 }
 
 -(void)nextBtnPress{
+    if (![tempTextField.text isEqualToString:self.newpayPwd]){
+        [[AppUtils shareAppUtils] showHUD:@"您两次输入的支付密码不一致" andView:self.view];
+        [self clearPassword];
+        return;
+    }
     
+    if ([self.title isEqualToString:@"设置支付密码"]) {
+        [[AppUtils shareAppUtils] saveIsPayPwd:YES];
+    }
+    
+    [self.navigationController popViewControllerAnimated:NO];
+    if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
+        [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
+    }
+}
+
+-(void)clearPassword{
+    tempTextField.text = @"";
+    self.pwd1.hidden = YES;
+    self.pwd2.hidden = YES;
+    self.pwd3.hidden = YES;
+    self.pwd4.hidden = YES;
+    self.pwd5.hidden = YES;
+    self.pwd6.hidden = YES;
+    [tempTextField becomeFirstResponder];
+}
+
+
+-(void)UIViewControllerBack:(BaseViewController *)baseViewController{
+    if ([baseViewController isKindOfClass:[PayPasswordViewController class]]) {
+        [self.navigationController popViewControllerAnimated:NO];
+        if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
+            [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning {

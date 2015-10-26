@@ -434,4 +434,22 @@ NSUserDefaults *defaults = nil;
     return isMatch;
 }
 
+-(void)saveIsPayPwd:(BOOL)isPayPwd {
+    if (defaults)
+    {
+        [defaults setBool:isPayPwd forKey:@"isPayPwd"];
+        [defaults synchronize];
+    }
+}
+
+-(BOOL)getIsPayPwd {
+    if (defaults)
+    {
+        BOOL isPayPwd = [defaults boolForKey:@"isPayPwd"];
+        return isPayPwd;
+    }
+    return NO;
+}
+
+
 @end

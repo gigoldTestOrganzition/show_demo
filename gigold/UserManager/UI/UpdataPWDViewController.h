@@ -8,6 +8,13 @@
 
 #import "BaseViewController.h"
 
-@interface UpdataPWDViewController : BaseViewController
+@interface UpdataPWDViewController : BaseViewController <UITextFieldDelegate>
+
+@property (weak, nonatomic) IBOutlet UILabel *passwordLabel1;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField1;
+@property (weak, nonatomic) IBOutlet UILabel *passwordLabel2;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField2;
+@property (weak, nonatomic) IBOutlet UIButton *nextBtn;
+@property (weak, nonatomic) IBOutlet UIButton *eyeBtn;
 
 @end

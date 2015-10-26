@@ -21,7 +21,7 @@
     
     isAgree = YES;
     
-    if (self.flowType == ResetPasswordType || self.flowType == UpdataPayPWDType) {
+    if (self.flowType == ResetPasswordType || self.flowType == UpdataPayPWDType || self.flowType == SetPayPWDType) {
         self.serveTextView.hidden = YES;
         self.next_view_height.constant = 30;
     }
@@ -102,6 +102,16 @@
     if (self.flowType == UpdataPayPWDType) {
         PayPasswordViewController* payPasswordView = [[PayPasswordViewController alloc] init];
         payPasswordView.delegate = self;
+        payPasswordView.payPwdType = SetOldPayPwdType;
+        payPasswordView.title = self.title;
+        [self.navigationController pushViewController:payPasswordView animated:YES];
+        return;
+    }
+    
+    if (self.flowType == SetPayPWDType) {
+        PayPasswordViewController* payPasswordView = [[PayPasswordViewController alloc] init];
+        payPasswordView.delegate = self;
+        payPasswordView.payPwdType = SetNewPayPwdType;
         payPasswordView.title = self.title;
         [self.navigationController pushViewController:payPasswordView animated:YES];
         return;
@@ -123,6 +133,13 @@
     if ([baseViewController isKindOfClass:[PasswordWriteViewController class]]) {
         PasswordWriteViewController* passwordWirteView = (PasswordWriteViewController*)baseViewController;
         self.backType = passwordWirteView.backType;
+        passwordWirteView.moblieNum = self.moblieNum;
+        [self.navigationController popViewControllerAnimated:NO];
+        if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
+            [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
+        }
+    }
+    else if ([baseViewController isKindOfClass:[PayPasswordViewController class]]){
         [self.navigationController popViewControllerAnimated:NO];
         if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
             [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];

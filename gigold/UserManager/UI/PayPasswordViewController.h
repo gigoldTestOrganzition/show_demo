@@ -6,7 +6,17 @@
 //  Copyright © 2015年 wsc. All rights reserved.
 //
 
+//登录功能
+typedef enum _PayPwdType
+{
+    SetOldPayPwdType = 0,
+    SetNewPayPwdType,
+    ValidatePayPwdType,
+    
+} PayPwdType;
+
 #import "BaseViewController.h"
+
 
 @interface PayPasswordViewController : BaseViewController <UITextFieldDelegate>
 {
@@ -23,4 +33,8 @@
 @property (weak, nonatomic) IBOutlet UIView *pwd5;
 @property (weak, nonatomic) IBOutlet UIView *pwd6;
 @property (weak, nonatomic) IBOutlet UIButton *nextBtn;
+
+@property (strong, nonatomic) NSString* newpayPwd;
+@property (assign, nonatomic) PayPwdType payPwdType;
+
 @end

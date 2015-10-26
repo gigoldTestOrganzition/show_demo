@@ -62,8 +62,7 @@
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (buttonIndex == 1) {
-        [[AppUtils shareAppUtils] saveIsLogin:NO];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"LoginStateChange" object:nil];
+        [self logoutRespond];
         [self.navigationController popViewControllerAnimated:YES];
     }
 }

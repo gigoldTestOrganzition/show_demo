@@ -14,6 +14,26 @@
 
 @implementation PasswordWriteViewController
 
+-(void)viewWillAppear:(BOOL)animated{
+    UIButton* btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(0, 0, 44, 44);
+    [btn setTitle:@"取消" forState:UIControlStateNormal];
+    btn.titleLabel.font = [UIFont systemFontOfSize:14];
+    btn.titleEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0);
+    //    [btn setTitle:@"返回" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(backBtnPress) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem* item = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    self.navigationItem.leftBarButtonItem = item;
+}
+
+-(void)backBtnPress{
+    [self.navigationController popViewControllerAnimated:NO];
+    self.backType = cancelType;
+    if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
+        [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -69,6 +89,9 @@
          NSLog(@"成功");
         [self.navigationController popViewControllerAnimated:NO];
         self.backType = FinishType;
+        if (self.flowType == RegisterType) {
+            [self loginRespond:self.moblieNum andPassword:self.passwordTextField.text];
+        }
         if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
             [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
         }

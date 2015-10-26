@@ -155,20 +155,68 @@
     NSLog(@"去%@",menuTitle);
     if ([menuTitle isEqualToString:@"吉有钱"]) {
     }else if ([menuTitle isEqualToString:@"交易记录"]){
-        IncomeAEViewController* incomeAEView = [[IncomeAEViewController alloc] init];
-        [incomeAEView setHidesBottomBarWhenPushed:YES];
-        [self.navigationController pushViewController:incomeAEView animated:YES];
+        if (![[AppUtils shareAppUtils] getIsLogin]) {
+            LoginViewController* loginView = [[LoginViewController alloc] init];
+            loginView.loginType = GoIncomeAE;
+            loginView.delegate = self;
+            [self.navigationController pushViewController:loginView animated:YES];
+        }else{
+            IncomeAEViewController* incomeAEView = [[IncomeAEViewController alloc] init];
+            incomeAEView.delegate = self;
+            [self.navigationController pushViewController:incomeAEView animated:YES];
+        }
+        
     }
     else if ([menuTitle isEqualToString:@"银行卡"]){
-        BankCardManagerViewController* bankCardView = [[BankCardManagerViewController alloc] init];
-        [bankCardView setHidesBottomBarWhenPushed:YES];
-        [self.navigationController pushViewController:bankCardView animated:YES];
+        if (![[AppUtils shareAppUtils] getIsLogin]) {
+            LoginViewController* loginView = [[LoginViewController alloc] init];
+            loginView.loginType = GoBankCardManager;
+            loginView.delegate = self;
+            [self.navigationController pushViewController:loginView animated:YES];
+        }else{
+            BankCardManagerViewController* bankCardView = [[BankCardManagerViewController alloc] init];
+            bankCardView.delegate = self;
+            [self.navigationController pushViewController:bankCardView animated:YES];
+        }
+        
     }
     else if ([menuTitle isEqualToString:@"密码管理"]){
-        PasswordManagerViewController* passwordManagerView = [[PasswordManagerViewController alloc] init];
-        [passwordManagerView setHidesBottomBarWhenPushed:YES];
-        [self.navigationController pushViewController:passwordManagerView animated:YES];
+        if (![[AppUtils shareAppUtils] getIsLogin]) {
+            LoginViewController* loginView = [[LoginViewController alloc] init];
+            loginView.loginType = GoPasswordManager;
+            loginView.delegate = self;
+            [self.navigationController pushViewController:loginView animated:YES];
+        }else{
+            PasswordManagerViewController* passwordManagerView = [[PasswordManagerViewController alloc] init];
+            passwordManagerView.delegate = self;
+            [self.navigationController pushViewController:passwordManagerView animated:YES];
+        }
+        
     }else if ([menuTitle isEqualToString:@"零钱"]){
+        
+    }
+}
+
+-(void)UIViewControllerBack:(BaseViewController *)baseViewController{
+    if ([baseViewController isKindOfClass:[LoginViewController class]]) {
+        LoginViewController* loginView = (LoginViewController*)baseViewController;
+        if (loginView.loginType == OnlyLogin) {
+            
+        }else if (loginView.loginType == GoIncomeAE){
+            IncomeAEViewController* incomeAEView = [[IncomeAEViewController alloc] init];
+            [self.navigationController pushViewController:incomeAEView animated:YES];
+        }else if (loginView.loginType == GoBankCardManager){
+            BankCardManagerViewController* bankCardView = [[BankCardManagerViewController alloc] init];
+            [self.navigationController pushViewController:bankCardView animated:YES];
+        }else if (loginView.loginType == GoPasswordManager){
+            PasswordManagerViewController* passwordManagerView = [[PasswordManagerViewController alloc] init];
+            [self.navigationController pushViewController:passwordManagerView animated:YES];
+        }
+    }
+    else if ([baseViewController isKindOfClass:[PasswordManagerViewController class]]){
+        LoginViewController* loginView = [[LoginViewController alloc] init];
+        loginView.loginType = OnlyLogin;
+        [self.navigationController pushViewController:loginView animated:YES];
     }
 }
 

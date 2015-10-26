@@ -6,6 +6,17 @@
 //  Copyright (c) 2015年wsc. All rights reserved.
 //
 
+//登录功能
+typedef enum _LoginType
+{
+    OnlyLogin = 0,
+    UpdataPassword,
+    GoPasswordManager,
+    GoBankCardManager,
+    GoIncomeAE,
+    
+} LoginType;
+
 #import "BaseViewController.h"
 #import "LoginRequest.h"
 
@@ -18,5 +29,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *loginBtn;
 @property (weak, nonatomic) IBOutlet UIButton *forgetBtn;
 @property (weak, nonatomic) IBOutlet UIButton *registerBtn;
+
+@property (assign, nonatomic) LoginType loginType;
 
 @end
