@@ -8,6 +8,8 @@
 
 #import "RootViewController.h"
 #import <UIKit/UIKit.h>
+#import "MyViewController.h"
+#import "appliacation_attribute.h"
 
 @interface RootViewController ()
 
@@ -17,20 +19,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-//    if ([((UINavigationController*)Etappdelegate.window.rootViewController) respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-//        ((UINavigationController*)Etappdelegate.window.rootViewController).interactivePopGestureRecognizer.delegate = self;
-//        ((UINavigationController*)Etappdelegate.window.rootViewController).interactivePopGestureRecognizer.enabled = NO;
-//    }
-    
-    //support shake
     [[UIApplication sharedApplication] setApplicationSupportsShakeToEdit:YES];
+
+    [self becomeFirstResponder];
+    
+    
+    
+    UINavigationController* lifeNavigationController = [[UINavigationController alloc]initWithRootViewController:(MyViewController*)storyboard_controller(@"MyViewController")];
+    self.centerViewController = lifeNavigationController;
     
     [self becomeFirstResponder];
     
     
-    BaseViewController* myAccountView= [[BaseViewController alloc] init];
-    self.centerViewController = myAccountView;
+
     
     
     MyAccountViewController* myAccountView1= [[MyAccountViewController alloc] init];

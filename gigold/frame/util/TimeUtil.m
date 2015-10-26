@@ -9,6 +9,10 @@
 #import "TimeUtil.h"
 
 @implementation TimeUtil
++(NSString*)stringToString:(NSString *)sourceStr sourceFormat:(NSString *)sourceFormat toFormat:(NSString *)toFormat{
+    NSDate* sourceData = [TimeUtil stringToNsData:sourceStr format:sourceFormat];
+    return [TimeUtil nsDataToString:sourceData format:toFormat];
+}
 +(NSString*)nsDataToString:(NSDate*)data format:(NSString *)formatString{
     //实例化一个NSDateFormatter对象
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];

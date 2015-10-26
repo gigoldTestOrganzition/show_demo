@@ -17,5 +17,9 @@
 +(BOOL)isNumber:(NSString *)str;
 //是否是数字
 +(BOOL)isNumberforObject:(id)object;
+//获取字典每个下标的对象
++(id)getObjectForNSDictionary:(NSDictionary*)dic index:(NSInteger)index;
+//获取字典每个下标的key
++(NSString*)getKeyForNSDictionary:(NSDictionary*)dic index:(NSInteger)index;
 
 @end
