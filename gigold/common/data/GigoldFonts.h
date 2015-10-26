@@ -9,6 +9,7 @@
 #ifndef GigoldFonts_h
 #define GigoldFonts_h
 #import "Fonts.h"
+
 //40 登录按钮文字
 #define login_btn_font fontWith(20.f)
 //36 标题按钮文字

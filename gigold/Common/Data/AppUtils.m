@@ -20,6 +20,8 @@ NSUserDefaults *defaults = nil;
         defaults = [NSUserDefaults standardUserDefaults];
     }
     return mAppUtil;
+
+
 }
 
 -(id)init {

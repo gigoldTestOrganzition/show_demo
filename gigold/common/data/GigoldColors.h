@@ -22,7 +22,7 @@
 //灰底分割线 C7C7C7
 #define gray_diver_color kColorWithRGB(199,199,199,1)
 //主体文字颜色 595959
-#define main_text_color kColorWithRGB(89，89，89,1)
+#define main_text_color kColorWithRGB(89,89,89,1)
 //白底分割线 E5E5E5
 #define white_background_diver_color kColorWithRGB(229,229,229,1)
 //标题栏按钮上的偏白色文字 FFFFFF
