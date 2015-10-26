@@ -14,6 +14,7 @@
     NSMutableArray* titleArray;
     NSMutableArray* imageArray;
     
+    UIImageView* headImageView;
     UILabel* loginLabel;
     UILabel* moblieLabel;
     UILabel* markLabel;

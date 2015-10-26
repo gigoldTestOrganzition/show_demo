@@ -64,8 +64,8 @@
     UIView* headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 120)];
     headerView.backgroundColor = self.view.backgroundColor;
     
-    UIImageView* headImageView = [[UIImageView alloc] initWithFrame:CGRectMake(15, headerView.frame.size.height-55, 45, 45)];
-    headImageView.backgroundColor = [UIColor redColor];
+    headImageView = [[UIImageView alloc] initWithFrame:CGRectMake(15, headerView.frame.size.height-55, 45, 45)];
+    [headImageView sd_setImageWithURL:nil placeholderImage:[UIImage imageNamed:@"user_faces_1"]];
     headImageView.layer.cornerRadius = headImageView.frame.size.height/2;
     
     [headerView addSubview:headImageView];
@@ -112,8 +112,7 @@
         NSLog(@"去看个人界面");
     }else{
         NSLog(@"去登录");
-        LoginViewController* loginView = [[LoginViewController alloc] init];
-        [self.navigationController pushViewController:loginView animated:YES];
+        [self showLoginView:OnlyLogin];
     }
 }
 
@@ -140,26 +139,23 @@
     if (!cell) {
         NSLog(@"%@",[[NSBundle mainBundle]loadNibNamed:@"MyAccountTableViewCell" owner:nil options:nil] );
         cell= [[[NSBundle mainBundle]loadNibNamed:@"MyAccountTableViewCell" owner:nil options:nil] firstObject];
+        cell.selectedBackgroundView = [[UIView alloc]initWithFrame:cell.frame];
+        cell.selectedBackgroundView.backgroundColor = theme_color;
     }
     cell.menuTitleLabel.text = [titleArray objectAtIndex:indexPath.row];
     cell.menuImageView.image = [UIImage imageNamed:[imageArray objectAtIndex:indexPath.row]];
     cell.valueLabel.text = @"";
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    [self.swipeController showLeft];
     NSString* menuTitle = [titleArray objectAtIndex:indexPath.row];
     NSLog(@"去%@",menuTitle);
     if ([menuTitle isEqualToString:@"吉有钱"]) {
     }else if ([menuTitle isEqualToString:@"交易记录"]){
         if (![[AppUtils shareAppUtils] getIsLogin]) {
-            LoginViewController* loginView = [[LoginViewController alloc] init];
-            loginView.loginType = GoIncomeAE;
-            loginView.delegate = self;
-            [self.navigationController pushViewController:loginView animated:YES];
+            [self showLoginView:GoIncomeAE];
         }else{
             IncomeAEViewController* incomeAEView = [[IncomeAEViewController alloc] init];
             incomeAEView.delegate = self;
@@ -169,10 +165,7 @@
     }
     else if ([menuTitle isEqualToString:@"银行卡"]){
         if (![[AppUtils shareAppUtils] getIsLogin]) {
-            LoginViewController* loginView = [[LoginViewController alloc] init];
-            loginView.loginType = GoBankCardManager;
-            loginView.delegate = self;
-            [self.navigationController pushViewController:loginView animated:YES];
+            [self showLoginView:GoBankCardManager];
         }else{
             BankCardManagerViewController* bankCardView = [[BankCardManagerViewController alloc] init];
             bankCardView.delegate = self;
@@ -182,10 +175,7 @@
     }
     else if ([menuTitle isEqualToString:@"密码管理"]){
         if (![[AppUtils shareAppUtils] getIsLogin]) {
-            LoginViewController* loginView = [[LoginViewController alloc] init];
-            loginView.loginType = GoPasswordManager;
-            loginView.delegate = self;
-            [self.navigationController pushViewController:loginView animated:YES];
+            [self showLoginView:GoPasswordManager];
         }else{
             PasswordManagerViewController* passwordManagerView = [[PasswordManagerViewController alloc] init];
             passwordManagerView.delegate = self;
@@ -216,9 +206,7 @@
         }
     }
     else if ([baseViewController isKindOfClass:[PasswordManagerViewController class]]){
-        LoginViewController* loginView = [[LoginViewController alloc] init];
-        loginView.loginType = OnlyLogin;
-        [self.navigationController pushViewController:loginView animated:YES];
+        [self showLoginView:OnlyLogin];
     }
 }
 

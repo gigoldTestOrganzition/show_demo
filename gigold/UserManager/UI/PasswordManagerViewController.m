@@ -35,9 +35,6 @@
     // Do any additional setup after loading the view from its nib.
 }
 
--(void)leftBtnPress{
-    [self.navigationController popViewControllerAnimated:YES];
-}
 
 #pragma mark ---- UITableViewDataSource,UITableViewDelegate --------
 

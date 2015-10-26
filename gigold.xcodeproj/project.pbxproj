@@ -55,6 +55,8 @@
 		5C746CB61BD78FE4007A7DE6 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C746CB11BD78FE4007A7DE6 /* MyViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		5C746CBB1BD79015007A7DE6 /* libUPPayPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C746CB81BD79015007A7DE6 /* libUPPayPlugin.a */; settings = {ASSET_TAGS = (); }; };
 		5C746CBD1BD7903B007A7DE6 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C746CBC1BD7903B007A7DE6 /* libsqlite3.0.tbd */; };
+		5C7BAEB61BDE0865008C3D9F /* user_faces_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C7BAEB41BDE0865008C3D9F /* user_faces_1@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5C7BAEB71BDE0865008C3D9F /* user_faces_1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C7BAEB51BDE0865008C3D9F /* user_faces_1@3x.png */; settings = {ASSET_TAGS = (); }; };
 		5C93B8E01BD8913600E8A8AA /* IncomeAEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C93B8DE1BD8913600E8A8AA /* IncomeAEViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5C93B8E11BD8913600E8A8AA /* IncomeAEViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C93B8DF1BD8913600E8A8AA /* IncomeAEViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		5C93B8EA1BD8CB0500E8A8AA /* InfoFinishedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C93B8E81BD8CB0500E8A8AA /* InfoFinishedViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -248,6 +250,8 @@
 		5C746CBA1BD79015007A7DE6 /* UPPayPluginDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPPayPluginDelegate.h; sourceTree = "<group>"; };
 		5C746CBC1BD7903B007A7DE6 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		5C7BAEB31BDDFF13008C3D9F /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		5C7BAEB41BDE0865008C3D9F /* user_faces_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_faces_1@2x.png"; sourceTree = "<group>"; };
+		5C7BAEB51BDE0865008C3D9F /* user_faces_1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_faces_1@3x.png"; sourceTree = "<group>"; };
 		5C93B8DD1BD8913600E8A8AA /* IncomeAEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncomeAEViewController.h; sourceTree = "<group>"; };
 		5C93B8DE1BD8913600E8A8AA /* IncomeAEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncomeAEViewController.m; sourceTree = "<group>"; };
 		5C93B8DF1BD8913600E8A8AA /* IncomeAEViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IncomeAEViewController.xib; sourceTree = "<group>"; };
@@ -735,6 +739,8 @@
 				5CC44B261BDA30F00071B668 /* user_menu_set_ico@3x.png */,
 				5CC44B3E1BDA35A30071B668 /* box_but_arrow@2x.png */,
 				5CC44B3F1BDA35A30071B668 /* box_but_arrow@3x.png */,
+				5C7BAEB41BDE0865008C3D9F /* user_faces_1@2x.png */,
+				5C7BAEB51BDE0865008C3D9F /* user_faces_1@3x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -1613,6 +1619,7 @@
 				5C746C981BD78A67007A7DE6 /* topUpStoryboard.storyboard in Resources */,
 				5CC44B291BDA30F00071B668 /* user_menu_ico_2@2x.png in Resources */,
 				5C6A5AAB1BDB46D0000CA77D /* login_jigao_logo@2x.png in Resources */,
+				5C7BAEB61BDE0865008C3D9F /* user_faces_1@2x.png in Resources */,
 				5CC44B2E1BDA30F00071B668 /* user_menu_ico_4@3x.png in Resources */,
 				5CC44B2C1BDA30F00071B668 /* user_menu_ico_3@3x.png in Resources */,
 				5C447C6D1BD77A3700A049D9 /* BankCardValidateViewController.xib in Resources */,
@@ -1641,6 +1648,7 @@
 				5C746CB51BD78FE4007A7DE6 /* MyViewController.storyboard in Resources */,
 				5CA673BF1BD9D63C00BED35A /* password_eye_1@2x.png in Resources */,
 				5C5A2DD61BD6115D00C4AE1D /* MyAccountViewController.xib in Resources */,
+				5C7BAEB71BDE0865008C3D9F /* user_faces_1@3x.png in Resources */,
 				5CC44B461BDA3AFB0071B668 /* MyAccountTableViewCell.xib in Resources */,
 				5CA673C21BD9D63C00BED35A /* password_eye_2@3x.png in Resources */,
 				5CC44B301BDA30F00071B668 /* user_menu_ico_5@3x.png in Resources */,

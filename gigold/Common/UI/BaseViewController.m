@@ -7,6 +7,8 @@
 //
 
 #import "BaseViewController.h"
+#import "LoginViewController.h"
+#import "PasswordManagerViewController.h"
 
 @interface BaseViewController ()
 
@@ -78,6 +80,15 @@
     
     self.view.backgroundColor = back_ground_color;
     // Do any additional setup after loading the view.
+}
+
+- (void)showLoginView:(LoginType)loginType{
+    NSLog(@"跳转loginView");
+    LoginViewController* loginView = [[LoginViewController alloc] init];
+    loginView.delegate = self;
+    loginView.loginType = loginType;
+    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:loginView];
+    [self presentViewController:nav animated:YES completion:^{}];
 }
 
 - (void)didReceiveMemoryWarning {

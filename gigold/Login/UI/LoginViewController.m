@@ -28,7 +28,7 @@
     
     [self.view addGestureRecognizer:oneTap];
     
-    [self.backBtn addTarget:self action:@selector(backBtnPress) forControlEvents:UIControlEventTouchUpInside];
+    [self.backBtn addTarget:self action:@selector(topBtnPress) forControlEvents:UIControlEventTouchUpInside];
 
     [self.loginBtn addTarget:self action:@selector(loginBtnPress) forControlEvents:UIControlEventTouchUpInside];
     
@@ -48,8 +48,8 @@
 }
 
 
--(void)backBtnPress{
-    [self.navigationController popViewControllerAnimated:YES];
+-(void)topBtnPress{
+    [self dismissViewControllerAnimated:YES completion:^{}];
 }
 
 -(void)selfViewPress{
@@ -78,7 +78,8 @@
     MoblieWriteViewController* moblieWriteView = [[MoblieWriteViewController alloc] init];
     moblieWriteView.delegate = self;
     moblieWriteView.flowType = RegisterType;
-    [self.navigationController pushViewController:moblieWriteView animated:YES];
+    BaseViewController* baseViewController = (BaseViewController*)self.delegate;
+    [baseViewController.navigationController pushViewController:moblieWriteView animated:YES];
 
 }
 
@@ -118,7 +119,7 @@
 }
 
 -(void)delayMethod{
-    [self.navigationController popViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:^{}];
     if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
         [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
     }
@@ -157,7 +158,7 @@
     if ([baseViewController isKindOfClass:[MoblieWriteViewController class]]) {
         MoblieWriteViewController* moblieWriteView = (MoblieWriteViewController*)baseViewController;
         if (moblieWriteView.backType == FinishType && moblieWriteView.flowType == RegisterType) {
-            [self.navigationController popViewControllerAnimated:NO];
+            [self dismissViewControllerAnimated:NO completion:^{}];
             if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
                 [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
             }
