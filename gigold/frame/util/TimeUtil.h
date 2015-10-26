@@ -11,8 +11,11 @@
 #define DATA2 @"yyyy年MM月dd日 HH:mm:ss"
 #define DATA3 @"yyyy年MM月dd日"
 #define DATA4 @"yyyy-MM-dd"
+#define DATA5 @"yyyy-MM"
 
 @interface TimeUtil : NSObject
+/*将时间转化为指定的格式*/
++(NSString*)stringToString:(NSString*)sourceStr sourceFormat:(NSString*)sourceFormat toFormat:(NSString*)toFormat;
 /*时间转为字符串形式*/
 +(NSString*)nsDataToString:(NSDate*)data format:(NSString*)formatString;
 /*字符串转为日期*/

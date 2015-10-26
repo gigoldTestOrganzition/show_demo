@@ -11,6 +11,10 @@
 #import "IncomeInstructionViewController.h"
 #import "IncomeDetailViewController.h"
 #import "TradingDetailViewController.h"
+#import "SenvenIncomeRateViewController.h"
+#import "TenThousandIncomeViewController.h"
+#import "RollOutViewController.h"
+#import "RollInViewController.h"
 
 @interface GigoldTreasureHomeViewController (){
   //累计收益
@@ -98,10 +102,14 @@
 // 转出
 -(void)rollOut{
     NSLog(@"out");
+    RollOutViewController* rollOutViewController  = (RollOutViewController*)storyboard_controller_identity(@"GigoldTreasureHome", @"rollOut");
+    [self.navigationController pushViewController:rollOutViewController animated:YES];
 }
 //转入
 -(void)rollIn{
      NSLog(@"in");
+    RollInViewController* rollInViewController  = (RollInViewController*)storyboard_controller_identity(@"GigoldTreasureHome", @"rollIn");
+    [self.navigationController pushViewController:rollInViewController animated:YES];
 }
 //收益说明
 -(void)incomeInstructions{
@@ -114,9 +122,14 @@
 //进去七年年化率查看
 - (IBAction)intoSevenIncomeRate:(id)sender {
     NSLog(@"seven");
+    SenvenIncomeRateViewController* senvenIncomeRateViewController  = (SenvenIncomeRateViewController*)storyboard_controller_identity(@"GigoldTreasureHome", @"senverIncome");
+    [self.navigationController pushViewController:senvenIncomeRateViewController animated:YES];
+    
 }
 //进去万分收益查看
 - (IBAction)intotenThousandIncome:(id)sender {
     NSLog(@"tenthousand");
+    TenThousandIncomeViewController* tenThousandIncomeViewController  = (TenThousandIncomeViewController*)storyboard_controller_identity(@"GigoldTreasureHome", @"tenThousandIncome");
+    [self.navigationController pushViewController:tenThousandIncomeViewController animated:YES];
 }
 @end
