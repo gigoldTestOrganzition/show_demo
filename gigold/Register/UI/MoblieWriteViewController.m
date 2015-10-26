@@ -24,6 +24,9 @@
         self.title = @"重置登录密码";
     }
     
+    self.shadowHeight1.constant = 0.5;
+    self.shadowHeight2.constant = 0.5;
+    
     self.mobileTextField.text = @"15111111111";
     self.mobileTextField.delegate = self;
     [self.mobileTextField becomeFirstResponder];

@@ -16,5 +16,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField2;
 @property (weak, nonatomic) IBOutlet UIButton *nextBtn;
 @property (weak, nonatomic) IBOutlet UIButton *eyeBtn;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *shadowHeight1;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *shadowHeight2;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *shadowHeight3;
 
 @end

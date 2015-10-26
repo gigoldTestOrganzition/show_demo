@@ -28,6 +28,10 @@
     
     [self.eyeBtn addTarget:self action:@selector(eyeBtnPress) forControlEvents:UIControlEventTouchUpInside];
     
+    self.shadowHeight1.constant = 0.5;
+    self.shadowHeight2.constant = 0.5;
+    self.shadowHeight3.constant = 0.5;
+    
     // Do any additional setup after loading the view from its nib.
 }
 

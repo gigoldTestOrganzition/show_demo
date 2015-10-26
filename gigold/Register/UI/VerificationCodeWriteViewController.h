@@ -27,6 +27,11 @@
 //输入界面和nextBtn的间隔
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *next_view_height;
 
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *shadowHeight1;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *shadowHeight2;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *shadowWidth3;
+
+
 @property (assign, nonatomic) FlowType flowType;
 @property (assign, nonatomic) BackType backType;
 

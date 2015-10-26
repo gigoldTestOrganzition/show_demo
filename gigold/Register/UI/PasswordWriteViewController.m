@@ -37,6 +37,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.shadowHeight1.constant = 0.5;
+    self.shadowHeight2.constant = 0.5;
+    
     if (self.flowType == ResetPasswordType){
         self.markLabel.hidden = YES;
         self.titleLabel.text = @"新密码";

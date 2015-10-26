@@ -21,6 +21,10 @@
     
     isAgree = YES;
     
+    self.shadowHeight1.constant = 0.5;
+    self.shadowHeight2.constant = 0.5;
+    self.shadowWidth3.constant = 0.5;
+    
     if (self.flowType == ResetPasswordType || self.flowType == UpdataPayPWDType || self.flowType == SetPayPWDType) {
         self.serveTextView.hidden = YES;
         self.next_view_height.constant = 30;

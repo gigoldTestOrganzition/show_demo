@@ -13,6 +13,9 @@
                 <outlet property="passwordLabel2" destination="5tz-DF-ncX" id="3h7-AR-QYL"/>
                 <outlet property="passwordTextField1" destination="JVT-GG-1K4" id="M46-rv-tcf"/>
                 <outlet property="passwordTextField2" destination="V8Y-u0-cbP" id="gLL-SS-B00"/>
+                <outlet property="shadowHeight1" destination="syL-og-Gbu" id="q4p-HN-Qgp"/>
+                <outlet property="shadowHeight2" destination="1SV-51-v68" id="1UM-5N-TI7"/>
+                <outlet property="shadowHeight3" destination="IUZ-BR-T2Z" id="aPz-hw-92B"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -114,16 +117,21 @@
                             </constraints>
                             <state key="normal" title="Button" image="password_eye_1.png"/>
                         </button>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cWK-a6-KoC" userLabel="shadowView">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cWK-a6-KoC" userLabel="shadowView">
                             <rect key="frame" x="0.0" y="45" width="600" height="1"/>
                             <color key="backgroundColor" red="0.78039215689999997" green="0.78039215689999997" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="tintColor" red="0.070588235289999995" green="0.20392156859999999" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="IUZ-BR-T2Z"/>
+                            </constraints>
                         </view>
                     </subviews>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="5tz-DF-ncX" secondAttribute="bottom" id="3aE-xF-Yyd"/>
                         <constraint firstItem="Zta-nM-FUa" firstAttribute="leading" secondItem="V8Y-u0-cbP" secondAttribute="trailing" constant="10" id="5ma-bK-wcz"/>
+                        <constraint firstItem="cWK-a6-KoC" firstAttribute="leading" secondItem="eiv-qf-HpH" secondAttribute="leading" id="Bwz-BE-U1b"/>
+                        <constraint firstAttribute="trailing" secondItem="cWK-a6-KoC" secondAttribute="trailing" id="HSX-Lv-ULB"/>
                         <constraint firstAttribute="trailing" secondItem="Zta-nM-FUa" secondAttribute="trailing" constant="10" id="Nku-vU-82c"/>
                         <constraint firstAttribute="height" constant="46" id="cGT-st-TE9"/>
                         <constraint firstAttribute="bottom" secondItem="Zta-nM-FUa" secondAttribute="bottom" constant="14" id="j6Q-8G-SPJ"/>
@@ -132,6 +140,7 @@
                         <constraint firstItem="V8Y-u0-cbP" firstAttribute="leading" secondItem="5tz-DF-ncX" secondAttribute="trailing" constant="10" id="nTc-yV-nTD"/>
                         <constraint firstItem="Zta-nM-FUa" firstAttribute="top" secondItem="eiv-qf-HpH" secondAttribute="top" constant="13" id="sHc-Re-keI"/>
                         <constraint firstItem="5tz-DF-ncX" firstAttribute="top" secondItem="eiv-qf-HpH" secondAttribute="top" id="sWa-Wa-B5Y"/>
+                        <constraint firstAttribute="bottom" secondItem="cWK-a6-KoC" secondAttribute="bottom" id="ygq-Gg-aDo"/>
                         <constraint firstItem="5tz-DF-ncX" firstAttribute="leading" secondItem="eiv-qf-HpH" secondAttribute="leading" constant="10" id="zGE-Lu-Hcj"/>
                     </constraints>
                 </view>
