@@ -12,7 +12,9 @@
 @interface SelectPayTypeView : CustomerView
 @property (weak, nonatomic) IBOutlet UITableView *selectPayTypeTableView;
 @property (weak, nonatomic) IBOutlet UIImageView *cancleImg;
+@property (weak, nonatomic) IBOutlet UILabel *title;
+
 @property(nonatomic,weak)id<UITableViewDelegate> delegate;
 @property(nonatomic,weak)id<UITableViewDataSource> dataSource;
-
+@property(nonatomic,copy)NSString* titleStr;
 @end

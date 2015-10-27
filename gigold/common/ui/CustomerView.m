@@ -13,6 +13,7 @@
 @synthesize pullStyle=_pullStyle;
 @synthesize showView=_showView;
 -(instancetype)init{
+    
     self = [super init];
     if (self) {
         self.frame = CGRectMake(0,0,mainScreenHeight,mainScreenHeight);

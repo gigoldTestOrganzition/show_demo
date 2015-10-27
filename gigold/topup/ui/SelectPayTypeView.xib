@@ -57,6 +57,7 @@
             <connections>
                 <outlet property="cancleImg" destination="rWV-8m-Lny" id="wdU-w5-vgM"/>
                 <outlet property="selectPayTypeTableView" destination="ABe-Gm-w30" id="WsT-9y-mXJ"/>
+                <outlet property="title" destination="Bdj-zN-Lgl" id="0jr-Rz-Et5"/>
             </connections>
             <point key="canvasLocation" x="284" y="457"/>
         </view>

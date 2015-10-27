@@ -12,8 +12,10 @@
 @implementation SelectPayTypeView
 @synthesize selectPayTypeTableView=_selectPayTypeTableView;
 @synthesize cancleImg=_cancleImg;
+@synthesize title=_title;
 @synthesize delegate = _delegate;
 @synthesize dataSource = _dataSource;
+@synthesize titleStr=_titleStr;
 -(instancetype)init{
     self = [super init];
     if (self) {
@@ -28,6 +30,7 @@
     contentView.frame = CGRectMake(0,0, mainScreenWidth,contentView.frame.size.height);
     self.cancleImg = contentView.cancleImg;
     self.selectPayTypeTableView = contentView.selectPayTypeTableView;
+    self.title = contentView.title;
     self.showView = contentView;
     
 }
@@ -42,5 +45,8 @@
 }
 -(void)setDataSource:(id<UITableViewDataSource>)dataSource{
     _selectPayTypeTableView.dataSource = dataSource;
+}
+-(void)setTitleStr:(NSString *)titleStr{
+    _title.text = titleStr;
 }
 @end

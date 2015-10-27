@@ -29,4 +29,9 @@
 #define title_text_color kColorWithRGB(255,255,255,1)
 //按钮不可点击状态 CECECE
 #define unable_tap_color kColorWithRGB(206,206,206,1)
+//圆弧颜色
+#define green_arc_color kColorWithRGB(92,214,50,1)
+
+
+
 #endif

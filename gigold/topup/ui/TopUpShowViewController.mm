@@ -54,7 +54,6 @@
     [super viewDidLoad];
     [self initBankCards];
     [self initUi];
-    
     // Do any additional setup after loading the view.
 }
 //初始化ui

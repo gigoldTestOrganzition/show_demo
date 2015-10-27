@@ -12,6 +12,7 @@
 typedef NS_ENUM(NSInteger,PullViewStyle){
     PullViewDown = 1 << 0,
     PullViewTop = 1 << 1
+    
 };
 @interface CustomerView : UIView
 @property(nonatomic,assign)PullViewStyle pullStyle;

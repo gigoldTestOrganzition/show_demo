@@ -15,7 +15,10 @@
 #import "SelectPayTypeView.h"
 #import "BankCell.h"
 #import "Bank.h"
-@interface TopUpViewController ()<UITextFieldDelegate,UITableViewDataSource,UITableViewDelegate>{
+#import "UPPayPlugin.h"
+#import "appliacation_attribute.h"
+#import "TopUpResultViewController.h"
+@interface TopUpViewController ()<UITextFieldDelegate,UITableViewDataSource,UITableViewDelegate,UPPayPluginDelegate>{
     //充值金额
     __weak IBOutlet UITextField *amountField;
     //下一步按钮
@@ -107,12 +110,19 @@
 -(void)selectUnipay{
     NSLog(@"unipay");
     [selectPayView stopDialog];
+    [self startUPPay];
+
 }
 //添加银行卡
 -(void)addBankCard{
     NSLog(@"add");
     [selectPayView stopDialog];
+    [self startUPPay];
 
+}
+//开启银联支付
+-(void)startUPPay{
+     [UPPayPlugin startPay:@"1" mode:@"01" viewController:self delegate:self];
 }
 #pragma mark -tableView协议
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -132,6 +142,7 @@
     Bank* bank = bankCards[indexPath.row];
     NSLog(bank.name);
     [selectPayView stopDialog];
+    [self startUPPay];
 }
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UIView* headView = [[NSBundle mainBundle] loadNibNamed:@"PayTypeCell" owner:self options:nil][0];
@@ -153,7 +164,7 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 48;
 }
-#pragma mark -协
+#pragma mark -tableview协议
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     
     if ([StringUtil isEmpty:string]) {
@@ -173,16 +184,21 @@
         return NO;
     }
     return YES;
-    
-    
-    
-
 }
 
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
     return YES;
+}
+#pragma mark -银联支付协议 
+-(void)UPPayPluginResult:(NSString *)result{
+    
+    TopUpResultViewController* topUpResultViewController = (TopUpResultViewController*)storyboard_controller_identity(@"topUpStoryboard", @"topupResult");
+    topUpResultViewController.isSuccess =[result isEqualToString:@"fail"]?NO:YES;
+    topUpResultViewController.amountStr = amountField.text;
+    [self.navigationController pushViewController:topUpResultViewController animated:YES];
+
 }
 /*
 #pragma mark - Navigation

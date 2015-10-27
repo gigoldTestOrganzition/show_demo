@@ -10,31 +10,62 @@
 #import "Colors.h"
 
 @interface TopUpResultViewController (){
-    //结果view
-    __weak IBOutlet UIView *resultView;
+    //显示img
+    __weak IBOutlet UIImageView *resultImg;
     //结果描述
     __weak IBOutlet UILabel *resultDesc;
+    //错误补充
+    __weak IBOutlet UILabel *resultErrorDesc;
+     //结果再操作
+    __weak IBOutlet UILabel *resultAction;
+    
+    __weak IBOutlet NSLayoutConstraint *resultActionDistanceLayoutConstraint;
 }
 
 @end
 
 @implementation TopUpResultViewController
-@synthesize isSuccess=_isSuccess;
+@synthesize isSuccess = _isSuccess;
+@synthesize amountStr = _amountStr;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title = @"充值结果";
-    resultView.layer.cornerRadius = 60.f;
-    if (_isSuccess) {
-        resultView.backgroundColor = lightBlueColor;
-        resultDesc.text = @"充值成功";
-    }else{
-        resultView.backgroundColor = lightGrayColor;
-        resultDesc.text = @"充值失败";
-    }
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"关闭" style:UIBarButtonItemStyleDone target:self action:@selector(operationResult)];
     
-    // Do any additional setup after loading the view.
+    if (_isSuccess) {
+        self.navigationItem.title = @"充值成功";
+        resultImg.image = [UIImage imageNamed:@"main_correct_ico.png"];
+        resultDesc.text = [NSString stringWithFormat:@"%@%@元",@"成功充值",_amountStr];
+        resultErrorDesc.hidden = YES;
+        resultAction.text = @"返回首页";
+        resultActionDistanceLayoutConstraint.constant-=20;
+        
+    }else{
+        self.navigationItem.title = @"充值失败";
+        resultImg.image = [UIImage imageNamed:@"main_error_ico.png"];
+        resultDesc.text = @"充值失败";
+        resultAction.text = @"重试";
+    }
+    UITapGestureRecognizer* actionGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(operationResult)];
+    resultAction.userInteractionEnabled = YES;
+    [resultAction addGestureRecognizer:actionGestureRecognizer];
+    
+    
+    
 }
-
+//操作结果
+-(void)operationResult{
+    if (_isSuccess) {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }else{
+        [self.navigationController popViewControllerAnimated:YES];
+    
+    }
+}
+//关闭
+-(void)close{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

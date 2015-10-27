@@ -12,12 +12,16 @@
 #import "appliacation_attribute.h"
 #import "TopUpViewController.h"
 #import "GigoldTreasureHomeViewController.h"
+#import "ResultShowView.h"
+#import "AutomaticArcView.h"
 
 @interface MyViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>{
     //功能描述
     __weak IBOutlet UICollectionView *functionCollectionView;
     //描述数据集合
     NSMutableArray* functionDatas;
+    
+    ResultShowView* resultShowView;
 }
 @end
 
@@ -90,11 +94,15 @@
 -(void)transfer{
     NSLog(@"转账");
     
+    if (!resultShowView) {
+        resultShowView = [[ResultShowView alloc]init];
+    }
+    [resultShowView showDialog:self.view];
+    
 }
 //话费充值
 -(void)phoneTopup{
     NSLog(@"话费充值");
-    
 }
 // 生活缴费
 -(void)lifePay{

@@ -12,5 +12,5 @@
 
 @interface TopUpResultViewController : SXPViewController
 @property(nonatomic,assign)BOOL isSuccess;
-
+@property(nonatomic,copy)NSString* amountStr;
 @end
