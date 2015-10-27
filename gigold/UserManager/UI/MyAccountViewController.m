@@ -12,6 +12,7 @@
 #import "IncomeAEViewController.h"
 #import "SettingsViewController.h"
 #import "LoginViewController.h"
+#import "SmallChangeViewController.h"
 
 @interface MyAccountViewController ()
 
@@ -57,6 +58,7 @@
         markLabel.hidden = YES;
         moblieLabel.hidden = YES;
     }
+    [self.mTableView reloadData];
 }
 
 
@@ -144,7 +146,20 @@
     }
     cell.menuTitleLabel.text = [titleArray objectAtIndex:indexPath.row];
     cell.menuImageView.image = [UIImage imageNamed:[imageArray objectAtIndex:indexPath.row]];
-    cell.valueLabel.text = @"";
+    if (![[AppUtils shareAppUtils] getIsLogin]) {
+        cell.valueLabel.text = @"";
+    }else{
+        if (indexPath.row == 0) {
+            cell.valueLabel.text = @"53123.12元";
+        }else if (indexPath.row == 1){
+            cell.valueLabel.text = @"140.00元";
+        }else if (indexPath.row == 2){
+            cell.valueLabel.text = @"3张";
+        }else{
+            cell.valueLabel.text = @"";
+        }
+    }
+    
 
     return cell;
 }
@@ -153,7 +168,12 @@
     NSString* menuTitle = [titleArray objectAtIndex:indexPath.row];
     NSLog(@"去%@",menuTitle);
     if ([menuTitle isEqualToString:@"吉有钱"]) {
-    }else if ([menuTitle isEqualToString:@"交易记录"]){
+    }
+    else if ([menuTitle isEqualToString:@"零钱"]){
+        SmallChangeViewController* smallChangeView = [[SmallChangeViewController alloc] init];
+        [self.navigationController pushViewController:smallChangeView animated:YES];
+    }
+    else if ([menuTitle isEqualToString:@"交易记录"]){
         if (![[AppUtils shareAppUtils] getIsLogin]) {
             [self showLoginView:GoIncomeAE];
         }else{

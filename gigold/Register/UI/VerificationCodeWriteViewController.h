@@ -6,7 +6,7 @@
 //  Copyright © 2015年 wsc. All rights reserved.
 //
 
-#define TimeInterval 5
+#define TimeInterval 60
 
 #import "BaseViewController.h"
 

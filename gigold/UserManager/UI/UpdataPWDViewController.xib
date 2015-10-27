@@ -31,7 +31,7 @@
                             <rect key="frame" x="95" y="8" width="495" height="30"/>
                             <color key="textColor" red="0.34901960780000002" green="0.34901960780000002" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
                         </textField>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61K-tl-eFy" userLabel="shadowView">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
@@ -42,7 +42,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6io-G0-WtR" userLabel="shadowView">
-                            <rect key="frame" x="0.0" y="45" width="600" height="1"/>
+                            <rect key="frame" x="10" y="45" width="590" height="1"/>
                             <color key="backgroundColor" red="0.78039215689999997" green="0.78039215689999997" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="tintColor" red="0.070588235289999995" green="0.20392156859999999" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
@@ -65,7 +65,7 @@
                         <constraint firstAttribute="bottom" secondItem="qOs-dg-miw" secondAttribute="bottom" id="4sF-uu-fdk"/>
                         <constraint firstAttribute="height" constant="46" id="8t4-q4-bey"/>
                         <constraint firstAttribute="trailing" secondItem="JVT-GG-1K4" secondAttribute="trailing" constant="10" id="BWH-qr-zX9"/>
-                        <constraint firstItem="6io-G0-WtR" firstAttribute="leading" secondItem="cWE-wL-cif" secondAttribute="leading" id="Fyq-E0-Kfb"/>
+                        <constraint firstItem="6io-G0-WtR" firstAttribute="leading" secondItem="cWE-wL-cif" secondAttribute="leading" constant="10" id="Fyq-E0-Kfb"/>
                         <constraint firstItem="JVT-GG-1K4" firstAttribute="leading" secondItem="qOs-dg-miw" secondAttribute="trailing" constant="10" id="K3p-xR-fRQ"/>
                         <constraint firstAttribute="bottom" secondItem="JVT-GG-1K4" secondAttribute="bottom" constant="8" id="KVq-hH-1Af"/>
                         <constraint firstItem="61K-tl-eFy" firstAttribute="top" secondItem="cWE-wL-cif" secondAttribute="top" id="Rzc-sG-J9N"/>

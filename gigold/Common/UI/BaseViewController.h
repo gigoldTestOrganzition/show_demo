@@ -40,7 +40,8 @@ typedef enum FlowType
     RegisterType = 0,
     ResetPasswordType,
     UpdataPayPWDType,
-    SetPayPWDType
+    SetPayPWDType,
+    AddBankCardType
 } FlowType;
 
 //判断返回状态值

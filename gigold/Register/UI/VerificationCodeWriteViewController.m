@@ -9,6 +9,7 @@
 #import "VerificationCodeWriteViewController.h"
 #import "PasswordWriteViewController.h"
 #import "PayPasswordViewController.h"
+#import "ServiceTextViewController.h"
 
 @interface VerificationCodeWriteViewController ()
 
@@ -25,7 +26,7 @@
     self.shadowHeight2.constant = 0.5;
     self.shadowWidth3.constant = 0.5;
     
-    if (self.flowType == ResetPasswordType || self.flowType == UpdataPayPWDType || self.flowType == SetPayPWDType) {
+    if (self.flowType == ResetPasswordType || self.flowType == UpdataPayPWDType || self.flowType == SetPayPWDType || self.flowType == AddBankCardType) {
         self.serveTextView.hidden = YES;
         self.next_view_height.constant = 30;
     }
@@ -35,6 +36,9 @@
     
     [self.nextBtn addTarget:self action:@selector(nextBtnPress) forControlEvents:UIControlEventTouchUpInside];
     self.nextBtn.enabled = NO;
+    if (self.flowType == AddBankCardType) {
+        [self.nextBtn setTitle:@"完成" forState:UIControlStateNormal];
+    }
     
     UITapGestureRecognizer* sendPress = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(startTime)];
     [self.sendLabel addGestureRecognizer:sendPress];
@@ -45,6 +49,10 @@
     [self.agreeBtn addTarget:self action:@selector(agreeBtnPress) forControlEvents:UIControlEventTouchUpInside];
     
     self.moblieLabel.text = [NSString stringWithFormat:@"已发送校验码到你的手机%@",[[AppUtils shareAppUtils] encryptMoblieNumber:self.moblieNum]];
+    
+    UITapGestureRecognizer* serveTextViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(goServeTextView)];
+    [self.serveTextView addGestureRecognizer:serveTextViewTap];
+    
     
     // Do any additional setup after loading the view from its nib.
 }
@@ -92,6 +100,12 @@
     timer = nil;
 }
 
+-(void)goServeTextView{
+    NSLog(@"去看服务条款");
+    ServiceTextViewController* serviceTextView = [[ServiceTextViewController alloc] init];
+    [self.navigationController pushViewController:serviceTextView animated:YES];
+}
+
 -(void)agreeBtnPress{
     isAgree = !isAgree;
     if (isAgree) {
@@ -119,6 +133,14 @@
         payPasswordView.title = self.title;
         [self.navigationController pushViewController:payPasswordView animated:YES];
         return;
+    }
+    
+    if (self.flowType == AddBankCardType) {
+        NSLog(@"成功");
+        [self.navigationController popViewControllerAnimated:NO];
+        if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
+            [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
+        }
     }
     
     if (isAgree) {

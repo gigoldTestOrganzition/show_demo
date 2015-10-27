@@ -74,13 +74,11 @@
 //去注册
 -(void)registerBtnPress{
     NSLog(@"去注册");
-    
+
     MoblieWriteViewController* moblieWriteView = [[MoblieWriteViewController alloc] init];
     moblieWriteView.delegate = self;
     moblieWriteView.flowType = RegisterType;
-    BaseViewController* baseViewController = (BaseViewController*)self.delegate;
-    [baseViewController.navigationController pushViewController:moblieWriteView animated:YES];
-
+    [self.navigationController pushViewController:moblieWriteView animated:YES];
 }
 
 //去登录

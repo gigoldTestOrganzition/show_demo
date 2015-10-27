@@ -41,8 +41,6 @@
 		5C6A5AAC1BDB46D0000CA77D /* login_jigao_logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C6A5AA11BDB46D0000CA77D /* login_jigao_logo@3x.png */; settings = {ASSET_TAGS = (); }; };
 		5C71BD7F1BDA134500978CF4 /* UpdataPWDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C71BD7D1BDA134500978CF4 /* UpdataPWDViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5C71BD801BDA134500978CF4 /* UpdataPWDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C71BD7E1BDA134500978CF4 /* UpdataPWDViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		5C746C871BD77EB0007A7DE6 /* MoblieValidateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C746C851BD77EB0007A7DE6 /* MoblieValidateViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5C746C881BD77EB0007A7DE6 /* MoblieValidateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C746C861BD77EB0007A7DE6 /* MoblieValidateViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		5C746C951BD78A67007A7DE6 /* BankCard.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C746C8C1BD78A67007A7DE6 /* BankCard.m */; settings = {ASSET_TAGS = (); }; };
 		5C746C961BD78A67007A7DE6 /* BankCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C746C8F1BD78A67007A7DE6 /* BankCardCell.m */; settings = {ASSET_TAGS = (); }; };
 		5C746C971BD78A67007A7DE6 /* TopUpShowViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5C746C911BD78A67007A7DE6 /* TopUpShowViewController.mm */; settings = {ASSET_TAGS = (); }; };
@@ -153,6 +151,17 @@
 		5CCCEEE21BDDC5C200336158 /* TradingData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCCEECC1BDDC5C200336158 /* TradingData.m */; settings = {ASSET_TAGS = (); }; };
 		5CCCEEE31BDDC5C200336158 /* TradingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCCEED11BDDC5C200336158 /* TradingCell.m */; settings = {ASSET_TAGS = (); }; };
 		5CCCEEE41BDDC5C200336158 /* TradingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCCEED31BDDC5C200336158 /* TradingDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5CEB722E1BDF66900048BB3D /* SmallChangeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CEB722C1BDF66900048BB3D /* SmallChangeTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		5CEB722F1BDF66900048BB3D /* SmallChangeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CEB722D1BDF66900048BB3D /* SmallChangeTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		5CEB72331BDF6F010048BB3D /* ServiceTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CEB72311BDF6F010048BB3D /* ServiceTextViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5CEB72341BDF6F010048BB3D /* ServiceTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CEB72321BDF6F010048BB3D /* ServiceTextViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		5CF836E11BDF4EBC00ECB83C /* BankCardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF836DF1BDF4EBC00ECB83C /* BankCardTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		5CF836E21BDF4EBC00ECB83C /* BankCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF836E01BDF4EBC00ECB83C /* BankCardTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		5CF836EC1BDF5CF400ECB83C /* SmallChangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF836EA1BDF5CF400ECB83C /* SmallChangeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5CF836ED1BDF5CF400ECB83C /* SmallChangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF836EB1BDF5CF400ECB83C /* SmallChangeViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		5CF836F11BDF640F00ECB83C /* bank_logo_ccb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF836EE1BDF640F00ECB83C /* bank_logo_ccb@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5CF836F21BDF640F00ECB83C /* no_data_ico@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF836EF1BDF640F00ECB83C /* no_data_ico@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5CF836F31BDF640F00ECB83C /* no_data_ico@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF836F01BDF640F00ECB83C /* no_data_ico@3x.png */; settings = {ASSET_TAGS = (); }; };
 		DCB348EA5503450DD424BB4D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA29EA734CC24C2A6E7B458A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -226,9 +235,6 @@
 		5C71BD7C1BDA134500978CF4 /* UpdataPWDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdataPWDViewController.h; sourceTree = "<group>"; };
 		5C71BD7D1BDA134500978CF4 /* UpdataPWDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdataPWDViewController.m; sourceTree = "<group>"; };
 		5C71BD7E1BDA134500978CF4 /* UpdataPWDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdataPWDViewController.xib; sourceTree = "<group>"; };
-		5C746C841BD77EB0007A7DE6 /* MoblieValidateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoblieValidateViewController.h; sourceTree = "<group>"; };
-		5C746C851BD77EB0007A7DE6 /* MoblieValidateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoblieValidateViewController.m; sourceTree = "<group>"; };
-		5C746C861BD77EB0007A7DE6 /* MoblieValidateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoblieValidateViewController.xib; sourceTree = "<group>"; };
 		5C746C8B1BD78A67007A7DE6 /* BankCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCard.h; sourceTree = "<group>"; };
 		5C746C8C1BD78A67007A7DE6 /* BankCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCard.m; sourceTree = "<group>"; };
 		5C746C8E1BD78A67007A7DE6 /* BankCardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardCell.h; sourceTree = "<group>"; };
@@ -418,6 +424,21 @@
 		5CCCEED11BDDC5C200336158 /* TradingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradingCell.m; sourceTree = "<group>"; };
 		5CCCEED21BDDC5C200336158 /* TradingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradingDetailViewController.h; sourceTree = "<group>"; };
 		5CCCEED31BDDC5C200336158 /* TradingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradingDetailViewController.m; sourceTree = "<group>"; };
+		5CEB722B1BDF66900048BB3D /* SmallChangeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallChangeTableViewCell.h; sourceTree = "<group>"; };
+		5CEB722C1BDF66900048BB3D /* SmallChangeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallChangeTableViewCell.m; sourceTree = "<group>"; };
+		5CEB722D1BDF66900048BB3D /* SmallChangeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallChangeTableViewCell.xib; sourceTree = "<group>"; };
+		5CEB72301BDF6F010048BB3D /* ServiceTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServiceTextViewController.h; sourceTree = "<group>"; };
+		5CEB72311BDF6F010048BB3D /* ServiceTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServiceTextViewController.m; sourceTree = "<group>"; };
+		5CEB72321BDF6F010048BB3D /* ServiceTextViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ServiceTextViewController.xib; sourceTree = "<group>"; };
+		5CF836DE1BDF4EBC00ECB83C /* BankCardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardTableViewCell.h; sourceTree = "<group>"; };
+		5CF836DF1BDF4EBC00ECB83C /* BankCardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardTableViewCell.m; sourceTree = "<group>"; };
+		5CF836E01BDF4EBC00ECB83C /* BankCardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardTableViewCell.xib; sourceTree = "<group>"; };
+		5CF836E91BDF5CF400ECB83C /* SmallChangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmallChangeViewController.h; sourceTree = "<group>"; };
+		5CF836EA1BDF5CF400ECB83C /* SmallChangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallChangeViewController.m; sourceTree = "<group>"; };
+		5CF836EB1BDF5CF400ECB83C /* SmallChangeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallChangeViewController.xib; sourceTree = "<group>"; };
+		5CF836EE1BDF640F00ECB83C /* bank_logo_ccb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bank_logo_ccb@2x.png"; sourceTree = "<group>"; };
+		5CF836EF1BDF640F00ECB83C /* no_data_ico@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "no_data_ico@2x.png"; sourceTree = "<group>"; };
+		5CF836F01BDF640F00ECB83C /* no_data_ico@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "no_data_ico@3x.png"; sourceTree = "<group>"; };
 		660292318B52F537CA48DCED /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AA29EA734CC24C2A6E7B458A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -521,6 +542,9 @@
 		5C5A2D8C1BD6115D00C4AE1D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				5CF836EE1BDF640F00ECB83C /* bank_logo_ccb@2x.png */,
+				5CF836EF1BDF640F00ECB83C /* no_data_ico@2x.png */,
+				5CF836F01BDF640F00ECB83C /* no_data_ico@3x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -530,9 +554,6 @@
 			children = (
 				5C4B7A901BD7C222009D556E /* BaseViewController.h */,
 				5C4B7A911BD7C222009D556E /* BaseViewController.m */,
-				5C746C841BD77EB0007A7DE6 /* MoblieValidateViewController.h */,
-				5C746C851BD77EB0007A7DE6 /* MoblieValidateViewController.m */,
-				5C746C861BD77EB0007A7DE6 /* MoblieValidateViewController.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -691,6 +712,9 @@
 				5C93B8F71BD8DA5A00E8A8AA /* PasswordWriteViewController.h */,
 				5C93B8F81BD8DA5A00E8A8AA /* PasswordWriteViewController.m */,
 				5C93B8F91BD8DA5A00E8A8AA /* PasswordWriteViewController.xib */,
+				5CEB72301BDF6F010048BB3D /* ServiceTextViewController.h */,
+				5CEB72311BDF6F010048BB3D /* ServiceTextViewController.m */,
+				5CEB72321BDF6F010048BB3D /* ServiceTextViewController.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -751,6 +775,7 @@
 				5C5A2DBB1BD6115D00C4AE1D /* MyAccountViewController.h */,
 				5C5A2DBC1BD6115D00C4AE1D /* MyAccountViewController.m */,
 				5C5A2DBD1BD6115D00C4AE1D /* MyAccountViewController.xib */,
+				5CF836E31BDF5AE800ECB83C /* Small change  */,
 				5C447C6E1BD77A4600A049D9 /* BankCardManager */,
 				5C93B8DB1BD88FBD00E8A8AA /* PasswordManager */,
 				5C93B8DC1BD8905100E8A8AA /* IncomeAndExpenditure */,
@@ -1077,6 +1102,12 @@
 		5CC44B381BDA34630071B668 /* cell */ = {
 			isa = PBXGroup;
 			children = (
+				5CEB722B1BDF66900048BB3D /* SmallChangeTableViewCell.h */,
+				5CEB722C1BDF66900048BB3D /* SmallChangeTableViewCell.m */,
+				5CEB722D1BDF66900048BB3D /* SmallChangeTableViewCell.xib */,
+				5CF836DE1BDF4EBC00ECB83C /* BankCardTableViewCell.h */,
+				5CF836DF1BDF4EBC00ECB83C /* BankCardTableViewCell.m */,
+				5CF836E01BDF4EBC00ECB83C /* BankCardTableViewCell.xib */,
 				5CC44B421BDA3AFB0071B668 /* MyAccountTableViewCell.h */,
 				5CC44B431BDA3AFB0071B668 /* MyAccountTableViewCell.m */,
 				5CC44B441BDA3AFB0071B668 /* MyAccountTableViewCell.xib */,
@@ -1506,6 +1537,16 @@
 			path = ui;
 			sourceTree = "<group>";
 		};
+		5CF836E31BDF5AE800ECB83C /* Small change  */ = {
+			isa = PBXGroup;
+			children = (
+				5CF836E91BDF5CF400ECB83C /* SmallChangeViewController.h */,
+				5CF836EA1BDF5CF400ECB83C /* SmallChangeViewController.m */,
+				5CF836EB1BDF5CF400ECB83C /* SmallChangeViewController.xib */,
+			);
+			name = "Small change ";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1623,15 +1664,16 @@
 				5CC44B2E1BDA30F00071B668 /* user_menu_ico_4@3x.png in Resources */,
 				5CC44B2C1BDA30F00071B668 /* user_menu_ico_3@3x.png in Resources */,
 				5C447C6D1BD77A3700A049D9 /* BankCardValidateViewController.xib in Resources */,
+				5CF836ED1BDF5CF400ECB83C /* SmallChangeViewController.xib in Resources */,
 				5C6A5AAC1BDB46D0000CA77D /* login_jigao_logo@3x.png in Resources */,
 				5CBE16E91BD76D0400692B0A /* BankCardManagerViewController.xib in Resources */,
 				5CA41C531BC8E688000A3484 /* Assets.xcassets in Resources */,
 				5CA673C51BD9D63C00BED35A /* protocol_but_2@2x.png in Resources */,
-				5C746C881BD77EB0007A7DE6 /* MoblieValidateViewController.xib in Resources */,
 				5C6A5AA31BDB46D0000CA77D /* login_down_arrow@2x.png in Resources */,
 				5C5A2DD81BD6115D00C4AE1D /* PasswordManagerViewController.xib in Resources */,
 				5C746CB41BD78FE4007A7DE6 /* FunctionCell.xib in Resources */,
 				5CC44B411BDA35A30071B668 /* box_but_arrow@3x.png in Resources */,
+				5CF836F11BDF640F00ECB83C /* bank_logo_ccb@2x.png in Resources */,
 				5CC44B281BDA30F00071B668 /* user_menu_ico_1@3x.png in Resources */,
 				5CC44B2B1BDA30F00071B668 /* user_menu_ico_3@2x.png in Resources */,
 				5CC44B271BDA30F00071B668 /* user_menu_ico_1@2x.png in Resources */,
@@ -1653,13 +1695,18 @@
 				5CA673C21BD9D63C00BED35A /* password_eye_2@3x.png in Resources */,
 				5CC44B301BDA30F00071B668 /* user_menu_ico_5@3x.png in Resources */,
 				5C746CB61BD78FE4007A7DE6 /* MyViewController.xib in Resources */,
+				5CEB722F1BDF66900048BB3D /* SmallChangeTableViewCell.xib in Resources */,
 				5C6A5AA81BDB46D0000CA77D /* login_ico_2@3x.png in Resources */,
 				5CBE16EE1BD76F9F00692B0A /* AddBankCardViewController.xib in Resources */,
 				5C6A5AA71BDB46D0000CA77D /* login_ico_2@2x.png in Resources */,
+				5CF836F31BDF640F00ECB83C /* no_data_ico@3x.png in Resources */,
 				5C93B8F11BD8D9BA00E8A8AA /* MoblieWriteViewController.xib in Resources */,
 				5CA673C41BD9D63C00BED35A /* protocol_but_1@3x.png in Resources */,
 				5CA673C01BD9D63C00BED35A /* password_eye_1@3x.png in Resources */,
+				5CF836F21BDF640F00ECB83C /* no_data_ico@2x.png in Resources */,
 				5C93B8EB1BD8CB0500E8A8AA /* InfoFinishedViewController.xib in Resources */,
+				5CEB72341BDF6F010048BB3D /* ServiceTextViewController.xib in Resources */,
+				5CF836E21BDF4EBC00ECB83C /* BankCardTableViewCell.xib in Resources */,
 				5C6A5AA41BDB46D0000CA77D /* login_down_arrow@3x.png in Resources */,
 				5CA673CA1BD9D63C00BED35A /* top_return_but_2@3x.png in Resources */,
 				5CC44B2A1BDA30F00071B668 /* user_menu_ico_2@3x.png in Resources */,
@@ -1753,6 +1800,7 @@
 				5CCCEE6E1BDDC4DC00336158 /* IncomeDetailData.m in Sources */,
 				5CC6BBBC1BD8933400660205 /* TopUpResultViewController.m in Sources */,
 				5C6A5A931BDB247A000CA77D /* SettingsViewController.m in Sources */,
+				5CF836E11BDF4EBC00ECB83C /* BankCardTableViewCell.m in Sources */,
 				5CC6BBFA1BD8993E00660205 /* MessageCenter.m in Sources */,
 				5CC6BBFE1BD8993E00660205 /* SXPViewController.m in Sources */,
 				5CC6BC061BD8993E00660205 /* Position.m in Sources */,
@@ -1766,12 +1814,14 @@
 				5CC44B451BDA3AFB0071B668 /* MyAccountTableViewCell.m in Sources */,
 				5CCCEE6F1BDDC4DC00336158 /* IncomeDetailCell.m in Sources */,
 				5CC6BC091BD8993E00660205 /* ViewUtil.m in Sources */,
+				5CF836EC1BDF5CF400ECB83C /* SmallChangeViewController.m in Sources */,
 				5C5A2DCB1BD6115D00C4AE1D /* RegisterRequest.m in Sources */,
 				5CC6BC1A1BD8A4E400660205 /* MBProgressHUDManager.m in Sources */,
 				5CA673AC1BD9C61000BED35A /* RNDirectionPanGestureRecognizer.m in Sources */,
 				5C5A2DD51BD6115D00C4AE1D /* MyAccountViewController.m in Sources */,
 				5CC6BC021BD8993E00660205 /* MathUtil.m in Sources */,
 				5CA41C4B1BC8E688000A3484 /* AppDelegate.m in Sources */,
+				5CEB722E1BDF66900048BB3D /* SmallChangeTableViewCell.m in Sources */,
 				5CA673AF1BD9C61000BED35A /* UIViewController+RNSwipeViewController.m in Sources */,
 				5C5A2DC81BD6115D00C4AE1D /* LoginRequest.m in Sources */,
 				5CC6BC041BD8993E00660205 /* NetworkUtil.m in Sources */,
@@ -1783,8 +1833,8 @@
 				5C93B8E01BD8913600E8A8AA /* IncomeAEViewController.m in Sources */,
 				5C71BD7F1BDA134500978CF4 /* UpdataPWDViewController.m in Sources */,
 				5CBE16ED1BD76F9F00692B0A /* AddBankCardViewController.m in Sources */,
+				5CEB72331BDF6F010048BB3D /* ServiceTextViewController.m in Sources */,
 				5CCCEEE11BDDC5C200336158 /* TenThousandIncomeViewController.m in Sources */,
-				5C746C871BD77EB0007A7DE6 /* MoblieValidateViewController.m in Sources */,
 				5CA673AD1BD9C61000BED35A /* RNSwipeViewController.m in Sources */,
 				5CC6BBF71BD8993E00660205 /* HttpClientManager.mm in Sources */,
 				5CBE16E81BD76D0400692B0A /* BankCardManagerViewController.m in Sources */,

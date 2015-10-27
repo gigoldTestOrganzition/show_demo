@@ -55,7 +55,11 @@
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
-    [textField resignFirstResponder];
+    if (textField == self.passwordTextField1) {
+        [self.passwordTextField2 becomeFirstResponder];
+    }else{
+        [self nextBtnPress];
+    }
     return YES;
 }
 
