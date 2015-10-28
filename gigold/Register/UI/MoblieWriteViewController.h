@@ -7,8 +7,12 @@
 //
 
 #import "BaseViewController.h"
+#import "LoadView.h"
 
 @interface MoblieWriteViewController : BaseViewController <UITextFieldDelegate>
+{
+    LoadView* loadView;
+}
 @property (weak, nonatomic) IBOutlet UITextField *mobileTextField;
 @property (weak, nonatomic) IBOutlet UIButton *nextBtn;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *shadowHeight1;

@@ -59,7 +59,15 @@
 -(void)nextBtnPress{
     NSLog(@"下一步");
     
+    
+    
     if ([[AppUtils shareAppUtils] validateMobile:self.mobileTextField.text]) {
+        if (self.flowType == ResetPasswordType) {
+            [self performSelector:@selector(stopLoadView) withObject:nil afterDelay:1];
+            loadView = [LoadView showLoad:LoadViewTypeSafeCheck view:self.view];
+            return;
+        }
+        
         VerificationCodeWriteViewController* verificationCodeWriteView = [[VerificationCodeWriteViewController alloc] init];
         verificationCodeWriteView.title = self.title;
         verificationCodeWriteView.moblieNum = self.mobileTextField.text;
@@ -71,6 +79,16 @@
         [self.mobileTextField becomeFirstResponder];
     }
     
+}
+
+-(void)stopLoadView{
+    [loadView stopDialog];
+    VerificationCodeWriteViewController* verificationCodeWriteView = [[VerificationCodeWriteViewController alloc] init];
+    verificationCodeWriteView.title = self.title;
+    verificationCodeWriteView.moblieNum = self.mobileTextField.text;
+    verificationCodeWriteView.flowType = self.flowType;
+    verificationCodeWriteView.delegate = self;
+    [self.navigationController pushViewController:verificationCodeWriteView animated:YES];
 }
 
 #pragma mark ---- BaseViewControllerDelegate --------

@@ -7,10 +7,12 @@
 //
 
 #import "BaseViewController.h"
+#import "LoadView.h"
 
 @interface PasswordManagerViewController : BaseViewController <UITableViewDataSource,UITableViewDelegate>
 {
     NSMutableArray* dataArray;
+    LoadView* loadView;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *mTableView;

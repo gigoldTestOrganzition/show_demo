@@ -32,7 +32,15 @@
     
     self.mTableView.delegate = self;
     self.mTableView.dataSource = self;
+    
+    [self performSelector:@selector(stopLoadView) withObject:nil afterDelay:1];
+   loadView = [LoadView showLoad:LoadViewTypeSafeCheck view:self.view];
+    
     // Do any additional setup after loading the view from its nib.
+}
+
+-(void)stopLoadView{
+    [loadView stopDialog];
 }
 
 
