@@ -8,44 +8,31 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>0</integer>
 		</dict>
 		<key>JSONKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
 		</dict>
 		<key>MJExtension.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
 		<key>SDWebImage.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>035ADD84759619D00777C7CCF8DE735F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>18C4E7F9956F8F1D51F045EF95FA4747</key>
+		<key>0756F5EF706718AE5ADBF224267F1646</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -55,27 +42,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5352D432641F0656C90741034E32F31E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>68C1CA4852409BD18E03D23778EBADE9</key>
+		<key>AB41AA97D4A96B8F029CFCD908916099</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B23B3D15FFC0FC9893968F478086D58D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CFDEB5EC30A00107E6189E06B0BABF98</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E2FF7F57136F3A947A27635C3DFE6BB5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
