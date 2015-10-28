@@ -28,9 +28,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ERW-B6-qmG">
                     <rect key="frame" x="0.0" y="89" width="600" height="56"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Q1Z-TT-hts">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bank_logo_cmb.png" translatesAutoresizingMaskIntoConstraints="NO" id="Q1Z-TT-hts">
                             <rect key="frame" x="10" y="13" width="30" height="30"/>
-                            <color key="backgroundColor" red="1" green="0.20392156859999999" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="30" id="2aY-13-gdz"/>
                                 <constraint firstAttribute="height" constant="30" id="oIs-pz-UTy"/>
@@ -184,6 +183,7 @@
         </view>
     </objects>
     <resources>
+        <image name="bank_logo_cmb.png" width="30" height="30"/>
         <image name="protocol_but_1.png" width="12" height="12"/>
     </resources>
 </document>

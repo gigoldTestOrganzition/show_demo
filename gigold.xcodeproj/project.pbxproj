@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C00F8FC1BE0A428009EAA73 /* PayPwdValidateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C00F8FA1BE0A428009EAA73 /* PayPwdValidateViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5C00F8FD1BE0A428009EAA73 /* PayPwdValidateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C00F8FB1BE0A428009EAA73 /* PayPwdValidateViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		5C1DFAFE1BDA195A00E0BB97 /* PayPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1DFAFC1BDA195A00E0BB97 /* PayPasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5C1DFAFF1BDA195A00E0BB97 /* PayPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C1DFAFD1BDA195A00E0BB97 /* PayPasswordViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		5C394BFC1BCF597E009AC0AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C394BFA1BCF597E009AC0AC /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		5C41D09C1BE0B5F800F76E50 /* ServiceText.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C41D09B1BE0B5F800F76E50 /* ServiceText.plist */; settings = {ASSET_TAGS = (); }; };
 		5C447C6C1BD77A3700A049D9 /* BankCardValidateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C447C6A1BD77A3700A049D9 /* BankCardValidateViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5C447C6D1BD77A3700A049D9 /* BankCardValidateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C447C6B1BD77A3700A049D9 /* BankCardValidateViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		5C4B7A921BD7C222009D556E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B7A911BD7C222009D556E /* BaseViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -94,6 +97,12 @@
 		5CA88B3A1BE06A3C00E50D0D /* top_menu_but_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA88B381BE06A3C00E50D0D /* top_menu_but_arrow@2x.png */; settings = {ASSET_TAGS = (); }; };
 		5CA88B3B1BE06A3C00E50D0D /* top_menu_but_arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA88B391BE06A3C00E50D0D /* top_menu_but_arrow@3x.png */; settings = {ASSET_TAGS = (); }; };
 		5CA88B3D1BE06B2500E50D0D /* bank_logo_ccb@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA88B3C1BE06B2500E50D0D /* bank_logo_ccb@3x.png */; settings = {ASSET_TAGS = (); }; };
+		5CB6FF6A1BE09B4D00D666D0 /* ico_statement_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CB6FF641BE09B4D00D666D0 /* ico_statement_1@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5CB6FF6B1BE09B4D00D666D0 /* ico_statement_1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CB6FF651BE09B4D00D666D0 /* ico_statement_1@3x.png */; settings = {ASSET_TAGS = (); }; };
+		5CB6FF6C1BE09B4D00D666D0 /* ico_statement_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CB6FF661BE09B4D00D666D0 /* ico_statement_2@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5CB6FF6D1BE09B4D00D666D0 /* ico_statement_2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CB6FF671BE09B4D00D666D0 /* ico_statement_2@3x.png */; settings = {ASSET_TAGS = (); }; };
+		5CB6FF6E1BE09B4D00D666D0 /* ico_statement_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CB6FF681BE09B4D00D666D0 /* ico_statement_3@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5CB6FF6F1BE09B4D00D666D0 /* ico_statement_3@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CB6FF691BE09B4D00D666D0 /* ico_statement_3@3x.png */; settings = {ASSET_TAGS = (); }; };
 		5CBE16E81BD76D0400692B0A /* BankCardManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE16E61BD76D0400692B0A /* BankCardManagerViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5CBE16E91BD76D0400692B0A /* BankCardManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CBE16E71BD76D0400692B0A /* BankCardManagerViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		5CBE16ED1BD76F9F00692B0A /* AddBankCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE16EB1BD76F9F00692B0A /* AddBankCardViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -197,18 +206,18 @@
 		5CCCEEE21BDDC5C200336158 /* TradingData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCCEECC1BDDC5C200336158 /* TradingData.m */; settings = {ASSET_TAGS = (); }; };
 		5CCCEEE31BDDC5C200336158 /* TradingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCCEED11BDDC5C200336158 /* TradingCell.m */; settings = {ASSET_TAGS = (); }; };
 		5CCCEEE41BDDC5C200336158 /* TradingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCCEED31BDDC5C200336158 /* TradingDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5CF7B6611BE0A7CC0041E96E /* safe_ico@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B65F1BE0A7CC0041E96E /* safe_ico@2x.png */; settings = {ASSET_TAGS = (); }; };
-		5CF7B6621BE0A7CC0041E96E /* safe_ico@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B6601BE0A7CC0041E96E /* safe_ico@3x.png */; settings = {ASSET_TAGS = (); }; };
-		5CF7B6671BE0A8D50041E96E /* SecurityPromptView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7B6661BE0A8D50041E96E /* SecurityPromptView.m */; settings = {ASSET_TAGS = (); }; };
-		5CF7B6691BE0A8F80041E96E /* SecurityPromptView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B6681BE0A8F80041E96E /* SecurityPromptView.xib */; settings = {ASSET_TAGS = (); }; };
-		5CF7B66D1BE0B2550041E96E /* LoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7B66C1BE0B2550041E96E /* LoadView.m */; settings = {ASSET_TAGS = (); }; };
-		5CF7B66F1BE0B29C0041E96E /* LoadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B66E1BE0B29C0041E96E /* LoadView.xib */; settings = {ASSET_TAGS = (); }; };
-		5CF7B6721BE0BA8F0041E96E /* pop_safe_ico_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B6701BE0BA8F0041E96E /* pop_safe_ico_1@2x.png */; settings = {ASSET_TAGS = (); }; };
-		5CF7B6731BE0BA8F0041E96E /* pop_safe_ico_1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B6711BE0BA8F0041E96E /* pop_safe_ico_1@3x.png */; settings = {ASSET_TAGS = (); }; };
-		5CF7B6761BE0BCC90041E96E /* pop_safe_ico_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B6741BE0BCC90041E96E /* pop_safe_ico_2@2x.png */; settings = {ASSET_TAGS = (); }; };
-		5CF7B6771BE0BCC90041E96E /* pop_safe_ico_2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B6751BE0BCC90041E96E /* pop_safe_ico_2@3x.png */; settings = {ASSET_TAGS = (); }; };
-		5CF7B67A1BE0C6720041E96E /* pop_loading_pci@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B6781BE0C6720041E96E /* pop_loading_pci@2x.png */; settings = {ASSET_TAGS = (); }; };
-		5CF7B67B1BE0C6720041E96E /* pop_loading_pci@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B6791BE0C6720041E96E /* pop_loading_pci@3x.png */; settings = {ASSET_TAGS = (); }; };
+		5CF7B6831BE0C8230041E96E /* LoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7B6801BE0C8230041E96E /* LoadView.m */; settings = {ASSET_TAGS = (); }; };
+		5CF7B6841BE0C8230041E96E /* LoadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B6811BE0C8230041E96E /* LoadView.xib */; settings = {ASSET_TAGS = (); }; };
+		5CF7B6891BE0C88F0041E96E /* SecurityPromptView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7B6871BE0C88F0041E96E /* SecurityPromptView.m */; settings = {ASSET_TAGS = (); }; };
+		5CF7B68A1BE0C88F0041E96E /* SecurityPromptView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B6881BE0C88F0041E96E /* SecurityPromptView.xib */; settings = {ASSET_TAGS = (); }; };
+		5CF7B6931BE0C9D70041E96E /* pop_loading_pci@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B68B1BE0C9D70041E96E /* pop_loading_pci@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5CF7B6941BE0C9D70041E96E /* pop_loading_pci@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B68C1BE0C9D70041E96E /* pop_loading_pci@3x.png */; settings = {ASSET_TAGS = (); }; };
+		5CF7B6951BE0C9D70041E96E /* pop_safe_ico_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B68D1BE0C9D70041E96E /* pop_safe_ico_1@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5CF7B6961BE0C9D70041E96E /* pop_safe_ico_1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B68E1BE0C9D70041E96E /* pop_safe_ico_1@3x.png */; settings = {ASSET_TAGS = (); }; };
+		5CF7B6971BE0C9D70041E96E /* pop_safe_ico_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B68F1BE0C9D70041E96E /* pop_safe_ico_2@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5CF7B6981BE0C9D70041E96E /* pop_safe_ico_2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B6901BE0C9D70041E96E /* pop_safe_ico_2@3x.png */; settings = {ASSET_TAGS = (); }; };
+		5CF7B6991BE0C9D70041E96E /* safe_ico@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B6911BE0C9D70041E96E /* safe_ico@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5CF7B69A1BE0C9D70041E96E /* safe_ico@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B6921BE0C9D70041E96E /* safe_ico@3x.png */; settings = {ASSET_TAGS = (); }; };
 		DCB348EA5503450DD424BB4D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA29EA734CC24C2A6E7B458A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -231,10 +240,14 @@
 
 /* Begin PBXFileReference section */
 		05C9FF4D315E838F911D2C11 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		5C00F8F91BE0A428009EAA73 /* PayPwdValidateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPwdValidateViewController.h; sourceTree = "<group>"; };
+		5C00F8FA1BE0A428009EAA73 /* PayPwdValidateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayPwdValidateViewController.m; sourceTree = "<group>"; };
+		5C00F8FB1BE0A428009EAA73 /* PayPwdValidateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PayPwdValidateViewController.xib; sourceTree = "<group>"; };
 		5C1DFAFB1BDA195A00E0BB97 /* PayPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayPasswordViewController.h; sourceTree = "<group>"; };
 		5C1DFAFC1BDA195A00E0BB97 /* PayPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayPasswordViewController.m; sourceTree = "<group>"; };
 		5C1DFAFD1BDA195A00E0BB97 /* PayPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PayPasswordViewController.xib; sourceTree = "<group>"; };
 		5C394BFB1BCF597E009AC0AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5C41D09B1BE0B5F800F76E50 /* ServiceText.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ServiceText.plist; path = gigold/ServiceText.plist; sourceTree = SOURCE_ROOT; };
 		5C447C691BD77A3700A049D9 /* BankCardValidateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardValidateViewController.h; sourceTree = "<group>"; };
 		5C447C6A1BD77A3700A049D9 /* BankCardValidateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardValidateViewController.m; sourceTree = "<group>"; };
 		5C447C6B1BD77A3700A049D9 /* BankCardValidateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardValidateViewController.xib; sourceTree = "<group>"; };
@@ -361,6 +374,12 @@
 		5CA88B381BE06A3C00E50D0D /* top_menu_but_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_menu_but_arrow@2x.png"; sourceTree = "<group>"; };
 		5CA88B391BE06A3C00E50D0D /* top_menu_but_arrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_menu_but_arrow@3x.png"; sourceTree = "<group>"; };
 		5CA88B3C1BE06B2500E50D0D /* bank_logo_ccb@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bank_logo_ccb@3x.png"; sourceTree = "<group>"; };
+		5CB6FF641BE09B4D00D666D0 /* ico_statement_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_statement_1@2x.png"; sourceTree = "<group>"; };
+		5CB6FF651BE09B4D00D666D0 /* ico_statement_1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_statement_1@3x.png"; sourceTree = "<group>"; };
+		5CB6FF661BE09B4D00D666D0 /* ico_statement_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_statement_2@2x.png"; sourceTree = "<group>"; };
+		5CB6FF671BE09B4D00D666D0 /* ico_statement_2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_statement_2@3x.png"; sourceTree = "<group>"; };
+		5CB6FF681BE09B4D00D666D0 /* ico_statement_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_statement_3@2x.png"; sourceTree = "<group>"; };
+		5CB6FF691BE09B4D00D666D0 /* ico_statement_3@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_statement_3@3x.png"; sourceTree = "<group>"; };
 		5CBE16E51BD76D0400692B0A /* BankCardManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardManagerViewController.h; sourceTree = "<group>"; };
 		5CBE16E61BD76D0400692B0A /* BankCardManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardManagerViewController.m; sourceTree = "<group>"; };
 		5CBE16E71BD76D0400692B0A /* BankCardManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardManagerViewController.xib; sourceTree = "<group>"; };
@@ -528,20 +547,20 @@
 		5CCCEED11BDDC5C200336158 /* TradingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradingCell.m; sourceTree = "<group>"; };
 		5CCCEED21BDDC5C200336158 /* TradingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradingDetailViewController.h; sourceTree = "<group>"; };
 		5CCCEED31BDDC5C200336158 /* TradingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradingDetailViewController.m; sourceTree = "<group>"; };
-		5CF7B65F1BE0A7CC0041E96E /* safe_ico@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "safe_ico@2x.png"; sourceTree = "<group>"; };
-		5CF7B6601BE0A7CC0041E96E /* safe_ico@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "safe_ico@3x.png"; sourceTree = "<group>"; };
-		5CF7B6651BE0A8D50041E96E /* SecurityPromptView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityPromptView.h; sourceTree = "<group>"; };
-		5CF7B6661BE0A8D50041E96E /* SecurityPromptView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityPromptView.m; sourceTree = "<group>"; };
-		5CF7B6681BE0A8F80041E96E /* SecurityPromptView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecurityPromptView.xib; sourceTree = "<group>"; };
-		5CF7B66B1BE0B2550041E96E /* LoadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadView.h; sourceTree = "<group>"; };
-		5CF7B66C1BE0B2550041E96E /* LoadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadView.m; sourceTree = "<group>"; };
-		5CF7B66E1BE0B29C0041E96E /* LoadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadView.xib; sourceTree = "<group>"; };
-		5CF7B6701BE0BA8F0041E96E /* pop_safe_ico_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop_safe_ico_1@2x.png"; sourceTree = "<group>"; };
-		5CF7B6711BE0BA8F0041E96E /* pop_safe_ico_1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop_safe_ico_1@3x.png"; sourceTree = "<group>"; };
-		5CF7B6741BE0BCC90041E96E /* pop_safe_ico_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop_safe_ico_2@2x.png"; sourceTree = "<group>"; };
-		5CF7B6751BE0BCC90041E96E /* pop_safe_ico_2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop_safe_ico_2@3x.png"; sourceTree = "<group>"; };
-		5CF7B6781BE0C6720041E96E /* pop_loading_pci@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop_loading_pci@2x.png"; sourceTree = "<group>"; };
-		5CF7B6791BE0C6720041E96E /* pop_loading_pci@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop_loading_pci@3x.png"; sourceTree = "<group>"; };
+		5CF7B67F1BE0C8230041E96E /* LoadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadView.h; sourceTree = "<group>"; };
+		5CF7B6801BE0C8230041E96E /* LoadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadView.m; sourceTree = "<group>"; };
+		5CF7B6811BE0C8230041E96E /* LoadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadView.xib; sourceTree = "<group>"; };
+		5CF7B6861BE0C88F0041E96E /* SecurityPromptView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityPromptView.h; sourceTree = "<group>"; };
+		5CF7B6871BE0C88F0041E96E /* SecurityPromptView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityPromptView.m; sourceTree = "<group>"; };
+		5CF7B6881BE0C88F0041E96E /* SecurityPromptView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecurityPromptView.xib; sourceTree = "<group>"; };
+		5CF7B68B1BE0C9D70041E96E /* pop_loading_pci@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pop_loading_pci@2x.png"; path = "gigold/common/Images/pop_loading_pci@2x.png"; sourceTree = SOURCE_ROOT; };
+		5CF7B68C1BE0C9D70041E96E /* pop_loading_pci@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pop_loading_pci@3x.png"; path = "gigold/common/Images/pop_loading_pci@3x.png"; sourceTree = SOURCE_ROOT; };
+		5CF7B68D1BE0C9D70041E96E /* pop_safe_ico_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pop_safe_ico_1@2x.png"; path = "gigold/common/Images/pop_safe_ico_1@2x.png"; sourceTree = SOURCE_ROOT; };
+		5CF7B68E1BE0C9D70041E96E /* pop_safe_ico_1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pop_safe_ico_1@3x.png"; path = "gigold/common/Images/pop_safe_ico_1@3x.png"; sourceTree = SOURCE_ROOT; };
+		5CF7B68F1BE0C9D70041E96E /* pop_safe_ico_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pop_safe_ico_2@2x.png"; path = "gigold/common/Images/pop_safe_ico_2@2x.png"; sourceTree = SOURCE_ROOT; };
+		5CF7B6901BE0C9D70041E96E /* pop_safe_ico_2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pop_safe_ico_2@3x.png"; path = "gigold/common/Images/pop_safe_ico_2@3x.png"; sourceTree = SOURCE_ROOT; };
+		5CF7B6911BE0C9D70041E96E /* safe_ico@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "safe_ico@2x.png"; path = "gigold/common/Images/safe_ico@2x.png"; sourceTree = SOURCE_ROOT; };
+		5CF7B6921BE0C9D70041E96E /* safe_ico@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "safe_ico@3x.png"; path = "gigold/common/Images/safe_ico@3x.png"; sourceTree = SOURCE_ROOT; };
 		660292318B52F537CA48DCED /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AA29EA734CC24C2A6E7B458A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -630,6 +649,7 @@
 				5CC9C2AE1BDDF04700C2269A /* GigoldFonts.h */,
 				5CC9C2CD1BDE494A00C2269A /* Bank.h */,
 				5CC9C2CE1BDE494A00C2269A /* Bank.m */,
+				5C41D09B1BE0B5F800F76E50 /* ServiceText.plist */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -647,14 +667,14 @@
 		5C5A2D8C1BD6115D00C4AE1D /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				5CF7B6781BE0C6720041E96E /* pop_loading_pci@2x.png */,
-				5CF7B6791BE0C6720041E96E /* pop_loading_pci@3x.png */,
-				5CF7B6741BE0BCC90041E96E /* pop_safe_ico_2@2x.png */,
-				5CF7B6751BE0BCC90041E96E /* pop_safe_ico_2@3x.png */,
-				5CF7B6701BE0BA8F0041E96E /* pop_safe_ico_1@2x.png */,
-				5CF7B6711BE0BA8F0041E96E /* pop_safe_ico_1@3x.png */,
-				5CF7B65F1BE0A7CC0041E96E /* safe_ico@2x.png */,
-				5CF7B6601BE0A7CC0041E96E /* safe_ico@3x.png */,
+				5CF7B68B1BE0C9D70041E96E /* pop_loading_pci@2x.png */,
+				5CF7B68C1BE0C9D70041E96E /* pop_loading_pci@3x.png */,
+				5CF7B68D1BE0C9D70041E96E /* pop_safe_ico_1@2x.png */,
+				5CF7B68E1BE0C9D70041E96E /* pop_safe_ico_1@3x.png */,
+				5CF7B68F1BE0C9D70041E96E /* pop_safe_ico_2@2x.png */,
+				5CF7B6901BE0C9D70041E96E /* pop_safe_ico_2@3x.png */,
+				5CF7B6911BE0C9D70041E96E /* safe_ico@2x.png */,
+				5CF7B6921BE0C9D70041E96E /* safe_ico@3x.png */,
 				5CC9C3451BE0681400C2269A /* bank_logo_ccb@2x.png */,
 				5CC9C3461BE0681400C2269A /* no_data_ico@2x.png */,
 				5CC9C3471BE0681400C2269A /* no_data_ico@3x.png */,
@@ -685,8 +705,8 @@
 		5C5A2D8D1BD6115D00C4AE1D /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				5CF7B66A1BE0B2470041E96E /* loadView */,
-				5CF7B6641BE0A87A0041E96E /* securityPromptView */,
+				5CF7B6851BE0C88F0041E96E /* securityPromptView */,
+				5CF7B67E1BE0C8230041E96E /* loadView */,
 				5CC9C3DB1BE06B0800C2269A /* outView */,
 				5CC9C3231BDF58F900C2269A /* resultShowView */,
 				5CC9C2BE1BDE427400C2269A /* selectPayTypeView */,
@@ -910,6 +930,12 @@
 				5CC44B3F1BDA35A30071B668 /* box_but_arrow@3x.png */,
 				5CA88B2E1BE069DB00E50D0D /* user_faces_1@2x.png */,
 				5CA88B2F1BE069DB00E50D0D /* user_faces_1@3x.png */,
+				5CB6FF641BE09B4D00D666D0 /* ico_statement_1@2x.png */,
+				5CB6FF651BE09B4D00D666D0 /* ico_statement_1@3x.png */,
+				5CB6FF661BE09B4D00D666D0 /* ico_statement_2@2x.png */,
+				5CB6FF671BE09B4D00D666D0 /* ico_statement_2@3x.png */,
+				5CB6FF681BE09B4D00D666D0 /* ico_statement_3@2x.png */,
+				5CB6FF691BE09B4D00D666D0 /* ico_statement_3@3x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -917,12 +943,10 @@
 		5C5A2DBA1BD6115D00C4AE1D /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				5CC9C3401BE063D800C2269A /* SmallChangeViewController.h */,
-				5CC9C3411BE063D800C2269A /* SmallChangeViewController.m */,
-				5CC9C3421BE063D800C2269A /* SmallChangeViewController.xib */,
 				5C5A2DBB1BD6115D00C4AE1D /* MyAccountViewController.h */,
 				5C5A2DBC1BD6115D00C4AE1D /* MyAccountViewController.m */,
 				5C5A2DBD1BD6115D00C4AE1D /* MyAccountViewController.xib */,
+				5CA88B3E1BE07ADA00E50D0D /* SmallChange */,
 				5C447C6E1BD77A4600A049D9 /* BankCardManager */,
 				5C93B8DB1BD88FBD00E8A8AA /* PasswordManager */,
 				5C93B8DC1BD8905100E8A8AA /* IncomeAndExpenditure */,
@@ -1050,6 +1074,9 @@
 				5C1DFAFB1BDA195A00E0BB97 /* PayPasswordViewController.h */,
 				5C1DFAFC1BDA195A00E0BB97 /* PayPasswordViewController.m */,
 				5C1DFAFD1BDA195A00E0BB97 /* PayPasswordViewController.xib */,
+				5C00F8F91BE0A428009EAA73 /* PayPwdValidateViewController.h */,
+				5C00F8FA1BE0A428009EAA73 /* PayPwdValidateViewController.m */,
+				5C00F8FB1BE0A428009EAA73 /* PayPwdValidateViewController.xib */,
 			);
 			name = PasswordManager;
 			sourceTree = "<group>";
@@ -1246,6 +1273,16 @@
 				5CA673AB1BD9C61000BED35A /* UIViewController+RNSwipeViewController.m */,
 			);
 			path = RNSwipeViewController;
+			sourceTree = "<group>";
+		};
+		5CA88B3E1BE07ADA00E50D0D /* SmallChange */ = {
+			isa = PBXGroup;
+			children = (
+				5CC9C3401BE063D800C2269A /* SmallChangeViewController.h */,
+				5CC9C3411BE063D800C2269A /* SmallChangeViewController.m */,
+				5CC9C3421BE063D800C2269A /* SmallChangeViewController.xib */,
+			);
+			name = SmallChange;
 			sourceTree = "<group>";
 		};
 		5CC44B381BDA34630071B668 /* cell */ = {
@@ -2841,26 +2878,26 @@
 			path = ui;
 			sourceTree = "<group>";
 		};
-		5CF7B6641BE0A87A0041E96E /* securityPromptView */ = {
+		5CF7B67E1BE0C8230041E96E /* loadView */ = {
 			isa = PBXGroup;
 			children = (
-				5CF7B6651BE0A8D50041E96E /* SecurityPromptView.h */,
-				5CF7B6661BE0A8D50041E96E /* SecurityPromptView.m */,
-				5CF7B6681BE0A8F80041E96E /* SecurityPromptView.xib */,
-			);
-			name = securityPromptView;
-			path = gigold/common/ui/securityPromptView;
-			sourceTree = SOURCE_ROOT;
-		};
-		5CF7B66A1BE0B2470041E96E /* loadView */ = {
-			isa = PBXGroup;
-			children = (
-				5CF7B66B1BE0B2550041E96E /* LoadView.h */,
-				5CF7B66C1BE0B2550041E96E /* LoadView.m */,
-				5CF7B66E1BE0B29C0041E96E /* LoadView.xib */,
+				5CF7B67F1BE0C8230041E96E /* LoadView.h */,
+				5CF7B6801BE0C8230041E96E /* LoadView.m */,
+				5CF7B6811BE0C8230041E96E /* LoadView.xib */,
 			);
 			name = loadView;
 			path = gigold/common/ui/loadView;
+			sourceTree = SOURCE_ROOT;
+		};
+		5CF7B6851BE0C88F0041E96E /* securityPromptView */ = {
+			isa = PBXGroup;
+			children = (
+				5CF7B6861BE0C88F0041E96E /* SecurityPromptView.h */,
+				5CF7B6871BE0C88F0041E96E /* SecurityPromptView.m */,
+				5CF7B6881BE0C88F0041E96E /* SecurityPromptView.xib */,
+			);
+			name = securityPromptView;
+			path = gigold/common/ui/securityPromptView;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -2875,7 +2912,7 @@
 				5CA41C401BC8E688000A3484 /* Frameworks */,
 				5CA41C411BC8E688000A3484 /* Resources */,
 				1D1931D61D8731B3D06DCB91 /* Copy Pods Resources */,
-				387DCFBAD098F1130523BF65 /* Embed Pods Frameworks */,
+				493EE8FE497E0720DCB574CB /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -2971,32 +3008,32 @@
 			files = (
 				5CA673C61BD9D63C00BED35A /* protocol_but_2@3x.png in Resources */,
 				5CA673C31BD9D63C00BED35A /* protocol_but_1@2x.png in Resources */,
-				5CF7B6761BE0BCC90041E96E /* pop_safe_ico_2@2x.png in Resources */,
 				5C5A2DCA1BD6115D00C4AE1D /* LoginViewController.xib in Resources */,
 				5C6A5AA61BDB46D0000CA77D /* login_ico_1@3x.png in Resources */,
 				5CA88B3B1BE06A3C00E50D0D /* top_menu_but_arrow@3x.png in Resources */,
+				5CF7B6991BE0C9D70041E96E /* safe_ico@2x.png in Resources */,
 				5C93B8F61BD8DA3900E8A8AA /* VerificationCodeWriteViewController.xib in Resources */,
+				5CB6FF6A1BE09B4D00D666D0 /* ico_statement_1@2x.png in Resources */,
+				5CF7B69A1BE0C9D70041E96E /* safe_ico@3x.png in Resources */,
 				5C746C981BD78A67007A7DE6 /* topUpStoryboard.storyboard in Resources */,
+				5CF7B68A1BE0C88F0041E96E /* SecurityPromptView.xib in Resources */,
 				5CC44B291BDA30F00071B668 /* user_menu_ico_2@2x.png in Resources */,
 				5CC9C2CA1BDE474400C2269A /* bank_logo_unionpay@3x.png in Resources */,
 				5CC9C2C01BDE42E400C2269A /* PayTypeCell.xib in Resources */,
 				5C6A5AAB1BDB46D0000CA77D /* login_jigao_logo@2x.png in Resources */,
 				5CC9C2CB1BDE474400C2269A /* box_but_arrow@2x.png in Resources */,
-				5CF7B6691BE0A8F80041E96E /* SecurityPromptView.xib in Resources */,
 				5CC9C33A1BE062E700C2269A /* SmallChangeTableViewCell.xib in Resources */,
 				5CC9C34A1BE0681400C2269A /* no_data_ico@3x.png in Resources */,
 				5CC9C3E01BE06B4100C2269A /* OutView.xib in Resources */,
 				5CC44B2E1BDA30F00071B668 /* user_menu_ico_4@3x.png in Resources */,
 				5CA88B361BE069EB00E50D0D /* no_data_ico@2x.png in Resources */,
 				5CC44B2C1BDA30F00071B668 /* user_menu_ico_3@3x.png in Resources */,
-				5CF7B67B1BE0C6720041E96E /* pop_loading_pci@3x.png in Resources */,
 				5CC9C32F1BDF824200C2269A /* main_error_ico2@2x.png in Resources */,
 				5C447C6D1BD77A3700A049D9 /* BankCardValidateViewController.xib in Resources */,
+				5CB6FF6D1BE09B4D00D666D0 /* ico_statement_2@3x.png in Resources */,
 				5C6A5AAC1BDB46D0000CA77D /* login_jigao_logo@3x.png in Resources */,
-				5CF7B6611BE0A7CC0041E96E /* safe_ico@2x.png in Resources */,
 				5CBE16E91BD76D0400692B0A /* BankCardManagerViewController.xib in Resources */,
 				5CC9C3D71BE0688900C2269A /* user_faces_1@2x.png in Resources */,
-				5CF7B67A1BE0C6720041E96E /* pop_loading_pci@2x.png in Resources */,
 				5CC9C2C71BDE474400C2269A /* bank_logo_cmb@2x.png in Resources */,
 				5CA41C531BC8E688000A3484 /* Assets.xcassets in Resources */,
 				5CA673C51BD9D63C00BED35A /* protocol_but_2@2x.png in Resources */,
@@ -3006,6 +3043,7 @@
 				5CC9C3481BE0681400C2269A /* bank_logo_ccb@2x.png in Resources */,
 				5CC44B411BDA35A30071B668 /* box_but_arrow@3x.png in Resources */,
 				5CC44B281BDA30F00071B668 /* user_menu_ico_1@3x.png in Resources */,
+				5CF7B6951BE0C9D70041E96E /* pop_safe_ico_1@2x.png in Resources */,
 				5CC44B2B1BDA30F00071B668 /* user_menu_ico_3@2x.png in Resources */,
 				5CC44B271BDA30F00071B668 /* user_menu_ico_1@2x.png in Resources */,
 				5CA88B301BE069DB00E50D0D /* user_faces_1@2x.png in Resources */,
@@ -3014,16 +3052,15 @@
 				5CA673C11BD9D63C00BED35A /* password_eye_2@2x.png in Resources */,
 				5C6A5AA91BDB46D0000CA77D /* login_ico_3@2x.png in Resources */,
 				5CC44B311BDA30F00071B668 /* user_menu_set_ico@2x.png in Resources */,
-				5CF7B6621BE0A7CC0041E96E /* safe_ico@3x.png in Resources */,
 				5CC9C32E1BDF824200C2269A /* main_correct_ico2@3x.png in Resources */,
 				5C93B8E11BD8913600E8A8AA /* IncomeAEViewController.xib in Resources */,
+				5CB6FF6F1BE09B4D00D666D0 /* ico_statement_3@3x.png in Resources */,
 				5C6A5AAA1BDB46D0000CA77D /* login_ico_3@3x.png in Resources */,
 				5CA88B311BE069DB00E50D0D /* user_faces_1@3x.png in Resources */,
-				5CF7B6721BE0BA8F0041E96E /* pop_safe_ico_1@2x.png in Resources */,
 				5CC9C3381BE062E700C2269A /* BankCardTableViewCell.xib in Resources */,
 				5CC44B2F1BDA30F00071B668 /* user_menu_ico_5@2x.png in Resources */,
-				5CF7B6731BE0BA8F0041E96E /* pop_safe_ico_1@3x.png in Resources */,
 				5CC9C3491BE0681400C2269A /* no_data_ico@2x.png in Resources */,
+				5CF7B6941BE0C9D70041E96E /* pop_loading_pci@3x.png in Resources */,
 				5CC9C32D1BDF824200C2269A /* main_correct_ico2@2x.png in Resources */,
 				5C6A5AA51BDB46D0000CA77D /* login_ico_1@2x.png in Resources */,
 				5CC9C2BA1BDE24C100C2269A /* pop_close_but@3x.png in Resources */,
@@ -3032,10 +3069,14 @@
 				5CC9C3441BE063D800C2269A /* SmallChangeViewController.xib in Resources */,
 				5C746CB51BD78FE4007A7DE6 /* MyViewController.storyboard in Resources */,
 				5CC9C2CC1BDE474400C2269A /* box_but_arrow@3x.png in Resources */,
+				5CF7B6981BE0C9D70041E96E /* pop_safe_ico_2@3x.png in Resources */,
+				5CB6FF6E1BE09B4D00D666D0 /* ico_statement_3@2x.png in Resources */,
 				5CC9C33F1BE0634600C2269A /* ServiceTextViewController.xib in Resources */,
 				5CC9C2C81BDE474400C2269A /* bank_logo_cmb@3x.png in Resources */,
 				5CA673BF1BD9D63C00BED35A /* password_eye_1@2x.png in Resources */,
+				5CF7B6841BE0C8230041E96E /* LoadView.xib in Resources */,
 				5CC9C2D81BDF03DA00C2269A /* main_correct_ico@3x.png in Resources */,
+				5CB6FF6B1BE09B4D00D666D0 /* ico_statement_1@3x.png in Resources */,
 				5C5A2DD61BD6115D00C4AE1D /* MyAccountViewController.xib in Resources */,
 				5CC44B461BDA3AFB0071B668 /* MyAccountTableViewCell.xib in Resources */,
 				5CC9C2DA1BDF03DA00C2269A /* main_error_ico@3x.png in Resources */,
@@ -3057,24 +3098,28 @@
 				5C6A5AA41BDB46D0000CA77D /* login_down_arrow@3x.png in Resources */,
 				5CA673CA1BD9D63C00BED35A /* top_return_but_2@3x.png in Resources */,
 				5CC44B2A1BDA30F00071B668 /* user_menu_ico_2@3x.png in Resources */,
-				5CF7B66F1BE0B29C0041E96E /* LoadView.xib in Resources */,
 				5C6A5A941BDB247A000CA77D /* SettingsViewController.xib in Resources */,
 				5CA88B351BE069EB00E50D0D /* bank_logo_ccb@2x.png in Resources */,
+				5C41D09C1BE0B5F800F76E50 /* ServiceText.plist in Resources */,
 				5CC9C2B91BDE24C100C2269A /* pop_close_but@2x.png in Resources */,
 				5CC9C2C91BDE474400C2269A /* bank_logo_unionpay@2x.png in Resources */,
 				5CC9C2D91BDF03DA00C2269A /* main_error_ico@2x.png in Resources */,
 				5CCCEE6C1BDDC4DC00336158 /* GigoldTreasureHome.storyboard in Resources */,
+				5CF7B6931BE0C9D70041E96E /* pop_loading_pci@2x.png in Resources */,
 				5CA673C81BD9D63C00BED35A /* top_return_but_1@3x.png in Resources */,
 				5CC9C2B41BDE226100C2269A /* SelectPayTypeView.xib in Resources */,
 				5CC44B2D1BDA30F00071B668 /* user_menu_ico_4@2x.png in Resources */,
 				5C1DFAFF1BDA195A00E0BB97 /* PayPasswordViewController.xib in Resources */,
+				5CF7B6961BE0C9D70041E96E /* pop_safe_ico_1@3x.png in Resources */,
 				5CA41C511BC8E688000A3484 /* Main.storyboard in Resources */,
 				5C6A5AA21BDB46D0000CA77D /* login_background.png in Resources */,
 				5CC44B401BDA35A30071B668 /* box_but_arrow@2x.png in Resources */,
-				5CF7B6771BE0BCC90041E96E /* pop_safe_ico_2@3x.png in Resources */,
+				5CB6FF6C1BE09B4D00D666D0 /* ico_statement_2@2x.png in Resources */,
+				5CF7B6971BE0C9D70041E96E /* pop_safe_ico_2@2x.png in Resources */,
 				5C93B8FB1BD8DA5A00E8A8AA /* PasswordWriteViewController.xib in Resources */,
 				5C394BFC1BCF597E009AC0AC /* LaunchScreen.storyboard in Resources */,
 				5CC9C3301BDF824200C2269A /* main_error_ico2@3x.png in Resources */,
+				5C00F8FD1BE0A428009EAA73 /* PayPwdValidateViewController.xib in Resources */,
 				5CC44B321BDA30F00071B668 /* user_menu_set_ico@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3111,7 +3156,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		387DCFBAD098F1130523BF65 /* Embed Pods Frameworks */ = {
+		493EE8FE497E0720DCB574CB /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -3178,7 +3223,6 @@
 				5CC6BBFE1BD8993E00660205 /* SXPViewController.m in Sources */,
 				5CC6BC061BD8993E00660205 /* Position.m in Sources */,
 				5C746C991BD78A67007A7DE6 /* TopUpViewController.mm in Sources */,
-				5CF7B66D1BE0B2550041E96E /* LoadView.m in Sources */,
 				5C5A2DD71BD6115D00C4AE1D /* PasswordManagerViewController.m in Sources */,
 				5CCCEEE01BDDC5C200336158 /* TenThousandCell.m in Sources */,
 				5CA673AE1BD9C61000BED35A /* UIView+Sizes.m in Sources */,
@@ -3187,8 +3231,8 @@
 				5CCCEE701BDDC4DC00336158 /* IncomeDetailViewController.m in Sources */,
 				5CC9C3431BE063D800C2269A /* SmallChangeViewController.m in Sources */,
 				5CC9C3DE1BE06B2D00C2269A /* OutView.m in Sources */,
-				5CF7B6671BE0A8D50041E96E /* SecurityPromptView.m in Sources */,
 				5CC9C33E1BE0634600C2269A /* ServiceTextViewController.m in Sources */,
+				5CF7B6831BE0C8230041E96E /* LoadView.m in Sources */,
 				5CC44B451BDA3AFB0071B668 /* MyAccountTableViewCell.m in Sources */,
 				5CCCEE6F1BDDC4DC00336158 /* IncomeDetailCell.m in Sources */,
 				5CC6BC091BD8993E00660205 /* ViewUtil.m in Sources */,
@@ -3206,6 +3250,7 @@
 				5CA41C481BC8E688000A3484 /* main.m in Sources */,
 				5C93B8F01BD8D9BA00E8A8AA /* MoblieWriteViewController.m in Sources */,
 				5C746C951BD78A67007A7DE6 /* BankCard.m in Sources */,
+				5C00F8FC1BE0A428009EAA73 /* PayPwdValidateViewController.m in Sources */,
 				5CCCEEE31BDDC5C200336158 /* TradingCell.m in Sources */,
 				5C93B8E01BD8913600E8A8AA /* IncomeAEViewController.m in Sources */,
 				5C71BD7F1BDA134500978CF4 /* UpdataPWDViewController.m in Sources */,
@@ -3236,6 +3281,7 @@
 				5C5A2DC71BD6115D00C4AE1D /* HelpViewController.m in Sources */,
 				5CC6BC081BD8993E00660205 /* TimeUtil.m in Sources */,
 				5C5A2DC51BD6115D00C4AE1D /* FMNetWorkManager.m in Sources */,
+				5CF7B6891BE0C88F0041E96E /* SecurityPromptView.m in Sources */,
 				5C5A2DC41BD6115D00C4AE1D /* AppUtils.m in Sources */,
 				5C746C961BD78A67007A7DE6 /* BankCardCell.m in Sources */,
 				5CC9C2CF1BDE494A00C2269A /* Bank.m in Sources */,

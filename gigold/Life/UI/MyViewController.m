@@ -149,7 +149,7 @@
 -(void)propertyPay{
     NSLog(@"物业费");
     //if (!loadView) {
-        loadView = [LoadView showLoad:LoadViewTypeJump view:self.view];
+        loadView = [LoadView showLoad:LoadViewTypeSafeCheck view:self.view];
     //}
     
 }

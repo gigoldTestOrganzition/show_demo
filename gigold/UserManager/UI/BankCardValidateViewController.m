@@ -8,6 +8,7 @@
 
 #import "BankCardValidateViewController.h"
 #import "VerificationCodeWriteViewController.h"
+#import "ServiceTextViewController.h"
 
 @interface BankCardValidateViewController ()
 
@@ -30,7 +31,82 @@
     
     [self.nextBtn addTarget:self action:@selector(nextBtnPress) forControlEvents:UIControlEventTouchUpInside];
     
+    UITapGestureRecognizer* oneTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(goServeTextView)];
+    [self.serveTextView addGestureRecognizer:oneTap];
+    
     // Do any additional setup after loading the view from its nib.
+}
+
+-(void)goServeTextView{
+    NSLog(@"去看服务条款");
+    
+    if (!popView) {
+        UIView* showView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, mainScreenWidth, 140)];
+        showView.backgroundColor = self.view.backgroundColor;
+        
+        UIButton* btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn1.backgroundColor = [UIColor whiteColor];
+        btn1.frame = CGRectMake(0, 0, showView.frame.size.width, 45);
+        [btn1 setTitle:@"快捷支付服务协议" forState:UIControlStateNormal];
+        btn1.titleLabel.font = dialog_font;
+        [btn1 setTitleColor:main_text_color forState:UIControlStateNormal];
+        [btn1 setTitleColor:main_text_color forState:UIControlStateHighlighted];
+        [showView addSubview:btn1];
+        
+        UIView* shadowView = [[UIView alloc] initWithFrame:CGRectMake(0, btn1.frame.size.height-0.5, btn1.frame.size.width, 0.5)];
+        shadowView.backgroundColor = gray_diver_color;
+        [btn1 addSubview:shadowView];
+        
+        UIButton* btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn2.backgroundColor = [UIColor whiteColor];
+        btn2.frame = CGRectMake(0, 45, showView.frame.size.width, 45);
+        [btn2 setTitle:@"招行快捷支付协议" forState:UIControlStateNormal];
+        btn2.titleLabel.font = dialog_font;
+        [btn2 setTitleColor:main_text_color forState:UIControlStateNormal];
+        [btn2 setTitleColor:main_text_color forState:UIControlStateHighlighted];
+        [showView addSubview:btn2];
+        
+        shadowView = [[UIView alloc] initWithFrame:CGRectMake(0, btn2.frame.size.height-0.5, btn2.frame.size.width, 0.5)];
+        shadowView.backgroundColor = gray_diver_color;
+        [btn2 addSubview:shadowView];
+        
+        UIButton* btn3 = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn3.backgroundColor = [UIColor whiteColor];
+        btn3.frame = CGRectMake(0, 95, showView.frame.size.width, 45);
+        [btn3 setTitle:@"取消" forState:UIControlStateNormal];
+        btn3.titleLabel.font = dialog_font;
+        [btn3 setTitleColor:main_text_color forState:UIControlStateNormal];
+        [btn3 setTitleColor:main_text_color forState:UIControlStateHighlighted];
+        [showView addSubview:btn3];
+        
+        shadowView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, btn3.frame.size.width, 0.5)];
+        shadowView.backgroundColor = gray_diver_color;
+        [btn3 addSubview:shadowView];
+        
+        [btn1 addTarget:self action:@selector(popBtnPress:) forControlEvents:UIControlEventTouchUpInside];
+        [btn2 addTarget:self action:@selector(popBtnPress:) forControlEvents:UIControlEventTouchUpInside];
+        [btn3 addTarget:self action:@selector(popBtnPress:) forControlEvents:UIControlEventTouchUpInside];
+        
+        popView = [[CustomerView alloc] init];
+        popView.showView = showView;
+    }
+    [popView showDialog:self.view];
+}
+
+-(void)popBtnPress:(UIButton*)btn{
+    [popView stopDialog];
+    if ([btn.titleLabel.text isEqualToString:@"取消"]) {
+        
+    }else{
+        ServiceTextViewController* serviceTextView = [[ServiceTextViewController alloc] init];
+        if ([btn.titleLabel.text isEqualToString:@"招行快捷支付协议"]) {
+            serviceTextView.serviceTextType = Service_Bank_CMBType;
+        }else if ([btn.titleLabel.text isEqualToString:@"快捷支付服务协议"]){
+            serviceTextView.serviceTextType = Service_FastPayType;
+        }
+        UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:serviceTextView];
+        [self presentViewController:nav animated:YES completion:^{}];
+    }
 }
 
 -(void)agreeBtnPress{
@@ -57,6 +133,7 @@
     
 }
 
+#pragma mark ---- UITextFieldDelegate --------
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     NSMutableString* textString = [NSMutableString stringWithString:textField.text];
     [textString replaceCharactersInRange:range withString:string];

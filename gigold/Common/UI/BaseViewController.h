@@ -31,6 +31,7 @@ typedef enum _LoginType
     GoPasswordManager,
     GoBankCardManager,
     GoIncomeAE,
+    GoSmallChange,
     
 } LoginType;
 

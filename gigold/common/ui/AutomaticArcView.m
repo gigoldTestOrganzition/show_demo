@@ -40,7 +40,7 @@
 }
 //初始化默认数据
 -(void)initData{
-    self.drawTime = 2.f;
+    self.drawTime = 1.f;
     self.strokeColor = green_arc_color;
     self.strokeWidth = 2.f;
     self.startRadian = 10;

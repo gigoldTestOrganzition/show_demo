@@ -57,6 +57,7 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+#pragma mark ---- UITextFieldDelegate --------
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     NSMutableString* textString = [NSMutableString stringWithString:textField.text];
     [textString replaceCharactersInRange:range withString:string];
@@ -103,7 +104,9 @@
 -(void)goServeTextView{
     NSLog(@"去看服务条款");
     ServiceTextViewController* serviceTextView = [[ServiceTextViewController alloc] init];
-    [self.navigationController pushViewController:serviceTextView animated:YES];
+    serviceTextView.serviceTextType = Service_GigoldType;
+    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:serviceTextView];
+    [self presentViewController:nav animated:YES completion:^{}];
 }
 
 -(void)agreeBtnPress{
@@ -117,6 +120,7 @@
 
 -(void)nextBtnPress{
     NSLog(@"下一步");
+    [self.validateTextField resignFirstResponder];
     if (self.flowType == UpdataPayPWDType) {
         PayPasswordViewController* payPasswordView = [[PayPasswordViewController alloc] init];
         payPasswordView.delegate = self;
@@ -137,10 +141,13 @@
     
     if (self.flowType == AddBankCardType) {
         NSLog(@"成功");
-        [self.navigationController popViewControllerAnimated:NO];
-        if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
-            [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
-        }
+        ResultShowView * resultShowView = [ResultShowView showResult:ResultTypeCorrect];
+        resultShowView.desc.text = @"快捷支付开通成功";
+        resultShowView.desc.textColor = main_text_color;
+        resultShowView.deleget = self;
+        [resultShowView showDialog:self.view];
+        return;
+        
     }
     
     if (isAgree) {
@@ -148,11 +155,20 @@
         passwordWriteView.title = self.title;
         passwordWriteView.flowType = self.flowType;
         passwordWriteView.delegate = self;
+        passwordWriteView.moblieNum = self.moblieNum;
         [self.navigationController pushViewController:passwordWriteView animated:YES];
     }else{
         [[AppUtils shareAppUtils] showHUD:@"请先同意服务条款！" andView:self.view];
     }
     
+}
+
+#pragma mark ---- ResultShowViewSureDeleget --------
+-(void)sure{
+    [self.navigationController popViewControllerAnimated:NO];
+    if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
+        [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
+    }
 }
 
 #pragma mark ---- BaseViewControllerDelegate --------

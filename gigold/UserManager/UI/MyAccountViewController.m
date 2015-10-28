@@ -33,8 +33,8 @@
     
     self.view.backgroundColor = [UIColor colorWithRed:72/255. green:202/255. blue:226/255. alpha:1];
     
-    titleArray = [[NSMutableArray alloc] initWithObjects:@"吉有钱",@"零钱",@"银行卡",@"交易记录",@"密码管理", nil];
-    imageArray = [[NSMutableArray alloc] initWithObjects:@"user_menu_ico_1",@"user_menu_ico_2",@"user_menu_ico_3",@"user_menu_ico_4",@"user_menu_ico_5", nil];
+    titleArray = [[NSMutableArray alloc] initWithObjects:@"吉有钱",@"零钱",@"银行卡",@"交易记录",@"密码管理",@"地址管理", nil];
+    imageArray = [[NSMutableArray alloc] initWithObjects:@"user_menu_ico_1",@"user_menu_ico_2",@"user_menu_ico_3",@"user_menu_ico_4",@"user_menu_ico_5",@"user_menu_ico_5",nil];
     
     [self.settingBtn addTarget:self action:@selector(settingBtnPress) forControlEvents:UIControlEventTouchUpInside];
     
@@ -170,8 +170,12 @@
     if ([menuTitle isEqualToString:@"吉有钱"]) {
     }
     else if ([menuTitle isEqualToString:@"零钱"]){
-        SmallChangeViewController* smallChangeView = [[SmallChangeViewController alloc] init];
-        [self.navigationController pushViewController:smallChangeView animated:YES];
+        if (![[AppUtils shareAppUtils] getIsLogin]) {
+            [self showLoginView:GoSmallChange];
+        }else{
+            SmallChangeViewController* smallChangeView = [[SmallChangeViewController alloc] init];
+            [self.navigationController pushViewController:smallChangeView animated:YES];
+        }
     }
     else if ([menuTitle isEqualToString:@"交易记录"]){
         if (![[AppUtils shareAppUtils] getIsLogin]) {
@@ -202,7 +206,7 @@
             [self.navigationController pushViewController:passwordManagerView animated:YES];
         }
         
-    }else if ([menuTitle isEqualToString:@"零钱"]){
+    }else if ([menuTitle isEqualToString:@"地址管理"]){
         
     }
 }
@@ -223,6 +227,9 @@
         }else if (loginView.loginType == GoPasswordManager){
             PasswordManagerViewController* passwordManagerView = [[PasswordManagerViewController alloc] init];
             [self.navigationController pushViewController:passwordManagerView animated:YES];
+        }else if (loginView.loginType == GoSmallChange){
+            SmallChangeViewController* smallChangeView = [[SmallChangeViewController alloc] init];
+            [self.navigationController pushViewController:smallChangeView animated:YES];
         }
     }
     else if ([baseViewController isKindOfClass:[PasswordManagerViewController class]]){

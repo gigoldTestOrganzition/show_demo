@@ -8,6 +8,7 @@
 
 #import "BankCardManagerViewController.h"
 #import "AddBankCardViewController.h"
+#import "PayPwdValidateViewController.h"
 
 @interface BankCardManagerViewController ()
 
@@ -137,13 +138,70 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"去删除某张卡");
+    if (!popView) {
+        UIView* showView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, mainScreenWidth, 45+50)];
+        showView.backgroundColor = self.view.backgroundColor;
+        
+        UIButton* btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn1.backgroundColor = [UIColor whiteColor];
+        btn1.frame = CGRectMake(0, 0, showView.frame.size.width, 45);
+        [btn1 setTitle:@"解除绑定" forState:UIControlStateNormal];
+        btn1.titleLabel.font = dialog_font;
+        [btn1 setTitleColor:theme_color forState:UIControlStateNormal];
+        [btn1 setTitleColor:theme_color forState:UIControlStateHighlighted];
+        [showView addSubview:btn1];
+        
+        UIView* shadowView = [[UIView alloc] initWithFrame:CGRectMake(0, btn1.frame.size.height-0.5, btn1.frame.size.width, 0.5)];
+        shadowView.backgroundColor = gray_diver_color;
+        [btn1 addSubview:shadowView];
+        
+        
+        UIButton* btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn2.backgroundColor = [UIColor whiteColor];
+        btn2.frame = CGRectMake(0, 50, showView.frame.size.width, 45);
+        [btn2 setTitle:@"取消" forState:UIControlStateNormal];
+        btn2.titleLabel.font = dialog_font;
+        [btn2 setTitleColor:main_text_color forState:UIControlStateNormal];
+        [btn2 setTitleColor:main_text_color forState:UIControlStateHighlighted];
+        [showView addSubview:btn2];
+        
+        shadowView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, btn2.frame.size.width, 0.5)];
+        shadowView.backgroundColor = gray_diver_color;
+        [btn2 addSubview:shadowView];
+        
+        [btn1 addTarget:self action:@selector(popBtnPress:) forControlEvents:UIControlEventTouchUpInside];
+        [btn2 addTarget:self action:@selector(popBtnPress:) forControlEvents:UIControlEventTouchUpInside];
+        
+        popView = [[CustomerView alloc] init];
+        popView.showView = showView;
+    }
+    [popView showDialog:self.view];
 }
+
+-(void)popBtnPress:(UIButton*)btn{
+    [popView stopDialog];
+    if ([btn.titleLabel.text isEqualToString:@"取消"]) {
+        
+    }else{
+        NSLog(@"去解绑");
+        PayPwdValidateViewController* payPwdValidateView = [[PayPwdValidateViewController alloc] init];
+        payPwdValidateView.payPwdValiteType = V_Delete_BankCardType;
+        payPwdValidateView.delegate = self;
+        payPwdValidateView.title = @"解除绑定";
+        payPwdValidateView.titleLabel.text = @"请输入6位数字支付密码解除绑定 招商银行储蓄卡（6372)";
+        [self.navigationController pushViewController:payPwdValidateView animated:YES];
+    }
+}
+
 
 #pragma mark ---- BaseViewControllerDelegate --------
 
 -(void)UIViewControllerBack:(BaseViewController *)baseViewController{
     if ([baseViewController isKindOfClass:[AddBankCardViewController class]]) {
         [dataArray addObject:@"新加一张银行卡"];
+        [self.mTableView reloadData];
+    }else if ([baseViewController isKindOfClass:[PayPwdValidateViewController class]]){
+        [dataArray removeLastObject];
         [self.mTableView reloadData];
     }
 }

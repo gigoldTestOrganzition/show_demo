@@ -35,6 +35,7 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+#pragma mark ---- UITextFieldDelegate --------
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     NSMutableString* textString = [NSMutableString stringWithString:textField.text];
     [textString replaceCharactersInRange:range withString:string];
@@ -77,6 +78,17 @@
 }
 
 -(void)nextBtnPress{
+    [self.passwordTextField1 resignFirstResponder];
+    [self.passwordTextField2 resignFirstResponder];
+    ResultShowView * resultShowView = [ResultShowView showResult:ResultTypeCorrect];
+    resultShowView.desc.text = @"登录密码修改成功";
+    resultShowView.desc.textColor = main_text_color;
+    resultShowView.deleget = self;
+    [resultShowView showDialog:self.view];
+}
+
+#pragma mark ---- ResultShowViewSureDeleget --------
+-(void)sure{
     [self.navigationController popViewControllerAnimated:NO];
     if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
         [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];

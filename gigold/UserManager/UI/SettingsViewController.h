@@ -7,10 +7,13 @@
 //
 
 #import "BaseViewController.h"
+#import "CustomerView.h"
 
-@interface SettingsViewController : BaseViewController <UITableViewDataSource,UITableViewDelegate>
+@interface SettingsViewController : BaseViewController <UITableViewDataSource>
 {
     NSMutableArray* dataArray;
+    
+    CustomerView* popView;
 }
 @property (weak, nonatomic) IBOutlet UITableView *mTableView;
 

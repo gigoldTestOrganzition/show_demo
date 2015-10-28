@@ -7,8 +7,10 @@
 //
 
 #import "BaseViewController.h"
+#import "ResultShowView.h"
 
-@interface PasswordWriteViewController : BaseViewController <UITextFieldDelegate>
+@interface PasswordWriteViewController : BaseViewController <UITextFieldDelegate,ResultShowViewSureDeleget>
+
 @property (weak, nonatomic) IBOutlet UIButton *nextBtn;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UIButton *eyeBtn;
