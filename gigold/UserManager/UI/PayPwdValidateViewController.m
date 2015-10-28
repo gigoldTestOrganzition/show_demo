@@ -1,19 +1,18 @@
 //
-//  PayPasswordViewController.m
+//  PayPwdValidateViewController.m
 //  gigold
 //
-//  Created by wsc on 15/10/23.
+//  Created by wsc on 15/10/28.
 //  Copyright © 2015年 wsc. All rights reserved.
 //
 
-#import "PayPasswordViewController.h"
 #import "PayPwdValidateViewController.h"
 
-@interface PayPasswordViewController ()
+@interface PayPwdValidateViewController ()
 
 @end
 
-@implementation PayPasswordViewController
+@implementation PayPwdValidateViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,17 +30,13 @@
     UITapGestureRecognizer* oneTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(textFieldResponder)];
     [self.payView addGestureRecognizer:oneTap];
     
-    if (self.payPwdType == SetOldPayPwdType) {
-        if ([self.title isEqualToString:@"设置支付密码"]) {
-        }else{
-            self.titleLabel.text = @"请输入6位数字旧支付密码";
-        }
-    }else{
-        if ([self.title isEqualToString:@"设置支付密码"]) {
-            self.titleLabel.text = @"请输入6位数字支付密码";
-        }else{
-            self.titleLabel.text = @"请输入新的6位数字支付密码";
-        }
+    [self.nextBtn addTarget:self action:@selector(nextBtnPress) forControlEvents:UIControlEventTouchUpInside];
+    self.nextBtn.enabled = NO;
+    
+    if (self.payPwdValiteType == V_Set_PayPwdType) {
+        self.titleLabel.text = @"请再次输入支付密码";
+    }else if (self.payPwdValiteType == V_Updata_PayPwdType){
+        self.titleLabel.text = @"请再次输入新的支付密码";
     }
     // Do any additional setup after loading the view from its nib.
 }
@@ -60,25 +55,16 @@
     
     [self showMarkView:string];
     
-    if (textString.length == 6){
-        if (self.payPwdType == SetOldPayPwdType){
-            PayPasswordViewController* payPasswordView = [[PayPasswordViewController alloc] init];
-            payPasswordView.delegate = self;
-            payPasswordView.title = self.title;
-            payPasswordView.payPwdType = SetNewPayPwdType;
-            [self.navigationController pushViewController:payPasswordView animated:YES];
-        }else{
-            PayPwdValidateViewController* payValiteView = [[PayPwdValidateViewController alloc] init];
-            payValiteView.delegate = self;
-            payValiteView.title = self.title;
-            if ([self.title isEqualToString:@"设置支付密码"]) {
-                payValiteView.payPwdValiteType = V_Set_PayPwdType;
-            }else{
-                payValiteView.payPwdValiteType = V_Updata_PayPwdType;
-            }
-            payValiteView.newpayPwd = textString;
-            [self.navigationController pushViewController:payValiteView animated:YES];
-        }
+    if (textString.length >= 6) {
+        self.nextBtn.backgroundColor = theme_color;
+        self.nextBtn.enabled = YES;
+    }else{
+        self.nextBtn.backgroundColor = unable_tap_color;
+        self.nextBtn.enabled = NO;
+    }
+        
+    if (textString.length > 6) {
+        return NO;
     }
     
     return YES;
@@ -140,6 +126,43 @@
     }
 }
 
+-(void)nextBtnPress{
+    [tempTextField  resignFirstResponder];
+    if (self.payPwdValiteType == V_Set_PayPwdType || self.payPwdValiteType == V_Updata_PayPwdType) {
+        if (![tempTextField.text isEqualToString:self.newpayPwd]){
+            [[AppUtils shareAppUtils] showHUD:@"您两次输入的支付密码不一致" andView:self.view];
+            [self clearPassword];
+            return;
+        }
+        
+        if ([self.title isEqualToString:@"设置支付密码"]) {
+            [[AppUtils shareAppUtils] saveIsPayPwd:YES];
+        }
+    }
+    
+    
+    ResultShowView * resultShowView = [ResultShowView showResult:ResultTypeCorrect];
+    if (self.payPwdValiteType == V_Set_PayPwdType) {
+        resultShowView.desc.text = @"支付密码设置成功";
+    }
+    else if (self.payPwdValiteType == V_Updata_PayPwdType){
+        resultShowView.desc.text = @"支付密码修改成功";
+    }
+    else if (self.payPwdValiteType == V_Delete_BankCardType){
+        resultShowView.desc.text = @"解除绑定成功";
+    }
+    resultShowView.desc.textColor = main_text_color;
+    resultShowView.deleget = self;
+    [resultShowView showDialog:self.view];
+    
+}
+
+-(void)sure{
+    [self.navigationController popViewControllerAnimated:NO];
+    if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
+        [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
+    }
+}
 
 -(void)clearPassword{
     tempTextField.text = @"";
@@ -149,24 +172,11 @@
     self.pwd4.hidden = YES;
     self.pwd5.hidden = YES;
     self.pwd6.hidden = YES;
+    self.nextBtn.enabled = NO;
+    self.nextBtn.backgroundColor = unable_tap_color;
     [tempTextField becomeFirstResponder];
 }
 
-#pragma mark ---- BaseViewControllerDelegate --------
-
--(void)UIViewControllerBack:(BaseViewController *)baseViewController{
-    if ([baseViewController isKindOfClass:[PayPasswordViewController class]]) {
-        [self.navigationController popViewControllerAnimated:NO];
-        if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
-            [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
-        }
-    }else if ([baseViewController isKindOfClass:[PayPwdValidateViewController class]]){
-        [self.navigationController popViewControllerAnimated:NO];
-        if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
-            [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
-        }
-    }
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

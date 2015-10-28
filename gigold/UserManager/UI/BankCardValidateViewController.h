@@ -7,10 +7,13 @@
 //
 
 #import "BaseViewController.h"
+#import "CustomerView.h"
 
 @interface BankCardValidateViewController : BaseViewController <UITextFieldDelegate>
 {
     BOOL isAgree;
+    
+    CustomerView* popView;
 }
 
 @property (weak, nonatomic) IBOutlet UIImageView* bankCardImageView;

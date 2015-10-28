@@ -1,22 +1,22 @@
 //
-//  PayPasswordViewController.h
+//  PayPwdValidateViewController.h
 //  gigold
 //
-//  Created by wsc on 15/10/23.
+//  Created by wsc on 15/10/28.
 //  Copyright © 2015年 wsc. All rights reserved.
 //
 
-//
-typedef enum _PayPwdType
+typedef enum _PayPwdValiteType
 {
-    SetOldPayPwdType = 0,
-    SetNewPayPwdType,
-    
-} PayPwdType;
+    V_Set_PayPwdType = 0,
+    V_Updata_PayPwdType,
+    V_Delete_BankCardType,
+} PayPwdValiteType;
 
 #import "BaseViewController.h"
+#import "ResultShowView.h"
 
-@interface PayPasswordViewController : BaseViewController <UITextFieldDelegate>
+@interface PayPwdValidateViewController : BaseViewController <UITextFieldDelegate,ResultShowViewSureDeleget>
 {
     UITextField* tempTextField;
 }
@@ -30,8 +30,9 @@ typedef enum _PayPwdType
 @property (weak, nonatomic) IBOutlet UIView *pwd4;
 @property (weak, nonatomic) IBOutlet UIView *pwd5;
 @property (weak, nonatomic) IBOutlet UIView *pwd6;
+@property (weak, nonatomic) IBOutlet UIButton *nextBtn;
 
 @property (strong, nonatomic) NSString* newpayPwd;
-@property (assign, nonatomic) PayPwdType payPwdType;
+@property (assign, nonatomic) PayPwdValiteType payPwdValiteType;
 
 @end

@@ -7,8 +7,9 @@
 //
 
 #import "BaseViewController.h"
+#import "ResultShowView.h"
 
-@interface UpdataPWDViewController : BaseViewController <UITextFieldDelegate>
+@interface UpdataPWDViewController : BaseViewController <UITextFieldDelegate,ResultShowViewSureDeleget>
 
 @property (weak, nonatomic) IBOutlet UILabel *passwordLabel1;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField1;

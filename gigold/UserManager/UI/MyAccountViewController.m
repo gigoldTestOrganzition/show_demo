@@ -170,8 +170,12 @@
     if ([menuTitle isEqualToString:@"吉有钱"]) {
     }
     else if ([menuTitle isEqualToString:@"零钱"]){
-        SmallChangeViewController* smallChangeView = [[SmallChangeViewController alloc] init];
-        [self.navigationController pushViewController:smallChangeView animated:YES];
+        if (![[AppUtils shareAppUtils] getIsLogin]) {
+            [self showLoginView:GoSmallChange];
+        }else{
+            SmallChangeViewController* smallChangeView = [[SmallChangeViewController alloc] init];
+            [self.navigationController pushViewController:smallChangeView animated:YES];
+        }
     }
     else if ([menuTitle isEqualToString:@"交易记录"]){
         if (![[AppUtils shareAppUtils] getIsLogin]) {
@@ -223,6 +227,9 @@
         }else if (loginView.loginType == GoPasswordManager){
             PasswordManagerViewController* passwordManagerView = [[PasswordManagerViewController alloc] init];
             [self.navigationController pushViewController:passwordManagerView animated:YES];
+        }else if (loginView.loginType == GoSmallChange){
+            SmallChangeViewController* smallChangeView = [[SmallChangeViewController alloc] init];
+            [self.navigationController pushViewController:smallChangeView animated:YES];
         }
     }
     else if ([baseViewController isKindOfClass:[PasswordManagerViewController class]]){

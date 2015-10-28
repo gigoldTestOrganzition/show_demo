@@ -88,21 +88,36 @@
 }
 
 -(void)nextBtnPress{
+    [self.passwordTextField resignFirstResponder];
     if ([[AppUtils shareAppUtils] validateLoginPassword:self.passwordTextField.text]) {
-         NSLog(@"成功");
-        [self.navigationController popViewControllerAnimated:NO];
-        self.backType = FinishType;
+        
+        ResultShowView * resultShowView = [ResultShowView showResult:ResultTypeCorrect];
         if (self.flowType == RegisterType) {
-            [self loginRespond:self.moblieNum andPassword:self.passwordTextField.text];
+            resultShowView.desc.text = @"注册成功，系统将自动登录";
         }
-        if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
-            [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
+        else if (self.flowType == ResetPasswordType){
+            resultShowView.desc.text = @"登录密码重置成功";
         }
+        resultShowView.desc.textColor = main_text_color;
+        resultShowView.deleget = self;
+        [resultShowView showDialog:self.view];
+        
     }else{
         [[AppUtils shareAppUtils] showHUD:@"请输入正确的密码！" andView:self.view];
         [self.passwordTextField becomeFirstResponder];
     }
     
+}
+
+-(void)sure{
+    [self.navigationController popViewControllerAnimated:NO];
+    self.backType = FinishType;
+    if (self.flowType == RegisterType) {
+        [self loginRespond:self.moblieNum andPassword:self.passwordTextField.text];
+    }
+    if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
+        [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

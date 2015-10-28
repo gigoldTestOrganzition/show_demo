@@ -77,6 +77,16 @@
 }
 
 -(void)nextBtnPress{
+    [self.passwordTextField1 resignFirstResponder];
+    [self.passwordTextField2 resignFirstResponder];
+    ResultShowView * resultShowView = [ResultShowView showResult:ResultTypeCorrect];
+    resultShowView.desc.text = @"登录密码修改成功";
+    resultShowView.desc.textColor = main_text_color;
+    resultShowView.deleget = self;
+    [resultShowView showDialog:self.view];
+}
+
+-(void)sure{
     [self.navigationController popViewControllerAnimated:NO];
     if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
         [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];

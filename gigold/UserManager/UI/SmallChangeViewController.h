@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "CustomerView.h"
 
 @interface SmallChangeViewController : BaseViewController <UITableViewDataSource,UITableViewDelegate>
 {
@@ -15,6 +16,11 @@
     UIView* navTitleView;
     UILabel* titleLabel;
     UIImageView* markImageView;
+    
+    NSMutableArray* menuImages;
+    NSMutableArray* menuTitles;
+    
+    CustomerView* popView;
 }
 @property (weak, nonatomic) IBOutlet UIView *noneView;
 @property (weak, nonatomic) IBOutlet UITableView *mTableView;

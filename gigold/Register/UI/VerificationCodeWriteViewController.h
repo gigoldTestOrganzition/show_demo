@@ -9,8 +9,9 @@
 #define TimeInterval 60
 
 #import "BaseViewController.h"
+#import "ResultShowView.h"
 
-@interface VerificationCodeWriteViewController : BaseViewController <UITextFieldDelegate>
+@interface VerificationCodeWriteViewController : BaseViewController <UITextFieldDelegate,ResultShowViewSureDeleget>
 {
     NSTimer* timer;
     NSInteger timeCount;
