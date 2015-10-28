@@ -24,5 +24,7 @@
 @property(nonatomic,assign)CGFloat strokeWidth;
 //代理
 @property(nonatomic,weak)id<AutomaticArcViewDeleget> deleget;
+//绘制时间
+@property(nonatomic,assign)CGFloat drawTime;
 -(void)showAnimation;
 @end

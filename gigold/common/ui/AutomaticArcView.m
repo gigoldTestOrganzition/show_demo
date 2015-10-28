@@ -21,6 +21,7 @@
 @synthesize startRadian = _startRadian;
 @synthesize endRadian = _endRadian;
 @synthesize deleget = _deleget;
+@synthesize drawTime=_drawTime;
 - (instancetype)init
 {
     self = [super init];
@@ -39,6 +40,7 @@
 }
 //初始化默认数据
 -(void)initData{
+    self.drawTime = 2.f;
     self.strokeColor = green_arc_color;
     self.strokeWidth = 2.f;
     self.startRadian = 10;
@@ -61,8 +63,9 @@
     if (!add) {
         [self initView];
     }
+    CGFloat evenTime = _drawTime/((_endRadian - _startRadian)/5);
     currentRadian = _startRadian;
-    animationTimer = [NSTimer scheduledTimerWithTimeInterval:0.03f target:self selector:@selector(drawArc) userInfo:nil repeats:YES];
+    animationTimer = [NSTimer scheduledTimerWithTimeInterval:evenTime target:self selector:@selector(drawArc) userInfo:nil repeats:YES];
 }
 -(void)drawArc{
     

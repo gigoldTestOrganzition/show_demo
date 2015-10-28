@@ -28,6 +28,8 @@ typedef NS_ENUM(NSInteger,ResultType){
 @property (weak, nonatomic) IBOutlet UIButton *actionBtn;
 //代理响应
 @property (weak, nonatomic) id<ResultShowViewSureDeleget> deleget;
+//绘制时间
+@property (assign,nonatomic)CGFloat drawTime;
 //显示
 +(ResultShowView*)showResult:(ResultType)resultType;
 @end

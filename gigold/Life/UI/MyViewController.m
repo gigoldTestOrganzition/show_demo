@@ -14,6 +14,7 @@
 #import "GigoldTreasureHomeViewController.h"
 #import "ResultShowView.h"
 #import "AutomaticArcView.h"
+#import "OutView.h"
 
 @interface MyViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>{
     //功能描述
@@ -21,7 +22,11 @@
     //描述数据集合
     NSMutableArray* functionDatas;
     
+    
+    //测试view
     ResultShowView* resultShowView;
+    OutView* outView;
+    CGFloat baseline;
 }
 @end
 
@@ -54,6 +59,10 @@
         fonctionDesc.action = [selArray[i++] pointerValue];
         [functionDatas addObject:fonctionDesc];
     }
+    
+    
+    // 测试
+    baseline = 200;
  }
 
 
@@ -82,12 +91,10 @@
 #pragma mark -action 功能响应
 //充值
 -(void)topup{
-    //NSLog(@"充值");
-    
     TopUpViewController* topupViewController = (TopUpViewController*)storyboard_controller(@"topUpStoryboard");
     topupViewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:topupViewController animated:YES];
-    //[self presentViewController:topupViewController animated:NO completion:nil];
+   
     
 }
 //转账
@@ -95,14 +102,34 @@
     NSLog(@"转账");
     
     if (!resultShowView) {
+        
         resultShowView = [ResultShowView showResult:ResultTypeError];
+        resultShowView.pullStyle = PullViewDown;
+        resultShowView.drawTime = 5.f;
+        
     }
-    [resultShowView showDialog:self.view];
+    if (![resultShowView isShow]) {
+        [resultShowView showDialogByBaseLine:baseline view:self.view];
+        
+    }else{
+        [resultShowView stopDialog];
+    }
+    
     
 }
 //话费充值
 -(void)phoneTopup{
     NSLog(@"话费充值");
+    if (!outView) {
+        outView = [[OutView alloc]init];
+        outView.pullStyle = PullViewCenter;
+    }
+    if (!outView.isShow) {
+        [outView showDialog:self.view];
+    }else{
+        [outView showDialog:self.view];
+    }
+    
 }
 // 生活缴费
 -(void)lifePay{
@@ -144,7 +171,7 @@
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-   FonctionDesc* funDesc =  functionDatas[indexPath.row];
+    FonctionDesc* funDesc =  functionDatas[indexPath.row];
     [self performSelector:funDesc.action];
     
 }

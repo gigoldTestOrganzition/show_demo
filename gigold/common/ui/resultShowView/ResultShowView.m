@@ -19,6 +19,7 @@
 @synthesize actionBtn = _actionBtn;
 @synthesize deleget =_deleget;
 @synthesize addAutomicView = _addAutomicView;
+@synthesize drawTime = _drawTime;
 -(instancetype)init{
     self = [super init];
     if (self) {
@@ -47,6 +48,9 @@
     _desc.hidden = YES;
 
 }
+-(void)setDrawTime:(CGFloat)drawTime{
+    automaticArcView.drawTime = drawTime;
+}
 -(void)initEvent{
     UITapGestureRecognizer* actionRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(sureAction)];
     _actionBtn.userInteractionEnabled = YES;
@@ -58,10 +62,11 @@
         [_deleget sure];
     }
 }
--(void)showDialog:(UIView *)view{
+
+-(void)showDialogByBaseLine:(CGFloat)baseLineValue view:(UIView *)view{
     _showImg.hidden = YES;
     _desc.hidden = YES;
-    [super showDialog:view];
+    [super showDialogByBaseLine:baseLineValue view:view];
     dispatch_async(dispatch_get_main_queue(), ^{
         [automaticArcView showAnimation];
     });
