@@ -86,6 +86,14 @@
 		5CA673C81BD9D63C00BED35A /* top_return_but_1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA673BC1BD9D63C00BED35A /* top_return_but_1@3x.png */; settings = {ASSET_TAGS = (); }; };
 		5CA673C91BD9D63C00BED35A /* top_return_but_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA673BD1BD9D63C00BED35A /* top_return_but_2@2x.png */; settings = {ASSET_TAGS = (); }; };
 		5CA673CA1BD9D63C00BED35A /* top_return_but_2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA673BE1BD9D63C00BED35A /* top_return_but_2@3x.png */; settings = {ASSET_TAGS = (); }; };
+		5CA88B301BE069DB00E50D0D /* user_faces_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA88B2E1BE069DB00E50D0D /* user_faces_1@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5CA88B311BE069DB00E50D0D /* user_faces_1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA88B2F1BE069DB00E50D0D /* user_faces_1@3x.png */; settings = {ASSET_TAGS = (); }; };
+		5CA88B351BE069EB00E50D0D /* bank_logo_ccb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA88B321BE069EB00E50D0D /* bank_logo_ccb@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5CA88B361BE069EB00E50D0D /* no_data_ico@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA88B331BE069EB00E50D0D /* no_data_ico@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5CA88B371BE069EB00E50D0D /* no_data_ico@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA88B341BE069EB00E50D0D /* no_data_ico@3x.png */; settings = {ASSET_TAGS = (); }; };
+		5CA88B3A1BE06A3C00E50D0D /* top_menu_but_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA88B381BE06A3C00E50D0D /* top_menu_but_arrow@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5CA88B3B1BE06A3C00E50D0D /* top_menu_but_arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA88B391BE06A3C00E50D0D /* top_menu_but_arrow@3x.png */; settings = {ASSET_TAGS = (); }; };
+		5CA88B3D1BE06B2500E50D0D /* bank_logo_ccb@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA88B3C1BE06B2500E50D0D /* bank_logo_ccb@3x.png */; settings = {ASSET_TAGS = (); }; };
 		5CBE16E81BD76D0400692B0A /* BankCardManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE16E61BD76D0400692B0A /* BankCardManagerViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5CBE16E91BD76D0400692B0A /* BankCardManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CBE16E71BD76D0400692B0A /* BankCardManagerViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		5CBE16ED1BD76F9F00692B0A /* AddBankCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE16EB1BD76F9F00692B0A /* AddBankCardViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -333,6 +341,14 @@
 		5CA673BC1BD9D63C00BED35A /* top_return_but_1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_return_but_1@3x.png"; sourceTree = "<group>"; };
 		5CA673BD1BD9D63C00BED35A /* top_return_but_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_return_but_2@2x.png"; sourceTree = "<group>"; };
 		5CA673BE1BD9D63C00BED35A /* top_return_but_2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_return_but_2@3x.png"; sourceTree = "<group>"; };
+		5CA88B2E1BE069DB00E50D0D /* user_faces_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_faces_1@2x.png"; sourceTree = "<group>"; };
+		5CA88B2F1BE069DB00E50D0D /* user_faces_1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_faces_1@3x.png"; sourceTree = "<group>"; };
+		5CA88B321BE069EB00E50D0D /* bank_logo_ccb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bank_logo_ccb@2x.png"; sourceTree = "<group>"; };
+		5CA88B331BE069EB00E50D0D /* no_data_ico@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "no_data_ico@2x.png"; sourceTree = "<group>"; };
+		5CA88B341BE069EB00E50D0D /* no_data_ico@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "no_data_ico@3x.png"; sourceTree = "<group>"; };
+		5CA88B381BE06A3C00E50D0D /* top_menu_but_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_menu_but_arrow@2x.png"; sourceTree = "<group>"; };
+		5CA88B391BE06A3C00E50D0D /* top_menu_but_arrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_menu_but_arrow@3x.png"; sourceTree = "<group>"; };
+		5CA88B3C1BE06B2500E50D0D /* bank_logo_ccb@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bank_logo_ccb@3x.png"; sourceTree = "<group>"; };
 		5CBE16E51BD76D0400692B0A /* BankCardManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardManagerViewController.h; sourceTree = "<group>"; };
 		5CBE16E61BD76D0400692B0A /* BankCardManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardManagerViewController.m; sourceTree = "<group>"; };
 		5CBE16E71BD76D0400692B0A /* BankCardManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardManagerViewController.xib; sourceTree = "<group>"; };
@@ -622,6 +638,12 @@
 				5CC9C2C41BDE474400C2269A /* bank_logo_unionpay@3x.png */,
 				5CC9C2C51BDE474400C2269A /* box_but_arrow@2x.png */,
 				5CC9C2C61BDE474400C2269A /* box_but_arrow@3x.png */,
+				5CA88B321BE069EB00E50D0D /* bank_logo_ccb@2x.png */,
+				5CA88B3C1BE06B2500E50D0D /* bank_logo_ccb@3x.png */,
+				5CA88B331BE069EB00E50D0D /* no_data_ico@2x.png */,
+				5CA88B341BE069EB00E50D0D /* no_data_ico@3x.png */,
+				5CA88B381BE06A3C00E50D0D /* top_menu_but_arrow@2x.png */,
+				5CA88B391BE06A3C00E50D0D /* top_menu_but_arrow@3x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -850,6 +872,8 @@
 				5CC44B261BDA30F00071B668 /* user_menu_set_ico@3x.png */,
 				5CC44B3E1BDA35A30071B668 /* box_but_arrow@2x.png */,
 				5CC44B3F1BDA35A30071B668 /* box_but_arrow@3x.png */,
+				5CA88B2E1BE069DB00E50D0D /* user_faces_1@2x.png */,
+				5CA88B2F1BE069DB00E50D0D /* user_faces_1@3x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -2891,6 +2915,7 @@
 				5CA673C31BD9D63C00BED35A /* protocol_but_1@2x.png in Resources */,
 				5C5A2DCA1BD6115D00C4AE1D /* LoginViewController.xib in Resources */,
 				5C6A5AA61BDB46D0000CA77D /* login_ico_1@3x.png in Resources */,
+				5CA88B3B1BE06A3C00E50D0D /* top_menu_but_arrow@3x.png in Resources */,
 				5C93B8F61BD8DA3900E8A8AA /* VerificationCodeWriteViewController.xib in Resources */,
 				5C746C981BD78A67007A7DE6 /* topUpStoryboard.storyboard in Resources */,
 				5CC44B291BDA30F00071B668 /* user_menu_ico_2@2x.png in Resources */,
@@ -2902,6 +2927,7 @@
 				5CC9C34A1BE0681400C2269A /* no_data_ico@3x.png in Resources */,
 				5CC9C3E01BE06B4100C2269A /* OutView.xib in Resources */,
 				5CC44B2E1BDA30F00071B668 /* user_menu_ico_4@3x.png in Resources */,
+				5CA88B361BE069EB00E50D0D /* no_data_ico@2x.png in Resources */,
 				5CC44B2C1BDA30F00071B668 /* user_menu_ico_3@3x.png in Resources */,
 				5CC9C32F1BDF824200C2269A /* main_error_ico2@2x.png in Resources */,
 				5C447C6D1BD77A3700A049D9 /* BankCardValidateViewController.xib in Resources */,
@@ -2919,6 +2945,7 @@
 				5CC44B281BDA30F00071B668 /* user_menu_ico_1@3x.png in Resources */,
 				5CC44B2B1BDA30F00071B668 /* user_menu_ico_3@2x.png in Resources */,
 				5CC44B271BDA30F00071B668 /* user_menu_ico_1@2x.png in Resources */,
+				5CA88B301BE069DB00E50D0D /* user_faces_1@2x.png in Resources */,
 				5C71BD801BDA134500978CF4 /* UpdataPWDViewController.xib in Resources */,
 				5CA673C91BD9D63C00BED35A /* top_return_but_2@2x.png in Resources */,
 				5CA673C11BD9D63C00BED35A /* password_eye_2@2x.png in Resources */,
@@ -2927,6 +2954,7 @@
 				5CC9C32E1BDF824200C2269A /* main_correct_ico2@3x.png in Resources */,
 				5C93B8E11BD8913600E8A8AA /* IncomeAEViewController.xib in Resources */,
 				5C6A5AAA1BDB46D0000CA77D /* login_ico_3@3x.png in Resources */,
+				5CA88B311BE069DB00E50D0D /* user_faces_1@3x.png in Resources */,
 				5CC9C3381BE062E700C2269A /* BankCardTableViewCell.xib in Resources */,
 				5CC44B2F1BDA30F00071B668 /* user_menu_ico_5@2x.png in Resources */,
 				5CC9C3491BE0681400C2269A /* no_data_ico@2x.png in Resources */,
@@ -2947,6 +2975,7 @@
 				5CC9C2DA1BDF03DA00C2269A /* main_error_ico@3x.png in Resources */,
 				5CC9C3D81BE0688900C2269A /* user_faces_1@3x.png in Resources */,
 				5CA673C21BD9D63C00BED35A /* password_eye_2@3x.png in Resources */,
+				5CA88B3D1BE06B2500E50D0D /* bank_logo_ccb@3x.png in Resources */,
 				5CC44B301BDA30F00071B668 /* user_menu_ico_5@3x.png in Resources */,
 				5C746CB61BD78FE4007A7DE6 /* MyViewController.xib in Resources */,
 				5C6A5AA81BDB46D0000CA77D /* login_ico_2@3x.png in Resources */,
@@ -2954,6 +2983,8 @@
 				5C6A5AA71BDB46D0000CA77D /* login_ico_2@2x.png in Resources */,
 				5C93B8F11BD8D9BA00E8A8AA /* MoblieWriteViewController.xib in Resources */,
 				5CA673C41BD9D63C00BED35A /* protocol_but_1@3x.png in Resources */,
+				5CA88B3A1BE06A3C00E50D0D /* top_menu_but_arrow@2x.png in Resources */,
+				5CA88B371BE069EB00E50D0D /* no_data_ico@3x.png in Resources */,
 				5CC9C2D71BDF03DA00C2269A /* main_correct_ico@2x.png in Resources */,
 				5CA673C01BD9D63C00BED35A /* password_eye_1@3x.png in Resources */,
 				5C93B8EB1BD8CB0500E8A8AA /* InfoFinishedViewController.xib in Resources */,
@@ -2961,6 +2992,7 @@
 				5CA673CA1BD9D63C00BED35A /* top_return_but_2@3x.png in Resources */,
 				5CC44B2A1BDA30F00071B668 /* user_menu_ico_2@3x.png in Resources */,
 				5C6A5A941BDB247A000CA77D /* SettingsViewController.xib in Resources */,
+				5CA88B351BE069EB00E50D0D /* bank_logo_ccb@2x.png in Resources */,
 				5CC9C2B91BDE24C100C2269A /* pop_close_but@2x.png in Resources */,
 				5CC9C2C91BDE474400C2269A /* bank_logo_unionpay@2x.png in Resources */,
 				5CC9C2D91BDF03DA00C2269A /* main_error_ico@2x.png in Resources */,
