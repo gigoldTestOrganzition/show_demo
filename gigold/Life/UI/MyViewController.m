@@ -95,7 +95,7 @@
     NSLog(@"转账");
     
     if (!resultShowView) {
-        resultShowView = [[ResultShowView alloc]init];
+        resultShowView = [ResultShowView showResult:ResultTypeError];
     }
     [resultShowView showDialog:self.view];
     
@@ -123,11 +123,6 @@
     gigoldTreasureHomeViewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:gigoldTreasureHomeViewController animated:YES];
 }
-
-
-
-
-
 
 #pragma mark -UICollectionView  协议
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{

@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "AutomaticArcView.h"
 #import "CustomerView.h"
+
+typedef NS_ENUM(NSInteger,ResultType){
+    ResultTypeCorrect = 1 << 0,
+    ResultTypeError = 1 << 1
+};
 @protocol ResultShowViewSureDeleget <NSObject>
 -(void)sure;
 @end
@@ -23,4 +28,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *actionBtn;
 //代理响应
 @property (weak, nonatomic) id<ResultShowViewSureDeleget> deleget;
+//显示
++(ResultShowView*)showResult:(ResultType)resultType;
 @end

@@ -42,4 +42,5 @@ typedef enum BackType
 
 @property (assign, nonatomic)id <BaseViewControllerDelegate>delegate;
 
+
 @end

@@ -66,6 +66,22 @@
         [automaticArcView showAnimation];
     });
 }
++(ResultShowView *)showResult:(ResultType)resultType{
+    ResultShowView* resultShowView = [[ResultShowView alloc]init];
+    switch (resultType) {
+        case ResultTypeCorrect:
+            resultShowView.showImg.image = [UIImage imageNamed:@"main_correct_ico2"];
+            break;
+        case ResultTypeError:
+            resultShowView.showImg.image = [UIImage imageNamed:@"main_error_ico2"];
+            break;
+        default:
+            resultShowView.showImg.image = [UIImage imageNamed:@"main_correct_ico2"];
+            break;
+    }
+    return resultShowView;
+}
+
 #pragma mark -AutomaticArcViewDeleget 协议 
 -(void)automaticArcViewEndDraw{
     _showImg.hidden = NO;
