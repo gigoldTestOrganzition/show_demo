@@ -11,6 +11,10 @@
 @interface SmallChangeViewController : BaseViewController <UITableViewDataSource,UITableViewDelegate>
 {
     NSMutableArray* dataArray;
+    
+    UIView* navTitleView;
+    UILabel* titleLabel;
+    UIImageView* markImageView;
 }
 @property (weak, nonatomic) IBOutlet UIView *noneView;
 @property (weak, nonatomic) IBOutlet UITableView *mTableView;

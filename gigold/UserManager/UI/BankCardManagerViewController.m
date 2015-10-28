@@ -121,9 +121,11 @@
     cell.backgroundColor = [UIColor clearColor];
     if (indexPath.row % 2 == 0) {
         cell.bankCardTopView.backgroundColor = [UIColor colorWithRed:216/255.f green:35/255.f blue:42/255.f alpha:1];
+        cell.bankImageView.image  = [UIImage imageNamed:@"bank_logo_cmb"];
         cell.cardTypeLabel.text = @"储蓄卡";
     }else{
         cell.bankCardTopView.backgroundColor = [UIColor colorWithRed:0/255.f green:91/255.f blue:167/255.f alpha:1];
+        cell.bankImageView.image  = [UIImage imageNamed:@"bank_logo_ccb"];
         cell.cardTypeLabel.text = @"信用卡";
     }
     cell.numberLabel.text = @"*** *** *** 0782";

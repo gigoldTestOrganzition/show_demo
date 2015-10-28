@@ -8,12 +8,47 @@
 
 #import "SmallChangeViewController.h"
 #import "SmallChangeTableViewCell.h"
+#import "StringUtil.h"
 
 @interface SmallChangeViewController ()
 
 @end
 
 @implementation SmallChangeViewController
+
+- (void)setTitle:(NSString *)title{
+    CGFloat width = [StringUtil getStringWidth:title font:title_or_btn_font size:CGSizeMake(MAXFLOAT, 44)];
+    if (!navTitleView) {
+        
+        navTitleView = [[UIView alloc] init];
+        
+        titleLabel = [[UILabel alloc] init];
+        titleLabel.backgroundColor = [UIColor clearColor];
+        titleLabel.font = title_or_btn_font;
+        titleLabel.textColor = [UIColor whiteColor];
+        
+        [navTitleView addSubview:titleLabel];
+        
+        markImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"top_menu_but_arrow"]];
+        [navTitleView addSubview:markImageView];
+        
+        UITapGestureRecognizer* oneTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(headTilePress)];
+        [navTitleView addGestureRecognizer:oneTap];
+        
+        
+        [self.navigationItem setTitleView:navTitleView];
+    }
+    
+    navTitleView.frame = CGRectMake(0, 0, width+22, 44);
+    titleLabel.frame = CGRectMake(0, 0, width, 44);
+    markImageView.frame = CGRectMake(width+10, 16, 12, 12);
+    
+    titleLabel.text = title;
+}
+
+-(void)headTilePress{
+    NSLog(@"弹出菜单");
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
