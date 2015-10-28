@@ -48,8 +48,6 @@
     [self.navigationItem setTitleView:navTitleView];
     
     titleLabel.text = title;
-    
-    NSLog(@"%f %f %f %f", markImageView.transform.tx,markImageView.transform.ty, markImageView.transform.c, markImageView.transform.d);
 }
 
 -(void)headTilePress{

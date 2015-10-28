@@ -105,7 +105,8 @@
     NSLog(@"去看服务条款");
     ServiceTextViewController* serviceTextView = [[ServiceTextViewController alloc] init];
     serviceTextView.serviceTextType = Service_GigoldType;
-    [self.navigationController pushViewController:serviceTextView animated:YES];
+    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:serviceTextView];
+    [self presentViewController:nav animated:YES completion:^{}];
 }
 
 -(void)agreeBtnPress{

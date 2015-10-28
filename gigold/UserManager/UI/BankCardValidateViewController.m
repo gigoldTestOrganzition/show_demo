@@ -104,7 +104,8 @@
         }else if ([btn.titleLabel.text isEqualToString:@"快捷支付服务协议"]){
             serviceTextView.serviceTextType = Service_FastPayType;
         }
-        [self.navigationController pushViewController:serviceTextView animated:YES];
+        UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:serviceTextView];
+        [self presentViewController:nav animated:YES completion:^{}];
     }
 }
 

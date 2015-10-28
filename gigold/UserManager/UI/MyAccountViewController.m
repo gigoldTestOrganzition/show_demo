@@ -33,7 +33,7 @@
     
     self.view.backgroundColor = [UIColor colorWithRed:72/255. green:202/255. blue:226/255. alpha:1];
     
-    titleArray = [[NSMutableArray alloc] initWithObjects:@"吉有钱",@"零钱",@"银行卡",@"交易记录",@"密码管理", nil];
+    titleArray = [[NSMutableArray alloc] initWithObjects:@"吉有钱",@"零钱",@"银行卡",@"交易记录",@"密码管理",@"地址管理", nil];
     imageArray = [[NSMutableArray alloc] initWithObjects:@"user_menu_ico_1",@"user_menu_ico_2",@"user_menu_ico_3",@"user_menu_ico_4",@"user_menu_ico_5", nil];
     
     [self.settingBtn addTarget:self action:@selector(settingBtnPress) forControlEvents:UIControlEventTouchUpInside];
@@ -206,7 +206,7 @@
             [self.navigationController pushViewController:passwordManagerView animated:YES];
         }
         
-    }else if ([menuTitle isEqualToString:@"零钱"]){
+    }else if ([menuTitle isEqualToString:@"地址管理"]){
         
     }
 }
