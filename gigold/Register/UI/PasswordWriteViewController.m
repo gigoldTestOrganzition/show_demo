@@ -58,6 +58,7 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+#pragma mark ---- UITextFieldDelegate --------
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     NSMutableString* textString = [NSMutableString stringWithString:textField.text];
     [textString replaceCharactersInRange:range withString:string];
@@ -109,6 +110,7 @@
     
 }
 
+#pragma mark ---- ResultShowViewSureDeleget --------
 -(void)sure{
     [self.navigationController popViewControllerAnimated:NO];
     self.backType = FinishType;

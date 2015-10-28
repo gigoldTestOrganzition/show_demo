@@ -47,7 +47,7 @@
         UIButton* btn1 = [UIButton buttonWithType:UIButtonTypeCustom];
         btn1.backgroundColor = [UIColor whiteColor];
         btn1.frame = CGRectMake(0, 0, showView.frame.size.width, 45);
-        [btn1 setTitle:@"吉高钱包用户协议" forState:UIControlStateNormal];
+        [btn1 setTitle:@"快捷支付服务协议" forState:UIControlStateNormal];
         btn1.titleLabel.font = dialog_font;
         [btn1 setTitleColor:main_text_color forState:UIControlStateNormal];
         [btn1 setTitleColor:main_text_color forState:UIControlStateHighlighted];
@@ -60,7 +60,7 @@
         UIButton* btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
         btn2.backgroundColor = [UIColor whiteColor];
         btn2.frame = CGRectMake(0, 45, showView.frame.size.width, 45);
-        [btn2 setTitle:@"吉高快捷支付协议" forState:UIControlStateNormal];
+        [btn2 setTitle:@"招行快捷支付协议" forState:UIControlStateNormal];
         btn2.titleLabel.font = dialog_font;
         [btn2 setTitleColor:main_text_color forState:UIControlStateNormal];
         [btn2 setTitleColor:main_text_color forState:UIControlStateHighlighted];
@@ -99,6 +99,11 @@
         
     }else{
         ServiceTextViewController* serviceTextView = [[ServiceTextViewController alloc] init];
+        if ([btn.titleLabel.text isEqualToString:@"招行快捷支付协议"]) {
+            serviceTextView.serviceTextType = Service_Bank_CMBType;
+        }else if ([btn.titleLabel.text isEqualToString:@"快捷支付服务协议"]){
+            serviceTextView.serviceTextType = Service_FastPayType;
+        }
         [self.navigationController pushViewController:serviceTextView animated:YES];
     }
 }
@@ -127,6 +132,7 @@
     
 }
 
+#pragma mark ---- UITextFieldDelegate --------
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     NSMutableString* textString = [NSMutableString stringWithString:textField.text];
     [textString replaceCharactersInRange:range withString:string];

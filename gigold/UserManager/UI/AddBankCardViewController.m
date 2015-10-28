@@ -33,6 +33,7 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+#pragma mark ---- UITextFieldDelegate --------
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     NSMutableString* textString = [NSMutableString stringWithString:textField.text];
     [textString replaceCharactersInRange:range withString:string];

@@ -12,6 +12,7 @@
 		5C1DFAFE1BDA195A00E0BB97 /* PayPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C1DFAFC1BDA195A00E0BB97 /* PayPasswordViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5C1DFAFF1BDA195A00E0BB97 /* PayPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C1DFAFD1BDA195A00E0BB97 /* PayPasswordViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		5C394BFC1BCF597E009AC0AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C394BFA1BCF597E009AC0AC /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		5C41D09C1BE0B5F800F76E50 /* ServiceText.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C41D09B1BE0B5F800F76E50 /* ServiceText.plist */; settings = {ASSET_TAGS = (); }; };
 		5C447C6C1BD77A3700A049D9 /* BankCardValidateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C447C6A1BD77A3700A049D9 /* BankCardValidateViewController.m */; settings = {ASSET_TAGS = (); }; };
 		5C447C6D1BD77A3700A049D9 /* BankCardValidateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C447C6B1BD77A3700A049D9 /* BankCardValidateViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		5C4B7A921BD7C222009D556E /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C4B7A911BD7C222009D556E /* BaseViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -234,6 +235,7 @@
 		5C1DFAFC1BDA195A00E0BB97 /* PayPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayPasswordViewController.m; sourceTree = "<group>"; };
 		5C1DFAFD1BDA195A00E0BB97 /* PayPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PayPasswordViewController.xib; sourceTree = "<group>"; };
 		5C394BFB1BCF597E009AC0AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5C41D09B1BE0B5F800F76E50 /* ServiceText.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ServiceText.plist; path = gigold/ServiceText.plist; sourceTree = SOURCE_ROOT; };
 		5C447C691BD77A3700A049D9 /* BankCardValidateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardValidateViewController.h; sourceTree = "<group>"; };
 		5C447C6A1BD77A3700A049D9 /* BankCardValidateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardValidateViewController.m; sourceTree = "<group>"; };
 		5C447C6B1BD77A3700A049D9 /* BankCardValidateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardValidateViewController.xib; sourceTree = "<group>"; };
@@ -621,6 +623,7 @@
 				5CC9C2AE1BDDF04700C2269A /* GigoldFonts.h */,
 				5CC9C2CD1BDE494A00C2269A /* Bank.h */,
 				5CC9C2CE1BDE494A00C2269A /* Bank.m */,
+				5C41D09B1BE0B5F800F76E50 /* ServiceText.plist */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -2851,7 +2854,6 @@
 				5CA41C401BC8E688000A3484 /* Frameworks */,
 				5CA41C411BC8E688000A3484 /* Resources */,
 				1D1931D61D8731B3D06DCB91 /* Copy Pods Resources */,
-				387DCFBAD098F1130523BF65 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -3032,6 +3034,7 @@
 				5CC44B2A1BDA30F00071B668 /* user_menu_ico_2@3x.png in Resources */,
 				5C6A5A941BDB247A000CA77D /* SettingsViewController.xib in Resources */,
 				5CA88B351BE069EB00E50D0D /* bank_logo_ccb@2x.png in Resources */,
+				5C41D09C1BE0B5F800F76E50 /* ServiceText.plist in Resources */,
 				5CC9C2B91BDE24C100C2269A /* pop_close_but@2x.png in Resources */,
 				5CC9C2C91BDE474400C2269A /* bank_logo_unionpay@2x.png in Resources */,
 				5CC9C2D91BDF03DA00C2269A /* main_error_ico@2x.png in Resources */,
@@ -3082,21 +3085,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		387DCFBAD098F1130523BF65 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9AA863AF3D4FD1A97E2D78EE /* Check Pods Manifest.lock */ = {

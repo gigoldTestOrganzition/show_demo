@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"服务协议";
     
     [self tableViewHeaderViewCreat];
     
@@ -39,11 +40,26 @@
 
 -(void)tableViewHeaderViewCreat{
     
-    NSString* contentString = @"用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议。 文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用户协议文字用。";
+//  读取自定义的plist文件
+    NSString* key = @"";
+    if (self.serviceTextType == Service_GigoldType) {
+        key = @"吉高支付服务协议";
+    }else if (self.serviceTextType == Service_FastPayType){
+        key = @"快捷支付服务协议";
+    }else if (self.serviceTextType == Service_Bank_CMBType){
+        key = @"招行快捷支付协议";
+    }
+    
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"ServiceText" ofType:@"plist"];
+    NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
+    NSLog(@"dictionary = %@",dictionary);
+    
+    
+    NSString* contentString = [dictionary objectForKey:key];
     
     CGSize size = [self contentSize:contentString];
     
-    UIView* headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, mainScreenWidth, 55+size.height)];
+    UIView* headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, mainScreenWidth, 55+size.height+10)];
     
     UILabel* headLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, headerView.frame.size.width, 55)];
     headLabel.backgroundColor = [UIColor clearColor];
@@ -51,11 +67,12 @@
     headLabel.textColor = main_text_color;
     headLabel.textAlignment = NSTextAlignmentCenter;
     headLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    headLabel.text = @"吉高钱包用户协议";
+    headLabel.text = key;
+    
     [headerView addSubview:headLabel];
     
     UILabel* contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 55, headerView.frame.size.width-2*15, size.height)];
-    contentLabel.backgroundColor = [UIColor redColor];
+    contentLabel.backgroundColor = [UIColor clearColor];
     contentLabel.lineBreakMode = NSLineBreakByWordWrapping;
     contentLabel.textAlignment = NSTextAlignmentLeft;
     contentLabel.font = prompt_or_icon_font;

@@ -57,6 +57,7 @@
     // Do any additional setup after loading the view from its nib.
 }
 
+#pragma mark ---- UITextFieldDelegate --------
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     NSMutableString* textString = [NSMutableString stringWithString:textField.text];
     [textString replaceCharactersInRange:range withString:string];
@@ -103,6 +104,7 @@
 -(void)goServeTextView{
     NSLog(@"去看服务条款");
     ServiceTextViewController* serviceTextView = [[ServiceTextViewController alloc] init];
+    serviceTextView.serviceTextType = Service_GigoldType;
     [self.navigationController pushViewController:serviceTextView animated:YES];
 }
 
@@ -160,6 +162,7 @@
     
 }
 
+#pragma mark ---- ResultShowViewSureDeleget --------
 -(void)sure{
     [self.navigationController popViewControllerAnimated:NO];
     if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
