@@ -197,6 +197,18 @@
 		5CCCEEE21BDDC5C200336158 /* TradingData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCCEECC1BDDC5C200336158 /* TradingData.m */; settings = {ASSET_TAGS = (); }; };
 		5CCCEEE31BDDC5C200336158 /* TradingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCCEED11BDDC5C200336158 /* TradingCell.m */; settings = {ASSET_TAGS = (); }; };
 		5CCCEEE41BDDC5C200336158 /* TradingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCCEED31BDDC5C200336158 /* TradingDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5CF7B6611BE0A7CC0041E96E /* safe_ico@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B65F1BE0A7CC0041E96E /* safe_ico@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5CF7B6621BE0A7CC0041E96E /* safe_ico@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B6601BE0A7CC0041E96E /* safe_ico@3x.png */; settings = {ASSET_TAGS = (); }; };
+		5CF7B6671BE0A8D50041E96E /* SecurityPromptView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7B6661BE0A8D50041E96E /* SecurityPromptView.m */; settings = {ASSET_TAGS = (); }; };
+		5CF7B6691BE0A8F80041E96E /* SecurityPromptView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B6681BE0A8F80041E96E /* SecurityPromptView.xib */; settings = {ASSET_TAGS = (); }; };
+		5CF7B66D1BE0B2550041E96E /* LoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7B66C1BE0B2550041E96E /* LoadView.m */; settings = {ASSET_TAGS = (); }; };
+		5CF7B66F1BE0B29C0041E96E /* LoadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B66E1BE0B29C0041E96E /* LoadView.xib */; settings = {ASSET_TAGS = (); }; };
+		5CF7B6721BE0BA8F0041E96E /* pop_safe_ico_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B6701BE0BA8F0041E96E /* pop_safe_ico_1@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5CF7B6731BE0BA8F0041E96E /* pop_safe_ico_1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B6711BE0BA8F0041E96E /* pop_safe_ico_1@3x.png */; settings = {ASSET_TAGS = (); }; };
+		5CF7B6761BE0BCC90041E96E /* pop_safe_ico_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B6741BE0BCC90041E96E /* pop_safe_ico_2@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5CF7B6771BE0BCC90041E96E /* pop_safe_ico_2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B6751BE0BCC90041E96E /* pop_safe_ico_2@3x.png */; settings = {ASSET_TAGS = (); }; };
+		5CF7B67A1BE0C6720041E96E /* pop_loading_pci@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B6781BE0C6720041E96E /* pop_loading_pci@2x.png */; settings = {ASSET_TAGS = (); }; };
+		5CF7B67B1BE0C6720041E96E /* pop_loading_pci@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B6791BE0C6720041E96E /* pop_loading_pci@3x.png */; settings = {ASSET_TAGS = (); }; };
 		DCB348EA5503450DD424BB4D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AA29EA734CC24C2A6E7B458A /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -516,6 +528,20 @@
 		5CCCEED11BDDC5C200336158 /* TradingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradingCell.m; sourceTree = "<group>"; };
 		5CCCEED21BDDC5C200336158 /* TradingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradingDetailViewController.h; sourceTree = "<group>"; };
 		5CCCEED31BDDC5C200336158 /* TradingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradingDetailViewController.m; sourceTree = "<group>"; };
+		5CF7B65F1BE0A7CC0041E96E /* safe_ico@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "safe_ico@2x.png"; sourceTree = "<group>"; };
+		5CF7B6601BE0A7CC0041E96E /* safe_ico@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "safe_ico@3x.png"; sourceTree = "<group>"; };
+		5CF7B6651BE0A8D50041E96E /* SecurityPromptView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityPromptView.h; sourceTree = "<group>"; };
+		5CF7B6661BE0A8D50041E96E /* SecurityPromptView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityPromptView.m; sourceTree = "<group>"; };
+		5CF7B6681BE0A8F80041E96E /* SecurityPromptView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecurityPromptView.xib; sourceTree = "<group>"; };
+		5CF7B66B1BE0B2550041E96E /* LoadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadView.h; sourceTree = "<group>"; };
+		5CF7B66C1BE0B2550041E96E /* LoadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadView.m; sourceTree = "<group>"; };
+		5CF7B66E1BE0B29C0041E96E /* LoadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadView.xib; sourceTree = "<group>"; };
+		5CF7B6701BE0BA8F0041E96E /* pop_safe_ico_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop_safe_ico_1@2x.png"; sourceTree = "<group>"; };
+		5CF7B6711BE0BA8F0041E96E /* pop_safe_ico_1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop_safe_ico_1@3x.png"; sourceTree = "<group>"; };
+		5CF7B6741BE0BCC90041E96E /* pop_safe_ico_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop_safe_ico_2@2x.png"; sourceTree = "<group>"; };
+		5CF7B6751BE0BCC90041E96E /* pop_safe_ico_2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop_safe_ico_2@3x.png"; sourceTree = "<group>"; };
+		5CF7B6781BE0C6720041E96E /* pop_loading_pci@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop_loading_pci@2x.png"; sourceTree = "<group>"; };
+		5CF7B6791BE0C6720041E96E /* pop_loading_pci@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pop_loading_pci@3x.png"; sourceTree = "<group>"; };
 		660292318B52F537CA48DCED /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		AA29EA734CC24C2A6E7B458A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -621,6 +647,14 @@
 		5C5A2D8C1BD6115D00C4AE1D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				5CF7B6781BE0C6720041E96E /* pop_loading_pci@2x.png */,
+				5CF7B6791BE0C6720041E96E /* pop_loading_pci@3x.png */,
+				5CF7B6741BE0BCC90041E96E /* pop_safe_ico_2@2x.png */,
+				5CF7B6751BE0BCC90041E96E /* pop_safe_ico_2@3x.png */,
+				5CF7B6701BE0BA8F0041E96E /* pop_safe_ico_1@2x.png */,
+				5CF7B6711BE0BA8F0041E96E /* pop_safe_ico_1@3x.png */,
+				5CF7B65F1BE0A7CC0041E96E /* safe_ico@2x.png */,
+				5CF7B6601BE0A7CC0041E96E /* safe_ico@3x.png */,
 				5CC9C3451BE0681400C2269A /* bank_logo_ccb@2x.png */,
 				5CC9C3461BE0681400C2269A /* no_data_ico@2x.png */,
 				5CC9C3471BE0681400C2269A /* no_data_ico@3x.png */,
@@ -651,6 +685,8 @@
 		5C5A2D8D1BD6115D00C4AE1D /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				5CF7B66A1BE0B2470041E96E /* loadView */,
+				5CF7B6641BE0A87A0041E96E /* securityPromptView */,
 				5CC9C3DB1BE06B0800C2269A /* outView */,
 				5CC9C3231BDF58F900C2269A /* resultShowView */,
 				5CC9C2BE1BDE427400C2269A /* selectPayTypeView */,
@@ -2805,6 +2841,28 @@
 			path = ui;
 			sourceTree = "<group>";
 		};
+		5CF7B6641BE0A87A0041E96E /* securityPromptView */ = {
+			isa = PBXGroup;
+			children = (
+				5CF7B6651BE0A8D50041E96E /* SecurityPromptView.h */,
+				5CF7B6661BE0A8D50041E96E /* SecurityPromptView.m */,
+				5CF7B6681BE0A8F80041E96E /* SecurityPromptView.xib */,
+			);
+			name = securityPromptView;
+			path = gigold/common/ui/securityPromptView;
+			sourceTree = SOURCE_ROOT;
+		};
+		5CF7B66A1BE0B2470041E96E /* loadView */ = {
+			isa = PBXGroup;
+			children = (
+				5CF7B66B1BE0B2550041E96E /* LoadView.h */,
+				5CF7B66C1BE0B2550041E96E /* LoadView.m */,
+				5CF7B66E1BE0B29C0041E96E /* LoadView.xib */,
+			);
+			name = loadView;
+			path = gigold/common/ui/loadView;
+			sourceTree = SOURCE_ROOT;
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2913,6 +2971,7 @@
 			files = (
 				5CA673C61BD9D63C00BED35A /* protocol_but_2@3x.png in Resources */,
 				5CA673C31BD9D63C00BED35A /* protocol_but_1@2x.png in Resources */,
+				5CF7B6761BE0BCC90041E96E /* pop_safe_ico_2@2x.png in Resources */,
 				5C5A2DCA1BD6115D00C4AE1D /* LoginViewController.xib in Resources */,
 				5C6A5AA61BDB46D0000CA77D /* login_ico_1@3x.png in Resources */,
 				5CA88B3B1BE06A3C00E50D0D /* top_menu_but_arrow@3x.png in Resources */,
@@ -2923,17 +2982,21 @@
 				5CC9C2C01BDE42E400C2269A /* PayTypeCell.xib in Resources */,
 				5C6A5AAB1BDB46D0000CA77D /* login_jigao_logo@2x.png in Resources */,
 				5CC9C2CB1BDE474400C2269A /* box_but_arrow@2x.png in Resources */,
+				5CF7B6691BE0A8F80041E96E /* SecurityPromptView.xib in Resources */,
 				5CC9C33A1BE062E700C2269A /* SmallChangeTableViewCell.xib in Resources */,
 				5CC9C34A1BE0681400C2269A /* no_data_ico@3x.png in Resources */,
 				5CC9C3E01BE06B4100C2269A /* OutView.xib in Resources */,
 				5CC44B2E1BDA30F00071B668 /* user_menu_ico_4@3x.png in Resources */,
 				5CA88B361BE069EB00E50D0D /* no_data_ico@2x.png in Resources */,
 				5CC44B2C1BDA30F00071B668 /* user_menu_ico_3@3x.png in Resources */,
+				5CF7B67B1BE0C6720041E96E /* pop_loading_pci@3x.png in Resources */,
 				5CC9C32F1BDF824200C2269A /* main_error_ico2@2x.png in Resources */,
 				5C447C6D1BD77A3700A049D9 /* BankCardValidateViewController.xib in Resources */,
 				5C6A5AAC1BDB46D0000CA77D /* login_jigao_logo@3x.png in Resources */,
+				5CF7B6611BE0A7CC0041E96E /* safe_ico@2x.png in Resources */,
 				5CBE16E91BD76D0400692B0A /* BankCardManagerViewController.xib in Resources */,
 				5CC9C3D71BE0688900C2269A /* user_faces_1@2x.png in Resources */,
+				5CF7B67A1BE0C6720041E96E /* pop_loading_pci@2x.png in Resources */,
 				5CC9C2C71BDE474400C2269A /* bank_logo_cmb@2x.png in Resources */,
 				5CA41C531BC8E688000A3484 /* Assets.xcassets in Resources */,
 				5CA673C51BD9D63C00BED35A /* protocol_but_2@2x.png in Resources */,
@@ -2951,12 +3014,15 @@
 				5CA673C11BD9D63C00BED35A /* password_eye_2@2x.png in Resources */,
 				5C6A5AA91BDB46D0000CA77D /* login_ico_3@2x.png in Resources */,
 				5CC44B311BDA30F00071B668 /* user_menu_set_ico@2x.png in Resources */,
+				5CF7B6621BE0A7CC0041E96E /* safe_ico@3x.png in Resources */,
 				5CC9C32E1BDF824200C2269A /* main_correct_ico2@3x.png in Resources */,
 				5C93B8E11BD8913600E8A8AA /* IncomeAEViewController.xib in Resources */,
 				5C6A5AAA1BDB46D0000CA77D /* login_ico_3@3x.png in Resources */,
 				5CA88B311BE069DB00E50D0D /* user_faces_1@3x.png in Resources */,
+				5CF7B6721BE0BA8F0041E96E /* pop_safe_ico_1@2x.png in Resources */,
 				5CC9C3381BE062E700C2269A /* BankCardTableViewCell.xib in Resources */,
 				5CC44B2F1BDA30F00071B668 /* user_menu_ico_5@2x.png in Resources */,
+				5CF7B6731BE0BA8F0041E96E /* pop_safe_ico_1@3x.png in Resources */,
 				5CC9C3491BE0681400C2269A /* no_data_ico@2x.png in Resources */,
 				5CC9C32D1BDF824200C2269A /* main_correct_ico2@2x.png in Resources */,
 				5C6A5AA51BDB46D0000CA77D /* login_ico_1@2x.png in Resources */,
@@ -2991,6 +3057,7 @@
 				5C6A5AA41BDB46D0000CA77D /* login_down_arrow@3x.png in Resources */,
 				5CA673CA1BD9D63C00BED35A /* top_return_but_2@3x.png in Resources */,
 				5CC44B2A1BDA30F00071B668 /* user_menu_ico_2@3x.png in Resources */,
+				5CF7B66F1BE0B29C0041E96E /* LoadView.xib in Resources */,
 				5C6A5A941BDB247A000CA77D /* SettingsViewController.xib in Resources */,
 				5CA88B351BE069EB00E50D0D /* bank_logo_ccb@2x.png in Resources */,
 				5CC9C2B91BDE24C100C2269A /* pop_close_but@2x.png in Resources */,
@@ -3004,6 +3071,7 @@
 				5CA41C511BC8E688000A3484 /* Main.storyboard in Resources */,
 				5C6A5AA21BDB46D0000CA77D /* login_background.png in Resources */,
 				5CC44B401BDA35A30071B668 /* box_but_arrow@2x.png in Resources */,
+				5CF7B6771BE0BCC90041E96E /* pop_safe_ico_2@3x.png in Resources */,
 				5C93B8FB1BD8DA5A00E8A8AA /* PasswordWriteViewController.xib in Resources */,
 				5C394BFC1BCF597E009AC0AC /* LaunchScreen.storyboard in Resources */,
 				5CC9C3301BDF824200C2269A /* main_error_ico2@3x.png in Resources */,
@@ -3110,6 +3178,7 @@
 				5CC6BBFE1BD8993E00660205 /* SXPViewController.m in Sources */,
 				5CC6BC061BD8993E00660205 /* Position.m in Sources */,
 				5C746C991BD78A67007A7DE6 /* TopUpViewController.mm in Sources */,
+				5CF7B66D1BE0B2550041E96E /* LoadView.m in Sources */,
 				5C5A2DD71BD6115D00C4AE1D /* PasswordManagerViewController.m in Sources */,
 				5CCCEEE01BDDC5C200336158 /* TenThousandCell.m in Sources */,
 				5CA673AE1BD9C61000BED35A /* UIView+Sizes.m in Sources */,
@@ -3118,6 +3187,7 @@
 				5CCCEE701BDDC4DC00336158 /* IncomeDetailViewController.m in Sources */,
 				5CC9C3431BE063D800C2269A /* SmallChangeViewController.m in Sources */,
 				5CC9C3DE1BE06B2D00C2269A /* OutView.m in Sources */,
+				5CF7B6671BE0A8D50041E96E /* SecurityPromptView.m in Sources */,
 				5CC9C33E1BE0634600C2269A /* ServiceTextViewController.m in Sources */,
 				5CC44B451BDA3AFB0071B668 /* MyAccountTableViewCell.m in Sources */,
 				5CCCEE6F1BDDC4DC00336158 /* IncomeDetailCell.m in Sources */,

@@ -15,8 +15,10 @@
 #import "ResultShowView.h"
 #import "AutomaticArcView.h"
 #import "OutView.h"
+#import "SecurityPromptView.h"
+#import "LoadView.h"
 
-@interface MyViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>{
+@interface MyViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,CustomerViewClickDeleget>{
     //功能描述
     __weak IBOutlet UICollectionView *functionCollectionView;
     //描述数据集合
@@ -26,6 +28,9 @@
     //测试view
     ResultShowView* resultShowView;
     OutView* outView;
+    SecurityPromptView* securityPromptView;
+    LoadView* loadView;
+    
     CGFloat baseline;
 }
 @end
@@ -134,13 +139,25 @@
 // 生活缴费
 -(void)lifePay{
     NSLog(@"生活缴费");
+    if (!securityPromptView) {
+        securityPromptView = [[SecurityPromptView alloc]init];
+        securityPromptView.clickDeleget = self;
+    }
+    [securityPromptView showDialog:self.view];
 }
 //物业费
 -(void)propertyPay{
     NSLog(@"物业费");
+    //if (!loadView) {
+        loadView = [LoadView showLoad:LoadViewTypeJump view:self.view];
+    //}
+    
 }
 //停车费
 -(void)stopCarPay{
+    //if (!loadView) {
+        loadView = [LoadView showLoad:LoadViewTypeJump view:self.view];
+    //}
     
 }
 //吉高宝
@@ -152,6 +169,10 @@
 }
 
 #pragma mark -UICollectionView  协议
+-(void)click:(NSString *)tag{
+    NSLog(@"设置支付密码");
+   
+}
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return 1;
 }
