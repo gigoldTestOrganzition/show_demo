@@ -14,6 +14,9 @@
                 <outlet property="sendLabel" destination="tFQ-Yp-0UR" id="gPm-94-Mzz"/>
                 <outlet property="serveTextLabel" destination="FMe-SS-bbG" id="wga-7z-g4T"/>
                 <outlet property="serveTextView" destination="7rm-1i-oWF" id="ls6-I1-gIi"/>
+                <outlet property="shadowHeight1" destination="7t5-We-s0K" id="6IA-cK-iqb"/>
+                <outlet property="shadowHeight2" destination="0WH-JQ-SYu" id="7RY-f2-3Go"/>
+                <outlet property="shadowWidth3" destination="4Zv-gt-9CU" id="f0A-ph-hQj"/>
                 <outlet property="validateTextField" destination="6eD-Ba-gAn" id="bai-Fk-o1g"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

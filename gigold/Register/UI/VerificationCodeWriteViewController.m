@@ -9,6 +9,7 @@
 #import "VerificationCodeWriteViewController.h"
 #import "PasswordWriteViewController.h"
 #import "PayPasswordViewController.h"
+#import "ServiceTextViewController.h"
 
 @interface VerificationCodeWriteViewController ()
 
@@ -21,7 +22,11 @@
     
     isAgree = YES;
     
-    if (self.flowType == ResetPasswordType || self.flowType == UpdataPayPWDType) {
+    self.shadowHeight1.constant = 0.5;
+    self.shadowHeight2.constant = 0.5;
+    self.shadowWidth3.constant = 0.5;
+    
+    if (self.flowType == ResetPasswordType || self.flowType == UpdataPayPWDType || self.flowType == SetPayPWDType || self.flowType == AddBankCardType) {
         self.serveTextView.hidden = YES;
         self.next_view_height.constant = 30;
     }
@@ -31,6 +36,9 @@
     
     [self.nextBtn addTarget:self action:@selector(nextBtnPress) forControlEvents:UIControlEventTouchUpInside];
     self.nextBtn.enabled = NO;
+    if (self.flowType == AddBankCardType) {
+        [self.nextBtn setTitle:@"完成" forState:UIControlStateNormal];
+    }
     
     UITapGestureRecognizer* sendPress = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(startTime)];
     [self.sendLabel addGestureRecognizer:sendPress];
@@ -42,6 +50,10 @@
     
     self.moblieLabel.text = [NSString stringWithFormat:@"已发送校验码到你的手机%@",[[AppUtils shareAppUtils] encryptMoblieNumber:self.moblieNum]];
     
+    UITapGestureRecognizer* serveTextViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(goServeTextView)];
+    [self.serveTextView addGestureRecognizer:serveTextViewTap];
+    
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -49,10 +61,10 @@
     NSMutableString* textString = [NSMutableString stringWithString:textField.text];
     [textString replaceCharactersInRange:range withString:string];
     if (textString.length == 0) {
-        self.nextBtn.backgroundColor = [UIColor colorWithRed:206/255.0f green:206/255.f blue:206/255.f alpha:1];
+        self.nextBtn.backgroundColor = unable_tap_color;
         self.nextBtn.enabled = NO;
     }else{
-        self.nextBtn.backgroundColor = [UIColor colorWithRed:74/255.0f green:202/255.f blue:226/255.f alpha:1];
+        self.nextBtn.backgroundColor = theme_color;
         self.nextBtn.enabled = YES;
     }
     return YES;
@@ -74,18 +86,24 @@
     if (timeCount  == TimeInterval) {
         [self endTime];
         timeCount = 0;
-        self.sendLabel.textColor = [UIColor colorWithRed:74/255.0f green:202/255.f blue:226/255.f alpha:1];
+        self.sendLabel.textColor = theme_color;
         self.sendLabel.text = @"重新发送";
         self.sendLabel.userInteractionEnabled = YES;
     }else{
         self.sendLabel.userInteractionEnabled = NO;
-        self.sendLabel.textColor = [UIColor colorWithRed:214/255.0f green:214/255.f blue:214/255.f alpha:1];
+        self.sendLabel.textColor = input_hint_color;
     }
 }
 
 -(void)endTime{
     [timer invalidate];
     timer = nil;
+}
+
+-(void)goServeTextView{
+    NSLog(@"去看服务条款");
+    ServiceTextViewController* serviceTextView = [[ServiceTextViewController alloc] init];
+    [self.navigationController pushViewController:serviceTextView animated:YES];
 }
 
 -(void)agreeBtnPress{
@@ -102,9 +120,27 @@
     if (self.flowType == UpdataPayPWDType) {
         PayPasswordViewController* payPasswordView = [[PayPasswordViewController alloc] init];
         payPasswordView.delegate = self;
+        payPasswordView.payPwdType = SetOldPayPwdType;
         payPasswordView.title = self.title;
         [self.navigationController pushViewController:payPasswordView animated:YES];
         return;
+    }
+    
+    if (self.flowType == SetPayPWDType) {
+        PayPasswordViewController* payPasswordView = [[PayPasswordViewController alloc] init];
+        payPasswordView.delegate = self;
+        payPasswordView.payPwdType = SetNewPayPwdType;
+        payPasswordView.title = self.title;
+        [self.navigationController pushViewController:payPasswordView animated:YES];
+        return;
+    }
+    
+    if (self.flowType == AddBankCardType) {
+        NSLog(@"成功");
+        [self.navigationController popViewControllerAnimated:NO];
+        if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
+            [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
+        }
     }
     
     if (isAgree) {
@@ -119,10 +155,19 @@
     
 }
 
+#pragma mark ---- BaseViewControllerDelegate --------
+
 -(void)UIViewControllerBack:(BaseViewController *)baseViewController{
     if ([baseViewController isKindOfClass:[PasswordWriteViewController class]]) {
         PasswordWriteViewController* passwordWirteView = (PasswordWriteViewController*)baseViewController;
         self.backType = passwordWirteView.backType;
+        passwordWirteView.moblieNum = self.moblieNum;
+        [self.navigationController popViewControllerAnimated:NO];
+        if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
+            [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
+        }
+    }
+    else if ([baseViewController isKindOfClass:[PayPasswordViewController class]]){
         [self.navigationController popViewControllerAnimated:NO];
         if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
             [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];

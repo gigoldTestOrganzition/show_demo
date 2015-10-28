@@ -69,4 +69,8 @@
 //登录密码验证
 - (BOOL)validateLoginPassword:(NSString*)password;
 
+//是否有设置支付密码 由服务器定
+-(void)saveIsPayPwd:(BOOL)isPayPwd;
+-(BOOL)getIsPayPwd;
+
 @end

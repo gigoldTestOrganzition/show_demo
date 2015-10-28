@@ -11,6 +11,10 @@
 @interface MoblieWriteViewController : BaseViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *mobileTextField;
 @property (weak, nonatomic) IBOutlet UIButton *nextBtn;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *shadowHeight1;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *shadowHeight2;
+
+
 @property (assign, nonatomic) FlowType flowType;
 @property (assign, nonatomic) BackType backType;
 

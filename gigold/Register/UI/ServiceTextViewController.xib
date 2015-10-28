@@ -5,9 +5,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BankCardManagerViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ServiceTextViewController">
             <connections>
-                <outlet property="mTableView" destination="KOY-kz-hfF" id="7cx-X4-Qoo"/>
+                <outlet property="mTableView" destination="SB9-6n-itR" id="N8V-CT-nhd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,17 +16,17 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="KOY-kz-hfF">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SB9-6n-itR">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="KOY-kz-hfF" secondAttribute="bottom" id="2NE-zE-OPt"/>
-                <constraint firstItem="KOY-kz-hfF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="JIq-Kx-PfJ"/>
-                <constraint firstItem="KOY-kz-hfF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Keg-IX-gnG"/>
-                <constraint firstAttribute="trailing" secondItem="KOY-kz-hfF" secondAttribute="trailing" id="hz0-0V-LdD"/>
+                <constraint firstItem="SB9-6n-itR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="0gB-5m-Ph2"/>
+                <constraint firstAttribute="bottom" secondItem="SB9-6n-itR" secondAttribute="bottom" id="7t2-1U-WqP"/>
+                <constraint firstItem="SB9-6n-itR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="O7c-Me-twP"/>
+                <constraint firstAttribute="trailing" secondItem="SB9-6n-itR" secondAttribute="trailing" id="nZb-5R-O8Z"/>
             </constraints>
         </view>
     </objects>

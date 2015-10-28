@@ -28,7 +28,7 @@
     
     [self.view addGestureRecognizer:oneTap];
     
-    [self.backBtn addTarget:self action:@selector(backBtnPress) forControlEvents:UIControlEventTouchUpInside];
+    [self.backBtn addTarget:self action:@selector(topBtnPress) forControlEvents:UIControlEventTouchUpInside];
 
     [self.loginBtn addTarget:self action:@selector(loginBtnPress) forControlEvents:UIControlEventTouchUpInside];
     
@@ -48,8 +48,8 @@
 }
 
 
--(void)backBtnPress{
-    [self.navigationController popViewControllerAnimated:YES];
+-(void)topBtnPress{
+    [self dismissViewControllerAnimated:YES completion:^{}];
 }
 
 -(void)selfViewPress{
@@ -74,12 +74,11 @@
 //去注册
 -(void)registerBtnPress{
     NSLog(@"去注册");
-    
+
     MoblieWriteViewController* moblieWriteView = [[MoblieWriteViewController alloc] init];
     moblieWriteView.delegate = self;
     moblieWriteView.flowType = RegisterType;
     [self.navigationController pushViewController:moblieWriteView animated:YES];
-
 }
 
 //去登录
@@ -109,11 +108,7 @@
         
     }];
     
-    [[AppUtils shareAppUtils] saveIsLogin:YES];
-    [[AppUtils shareAppUtils] saveAccount:self.accountTextField.text];
-    [[AppUtils shareAppUtils] savePassword:self.passwordTextField.text];
-    
-    [[AppUtils shareAppUtils] saveHistoricalAccount:self.passwordTextField.text andKey:self.accountTextField.text];
+    [self loginRespond:self.accountTextField.text andPassword:self.passwordTextField.text];
     
     [[AppUtils shareAppUtils] showHUD:@"登录成功" andView:self.view];
     
@@ -122,8 +117,10 @@
 }
 
 -(void)delayMethod{
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"LoginStateChange" object:nil];
-    [self backBtnPress];
+    [self dismissViewControllerAnimated:YES completion:^{}];
+    if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
+        [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
+    }
 }
 
 #pragma mark ---- LoginDelegate -----
@@ -153,11 +150,13 @@
     return YES;
 }
 
+#pragma mark ---- BaseViewControllerDelegate --------
+
 -(void)UIViewControllerBack:(BaseViewController *)baseViewController{
     if ([baseViewController isKindOfClass:[MoblieWriteViewController class]]) {
         MoblieWriteViewController* moblieWriteView = (MoblieWriteViewController*)baseViewController;
-        if (moblieWriteView.backType == FinishType) {
-            [self.navigationController popViewControllerAnimated:NO];
+        if (moblieWriteView.backType == FinishType && moblieWriteView.flowType == RegisterType) {
+            [self dismissViewControllerAnimated:NO completion:^{}];
             if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
                 [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
             }

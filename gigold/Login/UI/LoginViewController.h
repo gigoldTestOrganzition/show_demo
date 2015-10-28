@@ -19,4 +19,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *forgetBtn;
 @property (weak, nonatomic) IBOutlet UIButton *registerBtn;
 
+@property (assign, nonatomic) LoginType loginType;
+
 @end

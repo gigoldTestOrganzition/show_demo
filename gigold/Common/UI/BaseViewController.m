@@ -7,6 +7,8 @@
 //
 
 #import "BaseViewController.h"
+#import "LoginViewController.h"
+#import "PasswordManagerViewController.h"
 
 @interface BaseViewController ()
 
@@ -18,6 +20,18 @@
     [super viewWillAppear:animated];
     
     self.navigationController.navigationBarHidden = NO;
+    
+    
+    UIButton* btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(0, 0, 44, 44);
+    [btn setImage:[UIImage imageNamed:@"top_return_but_1"] forState:UIControlStateNormal];
+    [btn setImage:[UIImage imageNamed:@"top_return_but_2"] forState:UIControlStateHighlighted];
+    btn.imageEdgeInsets = UIEdgeInsetsMake(0, -30, 0, 0);
+//    [btn setTitle:@"返回" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(backBtnPress) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem* item = [[UIBarButtonItem alloc] initWithCustomView:btn];
+    self.navigationItem.leftBarButtonItem = item;
+    
     
 //    UIBarButtonItem *backItem=[[UIBarButtonItem alloc]init];
 //    backItem.title=@"hhh";
@@ -35,12 +49,46 @@
     
 }
 
+- (void)backBtnPress{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+//登出响应
+- (void)logoutRespond{
+    //修改保存信息
+    [[AppUtils shareAppUtils] saveIsLogin:NO];
+    //通知状态改变
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"LoginStateChange" object:nil];
+}
+//登录响应
+- (void)loginRespond:(NSString*)account andPassword:(NSString*)pwd{
+    //保存登录信息
+    [[AppUtils shareAppUtils] saveIsLogin:YES];
+    [[AppUtils shareAppUtils] saveAccount:account];
+    [[AppUtils shareAppUtils] savePassword:pwd];
+    
+    //保存登录过的账号记录
+    [[AppUtils shareAppUtils] saveHistoricalAccount:pwd andKey:account];
+    
+    //通知状态改变
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"LoginStateChange" object:nil];
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = UIColorFromRGB(0xF5F5F5);
+    self.view.backgroundColor = back_ground_color;
     // Do any additional setup after loading the view.
+}
+
+- (void)showLoginView:(LoginType)loginType{
+    NSLog(@"跳转loginView");
+    LoginViewController* loginView = [[LoginViewController alloc] init];
+    loginView.delegate = self;
+    loginView.loginType = loginType;
+    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:loginView];
+    [self presentViewController:nav animated:YES completion:^{}];
 }
 
 - (void)didReceiveMemoryWarning {

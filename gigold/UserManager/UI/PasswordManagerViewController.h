@@ -9,6 +9,9 @@
 #import "BaseViewController.h"
 
 @interface PasswordManagerViewController : BaseViewController <UITableViewDataSource,UITableViewDelegate>
+{
+    NSMutableArray* dataArray;
+}
 
 @property (weak, nonatomic) IBOutlet UITableView *mTableView;
 

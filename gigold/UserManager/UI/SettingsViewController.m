@@ -43,11 +43,11 @@
     [logoutBtn setTitle:@"退出登录" forState:UIControlStateNormal];
     
     UIView* shadowView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, logoutBtn.frame.size.width, 0.5)];
-    shadowView.backgroundColor = [UIColor colorWithRed:199/255. green:199/255. blue:199/255. alpha:1];
+    shadowView.backgroundColor = gray_diver_color;
     [logoutBtn addSubview:shadowView];
     
     shadowView = [[UIView alloc] initWithFrame:CGRectMake(0, logoutBtn.frame.size.height-0.5, logoutBtn.frame.size.width, 0.5)];
-    shadowView.backgroundColor = [UIColor colorWithRed:199/255. green:199/255. blue:199/255. alpha:1];
+    shadowView.backgroundColor = gray_diver_color;
     [logoutBtn addSubview:shadowView];
     
     self.mTableView.tableFooterView = logoutBtn;
@@ -62,8 +62,7 @@
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (buttonIndex == 1) {
-        [[AppUtils shareAppUtils] saveIsLogin:NO];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"LoginStateChange" object:nil];
+        [self logoutRespond];
         [self.navigationController popViewControllerAnimated:YES];
     }
 }
@@ -97,7 +96,7 @@
         cell= [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellString];
     }
     cell.textLabel.font = [UIFont systemFontOfSize:14];
-    cell.textLabel.textColor = [UIColor colorWithRed:89/255. green:89/255. blue:89/255. alpha:1];
+    cell.textLabel.textColor = main_text_color;
     cell.textLabel.text = [[dataArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 

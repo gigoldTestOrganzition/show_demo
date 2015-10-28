@@ -9,6 +9,8 @@
             <connections>
                 <outlet property="mobileTextField" destination="82h-n6-czs" id="mJa-Xf-m9c"/>
                 <outlet property="nextBtn" destination="ebQ-5Y-h3s" id="gzH-rr-raf"/>
+                <outlet property="shadowHeight1" destination="cGn-mH-aKk" id="ZS5-Sb-kH5"/>
+                <outlet property="shadowHeight2" destination="DBt-rQ-DRR" id="w3I-5G-eKD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

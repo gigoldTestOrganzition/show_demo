@@ -7,10 +7,13 @@
 //
 
 #import "BaseViewController.h"
+#import "BankCardTableViewCell.h"
 
 @interface BankCardManagerViewController : BaseViewController <UITableViewDataSource,UITableViewDelegate>
 {
     NSMutableArray* dataArray;
+    
+    UIButton* addNavBtn;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *mTableView;

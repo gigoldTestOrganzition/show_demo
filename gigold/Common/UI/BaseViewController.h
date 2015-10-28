@@ -12,6 +12,7 @@
 #import "AppDelegate.h"
 #import "UIViewController+RNSwipeViewController.h"
 
+
 @class BaseViewController;
 
 @protocol BaseViewControllerDelegate <NSObject>
@@ -22,12 +23,25 @@
 
 @end
 
+//登录功能
+typedef enum _LoginType
+{
+    OnlyLogin = 0,
+    UpdataPassword,
+    GoPasswordManager,
+    GoBankCardManager,
+    GoIncomeAE,
+    
+} LoginType;
+
 //注册和重置密码界面共用
 typedef enum FlowType
 {
     RegisterType = 0,
     ResetPasswordType,
-    UpdataPayPWDType
+    UpdataPayPWDType,
+    SetPayPWDType,
+    AddBankCardType
 } FlowType;
 
 //判断返回状态值
@@ -42,5 +56,13 @@ typedef enum BackType
 
 @property (assign, nonatomic)id <BaseViewControllerDelegate>delegate;
 
+- (void)backBtnPress;
+
+//登出响应
+- (void)logoutRespond;
+//登录响应
+- (void)loginRespond:(NSString*)account andPassword:(NSString*)pwd;
+
+- (void)showLoginView:(LoginType)loginType;
 
 @end

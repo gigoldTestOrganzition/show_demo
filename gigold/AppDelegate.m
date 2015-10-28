@@ -32,32 +32,22 @@
     
     
     NSLog(@"%f %f",mainScreenWidth,mainScreenHeight);
+
     
     //设置NavigationBar背景颜色
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:74/255.0f green:202/255.f blue:226/255.f alpha:1]];
+    [[UINavigationBar appearance] setBarTintColor:theme_color];
     //@{}代表Dictionary
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName:title_or_btn_font,
+                                                           
+                                                           NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
-    
-//    [self showHelpView];
-//    if ([[AppUtils shareAppUtils] getIsFirstRun]) {
-//        [self showHelpView];
-//    }else{
-//        [self showLoginView];
-//    }
     [self showMainView];
     
     //设置Window为主窗口并显示出来
     [self.window makeKeyAndVisible];
     
     return YES;
-}
-
--(void)showLoginView{
-    LoginViewController* loginView = [[LoginViewController alloc] init];
-    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:loginView];
-    [self.window setRootViewController:nav];
 }
 
 //接受显示主界面的通知
