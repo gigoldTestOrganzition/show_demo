@@ -9,7 +9,7 @@
 #import "BaseViewController.h"
 #import "CustomerView.h"
 
-@interface SettingsViewController : BaseViewController <UITableViewDataSource>
+@interface SettingsViewController : BaseViewController <UITableViewDataSource,UITableViewDelegate>
 {
     NSMutableArray* dataArray;
     

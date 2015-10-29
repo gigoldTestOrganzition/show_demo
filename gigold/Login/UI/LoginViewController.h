@@ -10,6 +10,9 @@
 #import "LoginRequest.h"
 
 @interface LoginViewController : BaseViewController <UITextFieldDelegate>
+{
+    LoadView* loadView;
+}
 
 @property (weak, nonatomic) IBOutlet UIButton *backBtn;
 

@@ -1,18 +1,19 @@
 //
-//  UpdataPWDViewController.m
+//  UpdatePWDViewController.m
 //  gigold
 //
 //  Created by wsc on 15/10/23.
 //  Copyright © 2015年 wsc. All rights reserved.
 //
 
-#import "UpdataPWDViewController.h"
+#import "UpdatePWDViewController.h"
+#import "PasswordRequest.h"
 
-@interface UpdataPWDViewController ()
+@interface UpdatePWDViewController ()
 
 @end
 
-@implementation UpdataPWDViewController
+@implementation UpdatePWDViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -80,16 +81,31 @@
 -(void)nextBtnPress{
     [self.passwordTextField1 resignFirstResponder];
     [self.passwordTextField2 resignFirstResponder];
-    ResultShowView * resultShowView = [ResultShowView showResult:ResultTypeCorrect];
-    resultShowView.desc.text = @"登录密码修改成功";
-    resultShowView.desc.textColor = main_text_color;
-    resultShowView.deleget = self;
-    [resultShowView showDialog:self.view];
+    if (!loadView) {
+        loadView = [LoadView showLoad:LoadViewTypeJump view:self.view];
+        loadView.desc.text = @"修改登录密码中";
+    }else{
+        [loadView showDialog:self.view];
+    }
+    
+    [[PasswordRequest sharedPasswordRequest] updateLoginPwd:self.passwordTextField1.text newLoginPwd:self.passwordTextField2.text success:^(AFHTTPRequestOperation * operation, id responseObject) {
+        [loadView stopDialog];
+        ResultShowView * resultShowView = [ResultShowView showResult:ResultTypeCorrect];
+        resultShowView.desc.text = @"登录密码修改成功";
+        resultShowView.desc.textColor = main_text_color;
+        resultShowView.deleget = self;
+        [resultShowView showDialog:self.view];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
+        [loadView stopDialog];
+        [[AppUtils shareAppUtils] showHUD:@"登录密码修改失败" andView:self.view];
+    }];
+    
+   
 }
 
 #pragma mark ---- ResultShowViewSureDeleget --------
 -(void)sure{
-    [self.navigationController popViewControllerAnimated:NO];
+    [self.navigationController popViewControllerAnimated:YES];
     if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
         [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
     }

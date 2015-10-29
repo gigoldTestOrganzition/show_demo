@@ -11,6 +11,7 @@
 #import "AppUtils.h"
 #import "AppDelegate.h"
 #import "UIViewController+RNSwipeViewController.h"
+#import "LoadView.h"
 
 
 @class BaseViewController;
@@ -27,7 +28,7 @@
 typedef enum _LoginType
 {
     OnlyLogin = 0,
-    UpdataPassword,
+    UpdatePassword,
     GoPasswordManager,
     GoBankCardManager,
     GoIncomeAE,
@@ -38,9 +39,9 @@ typedef enum _LoginType
 //注册和重置密码界面共用
 typedef enum FlowType
 {
-    RegisterType = 0,
+    RegisterType = 1,
     ResetPasswordType,
-    UpdataPayPWDType,
+    UpdatePayPWDType,
     SetPayPWDType,
     AddBankCardType
 } FlowType;

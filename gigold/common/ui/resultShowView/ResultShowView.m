@@ -10,7 +10,7 @@
 #import "ResultShowView.h"
 #import "AutomaticArcView.h"
 @interface ResultShowView()<AutomaticArcViewDeleget>{
-    AutomaticArcView* automaticArcView;
+
 }
 @end
 @implementation ResultShowView
@@ -20,6 +20,7 @@
 @synthesize deleget =_deleget;
 @synthesize addAutomicView = _addAutomicView;
 @synthesize drawTime = _drawTime;
+@synthesize automaticArcView = _automaticArcView;
 -(instancetype)init{
     self = [super init];
     if (self) {
@@ -40,16 +41,16 @@
     self.showView = resultShowView;
     
     self.addAutomicView = resultShowView.addAutomicView;
-    automaticArcView = [[AutomaticArcView alloc]initWithFrame:_addAutomicView.bounds];
-    automaticArcView.deleget =  self;
-    [_addAutomicView addSubview:automaticArcView];
+    _automaticArcView = [[AutomaticArcView alloc]initWithFrame:_addAutomicView.bounds];
+    _automaticArcView.deleget =  self;
+    [_addAutomicView addSubview:_automaticArcView];
     
     _showImg.hidden = YES;
     _desc.hidden = YES;
 
 }
 -(void)setDrawTime:(CGFloat)drawTime{
-    automaticArcView.drawTime = drawTime;
+    _automaticArcView.drawTime = drawTime;
 }
 -(void)initEvent{
     UITapGestureRecognizer* actionRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(sureAction)];
@@ -68,7 +69,7 @@
     _desc.hidden = YES;
     [super showDialogByBaseLine:baseLineValue view:view];
     dispatch_async(dispatch_get_main_queue(), ^{
-        [automaticArcView showAnimation];
+        [_automaticArcView showAnimation];
     });
 }
 +(ResultShowView *)showResult:(ResultType)resultType{
@@ -76,9 +77,11 @@
     switch (resultType) {
         case ResultTypeCorrect:
             resultShowView.showImg.image = [UIImage imageNamed:@"main_correct_ico2"];
+            resultShowView.automaticArcView.strokeColor = UIColorFromRGB(0x84CC34);
             break;
         case ResultTypeError:
             resultShowView.showImg.image = [UIImage imageNamed:@"main_error_ico2"];
+            resultShowView.automaticArcView.strokeColor = UIColorFromRGB(0xE56767);
             break;
         default:
             resultShowView.showImg.image = [UIImage imageNamed:@"main_correct_ico2"];

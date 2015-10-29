@@ -7,7 +7,7 @@
 //
 
 #import "PasswordManagerViewController.h"
-#import "UpdataPWDViewController.h"
+#import "UpdatePWDViewController.h"
 #import "PayPasswordViewController.h"
 #import "VerificationCodeWriteViewController.h"
 
@@ -75,10 +75,10 @@
     NSString* typeString = [dataArray objectAtIndex:indexPath.row];
     
     if ([typeString isEqualToString:@"修改登录密码"]) {
-        UpdataPWDViewController* updataPWDView = [[UpdataPWDViewController alloc] init];
-        updataPWDView.title = typeString;
-        updataPWDView.delegate = self;
-        [self.navigationController pushViewController:updataPWDView animated:YES];
+        UpdatePWDViewController* updatePWDView = [[UpdatePWDViewController alloc] init];
+        updatePWDView.title = typeString;
+        updatePWDView.delegate = self;
+        [self.navigationController pushViewController:updatePWDView animated:YES];
     }
     else if ([typeString isEqualToString:@"设置支付密码"]){
         VerificationCodeWriteViewController* verificationCodeWriteView = [[VerificationCodeWriteViewController alloc] init];
@@ -93,7 +93,7 @@
         verificationCodeWriteView.title = typeString;
         verificationCodeWriteView.delegate = self;
         verificationCodeWriteView.moblieNum = [[AppUtils shareAppUtils] getAccount];
-        verificationCodeWriteView.flowType = UpdataPayPWDType;
+        verificationCodeWriteView.flowType = UpdatePayPWDType;
         [self.navigationController pushViewController:verificationCodeWriteView animated:YES];
     }
     
@@ -102,7 +102,7 @@
 #pragma mark ---- BaseViewControllerDelegate --------
 
 -(void)UIViewControllerBack:(BaseViewController *)baseViewController{
-    if ([baseViewController isKindOfClass:[UpdataPWDViewController class]]) {
+    if ([baseViewController isKindOfClass:[UpdatePWDViewController class]]) {
         [self.navigationController popViewControllerAnimated:NO];
         if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
             [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];

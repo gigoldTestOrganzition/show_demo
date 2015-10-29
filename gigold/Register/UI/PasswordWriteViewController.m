@@ -7,6 +7,9 @@
 //
 
 #import "PasswordWriteViewController.h"
+#import "RegisterRequest.h"
+#import "LoginRequest.h"
+#import "PasswordRequest.h"
 
 @interface PasswordWriteViewController ()
 
@@ -91,17 +94,39 @@
 -(void)nextBtnPress{
     [self.passwordTextField resignFirstResponder];
     if ([[AppUtils shareAppUtils] validateLoginPassword:self.passwordTextField.text]) {
-        
-        ResultShowView * resultShowView = [ResultShowView showResult:ResultTypeCorrect];
+        if (!loadView) {
+            loadView = [LoadView showLoad:LoadViewTypeJump view:self.view];
+            loadView.desc.text = @"设置登录密码中";
+        }else{
+            [loadView showDialog:self.view];
+        }
         if (self.flowType == RegisterType) {
-            resultShowView.desc.text = @"注册成功，系统将自动登录";
+            [[RegisterRequest sharedRegisterRequest] registerRequestMoblieNum:self.moblieNum loginPwd:self.passwordTextField.text payPwd:@"" success:^(AFHTTPRequestOperation * operation, id responseObject) {
+                [loadView stopDialog];
+                ResultShowView * resultShowView = [ResultShowView showResult:ResultTypeCorrect];
+                resultShowView.desc.text = @"注册成功，系统将自动登录";
+                resultShowView.desc.textColor = main_text_color;
+                resultShowView.deleget = self;
+                [resultShowView showDialog:self.view];
+                
+            }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
+                [loadView stopDialog];
+                [[AppUtils shareAppUtils] showHUD:@"注册失败" andView:self.view];
+            }];
+        }else if (self.flowType == ResetPasswordType){
+            [[PasswordRequest sharedPasswordRequest] resetLoginPwd:self.passwordTextField.text mobileNum:self.moblieNum success:^(AFHTTPRequestOperation * operation, id responseObject) {
+                [loadView stopDialog];
+                ResultShowView * resultShowView = [ResultShowView showResult:ResultTypeCorrect];
+                resultShowView.desc.text = @"登录密码重置成功";
+                resultShowView.desc.textColor = main_text_color;
+                resultShowView.deleget = self;
+                [resultShowView showDialog:self.view];
+                
+            }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
+                [loadView stopDialog];
+                [[AppUtils shareAppUtils] showHUD:@"登录密码重置失败" andView:self.view];
+            }];
         }
-        else if (self.flowType == ResetPasswordType){
-            resultShowView.desc.text = @"登录密码重置成功";
-        }
-        resultShowView.desc.textColor = main_text_color;
-        resultShowView.deleget = self;
-        [resultShowView showDialog:self.view];
         
     }else{
         [[AppUtils shareAppUtils] showHUD:@"请输入正确的密码！" andView:self.view];
@@ -112,13 +137,48 @@
 
 #pragma mark ---- ResultShowViewSureDeleget --------
 -(void)sure{
-    [self.navigationController popViewControllerAnimated:NO];
-    self.backType = FinishType;
-    if (self.flowType == RegisterType) {
-        [self loginRespond:self.moblieNum andPassword:self.passwordTextField.text];
+    if (self.flowType == RegisterType){
+        loadView.desc.text = @"登录中";
+        [loadView showDialog:self.view];
+        [[LoginRequest sharedLoginRequest] loginRequestMobileNum:self.moblieNum pwd:self.passwordTextField.text success:^(AFHTTPRequestOperation * operation, id responseObject) {
+            [loadView stopDialog];
+            NSString* rspCd = [responseObject objectForKey:@"rspCd"];
+            NSString* rspInf = [responseObject objectForKey:@"rspInf"];
+            if ([rspCd isEqualToString:@"U0000"]) {
+                [self.navigationController popViewControllerAnimated:NO];
+                self.backType = FinishType;
+                if (self.flowType == RegisterType) {
+                    [self loginRespond:self.moblieNum andPassword:self.passwordTextField.text];
+                }
+                if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
+                    [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
+                }
+            }else{
+                [loadView stopDialog];
+                [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
+                [self.navigationController popViewControllerAnimated:NO];
+                self.backType = cancelType;
+                if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
+                    [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
+                }
+            }
+            
+        }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
+            [loadView stopDialog];
+            [[AppUtils shareAppUtils] showHUD:@"登录失败" andView:self.view];
+            [self.navigationController popViewControllerAnimated:NO];
+            self.backType = cancelType;
+            if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
+                [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
+            }
+        }];
     }
-    if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
-        [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
+    else if (self.flowType == ResetPasswordType){
+        [self.navigationController popViewControllerAnimated:NO];
+        self.backType = FinishType;
+        if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
+            [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
+        }
     }
 }
 

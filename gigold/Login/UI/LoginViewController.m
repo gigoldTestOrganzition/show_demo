@@ -41,8 +41,8 @@
     [self.passwordTextField setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
     
     //测试数据
-    self.accountTextField.text = @"12345678900";
-    self.passwordTextField.text = @"1324";
+    self.accountTextField.text = @"13507451180";
+    self.passwordTextField.text = @"111111";
     
     NSLog(@"md5%@",[[AppUtils shareAppUtils] md5:@"13511407383+yyyyyyyyy"]);
 }
@@ -102,17 +102,32 @@
         return;
     }
     
-    [[LoginRequest sharedLoginRequest] loginRequestMobileNum:@"13511232" pwd:@"123"success:^(AFHTTPRequestOperation * operation, id responseObject) {
+    if (!loadView) {
+        loadView = [LoadView showLoad:LoadViewTypeJump view:self.view];
+        loadView.desc.text = @"登录中";
+    }else{
+        [loadView showDialog:self.view];
+    }
+    [[LoginRequest sharedLoginRequest] loginRequestMobileNum:self.accountTextField.text pwd:self.passwordTextField.text success:^(AFHTTPRequestOperation * operation, id responseObject) {
+        [loadView stopDialog];
+        NSLog(@"JSON: %@", responseObject);
+        NSLog(@"allHTTPHeaderFields:%@ %@",operation.request.allHTTPHeaderFields,operation.response.allHeaderFields);
+        NSString* rspCd = [responseObject objectForKey:@"rspCd"];
+        NSString* rspInf = [responseObject objectForKey:@"rspInf"];
+        if ([rspCd isEqualToString:@"U0000"]) {
+            [self loginRespond:self.accountTextField.text andPassword:self.passwordTextField.text];
+            
+            [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
+            
+            [self performSelector:@selector(delayMethod) withObject:nil afterDelay:2.0f];
+        }else{
+            [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
+        }
         
     }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
-        
+        [loadView stopDialog];
+        [[AppUtils shareAppUtils] showHUD:@"登录失败" andView:self.view];
     }];
-    
-    [self loginRespond:self.accountTextField.text andPassword:self.passwordTextField.text];
-    
-    [[AppUtils shareAppUtils] showHUD:@"登录成功" andView:self.view];
-    
-    [self performSelector:@selector(delayMethod) withObject:nil afterDelay:1.0f];
     
 }
 
@@ -123,16 +138,6 @@
     }
 }
 
-#pragma mark ---- LoginDelegate -----
-
--(void)LoginSuccessInData:(NSString*)message{
-    NSLog(@"登录成功");
-    
-}
--(void)LoginFailInData:(NSString*)message{
-    NSLog(@"登录失败，原因是:%@",message);
-    [[AppUtils shareAppUtils] showHUD:message andView:self.view];
-}
 
 #pragma mark ---- textFieldDelegate -----
 

@@ -35,6 +35,10 @@
 -(void)saveHistoricalAccount:(NSString *)obj andKey:(NSString*)key;
 -(NSMutableDictionary*)getHistoricalAccount;
 
+//tokenId
+-(void)saveTokenId:(NSString*)tokenId;
+-(NSString*)getTokenId;
+
 
 - (NSString*)getVersion;
 - (NSDate*)getYestoday;

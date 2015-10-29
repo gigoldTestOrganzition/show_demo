@@ -75,7 +75,7 @@
             if ([self.title isEqualToString:@"设置支付密码"]) {
                 payValiteView.payPwdValiteType = V_Set_PayPwdType;
             }else{
-                payValiteView.payPwdValiteType = V_Updata_PayPwdType;
+                payValiteView.payPwdValiteType = V_Update_PayPwdType;
             }
             payValiteView.newpayPwd = textString;
             [self.navigationController pushViewController:payValiteView animated:YES];

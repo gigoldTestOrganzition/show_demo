@@ -1,5 +1,5 @@
 //
-//  UpdataPWDViewController.h
+//  UpdatePWDViewController.h
 //  gigold
 //
 //  Created by wsc on 15/10/23.
@@ -9,7 +9,10 @@
 #import "BaseViewController.h"
 #import "ResultShowView.h"
 
-@interface UpdataPWDViewController : BaseViewController <UITextFieldDelegate,ResultShowViewSureDeleget>
+@interface UpdatePWDViewController : BaseViewController <UITextFieldDelegate,ResultShowViewSureDeleget>
+{
+    LoadView* loadView;
+}
 
 @property (weak, nonatomic) IBOutlet UILabel *passwordLabel1;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField1;

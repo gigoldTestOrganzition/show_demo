@@ -10,6 +10,7 @@
 #import "PasswordWriteViewController.h"
 #import "PayPasswordViewController.h"
 #import "ServiceTextViewController.h"
+#import "RegisterRequest.h"
 
 @interface VerificationCodeWriteViewController ()
 
@@ -26,7 +27,7 @@
     self.shadowHeight2.constant = 0.5;
     self.shadowWidth3.constant = 0.5;
     
-    if (self.flowType == ResetPasswordType || self.flowType == UpdataPayPWDType || self.flowType == SetPayPWDType || self.flowType == AddBankCardType) {
+    if (self.flowType == ResetPasswordType || self.flowType == UpdatePayPWDType || self.flowType == SetPayPWDType || self.flowType == AddBankCardType) {
         self.serveTextView.hidden = YES;
         self.next_view_height.constant = 30;
     }
@@ -44,7 +45,8 @@
     [self.sendLabel addGestureRecognizer:sendPress];
     self.sendLabel.userInteractionEnabled = NO;
     
-    [self startTime];
+    timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerValue) userInfo:nil repeats:YES];
+    [self timerValue];
     
     [self.agreeBtn addTarget:self action:@selector(agreeBtnPress) forControlEvents:UIControlEventTouchUpInside];
     
@@ -77,8 +79,21 @@
 }
 
 -(void)startTime{
-    timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerValue) userInfo:nil repeats:YES];
-    [self timerValue];
+    [[RegisterRequest sharedRegisterRequest] validateMoblieNum:self.moblieNum BusinessType:self.flowType  success:^(AFHTTPRequestOperation * operation, id responseObject) {
+        NSString* rspCd = [responseObject objectForKey:@"rspCd"];
+//        NSString* rspInf = [responseObject objectForKey:@"rspInf"];
+        if ([rspCd isEqualToString:@"00000"]) {
+            [[AppUtils shareAppUtils] showHUD:@"重新发送成功" andView:self.view];
+            timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerValue) userInfo:nil repeats:YES];
+            [self timerValue];
+        }else{
+            [[AppUtils shareAppUtils] showHUD:@"重新发送失败" andView:self.view];
+        }
+        
+    }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
+        [[AppUtils shareAppUtils] showHUD:@"重新发送失败" andView:self.view];
+    }];
+    
 }
 
 -(void)timerValue{
@@ -118,48 +133,120 @@
     }
 }
 
+-(void)cancelView{
+    self.backType = cancelType;
+    [self.navigationController popViewControllerAnimated:NO];
+    if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
+        [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
+    }
+}
+
 -(void)nextBtnPress{
     NSLog(@"下一步");
     [self.validateTextField resignFirstResponder];
-    if (self.flowType == UpdataPayPWDType) {
-        PayPasswordViewController* payPasswordView = [[PayPasswordViewController alloc] init];
-        payPasswordView.delegate = self;
-        payPasswordView.payPwdType = SetOldPayPwdType;
-        payPasswordView.title = self.title;
-        [self.navigationController pushViewController:payPasswordView animated:YES];
-        return;
-    }
     
-    if (self.flowType == SetPayPWDType) {
-        PayPasswordViewController* payPasswordView = [[PayPasswordViewController alloc] init];
-        payPasswordView.delegate = self;
-        payPasswordView.payPwdType = SetNewPayPwdType;
-        payPasswordView.title = self.title;
-        [self.navigationController pushViewController:payPasswordView animated:YES];
-        return;
+    if (self.flowType == RegisterType) {
+        if (!isAgree) {
+            [[AppUtils shareAppUtils] showHUD:@"请先同意服务条款！" andView:self.view];
+            return;
+        }
     }
-    
-    if (self.flowType == AddBankCardType) {
-        NSLog(@"成功");
-        ResultShowView * resultShowView = [ResultShowView showResult:ResultTypeCorrect];
-        resultShowView.desc.text = @"快捷支付开通成功";
-        resultShowView.desc.textColor = main_text_color;
-        resultShowView.deleget = self;
-        [resultShowView showDialog:self.view];
-        return;
-        
-    }
-    
-    if (isAgree) {
-        PasswordWriteViewController* passwordWriteView = [[PasswordWriteViewController alloc] init];
-        passwordWriteView.title = self.title;
-        passwordWriteView.flowType = self.flowType;
-        passwordWriteView.delegate = self;
-        passwordWriteView.moblieNum = self.moblieNum;
-        [self.navigationController pushViewController:passwordWriteView animated:YES];
+    if (!loadView) {
+        loadView = [LoadView showLoad:LoadViewTypeJump view:self.view];
+        loadView.desc.text = @"短信验证中";
     }else{
-        [[AppUtils shareAppUtils] showHUD:@"请先同意服务条款！" andView:self.view];
+        [loadView showDialog:self.view];
     }
+    [[RegisterRequest sharedRegisterRequest] validateSmsCode:self.validateTextField.text success:^(AFHTTPRequestOperation * operation, id responseObject) {
+        NSString* rspCd = [responseObject objectForKey:@"rspCd"];
+        NSString* rspInf = [responseObject objectForKey:@"rspInf"];
+        if ([rspCd isEqualToString:@"D0000"]) {
+            if (self.flowType == RegisterType || self.flowType == ResetPasswordType) {
+                [[RegisterRequest sharedRegisterRequest] ValidateUserRequestMoblieNum:self.moblieNum success:^(AFHTTPRequestOperation * operation, id responseObject) {
+                    [loadView stopDialog];
+                    NSString* subrspCd = [responseObject objectForKey:@"rspCd"];
+                    NSString* subrspInf = [responseObject objectForKey:@"rspInf"];
+                    NSLog(@"subrspInf%@",subrspInf);
+                    BOOL isshowSuccess = YES;
+                    if (self.flowType == RegisterType) {
+                        [loadView stopDialog];
+                        if ([subrspCd isEqualToString:@"U0013"]) {
+                            NSLog(@"去直接登录");
+                            
+                            [[AppUtils shareAppUtils] showHUD:subrspInf andView:self.view];
+                            isshowSuccess = NO;
+                            [self performSelector:@selector(cancelView) withObject:nil afterDelay:1];
+                            
+                        }else{
+                            PasswordWriteViewController* passwordWriteView = [[PasswordWriteViewController alloc] init];
+                            passwordWriteView.title = self.title;
+                            passwordWriteView.flowType = self.flowType;
+                            passwordWriteView.delegate = self;
+                            passwordWriteView.moblieNum = self.moblieNum;
+                            [self.navigationController pushViewController:passwordWriteView animated:YES];
+                        }
+                        
+                    }
+                    else if (self.flowType == ResetPasswordType){
+                        if ([subrspCd isEqualToString:@"U0014"]) {
+                            [[AppUtils shareAppUtils] showHUD:subrspInf andView:self.view];
+                            isshowSuccess = NO;
+                            
+                            [self performSelector:@selector(cancelView) withObject:nil afterDelay:1];
+                        }else{
+                            PasswordWriteViewController* passwordWriteView = [[PasswordWriteViewController alloc] init];
+                            passwordWriteView.title = self.title;
+                            passwordWriteView.flowType = self.flowType;
+                            passwordWriteView.delegate = self;
+                            passwordWriteView.moblieNum = self.moblieNum;
+                            [self.navigationController pushViewController:passwordWriteView animated:YES];
+                        }
+                    }
+                    
+                    if (isshowSuccess) {
+                        [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
+                    }
+                }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
+                    [loadView stopDialog];
+                    [[AppUtils shareAppUtils] showHUD:@"验证失败" andView:self.view];
+                }];
+            }
+            else{
+                [loadView stopDialog];
+                if (self.flowType == UpdatePayPWDType) {
+                    PayPasswordViewController* payPasswordView = [[PayPasswordViewController alloc] init];
+                    payPasswordView.delegate = self;
+                    payPasswordView.payPwdType = SetOldPayPwdType;
+                    payPasswordView.title = self.title;
+                    [self.navigationController pushViewController:payPasswordView animated:YES];
+                }
+                else if (self.flowType == SetPayPWDType) {
+                    PayPasswordViewController* payPasswordView = [[PayPasswordViewController alloc] init];
+                    payPasswordView.delegate = self;
+                    payPasswordView.payPwdType = SetNewPayPwdType;
+                    payPasswordView.title = self.title;
+                    [self.navigationController pushViewController:payPasswordView animated:YES];
+                    return;
+                }
+                else if (self.flowType == AddBankCardType) {
+                    ResultShowView * resultShowView = [ResultShowView showResult:ResultTypeCorrect];
+                    resultShowView.desc.text = @"快捷支付开通成功";
+                    resultShowView.desc.textColor = main_text_color;
+                    resultShowView.deleget = self;
+                    [resultShowView showDialog:self.view];
+                    return;
+                }
+            }
+            
+        }else{
+            [loadView stopDialog];
+            [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
+        }
+        
+    }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
+        [loadView stopDialog];
+        [[AppUtils shareAppUtils] showHUD:@"验证失败" andView:self.view];
+    }];
     
 }
 

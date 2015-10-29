@@ -115,11 +115,11 @@
     menuTitles = [[NSMutableArray alloc] initWithObjects:@"全部",@"收入",@"支出", nil];
     menuImages = [[NSMutableArray alloc] initWithObjects:@"ico_statement_1",@"ico_statement_2",@"ico_statement_3", nil];
     
-    NSDictionary* dict1 = [NSDictionary dictionaryWithObjectsAndKeys:@"2015-10-10",@"time",@"账户充值",@"style",@"80",@"smallChange",@"+80",@"money", nil];
-    NSDictionary* dict2 = [NSDictionary dictionaryWithObjectsAndKeys:@"2015-10-11",@"time",@"账户充值",@"style",@"160",@"smallChange",@"+80",@"money", nil];
-    NSDictionary* dict3 = [NSDictionary dictionaryWithObjectsAndKeys:@"2015-10-12",@"time",@"账户充值",@"style",@"360",@"smallChange",@"+200",@"money", nil];
-    NSDictionary* dict4 = [NSDictionary dictionaryWithObjectsAndKeys:@"2015-10-13",@"time",@"提现",@"style",@"260",@"smallChange",@"-100",@"money", nil];
-    NSDictionary* dict5 = [NSDictionary dictionaryWithObjectsAndKeys:@"2015-10-15",@"time",@"商品消费",@"style",@"140",@"smallChange",@"-120",@"money", nil];
+    NSDictionary* dict1 = [NSDictionary dictionaryWithObjectsAndKeys:@"2015-10-10",@"time",@"账户充值",@"style",@"80",@"smallChange",@"80",@"money",@"+",@"fuhao", nil];
+    NSDictionary* dict2 = [NSDictionary dictionaryWithObjectsAndKeys:@"2015-10-11",@"time",@"账户充值",@"style",@"160",@"smallChange",@"80",@"money",@"+",@"fuhao", nil];
+    NSDictionary* dict3 = [NSDictionary dictionaryWithObjectsAndKeys:@"2015-10-12",@"time",@"账户充值",@"style",@"360",@"smallChange",@"200",@"money",@"+",@"fuhao", nil];
+    NSDictionary* dict4 = [NSDictionary dictionaryWithObjectsAndKeys:@"2015-10-13",@"time",@"提现",@"style",@"260",@"smallChange",@"100",@"money",@"-",@"fuhao", nil];
+    NSDictionary* dict5 = [NSDictionary dictionaryWithObjectsAndKeys:@"2015-10-15",@"time",@"商品消费",@"style",@"140",@"smallChange",@"120",@"money",@"-",@"fuhao", nil];
     
 //    dataArray = [[NSMutableArray alloc] init];
     dataArray = [[NSMutableArray alloc] initWithObjects:dict5,dict4,dict3,dict2,dict1, nil];
@@ -168,7 +168,13 @@
     cell.styleLabel.text = [[dataArray objectAtIndex:indexPath.row] objectForKey:@"style"];
     cell.timeLabel.text = [[dataArray objectAtIndex:indexPath.row] objectForKey:@"time"];
     cell.smallChangeLabel.text = [NSString stringWithFormat:@"余额：%@",[[dataArray objectAtIndex:indexPath.row] objectForKey:@"smallChange"]];
-    cell.moneyLabel.text = [[dataArray objectAtIndex:indexPath.row] objectForKey:@"money"];;
+    cell.moneyLabel.text = [NSString stringWithFormat:@"%@%@",[[dataArray objectAtIndex:indexPath.row] objectForKey:@"fuhao"],[[dataArray objectAtIndex:indexPath.row] objectForKey:@"money"]];;
+    
+    if ([[[dataArray objectAtIndex:indexPath.row] objectForKey:@"fuhao"]isEqualToString:@"+"]) {
+        cell.moneyLabel.textColor = theme_color;
+    }else{
+        cell.moneyLabel.textColor = UIColorFromRGB(0xE56767);
+    }
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     

@@ -17,7 +17,7 @@
 
 
 #ifdef DEBUG
-#define MF_URL_HOST @"http://192.168.2.47:8080/foundation-web"  //测试环境的HOST
+#define MF_URL_HOST @"http://192.168.2.29:8080/foundation-web"  //测试环境的HOST
 #else
 #define MF_URL_HOST @""  //正式环境的HOST
 #endif

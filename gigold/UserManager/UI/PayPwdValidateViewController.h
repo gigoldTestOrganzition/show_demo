@@ -9,7 +9,7 @@
 typedef enum _PayPwdValiteType
 {
     V_Set_PayPwdType = 0,
-    V_Updata_PayPwdType,
+    V_Update_PayPwdType,
     V_Delete_BankCardType,
 } PayPwdValiteType;
 

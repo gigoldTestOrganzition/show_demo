@@ -10,6 +10,9 @@
 #import "ResultShowView.h"
 
 @interface PasswordWriteViewController : BaseViewController <UITextFieldDelegate,ResultShowViewSureDeleget>
+{
+    LoadView* loadView;
+}
 
 @property (weak, nonatomic) IBOutlet UIButton *nextBtn;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;

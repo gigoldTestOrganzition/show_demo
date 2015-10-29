@@ -22,14 +22,31 @@ static RegisterRequest *registerRequest = nil;
 
 //获取短信验证码
 //"sign":"签名算法:将参数按ASII码排序，然后加上密钥串进行MD5加密，例如：sign=MD5(mobileNum=13576543876+MWD76D29KKAS8912SK)" /*签名*/
-- (AFHTTPRequestOperation *)validateMoblieNum:(NSString*)mobileNum
+- (AFHTTPRequestOperation *)validateMoblieNum:(NSString*)mobileNum BusinessType:(NSInteger)businessType
                                     success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                                     failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error, id responseObject))failure{
     
     NSMutableDictionary* tempParam = [NSMutableDictionary dictionary];
-    [tempParam setValue:mobileNum forKey:@"moblieNum"];
+    [tempParam setValue:mobileNum forKey:@"mobileNum"];
+    [tempParam setValue:[NSString stringWithFormat:@"%ld",(long)businessType] forKey:@"businessType"];
     
     return [[FMNetWorkManager sharedInstance] requestURL:MOBLIE_VALIDATE_URL httpMethod:@"POST" parameters:tempParam success:^(AFHTTPRequestOperation * operation, id responseObject) {
+        success(operation, responseObject);
+        
+    }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
+        failure(operation, error ,responseObject);
+    }];
+}
+
+//检查短信验证码是否合法
+//"smsCode":"" /*验证码*/
+- (AFHTTPRequestOperation *)validateSmsCode:(NSString*)smsCode
+                                    success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
+                                    failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error, id responseObject))failure{
+    NSMutableDictionary* tempParam = [NSMutableDictionary dictionary];
+    [tempParam setValue:smsCode forKey:@"smsCode"];
+
+    return [[FMNetWorkManager sharedInstance] requestURL:CODE_VALIDATE_URL httpMethod:@"POST" parameters:tempParam success:^(AFHTTPRequestOperation * operation, id responseObject) {
         success(operation, responseObject);
         
     }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
@@ -43,7 +60,14 @@ static RegisterRequest *registerRequest = nil;
                                            success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                                            failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error, id responseObject))failure{
     
-    return [[FMNetWorkManager sharedInstance] requestURL:REGISTER_URL httpMethod:@"POST" parameters:nil success:^(AFHTTPRequestOperation * operation, id responseObject) {
+    NSMutableDictionary* user = [NSMutableDictionary dictionary];
+    [user setValue:mobileNum forKey:@"mobileNum"];
+    [user setValue:loginPwd forKey:@"loginPwd"];
+    
+    NSMutableDictionary* tempParam = [NSMutableDictionary dictionary];
+    [tempParam setValue:user forKey:@"user"];
+    
+    return [[FMNetWorkManager sharedInstance] requestURL:REGISTER_URL httpMethod:@"POST" parameters:tempParam success:^(AFHTTPRequestOperation * operation, id responseObject) {
         success(operation, responseObject);
         
     }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
@@ -51,5 +75,24 @@ static RegisterRequest *registerRequest = nil;
     }];
 }
 
+//校验用户是否存在
+//"mobileNum":"" /*手机号，APP只得长度校难，后台作合法性校验*/
+
+- (AFHTTPRequestOperation *)ValidateUserRequestMoblieNum:(NSString*)mobileNum
+                                                 success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
+                                                 failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error, id responseObject))failure{
+    
+    NSMutableDictionary* user = [NSMutableDictionary dictionary];
+    [user setValue:mobileNum forKey:@"mobile"];
+
+    NSDictionary* param = [NSDictionary dictionaryWithObjectsAndKeys:user,@"user", nil];
+    
+    return [[FMNetWorkManager sharedInstance] requestURL:VALIDATE_UER_URL httpMethod:@"POST" parameters:param success:^(AFHTTPRequestOperation * operation, id responseObject) {
+        success(operation, responseObject);
+        
+    }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
+        failure(operation, error ,responseObject);
+    }];
+}
 
 @end

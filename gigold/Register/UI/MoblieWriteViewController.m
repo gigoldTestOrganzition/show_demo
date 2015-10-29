@@ -59,21 +59,40 @@
 -(void)nextBtnPress{
     NSLog(@"下一步");
     
-    
-    
     if ([[AppUtils shareAppUtils] validateMobile:self.mobileTextField.text]) {
-        if (self.flowType == ResetPasswordType) {
-            [self performSelector:@selector(stopLoadView) withObject:nil afterDelay:1];
-            loadView = [LoadView showLoad:LoadViewTypeSafeCheck view:self.view];
-            return;
+        if (!loadView) {
+            if (self.flowType == ResetPasswordType) {
+               loadView = [LoadView showLoad:LoadViewTypeSafeCheck view:self.view];
+            }else{
+                loadView = [LoadView showLoad:LoadViewTypeJump view:self.view];
+                loadView.desc.text = @"发送验证码中";
+            }
+        }else{
+            [loadView showDialog:self.view];
         }
+
+        [[RegisterRequest sharedRegisterRequest] validateMoblieNum:self.mobileTextField.text BusinessType:self.flowType success:^(AFHTTPRequestOperation * operation, id responseObject) {
+            [loadView stopDialog];
+            NSString* rspCd = [responseObject objectForKey:@"rspCd"];
+            NSString* rspInf = [responseObject objectForKey:@"rspInf"];
+            if ([rspCd isEqualToString:@"00000"]) {
+                [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
+                VerificationCodeWriteViewController* verificationCodeWriteView = [[VerificationCodeWriteViewController alloc] init];
+                verificationCodeWriteView.title = self.title;
+                verificationCodeWriteView.moblieNum = self.mobileTextField.text;
+                verificationCodeWriteView.flowType = self.flowType;
+                verificationCodeWriteView.delegate = self;
+                [self.navigationController pushViewController:verificationCodeWriteView animated:YES];
+            }else{
+                [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
+            }
+            
+        }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
+            [loadView stopDialog];
+            [[AppUtils shareAppUtils] showHUD:@"发送验证码失败" andView:self.view];
+        }];
         
-        VerificationCodeWriteViewController* verificationCodeWriteView = [[VerificationCodeWriteViewController alloc] init];
-        verificationCodeWriteView.title = self.title;
-        verificationCodeWriteView.moblieNum = self.mobileTextField.text;
-        verificationCodeWriteView.flowType = self.flowType;
-        verificationCodeWriteView.delegate = self;
-        [self.navigationController pushViewController:verificationCodeWriteView animated:YES];
+        
     }else{
         [[AppUtils shareAppUtils] showHUD:@"请输入正确的手机号码！" andView:self.view];
         [self.mobileTextField becomeFirstResponder];

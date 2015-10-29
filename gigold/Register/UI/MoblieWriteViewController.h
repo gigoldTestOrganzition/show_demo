@@ -8,6 +8,7 @@
 
 #import "BaseViewController.h"
 #import "LoadView.h"
+#import "RegisterRequest.h"
 
 @interface MoblieWriteViewController : BaseViewController <UITextFieldDelegate>
 {

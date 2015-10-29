@@ -30,6 +30,8 @@ typedef NS_ENUM(NSInteger,ResultType){
 @property (weak, nonatomic) id<ResultShowViewSureDeleget> deleget;
 //绘制时间
 @property (assign,nonatomic)CGFloat drawTime;
+@property (strong,nonatomic)AutomaticArcView* automaticArcView;
+
 //显示
 +(ResultShowView*)showResult:(ResultType)resultType;
 @end

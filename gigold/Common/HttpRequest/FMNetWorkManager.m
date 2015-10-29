@@ -7,6 +7,7 @@
 //
 
 #import "FMNetWorkManager.h"
+#import "AppUtils.h"
 
 @implementation FMNetWorkManager
 
@@ -82,7 +83,12 @@
                                            success:(void (^)(AFHTTPRequestOperation *, id))success
                                            failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error, id responseObject))failure
 {
-//    //公共参数
+    //公共参数
+    
+    NSMutableDictionary* params = [NSMutableDictionary dictionaryWithDictionary:parameters];
+    if ([[AppUtils shareAppUtils] getTokenId]) {
+        [params setObject:[[AppUtils shareAppUtils] getTokenId] forKey:@"tokenId"];
+    }
 //    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
 //    dic[@"jsessionid"] = @"7e0fe3fa6180157d032b4ebba5ca36fa";
 //    
@@ -92,40 +98,7 @@
 //    
 //    NSError *serializationError = nil;
 //    NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:method URLString:[[NSURL URLWithString:theUrl relativeToURL:self.baseURL] absoluteString] parameters:nil error:&serializationError];
-//    
-//    NSLog(@"request URL : %@", request.URL.absoluteString);
-//    if (timeout > 0) {
-//        [request setTimeoutInterval:timeout];
-//    }
-//    if (serializationError) {
-//        if (failure) {
-//#pragma clang diagnostic push
-//#pragma clang diagnostic ignored "-Wgnu"
-//            dispatch_async(self.completionQueue ?: dispatch_get_main_queue(), ^{
-//                failure(nil, serializationError ,nil);
-//            });
-//#pragma clang diagnostic pop
-//        }
-//        
-//        return nil;
-//    }
-//
-//    __block NSURLSessionDataTask *dataTask = nil;
-//    dataTask = [self dataTaskWithRequest:request completionHandler:^(NSURLResponse * __unused response, id responseObject, NSError *error) {
-//
-//        if (error) {
-//            if (failure) {
-//                failure(dataTask, error ,responseObject);
-//            }
-//        } else {
-//            if (success) {
-//                success(dataTask, responseObject);
-//            }
-//        }
-//    }];
-//    
-//    return dataTask;
-    
+
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     //申明返回的结果是json类型
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
@@ -139,7 +112,7 @@
 //    NSDictionary *parameters = @{@"1":@"XXXX",@"2":@"XXXX",@"3":@"XXXXX"};
     //你的接口地址
     //发送请求
-    __block AFHTTPRequestOperation *operation = [manager POST:[NSString stringWithFormat:@"%@%@",MF_URL_HOST,URLString] parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    __block AFHTTPRequestOperation *operation = [manager POST:[NSString stringWithFormat:@"%@%@",MF_URL_HOST,URLString] parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
         NSLog(@"allHTTPHeaderFields:%@ %@",operation.request.allHTTPHeaderFields,operation.response.allHeaderFields);
         success (operation,responseObject);

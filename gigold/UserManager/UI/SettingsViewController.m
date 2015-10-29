@@ -7,6 +7,7 @@
 //
 
 #import "SettingsViewController.h"
+#import "LoginRequest.h"
 
 @interface SettingsViewController ()
 
@@ -100,8 +101,20 @@
         
     }else{
         NSLog(@"去退出");
-        [self logoutRespond];
-        [self.navigationController popViewControllerAnimated:YES];
+        [[LoginRequest sharedLoginRequest] logoutRequestMobileNum:@"" success:^(AFHTTPRequestOperation * operation, id responseObject) {
+            NSString* rspCd = [responseObject objectForKey:@"rspCd"];
+            NSString* rspInf = [responseObject objectForKey:@"rspInf"];
+            if ([rspCd isEqualToString:@"U0000"]) {
+                [self logoutRespond];
+                [self.navigationController popViewControllerAnimated:YES];
+            }else{
+                [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
+            }
+        }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
+            [[AppUtils shareAppUtils] showHUD:@"登出失败" andView:self.view];
+        }];
+        
+        
     }
 }
 

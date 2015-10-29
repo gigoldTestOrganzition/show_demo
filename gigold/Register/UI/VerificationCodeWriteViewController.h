@@ -16,6 +16,8 @@
     NSTimer* timer;
     NSInteger timeCount;
     
+    LoadView* loadView;
+    
     BOOL isAgree;
 }
 @property (weak, nonatomic) IBOutlet UIButton *nextBtn;

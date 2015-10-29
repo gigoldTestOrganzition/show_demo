@@ -35,7 +35,7 @@
     
     if (self.payPwdValiteType == V_Set_PayPwdType) {
         self.titleLabel.text = @"请再次输入支付密码";
-    }else if (self.payPwdValiteType == V_Updata_PayPwdType){
+    }else if (self.payPwdValiteType == V_Update_PayPwdType){
         self.titleLabel.text = @"请再次输入新的支付密码";
     }
     // Do any additional setup after loading the view from its nib.
@@ -129,7 +129,7 @@
 
 -(void)nextBtnPress{
     [tempTextField  resignFirstResponder];
-    if (self.payPwdValiteType == V_Set_PayPwdType || self.payPwdValiteType == V_Updata_PayPwdType) {
+    if (self.payPwdValiteType == V_Set_PayPwdType || self.payPwdValiteType == V_Update_PayPwdType) {
         if (![tempTextField.text isEqualToString:self.newpayPwd]){
             [[AppUtils shareAppUtils] showHUD:@"您两次输入的支付密码不一致" andView:self.view];
             [self clearPassword];
@@ -146,7 +146,7 @@
     if (self.payPwdValiteType == V_Set_PayPwdType) {
         resultShowView.desc.text = @"支付密码设置成功";
     }
-    else if (self.payPwdValiteType == V_Updata_PayPwdType){
+    else if (self.payPwdValiteType == V_Update_PayPwdType){
         resultShowView.desc.text = @"支付密码修改成功";
     }
     else if (self.payPwdValiteType == V_Delete_BankCardType){

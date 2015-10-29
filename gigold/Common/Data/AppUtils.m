@@ -116,6 +116,21 @@ NSUserDefaults *defaults = nil;
     return NO;
 }
 
+-(void)saveTokenId:(NSString*)tokenId{
+    if (defaults)
+    {
+        [defaults setObject:tokenId?tokenId:@"" forKey:@"tokenId"];
+        [defaults synchronize];
+    }
+}
+-(NSString*)getTokenId{
+    if (defaults)
+    {
+        return  [defaults stringForKey:@"tokenId"];
+    }
+    return nil;
+}
+
 //记录常用登录的账号
 -(void)saveHistoricalAccount:(NSString *)obj andKey:(NSString*)key{
     if (defaults)
@@ -273,7 +288,9 @@ NSUserDefaults *defaults = nil;
 
 -(void)showHUD:(NSString*)text andView:(UIView*)view
 {
-    
+    if ([text isKindOfClass:[NSNull class]]) {
+        text = @"";
+    }
     MBProgressHUD *hud = [[MBProgressHUD alloc]initWithView:view];
     [view addSubview:hud];
     hud.customView = [[UIView alloc] init] ;
