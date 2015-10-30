@@ -207,8 +207,8 @@
 		5CCCEEE21BDDC5C200336158 /* TradingData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCCEECC1BDDC5C200336158 /* TradingData.m */; settings = {ASSET_TAGS = (); }; };
 		5CCCEEE31BDDC5C200336158 /* TradingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCCEED11BDDC5C200336158 /* TradingCell.m */; settings = {ASSET_TAGS = (); }; };
 		5CCCEEE41BDDC5C200336158 /* TradingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCCEED31BDDC5C200336158 /* TradingDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5CD0BFE41BE31D1F0036ED42 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD0BFE31BE31D1F0036ED42 /* User.m */; settings = {ASSET_TAGS = (); }; };
 		5CD0BFE91BE33EC20036ED42 /* BaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD0BFE81BE33EC20036ED42 /* BaseClass.m */; settings = {ASSET_TAGS = (); }; };
+		5CD0BFEE1BE354C90036ED42 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD0BFED1BE354C90036ED42 /* User.m */; settings = {ASSET_TAGS = (); }; };
 		5CF7B6831BE0C8230041E96E /* LoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7B6801BE0C8230041E96E /* LoadView.m */; settings = {ASSET_TAGS = (); }; };
 		5CF7B6841BE0C8230041E96E /* LoadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B6811BE0C8230041E96E /* LoadView.xib */; settings = {ASSET_TAGS = (); }; };
 		5CF7B6891BE0C88F0041E96E /* SecurityPromptView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7B6871BE0C88F0041E96E /* SecurityPromptView.m */; settings = {ASSET_TAGS = (); }; };
@@ -552,10 +552,10 @@
 		5CCCEED11BDDC5C200336158 /* TradingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradingCell.m; sourceTree = "<group>"; };
 		5CCCEED21BDDC5C200336158 /* TradingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradingDetailViewController.h; sourceTree = "<group>"; };
 		5CCCEED31BDDC5C200336158 /* TradingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradingDetailViewController.m; sourceTree = "<group>"; };
-		5CD0BFE21BE31D1F0036ED42 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = gigold/UserManager/HttpRequest/User.h; sourceTree = SOURCE_ROOT; };
-		5CD0BFE31BE31D1F0036ED42 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = gigold/UserManager/HttpRequest/User.m; sourceTree = SOURCE_ROOT; };
 		5CD0BFE71BE33EC20036ED42 /* BaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseClass.h; sourceTree = "<group>"; };
 		5CD0BFE81BE33EC20036ED42 /* BaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseClass.m; sourceTree = "<group>"; };
+		5CD0BFEC1BE354C90036ED42 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		5CD0BFED1BE354C90036ED42 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		5CF7B67F1BE0C8230041E96E /* LoadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadView.h; sourceTree = "<group>"; };
 		5CF7B6801BE0C8230041E96E /* LoadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadView.m; sourceTree = "<group>"; };
 		5CF7B6811BE0C8230041E96E /* LoadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadView.xib; sourceTree = "<group>"; };
@@ -896,21 +896,12 @@
 		5C5A2DB41BD6115D00C4AE1D /* UserManager */ = {
 			isa = PBXGroup;
 			children = (
-				5C5A2DB51BD6115D00C4AE1D /* Data */,
+				5CD0BFEB1BE354C90036ED42 /* Data */,
 				5C5A2DB61BD6115D00C4AE1D /* HttpRequest */,
 				5C5A2DB91BD6115D00C4AE1D /* Images */,
 				5C5A2DBA1BD6115D00C4AE1D /* UI */,
 			);
 			path = UserManager;
-			sourceTree = "<group>";
-		};
-		5C5A2DB51BD6115D00C4AE1D /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				5CD0BFE21BE31D1F0036ED42 /* User.h */,
-				5CD0BFE31BE31D1F0036ED42 /* User.m */,
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		5C5A2DB61BD6115D00C4AE1D /* HttpRequest */ = {
@@ -2893,6 +2884,16 @@
 			path = ui;
 			sourceTree = "<group>";
 		};
+		5CD0BFEB1BE354C90036ED42 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5CD0BFEC1BE354C90036ED42 /* User.h */,
+				5CD0BFED1BE354C90036ED42 /* User.m */,
+			);
+			name = Data;
+			path = gigold/UserManager/Data;
+			sourceTree = SOURCE_ROOT;
+		};
 		5CF7B67E1BE0C8230041E96E /* loadView */ = {
 			isa = PBXGroup;
 			children = (
@@ -3207,6 +3208,7 @@
 				5C746C971BD78A67007A7DE6 /* TopUpShowViewController.mm in Sources */,
 				5CCCEE711BDDC4DC00336158 /* IncomeInstructionViewController.m in Sources */,
 				5CCCEE781BDDC4DC00336158 /* SenvenIncomeRateViewController.m in Sources */,
+				5CD0BFEE1BE354C90036ED42 /* User.m in Sources */,
 				5CC6BC191BD8A4E400660205 /* MBProgressHUD.m in Sources */,
 				5CC6BBFC1BD8993E00660205 /* STDbHandle.m in Sources */,
 				5C4B7A921BD7C222009D556E /* BaseViewController.m in Sources */,
@@ -3244,7 +3246,6 @@
 				5CC9C3371BE062E700C2269A /* BankCardTableViewCell.m in Sources */,
 				5CA673AF1BD9C61000BED35A /* UIViewController+RNSwipeViewController.m in Sources */,
 				5C5A2DC81BD6115D00C4AE1D /* LoginRequest.m in Sources */,
-				5CD0BFE41BE31D1F0036ED42 /* User.m in Sources */,
 				5CC6BC041BD8993E00660205 /* NetworkUtil.m in Sources */,
 				5CCCEED91BDDC5C200336158 /* RollInViewController.m in Sources */,
 				5CA41C481BC8E688000A3484 /* main.m in Sources */,
