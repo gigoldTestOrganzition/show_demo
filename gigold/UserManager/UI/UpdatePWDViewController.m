@@ -90,11 +90,18 @@
     
     [[PasswordRequest sharedPasswordRequest] updateLoginPwd:self.passwordTextField1.text newLoginPwd:self.passwordTextField2.text success:^(AFHTTPRequestOperation * operation, id responseObject) {
         [loadView stopDialog];
-        ResultShowView * resultShowView = [ResultShowView showResult:ResultTypeCorrect];
-        resultShowView.desc.text = @"登录密码修改成功";
-        resultShowView.desc.textColor = main_text_color;
-        resultShowView.deleget = self;
-        [resultShowView showDialog:self.view];
+        NSString* rspCd = [responseObject objectForKey:@"rspCd"];
+        NSString* rspInf = [responseObject objectForKey:@"rspInf"];
+        if ([rspCd isEqualToString:@"00000"]){
+            ResultShowView * resultShowView = [ResultShowView showResult:ResultTypeCorrect];
+            resultShowView.desc.text = @"登录密码修改成功";
+            resultShowView.desc.textColor = main_text_color;
+            resultShowView.deleget = self;
+            [resultShowView showDialog:self.view];
+        }else{
+            [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
+        }
+        
     } failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
         [loadView stopDialog];
         [[AppUtils shareAppUtils] showHUD:@"登录密码修改失败" andView:self.view];

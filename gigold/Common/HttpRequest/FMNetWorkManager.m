@@ -104,6 +104,13 @@
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     //申明请求的数据是json类型
     manager.requestSerializer=[AFJSONRequestSerializer serializer];
+    manager.requestSerializer.HTTPShouldHandleCookies = YES;
+    
+
+//    NSArray *cookies = [NSKeyedUnarchiver unarchiveObjectWithData: [[NSUserDefaults standardUserDefaults] objectForKey: @"sessionCookies"]];
+//    NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+//
+
     //如果报接受类型不一致请替换一致text/html或别的
 //    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
 //    manager.requestSerializer.HTTPRequestHeaders
@@ -112,7 +119,24 @@
 //    NSDictionary *parameters = @{@"1":@"XXXX",@"2":@"XXXX",@"3":@"XXXXX"};
     //你的接口地址
     //发送请求
+    [manager.requestSerializer setValue:@"application/json"forHTTPHeaderField:@"Accept"];
+    [manager.requestSerializer setValue:@"application/json;charset=utf-8"forHTTPHeaderField:@"Content-Type"];
+    
+    NSString* GID =  [[AppUtils shareAppUtils] getGID];
+    NSLog(@"NSString GID%@",GID);
+    if (GID.length > 0){
+        [manager.requestSerializer setValue:GID forHTTPHeaderField:@"GID"];
+    }
+    
+    
     __block AFHTTPRequestOperation *operation = [manager POST:[NSString stringWithFormat:@"%@%@",MF_URL_HOST,URLString] parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        //取头信息中的GID值进行存储
+        NSString *GID = [[operation.response allHeaderFields] valueForKey:@"GID"];
+        if (GID.length > 0) {
+            [[AppUtils shareAppUtils] saveGID:GID];
+        }
+        
         NSLog(@"JSON: %@", responseObject);
         NSLog(@"allHTTPHeaderFields:%@ %@",operation.request.allHTTPHeaderFields,operation.response.allHeaderFields);
         success (operation,responseObject);

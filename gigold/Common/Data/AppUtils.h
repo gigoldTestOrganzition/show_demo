@@ -39,6 +39,9 @@
 -(void)saveTokenId:(NSString*)tokenId;
 -(NSString*)getTokenId;
 
+//GID
+-(void)saveGID:(NSString*)GID;
+-(NSString*)getGID;
 
 - (NSString*)getVersion;
 - (NSDate*)getYestoday;

@@ -28,7 +28,7 @@ static PasswordRequest *passwordRequest = nil;
                                   success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                                   failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error, id responseObject))failure{
     
-    NSDictionary* user = [NSDictionary dictionaryWithObjectsAndKeys:loginPwd,@"loginPwd",mobile,@"mobile", nil];
+    NSDictionary* user = [NSDictionary dictionaryWithObjectsAndKeys:loginPwd,@"loginPwd", nil];
     NSDictionary* params = [NSDictionary dictionaryWithObjectsAndKeys:user,@"user",nil];
     
     return [[FMNetWorkManager sharedInstance] requestURL:RESET_LOGIN_PWD_URL httpMethod:@"POST" parameters:params success:^(AFHTTPRequestOperation * operation, id responseObject) {

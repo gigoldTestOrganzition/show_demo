@@ -131,6 +131,22 @@ NSUserDefaults *defaults = nil;
     return nil;
 }
 
+-(void)saveGID:(NSString*)GID{
+    if (defaults)
+    {
+        [defaults setObject:GID?GID:@"" forKey:@"GID"];
+        [defaults synchronize];
+    }
+}
+
+-(NSString*)getGID{
+    if (defaults)
+    {
+        return  [defaults stringForKey:@"GID"];
+    }
+    return nil;
+}
+
 //记录常用登录的账号
 -(void)saveHistoricalAccount:(NSString *)obj andKey:(NSString*)key{
     if (defaults)

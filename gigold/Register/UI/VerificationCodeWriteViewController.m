@@ -157,10 +157,10 @@
     }else{
         [loadView showDialog:self.view];
     }
-    [[RegisterRequest sharedRegisterRequest] validateSmsCode:self.validateTextField.text success:^(AFHTTPRequestOperation * operation, id responseObject) {
+    [[RegisterRequest sharedRegisterRequest] validateSmsCode:self.validateTextField.text BusinessType:self.flowType success:^(AFHTTPRequestOperation * operation, id responseObject) {
         NSString* rspCd = [responseObject objectForKey:@"rspCd"];
         NSString* rspInf = [responseObject objectForKey:@"rspInf"];
-        if ([rspCd isEqualToString:@"D0000"]) {
+        if ([rspCd isEqualToString:@"00000"]) {
             if (self.flowType == RegisterType || self.flowType == ResetPasswordType) {
                 [[RegisterRequest sharedRegisterRequest] ValidateUserRequestMoblieNum:self.moblieNum success:^(AFHTTPRequestOperation * operation, id responseObject) {
                     [loadView stopDialog];

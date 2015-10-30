@@ -40,11 +40,12 @@ static RegisterRequest *registerRequest = nil;
 
 //检查短信验证码是否合法
 //"smsCode":"" /*验证码*/
-- (AFHTTPRequestOperation *)validateSmsCode:(NSString*)smsCode
+- (AFHTTPRequestOperation *)validateSmsCode:(NSString*)smsCode BusinessType:(NSInteger)businessType
                                     success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                                     failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error, id responseObject))failure{
     NSMutableDictionary* tempParam = [NSMutableDictionary dictionary];
     [tempParam setValue:smsCode forKey:@"smsCode"];
+    [tempParam setValue:[NSString stringWithFormat:@"%ld",(long)businessType] forKey:@"businessType"];
 
     return [[FMNetWorkManager sharedInstance] requestURL:CODE_VALIDATE_URL httpMethod:@"POST" parameters:tempParam success:^(AFHTTPRequestOperation * operation, id responseObject) {
         success(operation, responseObject);
@@ -61,7 +62,7 @@ static RegisterRequest *registerRequest = nil;
                                            failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error, id responseObject))failure{
     
     NSMutableDictionary* user = [NSMutableDictionary dictionary];
-    [user setValue:mobileNum forKey:@"mobileNum"];
+//    [user setValue:mobileNum forKey:@"mobile"];
     [user setValue:loginPwd forKey:@"loginPwd"];
     
     NSMutableDictionary* tempParam = [NSMutableDictionary dictionary];

@@ -25,7 +25,7 @@
 //检查短信验证码是否合法
 //"smsCode":"" /*验证码*/
 #define CODE_VALIDATE_URL  @"/sms/verifySmsCode.do"
-- (AFHTTPRequestOperation *)validateSmsCode:(NSString*)smsCode
+- (AFHTTPRequestOperation *)validateSmsCode:(NSString*)smsCode BusinessType:(NSInteger)businessType
                                       success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                                       failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error, id responseObject))failure;
 
@@ -35,7 +35,7 @@
 //"payPwd":"最少6位，而且必须为字母和数字的组合，第一位必须为字母" /*支付密码*/,
 //"sign":"sign=MD5(loginPwd=abc123&mobileNum=13576543876&payPwd=reft876+MWD76D29KKAS8912SK)" /*签名*/
 
-#define REGISTER_URL    @"/user/register.do"
+#define REGISTER_URL    @"/user/registerUser.do"
 
 - (AFHTTPRequestOperation *)registerRequestMoblieNum:(NSString*)mobileNum loginPwd:(NSString*)loginPwd  payPwd:(NSString*)payPwd
                                     success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
