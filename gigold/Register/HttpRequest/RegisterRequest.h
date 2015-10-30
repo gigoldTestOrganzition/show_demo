@@ -37,7 +37,7 @@
 
 #define REGISTER_URL    @"/user/registerUser.do"
 
-- (AFHTTPRequestOperation *)registerRequestMoblieNum:(NSString*)mobileNum loginPwd:(NSString*)loginPwd  payPwd:(NSString*)payPwd
+- (AFHTTPRequestOperation *)registerRequestLoginPwd:(NSString*)loginPwd
                                     success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                                     failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error, id responseObject))failure;
 

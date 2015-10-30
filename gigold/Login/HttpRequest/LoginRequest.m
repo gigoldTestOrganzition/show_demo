@@ -30,7 +30,9 @@ static LoginRequest *loginRequest = nil;
     NSDictionary* params = [NSDictionary dictionaryWithObjectsAndKeys:mobileNum,@"mobile",pwd,@"loginPwd", nil];
     NSDictionary* params1 = [NSDictionary dictionaryWithObjectsAndKeys:params,@"user", nil];
     
-    return [[FMNetWorkManager sharedInstance] requestURL:LOGIN_URL httpMethod:@"POST" parameters:params1 success:^(AFHTTPRequestOperation * operation, id responseObject) {
+    NSString* urlString = [NSString stringWithFormat:@"%@%@%@%@",HTTP_HEAD,MF_URL_HOST,FUNC_URL,LOGIN_URL];
+    
+    return [[FMNetWorkManager sharedInstance] requestURL:urlString httpMethod:@"POST" parameters:params1 success:^(AFHTTPRequestOperation * operation, id responseObject) {
         success(operation, responseObject);
         
     }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
@@ -43,7 +45,9 @@ static LoginRequest *loginRequest = nil;
 - (AFHTTPRequestOperation *)logoutRequestMobileNum:(NSString*)mobileNum
                                          success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                                          failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error, id responseObject))failure{
-    return [[FMNetWorkManager sharedInstance] requestURL:LOGOUT_URL httpMethod:@"POST" parameters:nil success:^(AFHTTPRequestOperation * operation, id responseObject) {
+    
+    NSString* urlString = [NSString stringWithFormat:@"%@%@%@%@",HTTP_HEAD,MF_URL_HOST,FUNC_URL,LOGOUT_URL];
+    return [[FMNetWorkManager sharedInstance] requestURL:urlString httpMethod:@"POST" parameters:nil success:^(AFHTTPRequestOperation * operation, id responseObject) {
         success(operation, responseObject);
         
     }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {

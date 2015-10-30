@@ -71,6 +71,7 @@
             [loadView showDialog:self.view];
         }
 
+        [[AppUtils shareAppUtils] saveGID:@""];
         [[RegisterRequest sharedRegisterRequest] validateMoblieNum:self.mobileTextField.text BusinessType:self.flowType success:^(AFHTTPRequestOperation * operation, id responseObject) {
             [loadView stopDialog];
             NSString* rspCd = [responseObject objectForKey:@"rspCd"];

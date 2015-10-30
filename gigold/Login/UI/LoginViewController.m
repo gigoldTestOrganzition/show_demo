@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "MoblieWriteViewController.h"
+#import "User.h"
 
 @interface LoginViewController ()
 
@@ -115,11 +116,16 @@
         NSString* rspCd = [responseObject objectForKey:@"rspCd"];
         NSString* rspInf = [responseObject objectForKey:@"rspInf"];
         if ([rspCd isEqualToString:@"U0000"]) {
-            [self loginRespond:self.accountTextField.text andPassword:self.passwordTextField.text];
+            [self loginRespond];
             
             [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
             
             [self performSelector:@selector(delayMethod) withObject:nil afterDelay:2.0f];
+            
+            User* user = [User objectWithKeyValues:[responseObject objectForKey:@"user"]];
+            [[AppUtils shareAppUtils] saveUserData:[responseObject objectForKey:@"user"]];
+            [self loginRespond];
+            NSLog(@"user%@",user);
         }else{
             [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
         }

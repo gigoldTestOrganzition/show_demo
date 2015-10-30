@@ -19,7 +19,7 @@
 
 #define RESET_LOGIN_PWD_URL  @"/user/resetLoginPwd.do"
 
-- (AFHTTPRequestOperation *)resetLoginPwd:(NSString*)loginPwd mobileNum:(NSString*)moblie
+- (AFHTTPRequestOperation *)resetLoginPwd:(NSString*)loginPwd
                                        success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                                        failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error, id responseObject))failure;
 

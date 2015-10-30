@@ -24,14 +24,16 @@ static PasswordRequest *passwordRequest = nil;
 //"loginPwd" /*登录密码*/
 //"moblie" /*手机号*/
 
-- (AFHTTPRequestOperation *)resetLoginPwd:(NSString*)loginPwd mobileNum:(NSString*)mobile
+- (AFHTTPRequestOperation *)resetLoginPwd:(NSString*)loginPwd
                                   success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                                   failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error, id responseObject))failure{
     
     NSDictionary* user = [NSDictionary dictionaryWithObjectsAndKeys:loginPwd,@"loginPwd", nil];
     NSDictionary* params = [NSDictionary dictionaryWithObjectsAndKeys:user,@"user",nil];
     
-    return [[FMNetWorkManager sharedInstance] requestURL:RESET_LOGIN_PWD_URL httpMethod:@"POST" parameters:params success:^(AFHTTPRequestOperation * operation, id responseObject) {
+    NSString* urlString = [NSString stringWithFormat:@"%@%@%@%@",HTTP_HEAD,MF_URL_HOST,FUNC_URL,RESET_LOGIN_PWD_URL];
+    
+    return [[FMNetWorkManager sharedInstance] requestURL:urlString httpMethod:@"POST" parameters:params success:^(AFHTTPRequestOperation * operation, id responseObject) {
         success(operation, responseObject);
         
     }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
@@ -45,7 +47,9 @@ static PasswordRequest *passwordRequest = nil;
     NSDictionary* user = [NSDictionary dictionaryWithObjectsAndKeys:newLoginPwd,@"loginPwd", nil];
     NSDictionary* params = [NSDictionary dictionaryWithObjectsAndKeys:user,@"user",oldloginPwd,@"oldPwd",nil];
     
-    return [[FMNetWorkManager sharedInstance] requestURL:UPDATE_LOGIN_PWD_URL httpMethod:@"POST" parameters:params success:^(AFHTTPRequestOperation * operation, id responseObject) {
+    NSString* urlString = [NSString stringWithFormat:@"%@%@%@%@",HTTP_HEAD,MF_URL_HOST,FUNC_URL,UPDATE_LOGIN_PWD_URL];
+    
+    return [[FMNetWorkManager sharedInstance] requestURL:urlString httpMethod:@"POST" parameters:params success:^(AFHTTPRequestOperation * operation, id responseObject) {
         success(operation, responseObject);
         
     }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {

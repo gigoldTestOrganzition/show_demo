@@ -84,7 +84,8 @@
         VerificationCodeWriteViewController* verificationCodeWriteView = [[VerificationCodeWriteViewController alloc] init];
         verificationCodeWriteView.title = typeString;
         verificationCodeWriteView.delegate = self;
-        verificationCodeWriteView.moblieNum = [[AppUtils shareAppUtils] getAccount];
+        User* user = [[AppUtils shareAppUtils] getUserData];
+        verificationCodeWriteView.moblieNum = user.mobile;
         verificationCodeWriteView.flowType = SetPayPWDType;
         [self.navigationController pushViewController:verificationCodeWriteView animated:YES];
     }
@@ -92,7 +93,8 @@
         VerificationCodeWriteViewController* verificationCodeWriteView = [[VerificationCodeWriteViewController alloc] init];
         verificationCodeWriteView.title = typeString;
         verificationCodeWriteView.delegate = self;
-        verificationCodeWriteView.moblieNum = [[AppUtils shareAppUtils] getAccount];
+        User* user = [[AppUtils shareAppUtils] getUserData];
+        verificationCodeWriteView.moblieNum = user.mobile;
         verificationCodeWriteView.flowType = UpdatePayPWDType;
         [self.navigationController pushViewController:verificationCodeWriteView animated:YES];
     }

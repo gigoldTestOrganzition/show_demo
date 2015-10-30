@@ -8,6 +8,7 @@
 
 #import "BaseViewController.h"
 #import "MyAccountTableViewCell.h"
+#import "User.h"
 
 @interface MyAccountViewController : BaseViewController <UITableViewDataSource,UITableViewDelegate>
 {
@@ -18,6 +19,8 @@
     UILabel* loginLabel;
     UILabel* moblieLabel;
     UILabel* markLabel;
+    
+    User* myUser;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *mTableView;

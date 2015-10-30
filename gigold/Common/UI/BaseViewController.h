@@ -63,7 +63,7 @@ typedef enum BackType
 //登出响应
 - (void)logoutRespond;
 //登录响应
-- (void)loginRespond:(NSString*)account andPassword:(NSString*)pwd;
+- (void)loginRespond;
 
 - (void)showLoginView:(LoginType)loginType;
 

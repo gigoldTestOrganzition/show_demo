@@ -207,6 +207,8 @@
 		5CCCEEE21BDDC5C200336158 /* TradingData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCCEECC1BDDC5C200336158 /* TradingData.m */; settings = {ASSET_TAGS = (); }; };
 		5CCCEEE31BDDC5C200336158 /* TradingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCCEED11BDDC5C200336158 /* TradingCell.m */; settings = {ASSET_TAGS = (); }; };
 		5CCCEEE41BDDC5C200336158 /* TradingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CCCEED31BDDC5C200336158 /* TradingDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		5CD0BFE41BE31D1F0036ED42 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD0BFE31BE31D1F0036ED42 /* User.m */; settings = {ASSET_TAGS = (); }; };
+		5CD0BFE91BE33EC20036ED42 /* BaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CD0BFE81BE33EC20036ED42 /* BaseClass.m */; settings = {ASSET_TAGS = (); }; };
 		5CF7B6831BE0C8230041E96E /* LoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7B6801BE0C8230041E96E /* LoadView.m */; settings = {ASSET_TAGS = (); }; };
 		5CF7B6841BE0C8230041E96E /* LoadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CF7B6811BE0C8230041E96E /* LoadView.xib */; settings = {ASSET_TAGS = (); }; };
 		5CF7B6891BE0C88F0041E96E /* SecurityPromptView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7B6871BE0C88F0041E96E /* SecurityPromptView.m */; settings = {ASSET_TAGS = (); }; };
@@ -550,6 +552,10 @@
 		5CCCEED11BDDC5C200336158 /* TradingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradingCell.m; sourceTree = "<group>"; };
 		5CCCEED21BDDC5C200336158 /* TradingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TradingDetailViewController.h; sourceTree = "<group>"; };
 		5CCCEED31BDDC5C200336158 /* TradingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TradingDetailViewController.m; sourceTree = "<group>"; };
+		5CD0BFE21BE31D1F0036ED42 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = gigold/UserManager/HttpRequest/User.h; sourceTree = SOURCE_ROOT; };
+		5CD0BFE31BE31D1F0036ED42 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = gigold/UserManager/HttpRequest/User.m; sourceTree = SOURCE_ROOT; };
+		5CD0BFE71BE33EC20036ED42 /* BaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseClass.h; sourceTree = "<group>"; };
+		5CD0BFE81BE33EC20036ED42 /* BaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseClass.m; sourceTree = "<group>"; };
 		5CF7B67F1BE0C8230041E96E /* LoadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadView.h; sourceTree = "<group>"; };
 		5CF7B6801BE0C8230041E96E /* LoadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadView.m; sourceTree = "<group>"; };
 		5CF7B6811BE0C8230041E96E /* LoadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadView.xib; sourceTree = "<group>"; };
@@ -652,6 +658,8 @@
 				5CC9C2AE1BDDF04700C2269A /* GigoldFonts.h */,
 				5CC9C2CD1BDE494A00C2269A /* Bank.h */,
 				5CC9C2CE1BDE494A00C2269A /* Bank.m */,
+				5CD0BFE71BE33EC20036ED42 /* BaseClass.h */,
+				5CD0BFE81BE33EC20036ED42 /* BaseClass.m */,
 				5C41D09B1BE0B5F800F76E50 /* ServiceText.plist */,
 			);
 			path = Data;
@@ -899,6 +907,8 @@
 		5C5A2DB51BD6115D00C4AE1D /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				5CD0BFE21BE31D1F0036ED42 /* User.h */,
+				5CD0BFE31BE31D1F0036ED42 /* User.m */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -3234,6 +3244,7 @@
 				5CC9C3371BE062E700C2269A /* BankCardTableViewCell.m in Sources */,
 				5CA673AF1BD9C61000BED35A /* UIViewController+RNSwipeViewController.m in Sources */,
 				5C5A2DC81BD6115D00C4AE1D /* LoginRequest.m in Sources */,
+				5CD0BFE41BE31D1F0036ED42 /* User.m in Sources */,
 				5CC6BC041BD8993E00660205 /* NetworkUtil.m in Sources */,
 				5CCCEED91BDDC5C200336158 /* RollInViewController.m in Sources */,
 				5CA41C481BC8E688000A3484 /* main.m in Sources */,
@@ -3264,6 +3275,7 @@
 				5CCCEE761BDDC4DC00336158 /* SenvenIncomeRateData.m in Sources */,
 				5C5A2DD41BD6115D00C4AE1D /* UserInfoRequest.m in Sources */,
 				5CC6BBFD1BD8993E00660205 /* STDbObject.m in Sources */,
+				5CD0BFE91BE33EC20036ED42 /* BaseClass.m in Sources */,
 				5C93B8F51BD8DA3900E8A8AA /* VerificationCodeWriteViewController.m in Sources */,
 				5C5A2DC91BD6115D00C4AE1D /* LoginViewController.m in Sources */,
 				5CC9C3221BDF4B0E00C2269A /* AutomaticArcView.m in Sources */,

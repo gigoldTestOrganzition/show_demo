@@ -126,10 +126,12 @@
     NSLog(@"NSString GID%@",GID);
     if (GID.length > 0){
         [manager.requestSerializer setValue:GID forHTTPHeaderField:@"GID"];
+    }else{
+        [manager.requestSerializer setValue:nil forHTTPHeaderField:@"GID"];
     }
     
     
-    __block AFHTTPRequestOperation *operation = [manager POST:[NSString stringWithFormat:@"%@%@",MF_URL_HOST,URLString] parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    __block AFHTTPRequestOperation *operation = [manager POST:URLString parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         //取头信息中的GID值进行存储
         NSString *GID = [[operation.response allHeaderFields] valueForKey:@"GID"];

@@ -112,6 +112,8 @@
 
 #pragma mark ---- ResultShowViewSureDeleget --------
 -(void)sure{
+    [[AppUtils shareAppUtils] saveGID:@""];
+    [self logoutRespond];
     [self.navigationController popViewControllerAnimated:YES];
     if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
         [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];

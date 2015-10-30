@@ -171,6 +171,28 @@ NSUserDefaults *defaults = nil;
     return nil;
 }
 
+-(void)saveUserData:(id)obj {
+    if (defaults)
+    {
+        NSData *data = [NSJSONSerialization dataWithJSONObject:obj options:0 error:nil];
+        NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        [defaults setObject:jsonString forKey:@"currentUser"];
+        [defaults synchronize];
+    }
+}
+
+-(User*)getUserData {
+    if (defaults)
+    {
+        User* user = nil;
+        NSString *jsonString = [defaults objectForKey:@"currentUser"];
+        if (jsonString) {
+            user = [User objectWithKeyValues:jsonString];
+        }
+        return user;
+    }
+    return nil;
+}
 
 - (NSString*)getVersion {
     NSDictionary* infoDict =[[NSBundle mainBundle] infoDictionary];

@@ -29,6 +29,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    myUser = [[AppUtils shareAppUtils] getUserData];
+    
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(LoginStateChangeNotification:)name:@"LoginStateChange" object:nil];
     
     self.view.backgroundColor = [UIColor colorWithRed:72/255. green:202/255. blue:226/255. alpha:1];
@@ -49,10 +51,12 @@
 
 //监听登录状态改变
 -(void)LoginStateChangeNotification:(NSNotification *)notification{
+    myUser = [[AppUtils shareAppUtils] getUserData];
     if ([[AppUtils shareAppUtils] getIsLogin]) {
         loginLabel.hidden = YES;
         markLabel.hidden = NO;
         moblieLabel.hidden = NO;
+        moblieLabel.text = [[AppUtils shareAppUtils] encryptMoblieNumber:myUser.mobile];
     }else{
         loginLabel.hidden = NO;
         markLabel.hidden = YES;
@@ -83,7 +87,7 @@
     moblieLabel.backgroundColor = [UIColor clearColor];
     moblieLabel.font = [UIFont systemFontOfSize:16];
     moblieLabel.textColor = [UIColor whiteColor];
-    moblieLabel.text = [[AppUtils shareAppUtils] encryptMoblieNumber:[[AppUtils shareAppUtils] getAccount]];
+    moblieLabel.text = [[AppUtils shareAppUtils] encryptMoblieNumber:myUser.mobile];
     [headerView addSubview:moblieLabel];
     
     markLabel = [[UILabel alloc] initWithFrame:CGRectMake(headImageView.frame.size.width+headImageView.frame.origin.x+10, headImageView.frame.origin.y+22+6,60, 16)];

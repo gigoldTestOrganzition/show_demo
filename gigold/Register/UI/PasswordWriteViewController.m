@@ -101,7 +101,7 @@
             [loadView showDialog:self.view];
         }
         if (self.flowType == RegisterType) {
-            [[RegisterRequest sharedRegisterRequest] registerRequestMoblieNum:self.moblieNum loginPwd:self.passwordTextField.text payPwd:@"" success:^(AFHTTPRequestOperation * operation, id responseObject) {
+            [[RegisterRequest sharedRegisterRequest] registerRequestLoginPwd:self.passwordTextField.text success:^(AFHTTPRequestOperation * operation, id responseObject) {
                 [loadView stopDialog];
                 NSString* subrspCd = [responseObject objectForKey:@"rspCd"];
                 NSString* subrspInf = [responseObject objectForKey:@"rspInf"];
@@ -120,7 +120,7 @@
                 [[AppUtils shareAppUtils] showHUD:@"注册失败" andView:self.view];
             }];
         }else if (self.flowType == ResetPasswordType){
-            [[PasswordRequest sharedPasswordRequest] resetLoginPwd:self.passwordTextField.text mobileNum:self.moblieNum success:^(AFHTTPRequestOperation * operation, id responseObject) {
+            [[PasswordRequest sharedPasswordRequest] resetLoginPwd:self.passwordTextField.text success:^(AFHTTPRequestOperation * operation, id responseObject) {
                 [loadView stopDialog];
                 NSString* subrspCd = [responseObject objectForKey:@"rspCd"];
                 NSString* subrspInf = [responseObject objectForKey:@"rspInf"];
@@ -151,7 +151,9 @@
 #pragma mark ---- ResultShowViewSureDeleget --------
 -(void)sure{
     if (self.flowType == RegisterType) {
-        [self loginRespond:self.moblieNum andPassword:self.passwordTextField.text];
+        [self loginRespond];
+    }else if (self.flowType == ResetPasswordType){
+        [[AppUtils shareAppUtils] saveGID:@""];
     }
     [self.navigationController popViewControllerAnimated:NO];
     self.backType = FinishType;

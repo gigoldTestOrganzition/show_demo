@@ -30,7 +30,9 @@ static RegisterRequest *registerRequest = nil;
     [tempParam setValue:mobileNum forKey:@"mobileNum"];
     [tempParam setValue:[NSString stringWithFormat:@"%ld",(long)businessType] forKey:@"businessType"];
     
-    return [[FMNetWorkManager sharedInstance] requestURL:MOBLIE_VALIDATE_URL httpMethod:@"POST" parameters:tempParam success:^(AFHTTPRequestOperation * operation, id responseObject) {
+    NSString* urlString = [NSString stringWithFormat:@"%@%@%@%@",HTTP_HEAD,MF_URL_HOST,FUNC_URL,MOBLIE_VALIDATE_URL];
+    
+    return [[FMNetWorkManager sharedInstance] requestURL:urlString httpMethod:@"POST" parameters:tempParam success:^(AFHTTPRequestOperation * operation, id responseObject) {
         success(operation, responseObject);
         
     }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
@@ -46,8 +48,10 @@ static RegisterRequest *registerRequest = nil;
     NSMutableDictionary* tempParam = [NSMutableDictionary dictionary];
     [tempParam setValue:smsCode forKey:@"smsCode"];
     [tempParam setValue:[NSString stringWithFormat:@"%ld",(long)businessType] forKey:@"businessType"];
+    
+    NSString* urlString = [NSString stringWithFormat:@"%@%@%@%@",HTTP_HEAD,MF_URL_HOST,FUNC_URL,CODE_VALIDATE_URL];
 
-    return [[FMNetWorkManager sharedInstance] requestURL:CODE_VALIDATE_URL httpMethod:@"POST" parameters:tempParam success:^(AFHTTPRequestOperation * operation, id responseObject) {
+    return [[FMNetWorkManager sharedInstance] requestURL:urlString httpMethod:@"POST" parameters:tempParam success:^(AFHTTPRequestOperation * operation, id responseObject) {
         success(operation, responseObject);
         
     }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
@@ -57,18 +61,19 @@ static RegisterRequest *registerRequest = nil;
 
 //用户开户
 //"sign":"sign=MD5(loginPwd=abc123&mobileNum=13576543876&payPwd=reft876+MWD76D29KKAS8912SK)" /*签名*/
-- (AFHTTPRequestOperation *)registerRequestMoblieNum:(NSString*)mobileNum loginPwd:(NSString*)loginPwd  payPwd:(NSString*)payPwd
+- (AFHTTPRequestOperation *)registerRequestMLoginPwd:(NSString*)loginPwd
                                            success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                                            failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error, id responseObject))failure{
     
     NSMutableDictionary* user = [NSMutableDictionary dictionary];
-//    [user setValue:mobileNum forKey:@"mobile"];
     [user setValue:loginPwd forKey:@"loginPwd"];
     
     NSMutableDictionary* tempParam = [NSMutableDictionary dictionary];
     [tempParam setValue:user forKey:@"user"];
     
-    return [[FMNetWorkManager sharedInstance] requestURL:REGISTER_URL httpMethod:@"POST" parameters:tempParam success:^(AFHTTPRequestOperation * operation, id responseObject) {
+    NSString* urlString = [NSString stringWithFormat:@"%@%@%@%@",HTTP_HEAD,MF_URL_HOST,FUNC_URL,REGISTER_URL];
+    
+    return [[FMNetWorkManager sharedInstance] requestURL:urlString httpMethod:@"POST" parameters:tempParam success:^(AFHTTPRequestOperation * operation, id responseObject) {
         success(operation, responseObject);
         
     }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
@@ -88,7 +93,9 @@ static RegisterRequest *registerRequest = nil;
 
     NSDictionary* param = [NSDictionary dictionaryWithObjectsAndKeys:user,@"user", nil];
     
-    return [[FMNetWorkManager sharedInstance] requestURL:VALIDATE_UER_URL httpMethod:@"POST" parameters:param success:^(AFHTTPRequestOperation * operation, id responseObject) {
+    NSString* urlString = [NSString stringWithFormat:@"%@%@%@%@",HTTP_HEAD,MF_URL_HOST,FUNC_URL,VALIDATE_UER_URL];
+    
+    return [[FMNetWorkManager sharedInstance] requestURL:urlString httpMethod:@"POST" parameters:param success:^(AFHTTPRequestOperation * operation, id responseObject) {
         success(operation, responseObject);
         
     }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {

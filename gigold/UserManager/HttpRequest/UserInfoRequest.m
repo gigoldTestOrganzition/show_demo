@@ -28,7 +28,9 @@ static UserInfoRequest *userInfoRequest = nil;
                                      success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                                      failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error, id responseObject))failure{
     
-    return [[FMNetWorkManager sharedInstance] requestURL:QUERY_INFO_URL httpMethod:@"POST" parameters:nil success:^(AFHTTPRequestOperation * operation, id responseObject) {
+    NSString* urlString = [NSString stringWithFormat:@"%@%@%@%@",HTTP_HEAD,MF_URL_HOST,FUNC_URL,QUERY_INFO_URL];
+    
+    return [[FMNetWorkManager sharedInstance] requestURL:urlString httpMethod:@"POST" parameters:nil success:^(AFHTTPRequestOperation * operation, id responseObject) {
         success(operation, responseObject);
         
     }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
@@ -44,7 +46,9 @@ static UserInfoRequest *userInfoRequest = nil;
                                    success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                                    failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error, id responseObject))failure{
     
-    return [[FMNetWorkManager sharedInstance] requestURL:BAL_INFO_URL httpMethod:@"POST" parameters:nil success:^(AFHTTPRequestOperation * operation, id responseObject) {
+    NSString* urlString = [NSString stringWithFormat:@"%@%@%@%@",HTTP_HEAD,MF_URL_HOST,FUNC_URL,BAL_INFO_URL];
+    
+    return [[FMNetWorkManager sharedInstance] requestURL:urlString httpMethod:@"POST" parameters:nil success:^(AFHTTPRequestOperation * operation, id responseObject) {
         success(operation, responseObject);
         
     }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
@@ -59,7 +63,9 @@ static UserInfoRequest *userInfoRequest = nil;
                                    success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                                    failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error, id responseObject))failure{
     
-    return [[FMNetWorkManager sharedInstance] requestURL:AMTDETAIL_QUERY_URL httpMethod:@"POST" parameters:nil success:^(AFHTTPRequestOperation * operation, id responseObject) {
+    NSString* urlString = [NSString stringWithFormat:@"%@%@%@%@",HTTP_HEAD,MF_URL_HOST,FUNC_URL,AMTDETAIL_QUERY_URL];
+    
+    return [[FMNetWorkManager sharedInstance] requestURL:urlString httpMethod:@"POST" parameters:nil success:^(AFHTTPRequestOperation * operation, id responseObject) {
         success(operation, responseObject);
         
     }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {

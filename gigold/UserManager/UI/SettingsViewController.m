@@ -107,6 +107,7 @@
             if ([rspCd isEqualToString:@"U0000"]) {
                 [self logoutRespond];
                 [self.navigationController popViewControllerAnimated:YES];
+                [[AppUtils shareAppUtils] saveGID:@""];
             }else{
                 [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
             }

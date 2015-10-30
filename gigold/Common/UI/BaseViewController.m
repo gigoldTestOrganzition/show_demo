@@ -61,15 +61,9 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:@"LoginStateChange" object:nil];
 }
 //登录响应
-- (void)loginRespond:(NSString*)account andPassword:(NSString*)pwd{
+- (void)loginRespond{
     //保存登录信息
     [[AppUtils shareAppUtils] saveIsLogin:YES];
-    [[AppUtils shareAppUtils] saveAccount:account];
-    [[AppUtils shareAppUtils] savePassword:pwd];
-    
-    //保存登录过的账号记录
-    [[AppUtils shareAppUtils] saveHistoricalAccount:pwd andKey:account];
-    
     //通知状态改变
     [[NSNotificationCenter defaultCenter] postNotificationName:@"LoginStateChange" object:nil];
 }

@@ -10,17 +10,12 @@
 #import <StoreKit/StoreKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import "AppDelegate.h"
+#import "User.h"
 
 
 @interface AppUtils : NSObject<SKStoreProductViewControllerDelegate>
 
 + (AppUtils*)shareAppUtils;
-
-- (void)saveAccount:(NSString*)obj;
-- (NSString*)getAccount;
-
-- (void)savePassword:(NSString*)obj;
-- (NSString*)getPassword;
 
 - (void)saveUserId:(NSString*)obj;
 - (NSString*)getUserId;
@@ -34,6 +29,10 @@
 //记录常用登录的账号
 -(void)saveHistoricalAccount:(NSString *)obj andKey:(NSString*)key;
 -(NSMutableDictionary*)getHistoricalAccount;
+
+//保存登录的账号信息
+-(void)saveUserData:(id)obj;
+-(User*)getUserData;
 
 //tokenId
 -(void)saveTokenId:(NSString*)tokenId;
