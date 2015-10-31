@@ -112,7 +112,7 @@
 
 #pragma mark ---- ResultShowViewSureDeleget --------
 -(void)sure{
-    [[AppUtils shareAppUtils] saveGID:@""];
+//    [[AppUtils shareAppUtils] saveGID:@""];
     [self logoutRespond];
     [self.navigationController popViewControllerAnimated:YES];
     if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {

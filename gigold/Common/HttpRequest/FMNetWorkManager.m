@@ -113,39 +113,45 @@
 
     //如果报接受类型不一致请替换一致text/html或别的
 //    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+//    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html",@"text/json",@"text/javascript", nil];
 //    manager.requestSerializer.HTTPRequestHeaders
 //    [manager ]
     //传入的参数
 //    NSDictionary *parameters = @{@"1":@"XXXX",@"2":@"XXXX",@"3":@"XXXXX"};
     //你的接口地址
     //发送请求
-    [manager.requestSerializer setValue:@"application/json"forHTTPHeaderField:@"Accept"];
-    [manager.requestSerializer setValue:@"application/json;charset=utf-8"forHTTPHeaderField:@"Content-Type"];
+//    [manager.requestSerializer setValue:@"application/json"forHTTPHeaderField:@"Accept"];
+//    [manager.requestSerializer setValue:@"application/json;charset=utf-8;"forHTTPHeaderField:@"Content-Type"];
+//    [manager.requestSerializer setValue:@"text/plain"forHTTPHeaderField:@"Content-Type"];
+    
     
     NSString* GID =  [[AppUtils shareAppUtils] getGID];
     NSLog(@"NSString GID%@",GID);
+    //清空cookies
+    NSLog(@"%@",[[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]);
+    [[NSHTTPCookieStorage sharedHTTPCookieStorage] removeCookiesSinceDate:[NSDate dateWithTimeIntervalSince1970:0]];
+    NSLog(@"%@",[[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]);
+
     if (GID.length > 0){
         [manager.requestSerializer setValue:GID forHTTPHeaderField:@"GID"];
     }else{
         [manager.requestSerializer setValue:nil forHTTPHeaderField:@"GID"];
     }
+    NSLog(@"%@",manager.requestSerializer.HTTPRequestHeaders);
     
-    
-    __block AFHTTPRequestOperation *operation = [manager POST:URLString parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        
+     __block AFHTTPRequestOperation *operation = [manager POST:URLString parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         //取头信息中的GID值进行存储
         NSString *GID = [[operation.response allHeaderFields] valueForKey:@"GID"];
         if (GID.length > 0) {
             [[AppUtils shareAppUtils] saveGID:GID];
         }
-        
         NSLog(@"JSON: %@", responseObject);
         NSLog(@"allHTTPHeaderFields:%@ %@",operation.request.allHTTPHeaderFields,operation.response.allHeaderFields);
         success (operation,responseObject);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
-        failure(operation,error,nil);
+         failure(operation,error,nil);
     }];
+    
     return operation;
 }
 

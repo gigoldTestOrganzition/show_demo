@@ -30,6 +30,7 @@
 -(void)saveHistoricalAccount:(NSString *)obj andKey:(NSString*)key;
 -(NSMutableDictionary*)getHistoricalAccount;
 
+
 //保存登录的账号信息
 -(void)saveUserData:(id)obj;
 -(User*)getUserData;

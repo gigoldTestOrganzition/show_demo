@@ -25,6 +25,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+//    [[AppUtils shareAppUtils] saveGID:@""];
+    
     UITapGestureRecognizer* oneTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selfViewPress)];
     
     [self.view addGestureRecognizer:oneTap];
@@ -42,7 +44,8 @@
     [self.passwordTextField setValue:[UIColor whiteColor] forKeyPath:@"_placeholderLabel.textColor"];
     
     //测试数据
-    self.accountTextField.text = @"13507451180";
+    
+    self.accountTextField.text = [[AppUtils shareAppUtils] getUserId];
     self.passwordTextField.text = @"111111";
     
     NSLog(@"md5%@",[[AppUtils shareAppUtils] md5:@"13511407383+yyyyyyyyy"]);
@@ -111,18 +114,18 @@
     }
     [[LoginRequest sharedLoginRequest] loginRequestMobileNum:self.accountTextField.text pwd:self.passwordTextField.text success:^(AFHTTPRequestOperation * operation, id responseObject) {
         [loadView stopDialog];
-        NSLog(@"JSON: %@", responseObject);
-        NSLog(@"allHTTPHeaderFields:%@ %@",operation.request.allHTTPHeaderFields,operation.response.allHeaderFields);
         NSString* rspCd = [responseObject objectForKey:@"rspCd"];
         NSString* rspInf = [responseObject objectForKey:@"rspInf"];
         if ([rspCd isEqualToString:@"U0000"]) {
             [self loginRespond];
+            
             
             [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
             
             [self performSelector:@selector(delayMethod) withObject:nil afterDelay:2.0f];
             
             User* user = [User objectWithKeyValues:[responseObject objectForKey:@"user"]];
+            [[AppUtils shareAppUtils] saveUserId:user.mobile];
             [[AppUtils shareAppUtils] saveUserData:[responseObject objectForKey:@"user"]];
             [self loginRespond];
             NSLog(@"user%@",user);

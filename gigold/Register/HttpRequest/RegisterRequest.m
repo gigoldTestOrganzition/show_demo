@@ -61,7 +61,7 @@ static RegisterRequest *registerRequest = nil;
 
 //用户开户
 //"sign":"sign=MD5(loginPwd=abc123&mobileNum=13576543876&payPwd=reft876+MWD76D29KKAS8912SK)" /*签名*/
-- (AFHTTPRequestOperation *)registerRequestMLoginPwd:(NSString*)loginPwd
+- (AFHTTPRequestOperation *)registerRequestLoginPwd:(NSString*)loginPwd
                                            success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                                            failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error, id responseObject))failure{
     
@@ -87,6 +87,8 @@ static RegisterRequest *registerRequest = nil;
 - (AFHTTPRequestOperation *)ValidateUserRequestMoblieNum:(NSString*)mobileNum
                                                  success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                                                  failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error, id responseObject))failure{
+    
+    NSLog(@"ValidateUser%@",mobileNum);
     
     NSMutableDictionary* user = [NSMutableDictionary dictionary];
     [user setValue:mobileNum forKey:@"mobile"];

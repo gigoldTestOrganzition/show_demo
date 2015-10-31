@@ -44,8 +44,8 @@ static PasswordRequest *passwordRequest = nil;
 - (AFHTTPRequestOperation *)updateLoginPwd:(NSString*)oldloginPwd newLoginPwd:(NSString*)newLoginPwd
                                    success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                                    failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error, id responseObject))failure{
-    NSDictionary* user = [NSDictionary dictionaryWithObjectsAndKeys:newLoginPwd,@"loginPwd", nil];
-    NSDictionary* params = [NSDictionary dictionaryWithObjectsAndKeys:user,@"user",oldloginPwd,@"oldPwd",nil];
+    NSDictionary* user = [NSDictionary dictionaryWithObjectsAndKeys:newLoginPwd,@"loginPwd",oldloginPwd,@"oldPwd", nil];
+    NSDictionary* params = [NSDictionary dictionaryWithObjectsAndKeys:user,@"user",nil];
     
     NSString* urlString = [NSString stringWithFormat:@"%@%@%@%@",HTTP_HEAD,MF_URL_HOST,FUNC_URL,UPDATE_LOGIN_PWD_URL];
     

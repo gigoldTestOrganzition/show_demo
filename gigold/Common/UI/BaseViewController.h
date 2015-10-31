@@ -43,7 +43,8 @@ typedef enum FlowType
     ResetPasswordType,
     UpdatePayPWDType,
     SetPayPWDType,
-    AddBankCardType
+    AddBankCardType,
+    LoginPasswordType,
 } FlowType;
 
 //判断返回状态值

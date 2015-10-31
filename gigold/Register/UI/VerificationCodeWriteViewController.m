@@ -170,36 +170,56 @@
                     BOOL isshowSuccess = YES;
                     if (self.flowType == RegisterType) {
                         [loadView stopDialog];
-                        if ([subrspCd isEqualToString:@"U0013"]) {
+                        if ([subrspCd isEqualToString:@"U0014"]) {
                             NSLog(@"去直接登录");
-                            
-                            [[AppUtils shareAppUtils] showHUD:subrspInf andView:self.view];
-                            isshowSuccess = NO;
-                            [self performSelector:@selector(cancelView) withObject:nil afterDelay:1];
-                            
-                        }else{
                             PasswordWriteViewController* passwordWriteView = [[PasswordWriteViewController alloc] init];
                             passwordWriteView.title = self.title;
                             passwordWriteView.flowType = self.flowType;
                             passwordWriteView.delegate = self;
                             passwordWriteView.moblieNum = self.moblieNum;
                             [self.navigationController pushViewController:passwordWriteView animated:YES];
+                            
+                        }else{
+                            if ([subrspCd isEqualToString:@"U0013"]){
+                                PasswordWriteViewController* passwordWriteView = [[PasswordWriteViewController alloc] init];
+                                passwordWriteView.title = @"登录";
+                                passwordWriteView.flowType = LoginPasswordType;
+                                passwordWriteView.delegate = self;
+                                passwordWriteView.moblieNum = self.moblieNum;passwordWriteView.markLabel.text = @"您的账户不存在，请输入登录密码进行登录";
+                                [self.navigationController pushViewController:passwordWriteView animated:YES];
+                            }else{
+                                [[AppUtils shareAppUtils] showHUD:subrspInf andView:self.view];
+                                isshowSuccess = NO;
+                                [self performSelector:@selector(cancelView) withObject:nil afterDelay:1];
+                            }
                         }
                         
                     }
                     else if (self.flowType == ResetPasswordType){
-                        if ([subrspCd isEqualToString:@"U0014"]) {
-                            [[AppUtils shareAppUtils] showHUD:subrspInf andView:self.view];
-                            isshowSuccess = NO;
-                            
-                            [self performSelector:@selector(cancelView) withObject:nil afterDelay:1];
-                        }else{
+                        if ([subrspCd isEqualToString:@"U0013"]) {
                             PasswordWriteViewController* passwordWriteView = [[PasswordWriteViewController alloc] init];
                             passwordWriteView.title = self.title;
                             passwordWriteView.flowType = self.flowType;
                             passwordWriteView.delegate = self;
                             passwordWriteView.moblieNum = self.moblieNum;
                             [self.navigationController pushViewController:passwordWriteView animated:YES];
+                        }else{
+                            if ([subrspCd isEqualToString:@"U0014"]) {
+                                if ([subrspCd isEqualToString:@"U0013"]){
+                                    PasswordWriteViewController* passwordWriteView = [[PasswordWriteViewController alloc] init];
+                                    passwordWriteView.title = @"注册";
+                                    passwordWriteView.flowType = RegisterType;
+                                    passwordWriteView.delegate = self;
+                                    passwordWriteView.moblieNum = self.moblieNum;
+                                    passwordWriteView.markLabel.text = @"您的账户不存在，请输入登录密码进行注册";
+                                    [self.navigationController pushViewController:passwordWriteView animated:YES];
+                                }
+                            }else{
+                                [[AppUtils shareAppUtils] showHUD:subrspInf andView:self.view];
+                                isshowSuccess = NO;
+                                
+                                [self performSelector:@selector(cancelView) withObject:nil afterDelay:1];
+                            }
                         }
                     }
                     

@@ -38,8 +38,8 @@
 #define REGISTER_URL    @"/user/registerUser.do"
 
 - (AFHTTPRequestOperation *)registerRequestLoginPwd:(NSString*)loginPwd
-                                    success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
-                                    failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error, id responseObject))failure;
+                                             success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
+                                             failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error, id responseObject))failure;
 
 //校验用户是否存在
 //"mobileNum":"" /*手机号，APP只得长度校难，后台作合法性校验*/

@@ -27,7 +27,7 @@
     self.shadowHeight1.constant = 0.5;
     self.shadowHeight2.constant = 0.5;
     
-    self.mobileTextField.text = @"15111111111";
+    self.mobileTextField.text = [[AppUtils shareAppUtils] getUserId];
     self.mobileTextField.delegate = self;
     [self.mobileTextField becomeFirstResponder];
     
@@ -70,8 +70,6 @@
         }else{
             [loadView showDialog:self.view];
         }
-
-        [[AppUtils shareAppUtils] saveGID:@""];
         [[RegisterRequest sharedRegisterRequest] validateMoblieNum:self.mobileTextField.text BusinessType:self.flowType success:^(AFHTTPRequestOperation * operation, id responseObject) {
             [loadView stopDialog];
             NSString* rspCd = [responseObject objectForKey:@"rspCd"];
