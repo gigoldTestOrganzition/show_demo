@@ -13,6 +13,8 @@
 @protocol CustomerViewClickDeleget <NSObject>
 //点击事件 tag为事件标识
 -(void)click:(NSString*)tag;
+//点击事件，传递多个参数
+-(void)clickParam:(NSDictionary*)param;
 @end
 /*自定义view弹出方式*/
 typedef NS_ENUM(NSInteger,PullViewStyle){
@@ -31,6 +33,7 @@ typedef NS_ENUM(NSInteger,PullViewStyle){
 @property(nonatomic,assign)CGFloat baseLineValue;
 //是否是显示状态
 -(BOOL)isShow;
+
 //显示
 -(void)showDialog:(UIView*)view;
 -(void)showDialogByBaseLine:(CGFloat)baseLineValue view:(UIView*)view;

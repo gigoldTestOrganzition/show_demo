@@ -36,6 +36,7 @@
     
     //设置NavigationBar背景颜色
     [[UINavigationBar appearance] setBarTintColor:theme_color];
+//    [[UINavigationBar appearance] setBackgroundColor:theme_color];
     //@{}代表Dictionary
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName:title_or_btn_font,
                                                            

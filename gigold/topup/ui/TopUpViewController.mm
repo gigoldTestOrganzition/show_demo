@@ -18,6 +18,7 @@
 #import "UPPayPlugin.h"
 #import "appliacation_attribute.h"
 #import "TopUpResultViewController.h"
+#import "AddBankCardViewController.h"
 @interface TopUpViewController ()<UITextFieldDelegate,UITableViewDataSource,UITableViewDelegate,UPPayPluginDelegate>{
     //充值金额
     __weak IBOutlet UITextField *amountField;
@@ -117,7 +118,9 @@
 -(void)addBankCard{
     NSLog(@"add");
     [selectPayView stopDialog];
-    [self startUPPay];
+    //[self startUPPay];
+    AddBankCardViewController* addBankCardViewController =  [[AddBankCardViewController alloc]init];
+    [self.navigationController pushViewController:addBankCardViewController animated:YES];
 
 }
 //开启银联支付
@@ -140,7 +143,7 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     Bank* bank = bankCards[indexPath.row];
-    NSLog(bank.name);
+    //NSLog(bank.name);
     [selectPayView stopDialog];
     [self startUPPay];
 }
@@ -197,7 +200,7 @@
     TopUpResultViewController* topUpResultViewController = (TopUpResultViewController*)storyboard_controller_identity(@"topUpStoryboard", @"topupResult");
     topUpResultViewController.isSuccess =[result isEqualToString:@"fail"]?NO:YES;
     topUpResultViewController.amountStr = amountField.text;
-    [self.navigationController pushViewController:topUpResultViewController animated:YES];
+    [self.navigationController pushViewController:topUpResultViewController animated:NO];
 
 }
 /*

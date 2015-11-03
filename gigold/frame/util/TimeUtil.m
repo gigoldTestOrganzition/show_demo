@@ -77,4 +77,14 @@
 +(NSString*)nowTime:(NSString *)formatString{
     return [TimeUtil nsDataToString:[NSDate date] format:formatString];
 }
++(NSDate *)getMarkTime:(NSInteger)year month:(NSInteger)month day:(NSInteger)day hours:(NSInteger)hours date:(NSDate *)date{
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSDateComponents *adcomps = [[NSDateComponents alloc]init];
+    [adcomps setYear:year];
+    [adcomps setMonth:month];
+    [adcomps setDay:day];
+    [adcomps setHour:hours];
+    return [calendar dateByAddingComponents:adcomps toDate:date options:0];
+}
+
 @end

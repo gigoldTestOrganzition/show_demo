@@ -13,7 +13,7 @@
 #import "SettingsViewController.h"
 #import "LoginViewController.h"
 #import "SmallChangeViewController.h"
-
+#import "AddressManagerViewController.h"
 @interface MyAccountViewController ()
 
 @end
@@ -211,6 +211,8 @@
         }
         
     }else if ([menuTitle isEqualToString:@"地址管理"]){
+        AddressManagerViewController* addressManagerViewController = [[AddressManagerViewController alloc]init];
+        [self.navigationController pushViewController:addressManagerViewController animated:YES];
         
     }
 }

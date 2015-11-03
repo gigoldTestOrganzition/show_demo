@@ -8,7 +8,8 @@
 
 #import "PayPasswordViewController.h"
 #import "PayPwdValidateViewController.h"
-
+#import "appliacation_attribute.h"
+#import "RollInResultViewController.h"
 @interface PayPasswordViewController ()
 
 @end
@@ -36,7 +37,7 @@
         }else{
             self.titleLabel.text = @"请输入6位数字旧支付密码";
         }
-    }else{
+    }else if(self.payPwdType != RollInPayPwdType&&self.payPwdType != RollOutPayPwdType){
         if ([self.title isEqualToString:@"设置支付密码"]) {
             self.titleLabel.text = @"请输入6位数字支付密码";
         }else{
@@ -68,6 +69,15 @@
             payPasswordView.title = self.title;
             payPasswordView.payPwdType = SetNewPayPwdType;
             [self.navigationController pushViewController:payPasswordView animated:YES];
+        }else if(self.payPwdType == RollInPayPwdType){
+            RollInResultViewController* rollInResultViewController = storyboard_controller_identity(@"GigoldTreasureHome", @"rollInResult");
+            rollInResultViewController.parames = self.parames;
+            [self.navigationController pushViewController:rollInResultViewController animated:YES];
+        }else if(self.payPwdType ==  RollOutPayPwdType){
+            RollInResultViewController* rollInResultViewController = storyboard_controller_identity(@"GigoldTreasureHome", @"rollOutResult");
+            rollInResultViewController.parames = self.parames;
+            [self.navigationController pushViewController:rollInResultViewController animated:YES];
+            
         }else{
             PayPwdValidateViewController* payValiteView = [[PayPwdValidateViewController alloc] init];
             payValiteView.delegate = self;

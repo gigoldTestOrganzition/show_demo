@@ -9,6 +9,10 @@
 #ifndef GigoldColors_h
 #define GigoldColors_h
 #import "Colors.h"
+
+
+//警告红色 E56767
+#define warning_red_color kColorWithRGB(229,103,103,1)
 //主题色 4ACAE2
 #define theme_color kColorWithRGB(74,202,226,1)
 //白底辅助文字 A0A0A0
@@ -31,6 +35,9 @@
 #define unable_tap_color kColorWithRGB(206,206,206,1)
 //圆弧颜色
 #define green_arc_color kColorWithRGB(92,214,50,1)
+//进度颜色
+#define progress_color kColorWithRGB(200,214,217,1)
+
 
 
 

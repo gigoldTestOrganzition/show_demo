@@ -39,6 +39,7 @@
 }
 //确认退出
 -(void)sureOut{
+    [self stopDialog];
     if ([super clickDeleget]){
         [[super clickDeleget] click:OUT_APPLICATION_TAG];
     }

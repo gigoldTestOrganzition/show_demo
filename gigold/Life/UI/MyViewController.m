@@ -17,6 +17,8 @@
 #import "OutView.h"
 #import "SecurityPromptView.h"
 #import "LoadView.h"
+#import "OpenGigoldViewController.h"
+#import "CustomerProgressLableView.h"
 
 @interface MyViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,CustomerViewClickDeleget>{
     //功能描述
@@ -24,14 +26,13 @@
     //描述数据集合
     NSMutableArray* functionDatas;
     
-    
-    //测试view
-    ResultShowView* resultShowView;
-    OutView* outView;
-    SecurityPromptView* securityPromptView;
-    LoadView* loadView;
-    
-    CGFloat baseline;
+//    
+//    //测试view
+//    ResultShowView* resultShowView;
+//    OutView* outView;
+//    SecurityPromptView* securityPromptView;
+//    LoadView* loadView;
+//    CGFloat baseline;
 }
 @end
 
@@ -67,7 +68,7 @@
     
     
     // 测试
-    baseline = 200;
+    //baseline = 200;
  }
 
 
@@ -106,66 +107,74 @@
 -(void)transfer{
     NSLog(@"转账");
     
-    if (!resultShowView) {
-        
-        resultShowView = [ResultShowView showResult:ResultTypeError];
-        resultShowView.pullStyle = PullViewDown;
-        resultShowView.drawTime = 5.f;
-        
-    }
-    if (![resultShowView isShow]) {
-        [resultShowView showDialogByBaseLine:baseline view:self.view];
-        
-    }else{
-        [resultShowView stopDialog];
-    }
+//    if (!resultShowView) {
+//        
+//        resultShowView = [ResultShowView showResult:ResultTypeError];
+//        resultShowView.pullStyle = PullViewDown;
+//        resultShowView.drawTime = 5.f;
+//        
+//    }
+//    if (![resultShowView isShow]) {
+//        [resultShowView showDialogByBaseLine:baseline view:self.view];
+//        
+//    }else{
+//        [resultShowView stopDialog];
+//    }
     
     
 }
 //话费充值
 -(void)phoneTopup{
     NSLog(@"话费充值");
-    if (!outView) {
-        outView = [[OutView alloc]init];
-        outView.pullStyle = PullViewCenter;
-    }
-    if (!outView.isShow) {
-        [outView showDialog:self.view];
-    }else{
-        [outView showDialog:self.view];
-    }
+//    if (!outView) {
+//        outView = [[OutView alloc]init];
+//        outView.pullStyle = PullViewCenter;
+//    }
+//    if (!outView.isShow) {
+//        [outView showDialog:self.view];
+//    }else{
+//        [outView showDialog:self.view];
+//    }
     
 }
 // 生活缴费
 -(void)lifePay{
     NSLog(@"生活缴费");
-    if (!securityPromptView) {
-        securityPromptView = [[SecurityPromptView alloc]init];
-        securityPromptView.clickDeleget = self;
-    }
-    [securityPromptView showDialog:self.view];
+//    if (!securityPromptView) {
+//        securityPromptView = [[SecurityPromptView alloc]init];
+//        securityPromptView.clickDeleget = self;
+//    }
+//    [securityPromptView showDialog:self.view];
 }
 //物业费
 -(void)propertyPay{
     NSLog(@"物业费");
+    
+        GigoldTreasureHomeViewController* gigoldTreasureHomeViewController = (GigoldTreasureHomeViewController*)storyboard_controller_identity(@"GigoldTreasureHome",@"home");
+        gigoldTreasureHomeViewController.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:gigoldTreasureHomeViewController animated:YES];
+    
     //if (!loadView) {
-        loadView = [LoadView showLoad:LoadViewTypeSafeCheck view:self.view];
+    //    loadView = [LoadView showLoad:LoadViewTypeSafeCheck view:self.view];
     //}
     
 }
 //停车费
 -(void)stopCarPay{
     //if (!loadView) {
-        loadView = [LoadView showLoad:LoadViewTypeJump view:self.view];
+    //    loadView = [LoadView showLoad:LoadViewTypeJump view:self.view];
     //}
     
 }
 //吉高宝
 -(void)gigoldTreasure{
     
-    GigoldTreasureHomeViewController* gigoldTreasureHomeViewController = (GigoldTreasureHomeViewController*)storyboard_controller_identity(@"GigoldTreasureHome",@"home");
-    gigoldTreasureHomeViewController.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:gigoldTreasureHomeViewController animated:YES];
+//    GigoldTreasureHomeViewController* gigoldTreasureHomeViewController = (GigoldTreasureHomeViewController*)storyboard_controller_identity(@"GigoldTreasureHome",@"home");
+//    gigoldTreasureHomeViewController.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController:gigoldTreasureHomeViewController animated:YES];
+    
+    OpenGigoldViewController* openGigoldViewController = [[OpenGigoldViewController alloc]init];
+    [self.navigationController pushViewController:openGigoldViewController animated:YES];
 }
 
 #pragma mark -UICollectionView  协议

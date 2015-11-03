@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SelectRegionView">
+            <rect key="frame" x="0.0" y="0.0" width="293" height="192"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1sv-q5-dKR">
+                    <rect key="frame" x="0.0" y="0.0" width="293" height="40"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="取消" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXh-kq-iw9">
+                            <rect key="frame" x="10" y="10" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.31038951649521784" green="0.46942221501244935" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="确定" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BER-NX-WtJ">
+                            <rect key="frame" x="241" y="10" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.31038951650000002" green="0.46942221499999998" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="BXh-kq-iw9" firstAttribute="centerY" secondItem="1sv-q5-dKR" secondAttribute="centerY" id="2cg-bm-MAM"/>
+                        <constraint firstAttribute="height" constant="40" id="WoL-h6-EF6"/>
+                        <constraint firstItem="BXh-kq-iw9" firstAttribute="leading" secondItem="1sv-q5-dKR" secondAttribute="leading" constant="10" id="XQx-Mt-hcY"/>
+                        <constraint firstItem="BER-NX-WtJ" firstAttribute="centerY" secondItem="1sv-q5-dKR" secondAttribute="centerY" id="Y7x-oq-0Bz"/>
+                        <constraint firstAttribute="trailing" secondItem="BER-NX-WtJ" secondAttribute="trailing" constant="10" id="gfV-9s-PPM"/>
+                    </constraints>
+                </view>
+                <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vi1-5l-ZQS">
+                    <rect key="frame" x="0.0" y="38" width="293" height="154"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </pickerView>
+            </subviews>
+            <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="1sv-q5-dKR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="DWW-eO-2Py"/>
+                <constraint firstAttribute="trailing" secondItem="1sv-q5-dKR" secondAttribute="trailing" id="KXK-tS-VfN"/>
+                <constraint firstItem="vi1-5l-ZQS" firstAttribute="top" secondItem="1sv-q5-dKR" secondAttribute="bottom" constant="1" id="RYb-tL-bj3"/>
+                <constraint firstItem="vi1-5l-ZQS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="tLI-XM-0EM"/>
+                <constraint firstAttribute="trailing" secondItem="vi1-5l-ZQS" secondAttribute="trailing" id="tMi-2n-fTW"/>
+                <constraint firstAttribute="bottom" secondItem="vi1-5l-ZQS" secondAttribute="bottom" id="vkX-fs-Rly"/>
+                <constraint firstItem="1sv-q5-dKR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vmG-Tz-92e"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cancle" destination="BXh-kq-iw9" id="AA9-2w-6lb"/>
+                <outlet property="regionPickerView" destination="vi1-5l-ZQS" id="eKe-dP-MHw"/>
+                <outlet property="sure" destination="BER-NX-WtJ" id="2aQ-lt-JVh"/>
+            </connections>
+            <point key="canvasLocation" x="210.5" y="490"/>
+        </view>
+        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" id="XlK-ju-YYj">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+            <date key="date" timeIntervalSinceReferenceDate="467794715.51421702">
+                <!--2015-10-29 06:58:35 +0000-->
+            </date>
+            <point key="canvasLocation" x="350" y="977"/>
+        </datePicker>
+    </objects>
+</document>

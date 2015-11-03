@@ -17,6 +17,7 @@
 @implementation BaseViewController
 
 - (void)viewWillAppear:(BOOL)animated{
+    
     [super viewWillAppear:animated];
     
     self.navigationController.navigationBarHidden = NO;
@@ -27,24 +28,9 @@
     [btn setImage:[UIImage imageNamed:@"top_return_but_1"] forState:UIControlStateNormal];
     [btn setImage:[UIImage imageNamed:@"top_return_but_2"] forState:UIControlStateHighlighted];
     btn.imageEdgeInsets = UIEdgeInsetsMake(0, -30, 0, 0);
-//    [btn setTitle:@"返回" forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(backBtnPress) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem* item = [[UIBarButtonItem alloc] initWithCustomView:btn];
     self.navigationItem.leftBarButtonItem = item;
-    
-    
-//    UIBarButtonItem *backItem=[[UIBarButtonItem alloc]init];
-//    backItem.title=@"hhh";
-//    backItem.image=[UIImage imageNamed:@"top_return_but_1"];
-//    self.navigationItem.backBarButtonItem=backItem;
-    
-//    自定义返回按钮
-//    UIImage *backButtonImage = [[UIImage imageNamed:@"top_return_but_1"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
-//
-//    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-//    //将返回按钮的文字position设置不在屏幕上显示
-//    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(NSIntegerMin, NSIntegerMin) forBarMetrics:UIBarMetricsDefault];
-////
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
 }

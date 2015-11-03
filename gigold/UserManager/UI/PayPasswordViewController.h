@@ -9,8 +9,10 @@
 //
 typedef enum _PayPwdType
 {
-    SetOldPayPwdType = 0,
-    SetNewPayPwdType,
+    SetOldPayPwdType = 1 << 0,
+    SetNewPayPwdType = 1 << 1,
+    RollInPayPwdType = 1 << 2,
+    RollOutPayPwdType = 1 << 3
     
 } PayPwdType;
 
@@ -33,5 +35,7 @@ typedef enum _PayPwdType
 
 @property (strong, nonatomic) NSString* newpayPwd;
 @property (assign, nonatomic) PayPwdType payPwdType;
+//带来的参数
+@property (nonatomic,strong)NSMutableDictionary* parames;
 
 @end
