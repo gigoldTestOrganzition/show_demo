@@ -171,27 +171,18 @@ NSUserDefaults *defaults = nil;
     return nil;
 }
 
--(void)saveUserData:(id)obj {
+-(void)saveUserInfo:(id)obj {
     if (defaults)
     {
-        if (obj) {
-            NSData *data = [NSJSONSerialization dataWithJSONObject:obj options:0 error:nil];
-            NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            [defaults setObject:jsonString forKey:@"currentUser"];
+            [defaults setObject:obj forKey:@"UserInfo"];
             [defaults synchronize];
-        }
     }
 }
 
--(User*)getUserData {
+-(NSDictionary*)getUserInfo {
     if (defaults)
     {
-        User* user = nil;
-        NSString *jsonString = [defaults objectForKey:@"currentUser"];
-        if (jsonString) {
-            user = [User objectWithKeyValues:jsonString];
-        }
-        return user;
+        return  [defaults objectForKey:@"UserInfo"];
     }
     return nil;
 }
@@ -476,11 +467,11 @@ NSUserDefaults *defaults = nil;
             ]; 
 }
 
-- (NSString *)encryptMoblieNumber:(NSString*)str{
+- (NSString *)encryptMobileNumber:(NSString*)str{
     if (str.length >= 11) {
-        NSMutableString* newMoblie = [NSMutableString stringWithString:str];
-        [newMoblie replaceCharactersInRange:NSMakeRange(3, 5) withString:@"***"];
-        return newMoblie;
+        NSMutableString* newMobile = [NSMutableString stringWithString:str];
+        [newMobile replaceCharactersInRange:NSMakeRange(3, 5) withString:@"***"];
+        return newMobile;
     }else{
         return str;
     }

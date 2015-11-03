@@ -20,7 +20,7 @@
     UILabel* moblieLabel;
     UILabel* markLabel;
     
-    User* myUser;
+    NSDictionary* myUser;
 }
 
 @property (weak, nonatomic) IBOutlet UITableView *mTableView;

@@ -32,8 +32,8 @@
 
 
 //保存登录的账号信息
--(void)saveUserData:(id)obj;
--(User*)getUserData;
+-(void)saveUserInfo:(id)obj;
+-(NSDictionary*)getUserInfo;
 
 //tokenId
 -(void)saveTokenId:(NSString*)tokenId;
@@ -71,7 +71,7 @@
 - (NSString *)md5:(NSString *)str;
 
 //加密手机号码
-- (NSString *)encryptMoblieNumber:(NSString*)str;
+- (NSString *)encryptMobileNumber:(NSString*)str;
 
 //登录密码验证
 - (BOOL)validateLoginPassword:(NSString*)password;

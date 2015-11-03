@@ -126,7 +126,7 @@
             User* user = [[User alloc] init];
             user.mobile = [responseObject objectForKey:@"mobile"];
             [[AppUtils shareAppUtils] saveUserId:user.mobile];
-            [[AppUtils shareAppUtils] saveUserData:[responseObject objectForKey:@"user"]];
+            [[AppUtils shareAppUtils] saveUserInfo:[responseObject objectForKey:@"userInfo"]];
             [self loginRespond];
             NSLog(@"user%@",user);
         }else{

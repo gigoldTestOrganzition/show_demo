@@ -50,7 +50,7 @@
     
     [self.agreeBtn addTarget:self action:@selector(agreeBtnPress) forControlEvents:UIControlEventTouchUpInside];
     
-    self.moblieLabel.text = [NSString stringWithFormat:@"已发送校验码到你的手机%@",[[AppUtils shareAppUtils] encryptMoblieNumber:self.moblieNum]];
+    self.moblieLabel.text = [NSString stringWithFormat:@"已发送校验码到你的手机%@",[[AppUtils shareAppUtils] encryptMobileNumber:self.moblieNum]];
     
     UITapGestureRecognizer* serveTextViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(goServeTextView)];
     [self.serveTextView addGestureRecognizer:serveTextViewTap];

@@ -41,6 +41,7 @@
 
 //登出响应
 - (void)logoutRespond{
+    [[AppUtils shareAppUtils] saveUserInfo:nil];
     [[AppUtils shareAppUtils] saveGID:@""];
     //修改保存信息
     [[AppUtils shareAppUtils] saveIsLogin:NO];
