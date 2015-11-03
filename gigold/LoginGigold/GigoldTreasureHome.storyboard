@@ -266,6 +266,7 @@
                         <outlet property="sevenRateView" destination="RLF-QQ-Mg3" id="z8U-Uw-nvk"/>
                         <outlet property="tenthousandLable" destination="iH7-fc-bRg" id="qwe-dB-m8B"/>
                         <outlet property="tenthousandView" destination="TBP-ws-pOl" id="Ruj-ZK-5RG"/>
+                        <outlet property="topLayout" destination="SMO-cK-9ch" id="9pi-B2-RJb"/>
                         <outlet property="totalAmount" destination="DTj-QJ-xlQ" id="3uG-wy-Kar"/>
                         <outlet property="totalIncomeLable" destination="R7E-2l-GV9" id="6Ic-4I-54t"/>
                         <outlet property="totalIncomeView" destination="gvF-YE-vhd" id="2jj-ZA-88M"/>

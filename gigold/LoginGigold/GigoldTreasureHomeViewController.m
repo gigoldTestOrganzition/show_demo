@@ -27,12 +27,15 @@
     
     //万份收益
     __weak IBOutlet UIView *tenthousandView;
-        //万分收益
-        __weak IBOutlet UILabel *tenthousandLable;
+    //万分收益
+    __weak IBOutlet UILabel *tenthousandLable;
     //累计收益
     __weak IBOutlet UIView *totalIncomeView;
-        //累计收益
-        __weak IBOutlet UILabel *totalIncomeLable;
+    //累计收益
+    __weak IBOutlet UILabel *totalIncomeLable;
+    //渐变背景view
+    __weak IBOutlet UIView *topLayout;
+    
     //七日年化率
     __weak IBOutlet UIView *sevenRateView;
     __weak IBOutlet UIView *sevenRateChartView;
@@ -56,6 +59,7 @@
     NSDictionary* attributesDic = [NSDictionary dictionaryWithObjectsAndKeys:main_font,NSFontAttributeName,nil];
     [[UIBarButtonItem appearance] setTitleTextAttributes:attributesDic forState:0];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"收益说明" style:UIBarButtonItemStyleDone target:self action:@selector(incomeInstructions)];
+    [self setTopBackground];
     
     UUChart* sevenRateChart = [[UUChart alloc]initwithUUChartDataFrame:CGRectMake(0.f,0.f,mainScreenWidth - 20.f,150.f) withSource:self withStyle:UUChartLineStyle];
     [sevenRateChart showInView:sevenRateChartView];
@@ -94,7 +98,18 @@
     [rollIn addGestureRecognizer:rollInRecognizer];
     // Do any additional setup after loading the view.
 }
-
+/*
+ *设置渐变背景色
+ */
+-(void)setTopBackground{
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = CGRectMake(0.f,0.f,mainScreenWidth,280.f);
+    gradient.colors = [NSArray arrayWithObjects:
+                       (id)theme_light_color.CGColor,
+                       (id)theme_color.CGColor,nil];
+    topLayout.clipsToBounds = YES;
+    [topLayout.layer insertSublayer:gradient atIndex:0];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
