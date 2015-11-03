@@ -30,6 +30,12 @@
 }
 
 -(void)backBtnPress{
+    if (self.backType == FinishType){
+        if (self.flowType == RegisterType) {
+            [self loginRespond];
+        }else if (self.flowType == ResetPasswordType){
+        }
+    }
     [self.navigationController popViewControllerAnimated:NO];
     if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
         [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
