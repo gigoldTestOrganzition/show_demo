@@ -46,7 +46,6 @@
     //测试数据
     
     self.accountTextField.text = [[AppUtils shareAppUtils] getUserId];
-    self.passwordTextField.text = @"111111";
     
     NSLog(@"md5%@",[[AppUtils shareAppUtils] md5:@"13511407383+yyyyyyyyy"]);
 }
@@ -89,19 +88,19 @@
 -(void)loginBtnPress{
     NSLog(@"去登录");
     if (self.accountTextField.text.length == 0) {
-        [[AppUtils shareAppUtils] showAlert:@"用户名不能为空！"];
+        [[AppUtils shareAppUtils] showHUD:@"用户名不能为空！" andView:self.view];
         [self.accountTextField becomeFirstResponder];
         return;
     }else{
         if (![[AppUtils shareAppUtils] validateMobile:self.accountTextField.text]) {
-            [[AppUtils shareAppUtils] showAlert:@"请输入正确的用户名"];
+            [[AppUtils shareAppUtils] showHUD:@"请输入正确的用户名！" andView:self.view];
             [self.accountTextField becomeFirstResponder];
             return;
         }
     }
     
     if (self.passwordTextField.text.length == 0) {
-        [[AppUtils shareAppUtils] showAlert:@"密码不能为空！"];
+        [[AppUtils shareAppUtils] showHUD:@"登录密码不能为空！" andView:self.view];
         [self.passwordTextField becomeFirstResponder];
         return;
     }
@@ -116,7 +115,7 @@
         [loadView stopDialog];
         NSString* rspCd = [responseObject objectForKey:@"rspCd"];
         NSString* rspInf = [responseObject objectForKey:@"rspInf"];
-        if ([rspCd isEqualToString:@"U0000"]) {
+        if ([rspCd isEqualToString:SUCCESS]) {
             [self loginRespond];
             
             
@@ -124,7 +123,8 @@
             
             [self performSelector:@selector(delayMethod) withObject:nil afterDelay:2.0f];
             
-            User* user = [User objectWithKeyValues:[responseObject objectForKey:@"user"]];
+            User* user = [[User alloc] init];
+            user.mobile = [responseObject objectForKey:@"mobile"];
             [[AppUtils shareAppUtils] saveUserId:user.mobile];
             [[AppUtils shareAppUtils] saveUserData:[responseObject objectForKey:@"user"]];
             [self loginRespond];
@@ -169,7 +169,7 @@
 -(void)UIViewControllerBack:(BaseViewController *)baseViewController{
     if ([baseViewController isKindOfClass:[MoblieWriteViewController class]]) {
         MoblieWriteViewController* moblieWriteView = (MoblieWriteViewController*)baseViewController;
-        if (moblieWriteView.backType == FinishType && moblieWriteView.flowType == RegisterType) {
+        if (moblieWriteView.backType == FinishType && (moblieWriteView.flowType == RegisterType || moblieWriteView.flowType == LoginPasswordType)) {
             [self dismissViewControllerAnimated:NO completion:^{}];
             if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
                 [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];

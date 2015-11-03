@@ -81,6 +81,28 @@
 -(void)nextBtnPress{
     [self.passwordTextField1 resignFirstResponder];
     [self.passwordTextField2 resignFirstResponder];
+    
+    if (self.passwordTextField1.text.length == 0) {
+        [[AppUtils shareAppUtils] showHUD:@"旧密码不能为空！" andView:self.view];
+        [self.passwordTextField1 becomeFirstResponder];
+        return;
+    }
+    
+    
+    if (self.passwordTextField2.text.length == 0) {
+        [[AppUtils shareAppUtils] showHUD:@"新密码不能为空！" andView:self.view];
+        [self.passwordTextField2 becomeFirstResponder];
+        return;
+    }else{
+        if (![[AppUtils shareAppUtils] validateLoginPassword:self.passwordTextField2.text]) {
+            [[AppUtils shareAppUtils] showHUD:@"登录密码格式不正确！" andView:self.view];
+            [self.passwordTextField2 becomeFirstResponder];
+            return;
+        }
+        
+    }
+    
+    
     if (!loadView) {
         loadView = [LoadView showLoad:LoadViewTypeJump view:self.view];
         loadView.desc.text = @"修改登录密码中";
@@ -92,7 +114,7 @@
         [loadView stopDialog];
         NSString* rspCd = [responseObject objectForKey:@"rspCd"];
         NSString* rspInf = [responseObject objectForKey:@"rspInf"];
-        if ([rspCd isEqualToString:@"00000"]){
+        if ([rspCd isEqualToString:SUCCESS]){
             ResultShowView * resultShowView = [ResultShowView showResult:ResultTypeCorrect];
             resultShowView.desc.text = @"登录密码修改成功";
             resultShowView.desc.textColor = main_text_color;
@@ -112,7 +134,6 @@
 
 #pragma mark ---- ResultShowViewSureDeleget --------
 -(void)sure{
-//    [[AppUtils shareAppUtils] saveGID:@""];
     [self logoutRespond];
     [self.navigationController popViewControllerAnimated:YES];
     if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {

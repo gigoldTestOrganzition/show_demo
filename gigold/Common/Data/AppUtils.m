@@ -174,10 +174,12 @@ NSUserDefaults *defaults = nil;
 -(void)saveUserData:(id)obj {
     if (defaults)
     {
-        NSData *data = [NSJSONSerialization dataWithJSONObject:obj options:0 error:nil];
-        NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        [defaults setObject:jsonString forKey:@"currentUser"];
-        [defaults synchronize];
+        if (obj) {
+            NSData *data = [NSJSONSerialization dataWithJSONObject:obj options:0 error:nil];
+            NSString *jsonString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+            [defaults setObject:jsonString forKey:@"currentUser"];
+            [defaults synchronize];
+        }
     }
 }
 
@@ -485,7 +487,7 @@ NSUserDefaults *defaults = nil;
 }
 
 - (BOOL)validateLoginPassword:(NSString*)password{
-    NSString * regex = @"^[A-Za-z0-9]{6,20}$";
+    NSString * regex = @"^([a-zA-Z])[0-9A-Za-z]{5,19}$";
     NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
     BOOL isMatch = [pred evaluateWithObject:password];
     return isMatch;

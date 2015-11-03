@@ -74,7 +74,7 @@
             [loadView stopDialog];
             NSString* rspCd = [responseObject objectForKey:@"rspCd"];
             NSString* rspInf = [responseObject objectForKey:@"rspInf"];
-            if ([rspCd isEqualToString:@"00000"]) {
+            if ([rspCd isEqualToString:SUCCESS]) {
                 [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
                 VerificationCodeWriteViewController* verificationCodeWriteView = [[VerificationCodeWriteViewController alloc] init];
                 verificationCodeWriteView.title = self.title;
@@ -115,6 +115,7 @@
     if ([baseViewController isKindOfClass:[VerificationCodeWriteViewController class]]) {
         VerificationCodeWriteViewController* verificationCodeWriteView = (VerificationCodeWriteViewController*)baseViewController;
         self.backType = verificationCodeWriteView.backType;
+        self.flowType = verificationCodeWriteView.flowType;
         [self.navigationController popViewControllerAnimated:NO];
         if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
             [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];

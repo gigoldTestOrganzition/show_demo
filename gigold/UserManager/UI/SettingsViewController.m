@@ -104,10 +104,9 @@
         [[LoginRequest sharedLoginRequest] logoutRequestMobileNum:@"" success:^(AFHTTPRequestOperation * operation, id responseObject) {
             NSString* rspCd = [responseObject objectForKey:@"rspCd"];
             NSString* rspInf = [responseObject objectForKey:@"rspInf"];
-            if ([rspCd isEqualToString:@"U0000"]) {
+            if ([rspCd isEqualToString:SUCCESS]) {
                 [self logoutRespond];
                 [self.navigationController popViewControllerAnimated:YES];
-                [[AppUtils shareAppUtils] saveGID:@""];
             }else{
                 [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
             }

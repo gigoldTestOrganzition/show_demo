@@ -219,6 +219,8 @@
 		5C6D21251BE8633300B57025 /* AddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C6D211D1BE8633300B57025 /* AddressCell.xib */; };
 		5C6D21261BE8633300B57025 /* AddressManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6D211F1BE8633300B57025 /* AddressManagerViewController.m */; };
 		5C6D21271BE8633300B57025 /* AddressManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C6D21201BE8633300B57025 /* AddressManagerViewController.xib */; };
+		5C6D212A1BE88E2000B57025 /* user_menu_ico_6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C6D21281BE88E2000B57025 /* user_menu_ico_6@2x.png */; };
+		5C6D212B1BE88E2000B57025 /* user_menu_ico_6@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C6D21291BE88E2000B57025 /* user_menu_ico_6@3x.png */; };
 		5C71BD7F1BDA134500978CF4 /* UpdatePWDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C71BD7D1BDA134500978CF4 /* UpdatePWDViewController.m */; };
 		5C71BD801BDA134500978CF4 /* UpdatePWDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C71BD7E1BDA134500978CF4 /* UpdatePWDViewController.xib */; };
 		5C746CBB1BD79015007A7DE6 /* libUPPayPlugin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C746CB81BD79015007A7DE6 /* libUPPayPlugin.a */; };
@@ -636,6 +638,8 @@
 		5C6D211E1BE8633300B57025 /* AddressManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressManagerViewController.h; sourceTree = "<group>"; };
 		5C6D211F1BE8633300B57025 /* AddressManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressManagerViewController.m; sourceTree = "<group>"; };
 		5C6D21201BE8633300B57025 /* AddressManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressManagerViewController.xib; sourceTree = "<group>"; };
+		5C6D21281BE88E2000B57025 /* user_menu_ico_6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_menu_ico_6@2x.png"; sourceTree = "<group>"; };
+		5C6D21291BE88E2000B57025 /* user_menu_ico_6@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_menu_ico_6@3x.png"; sourceTree = "<group>"; };
 		5C71BD7C1BDA134500978CF4 /* UpdatePWDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdatePWDViewController.h; sourceTree = "<group>"; };
 		5C71BD7D1BDA134500978CF4 /* UpdatePWDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdatePWDViewController.m; sourceTree = "<group>"; };
 		5C71BD7E1BDA134500978CF4 /* UpdatePWDViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpdatePWDViewController.xib; sourceTree = "<group>"; };
@@ -1006,6 +1010,8 @@
 				5CC44B221BDA30F00071B668 /* user_menu_ico_4@3x.png */,
 				5CC44B231BDA30F00071B668 /* user_menu_ico_5@2x.png */,
 				5CC44B241BDA30F00071B668 /* user_menu_ico_5@3x.png */,
+				5C6D21281BE88E2000B57025 /* user_menu_ico_6@2x.png */,
+				5C6D21291BE88E2000B57025 /* user_menu_ico_6@3x.png */,
 				5CC44B251BDA30F00071B668 /* user_menu_set_ico@2x.png */,
 				5CC44B261BDA30F00071B668 /* user_menu_set_ico@3x.png */,
 				5CC44B3E1BDA35A30071B668 /* box_but_arrow@2x.png */,
@@ -3574,6 +3580,7 @@
 				5C6D21251BE8633300B57025 /* AddressCell.xib in Resources */,
 				5C5A2DD61BD6115D00C4AE1D /* MyAccountViewController.xib in Resources */,
 				5CC44B461BDA3AFB0071B668 /* MyAccountTableViewCell.xib in Resources */,
+				5C6D212B1BE88E2000B57025 /* user_menu_ico_6@3x.png in Resources */,
 				5C6D1FD31BE85B6B00B57025 /* jyq_shisuan_ico1@3x.png in Resources */,
 				5CC9C3D81BE0688900C2269A /* user_faces_1@3x.png in Resources */,
 				5C6D1FDB1BE85B6B00B57025 /* GiglodsDeclaration.xib in Resources */,
@@ -3602,6 +3609,7 @@
 				5C6D1FB91BE85B6B00B57025 /* LimitInstructionsViewController.xib in Resources */,
 				5C6D1FC31BE85B6B00B57025 /* ico_statement_5@2x.png in Resources */,
 				5C6D1FA81BE85B6B00B57025 /* ico_statement_3@3x.png in Resources */,
+				5C6D212A1BE88E2000B57025 /* user_menu_ico_6@2x.png in Resources */,
 				5C6D1FED1BE85B6B00B57025 /* jyq_shisuan_round@3x.png in Resources */,
 				5C6D1FD01BE85B6B00B57025 /* jiyouqian_ico@2x.png in Resources */,
 				5C6D205D1BE85C8500B57025 /* main_correct_ico@2x.png in Resources */,

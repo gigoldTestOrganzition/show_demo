@@ -82,7 +82,7 @@
     [[RegisterRequest sharedRegisterRequest] validateMoblieNum:self.moblieNum BusinessType:self.flowType  success:^(AFHTTPRequestOperation * operation, id responseObject) {
         NSString* rspCd = [responseObject objectForKey:@"rspCd"];
 //        NSString* rspInf = [responseObject objectForKey:@"rspInf"];
-        if ([rspCd isEqualToString:@"00000"]) {
+        if ([rspCd isEqualToString:SUCCESS]) {
             [[AppUtils shareAppUtils] showHUD:@"重新发送成功" andView:self.view];
             timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerValue) userInfo:nil repeats:YES];
             [self timerValue];
@@ -160,7 +160,7 @@
     [[RegisterRequest sharedRegisterRequest] validateSmsCode:self.validateTextField.text BusinessType:self.flowType success:^(AFHTTPRequestOperation * operation, id responseObject) {
         NSString* rspCd = [responseObject objectForKey:@"rspCd"];
         NSString* rspInf = [responseObject objectForKey:@"rspInf"];
-        if ([rspCd isEqualToString:@"00000"]) {
+        if ([rspCd isEqualToString:SUCCESS]) {
             if (self.flowType == RegisterType || self.flowType == ResetPasswordType) {
                 [[RegisterRequest sharedRegisterRequest] ValidateUserRequestMoblieNum:self.moblieNum success:^(AFHTTPRequestOperation * operation, id responseObject) {
                     [loadView stopDialog];
@@ -170,7 +170,7 @@
                     BOOL isshowSuccess = YES;
                     if (self.flowType == RegisterType) {
                         [loadView stopDialog];
-                        if ([subrspCd isEqualToString:@"U0014"]) {
+                        if ([subrspCd isEqualToString:USER_NOT_EXIST]) {
                             NSLog(@"去直接登录");
                             PasswordWriteViewController* passwordWriteView = [[PasswordWriteViewController alloc] init];
                             passwordWriteView.title = self.title;
@@ -180,7 +180,7 @@
                             [self.navigationController pushViewController:passwordWriteView animated:YES];
                             
                         }else{
-                            if ([subrspCd isEqualToString:@"U0013"]){
+                            if ([subrspCd isEqualToString:USER_IS_EXIST]){
                                 PasswordWriteViewController* passwordWriteView = [[PasswordWriteViewController alloc] init];
                                 passwordWriteView.title = @"登录";
                                 passwordWriteView.flowType = LoginPasswordType;
@@ -196,7 +196,7 @@
                         
                     }
                     else if (self.flowType == ResetPasswordType){
-                        if ([subrspCd isEqualToString:@"U0013"]) {
+                        if ([subrspCd isEqualToString:USER_IS_EXIST]) {
                             PasswordWriteViewController* passwordWriteView = [[PasswordWriteViewController alloc] init];
                             passwordWriteView.title = self.title;
                             passwordWriteView.flowType = self.flowType;
@@ -204,16 +204,14 @@
                             passwordWriteView.moblieNum = self.moblieNum;
                             [self.navigationController pushViewController:passwordWriteView animated:YES];
                         }else{
-                            if ([subrspCd isEqualToString:@"U0014"]) {
-                                if ([subrspCd isEqualToString:@"U0013"]){
-                                    PasswordWriteViewController* passwordWriteView = [[PasswordWriteViewController alloc] init];
-                                    passwordWriteView.title = @"注册";
-                                    passwordWriteView.flowType = RegisterType;
-                                    passwordWriteView.delegate = self;
-                                    passwordWriteView.moblieNum = self.moblieNum;
-                                    passwordWriteView.markLabel.text = @"您的账户不存在，请输入登录密码进行注册";
-                                    [self.navigationController pushViewController:passwordWriteView animated:YES];
-                                }
+                            if ([subrspCd isEqualToString:USER_NOT_EXIST]) {
+                                PasswordWriteViewController* passwordWriteView = [[PasswordWriteViewController alloc] init];
+                                passwordWriteView.title = @"注册";
+                                passwordWriteView.flowType = RegisterType;
+                                passwordWriteView.delegate = self;
+                                passwordWriteView.moblieNum = self.moblieNum;
+                                passwordWriteView.markLabel.text = @"您的账户不存在，请输入登录密码进行注册";
+                                [self.navigationController pushViewController:passwordWriteView animated:YES];
                             }else{
                                 [[AppUtils shareAppUtils] showHUD:subrspInf andView:self.view];
                                 isshowSuccess = NO;
@@ -284,6 +282,7 @@
     if ([baseViewController isKindOfClass:[PasswordWriteViewController class]]) {
         PasswordWriteViewController* passwordWirteView = (PasswordWriteViewController*)baseViewController;
         self.backType = passwordWirteView.backType;
+        self.flowType = passwordWirteView.flowType;
         passwordWirteView.moblieNum = self.moblieNum;
         [self.navigationController popViewControllerAnimated:NO];
         if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {

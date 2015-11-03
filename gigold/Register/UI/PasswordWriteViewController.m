@@ -100,92 +100,102 @@
 
 -(void)nextBtnPress{
     [self.passwordTextField resignFirstResponder];
-    if ([[AppUtils shareAppUtils] validateLoginPassword:self.passwordTextField.text]) {
-        if (!loadView) {
-            loadView = [LoadView showLoad:LoadViewTypeJump view:self.view];
-            if (self.flowType == LoginPasswordType) {
-                loadView.desc.text = @"登录中";
-            }else{
-                loadView.desc.text = @"设置登录密码中";
-            }
-            
+    
+    
+    if (self.passwordTextField.text.length == 0) {
+        [[AppUtils shareAppUtils] showHUD:@"登录密码不能为空！" andView:self.view];
+        [self.passwordTextField becomeFirstResponder];
+        return;
+    }else{
+        if (![[AppUtils shareAppUtils] validateLoginPassword:self.passwordTextField.text]) {
+            [[AppUtils shareAppUtils] showHUD:@"登录密码格式不正确！" andView:self.view];
+            [self.passwordTextField becomeFirstResponder];
+            return;
+        }
+    }
+    
+    if (!loadView) {
+        loadView = [LoadView showLoad:LoadViewTypeJump view:self.view];
+        if (self.flowType == LoginPasswordType) {
+            loadView.desc.text = @"登录中";
         }else{
-            [loadView showDialog:self.view];
-        }
-        if (self.flowType == RegisterType) {
-            [[RegisterRequest sharedRegisterRequest] registerRequestLoginPwd:self.passwordTextField.text success:^(AFHTTPRequestOperation * operation, id responseObject) {
-                [loadView stopDialog];
-                NSString* subrspCd = [responseObject objectForKey:@"rspCd"];
-                NSString* subrspInf = [responseObject objectForKey:@"rspInf"];
-                if ([subrspCd isEqualToString:@"00000"]) {
-                    self.backType = FinishType;
-                    ResultShowView * resultShowView = [ResultShowView showResult:ResultTypeCorrect];
-                    resultShowView.desc.text = @"注册成功，系统将自动登录";
-                    resultShowView.desc.textColor = main_text_color;
-                    resultShowView.deleget = self;
-                    [resultShowView showDialog:self.view];
-                }else{
-                    [[AppUtils shareAppUtils] showHUD:subrspInf andView:self.view];
-                }
-               
-            }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
-                [loadView stopDialog];
-                [[AppUtils shareAppUtils] showHUD:@"注册失败" andView:self.view];
-            }];
-        }
-        else if (self.flowType == ResetPasswordType){
-            [[PasswordRequest sharedPasswordRequest] resetLoginPwd:self.passwordTextField.text success:^(AFHTTPRequestOperation * operation, id responseObject) {
-                [loadView stopDialog];
-                NSString* subrspCd = [responseObject objectForKey:@"rspCd"];
-                NSString* subrspInf = [responseObject objectForKey:@"rspInf"];
-                if ([subrspCd isEqualToString:@"00000"]) {
-                    self.backType = FinishType;
-                    ResultShowView * resultShowView = [ResultShowView showResult:ResultTypeCorrect];
-                    resultShowView.desc.text = @"登录密码重置成功";
-                    resultShowView.desc.textColor = main_text_color;
-                    resultShowView.deleget = self;
-                    [resultShowView showDialog:self.view];
-                }else{
-                    [[AppUtils shareAppUtils] showHUD:subrspInf andView:self.view];
-                }
-                
-                
-            }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
-                [loadView stopDialog];
-                [[AppUtils shareAppUtils] showHUD:@"登录密码重置失败" andView:self.view];
-            }];
-        }
-        else if (self.flowType == LoginPasswordType){
-            [[LoginRequest sharedLoginRequest] loginRequestMobileNum:self.moblieNum pwd:self.passwordTextField.text success:^(AFHTTPRequestOperation * operation, id responseObject) {
-                [loadView stopDialog];
-                NSString* rspCd = [responseObject objectForKey:@"rspCd"];
-                NSString* rspInf = [responseObject objectForKey:@"rspInf"];
-                if ([rspCd isEqualToString:@"U0000"]) {
-                    self.backType = FinishType;
-                    User* user = [User objectWithKeyValues:[responseObject objectForKey:@"user"]];
-                    [[AppUtils shareAppUtils] saveUserId:user.mobile];
-                    [[AppUtils shareAppUtils] saveUserData:[responseObject objectForKey:@"user"]];
-                    [self loginRespond];
-                    ResultShowView * resultShowView = [ResultShowView showResult:ResultTypeCorrect];
-                    resultShowView.desc.text = @"登录成功";
-                    resultShowView.desc.textColor = main_text_color;
-                    resultShowView.deleget = self;
-                    [resultShowView showDialog:self.view];
-                }else{
-                    [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
-                }
-                
-            }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
-                [loadView stopDialog];
-                [[AppUtils shareAppUtils] showHUD:@"登录失败" andView:self.view];
-            }];
+            loadView.desc.text = @"设置登录密码中";
         }
         
     }else{
-        [[AppUtils shareAppUtils] showHUD:@"请输入正确的密码！" andView:self.view];
-        [self.passwordTextField becomeFirstResponder];
+        [loadView showDialog:self.view];
     }
     
+    if (self.flowType == RegisterType) {
+        [[RegisterRequest sharedRegisterRequest] registerRequestLoginPwd:self.passwordTextField.text success:^(AFHTTPRequestOperation * operation, id responseObject) {
+            [loadView stopDialog];
+            NSString* subrspCd = [responseObject objectForKey:@"rspCd"];
+            NSString* subrspInf = [responseObject objectForKey:@"rspInf"];
+            if ([subrspCd isEqualToString:SUCCESS]) {
+                self.backType = FinishType;
+                ResultShowView * resultShowView = [ResultShowView showResult:ResultTypeCorrect];
+                resultShowView.desc.text = @"注册成功，系统将自动登录";
+                resultShowView.desc.textColor = main_text_color;
+                resultShowView.deleget = self;
+                [resultShowView showDialog:self.view];
+            }else{
+                [[AppUtils shareAppUtils] showHUD:subrspInf andView:self.view];
+            }
+            
+        }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
+            [loadView stopDialog];
+            [[AppUtils shareAppUtils] showHUD:@"注册失败" andView:self.view];
+        }];
+    }
+    else if (self.flowType == ResetPasswordType){
+        [[PasswordRequest sharedPasswordRequest] resetLoginPwd:self.passwordTextField.text success:^(AFHTTPRequestOperation * operation, id responseObject) {
+            [loadView stopDialog];
+            NSString* subrspCd = [responseObject objectForKey:@"rspCd"];
+            NSString* subrspInf = [responseObject objectForKey:@"rspInf"];
+            if ([subrspCd isEqualToString:SUCCESS]) {
+                [[AppUtils shareAppUtils] saveGID:@""];
+                self.backType = FinishType;
+                ResultShowView * resultShowView = [ResultShowView showResult:ResultTypeCorrect];
+                resultShowView.desc.text = @"登录密码重置成功";
+                resultShowView.desc.textColor = main_text_color;
+                resultShowView.deleget = self;
+                [resultShowView showDialog:self.view];
+            }else{
+                [[AppUtils shareAppUtils] showHUD:subrspInf andView:self.view];
+            }
+            
+            
+        }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
+            [loadView stopDialog];
+            [[AppUtils shareAppUtils] showHUD:@"登录密码重置失败" andView:self.view];
+        }];
+    }
+    else if (self.flowType == LoginPasswordType){
+        [[LoginRequest sharedLoginRequest] loginRequestMobileNum:self.moblieNum pwd:self.passwordTextField.text success:^(AFHTTPRequestOperation * operation, id responseObject) {
+            [loadView stopDialog];
+            NSString* rspCd = [responseObject objectForKey:@"rspCd"];
+            NSString* rspInf = [responseObject objectForKey:@"rspInf"];
+            if ([rspCd isEqualToString:SUCCESS]) {
+                self.backType = FinishType;
+                User* user = [[User alloc] init];
+                user.mobile = [responseObject objectForKey:@"mobile"];
+                [[AppUtils shareAppUtils] saveUserId:user.mobile];
+                [[AppUtils shareAppUtils] saveUserData:[responseObject objectForKey:@"user"]];
+                [self loginRespond];
+                ResultShowView * resultShowView = [ResultShowView showResult:ResultTypeCorrect];
+                resultShowView.desc.text = @"登录成功";
+                resultShowView.desc.textColor = main_text_color;
+                resultShowView.deleget = self;
+                [resultShowView showDialog:self.view];
+            }else{
+                [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
+            }
+            
+        }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
+            [loadView stopDialog];
+            [[AppUtils shareAppUtils] showHUD:@"登录失败" andView:self.view];
+        }];
+    }
 }
 
 #pragma mark ---- ResultShowViewSureDeleget --------

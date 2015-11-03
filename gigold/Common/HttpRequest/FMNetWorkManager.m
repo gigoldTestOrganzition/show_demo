@@ -126,18 +126,14 @@
     
     
     NSString* GID =  [[AppUtils shareAppUtils] getGID];
-    NSLog(@"NSString GID%@",GID);
     //清空cookies
-    NSLog(@"%@",[[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]);
     [[NSHTTPCookieStorage sharedHTTPCookieStorage] removeCookiesSinceDate:[NSDate dateWithTimeIntervalSince1970:0]];
-    NSLog(@"%@",[[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies]);
 
     if (GID.length > 0){
         [manager.requestSerializer setValue:GID forHTTPHeaderField:@"GID"];
     }else{
         [manager.requestSerializer setValue:nil forHTTPHeaderField:@"GID"];
     }
-    NSLog(@"%@",manager.requestSerializer.HTTPRequestHeaders);
     
      __block AFHTTPRequestOperation *operation = [manager POST:URLString parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         //取头信息中的GID值进行存储
