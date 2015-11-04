@@ -30,12 +30,6 @@
 }
 
 -(void)backBtnPress{
-    if (self.backType == FinishType){
-        if (self.flowType == RegisterType) {
-            [self loginRespond];
-        }else if (self.flowType == ResetPasswordType){
-        }
-    }
     [self.navigationController popViewControllerAnimated:NO];
     if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
         [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
@@ -133,6 +127,11 @@
             NSString* subrspInf = [responseObject objectForKey:@"rspInf"];
             if ([subrspCd isEqualToString:SUCCESS]) {
                 self.backType = FinishType;
+                User* user = [[User alloc] init];
+                user.mobile = [responseObject objectForKey:@"mobile"];
+                [[AppUtils shareAppUtils] saveUserId:user.mobile];
+                [[AppUtils shareAppUtils] saveUserInfo:[responseObject objectForKey:@"userInfo"]];
+                [self loginRespond];
                 ResultShowView * resultShowView = [ResultShowView showResult:ResultTypeCorrect];
                 resultShowView.desc.text = @"注册成功，系统将自动登录";
                 resultShowView.desc.textColor = main_text_color;
@@ -200,10 +199,6 @@
 
 #pragma mark ---- ResultShowViewSureDeleget --------
 -(void)sure{
-    if (self.flowType == RegisterType) {
-        [self loginRespond];
-    }else if (self.flowType == ResetPasswordType){
-    }
     [self.navigationController popViewControllerAnimated:NO];
     if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
         [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];

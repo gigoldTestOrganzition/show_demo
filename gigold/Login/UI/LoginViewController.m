@@ -128,7 +128,6 @@
             [[AppUtils shareAppUtils] saveUserId:user.mobile];
             [[AppUtils shareAppUtils] saveUserInfo:[responseObject objectForKey:@"userInfo"]];
             [self loginRespond];
-            NSLog(@"user%@",user);
         }else{
             [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
         }

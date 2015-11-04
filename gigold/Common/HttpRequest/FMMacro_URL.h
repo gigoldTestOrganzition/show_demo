@@ -45,6 +45,7 @@
 #define USER_MOBILE_PWD_ERROR @"U0016" //账号或密码错误
 #define USER_OLD_PWD_ERROR    @"U0017" //旧密码不正确
 #define USER_UPDATE_PWD_FAIL  @"U0018" //操作密码失败
+#define USER_PWD_STYLE_ERROR  @"U0019" //密码格式不正确
 
 //短信返回码定义
 #define SMS_MOBILE_ERROR      @"S0001" //手机号码不合法

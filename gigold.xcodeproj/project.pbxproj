@@ -3434,6 +3434,7 @@
 				TargetAttributes = {
 					5CA41C421BC8E688000A3484 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = M9W78X274W;
 					};
 					5CA41C5B1BC8E688000A3484 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -3884,8 +3885,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: yinyan wen (9Y9J9E2VL9)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yinyan wen (9Y9J9E2VL9)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: wangsucheng0715@163.com (QLLFXP8PFL)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: wangsucheng0715@163.com (QLLFXP8PFL)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -3929,8 +3930,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: yinyan wen (9Y9J9E2VL9)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yinyan wen (9Y9J9E2VL9)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: wangsucheng0715@163.com (QLLFXP8PFL)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: wangsucheng0715@163.com (QLLFXP8PFL)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -3956,7 +3957,9 @@
 			baseConfigurationReference = 660292318B52F537CA48DCED /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: yinyan wen (9Y9J9E2VL9)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/gigold/Common/Data/PrefixHeader.pch";
 				INFOPLIST_FILE = gigold/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -3967,6 +3970,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = www.gigold.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -3977,7 +3981,9 @@
 			baseConfigurationReference = 05C9FF4D315E838F911D2C11 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: yinyan wen (9Y9J9E2VL9)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/gigold/Common/Data/PrefixHeader.pch";
 				INFOPLIST_FILE = gigold/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -3989,6 +3995,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = www.gigold.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
