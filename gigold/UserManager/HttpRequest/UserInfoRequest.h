@@ -41,7 +41,7 @@
 //"endDate":"" /*结束日期*/,
 //"sign":"签名算法:将参数按ASII码排序，然后加上密钥串进行MD5加密，例如：sign=MD5(mobileNum=13576543876+MWD76D29KKAS8912SK)" /*签名*/
 
-#define AMTDETAIL_QUERY_URL   @"/user/amtdetailquery"
+#define AMTDETAIL_QUERY_URL   @"/user/amtdetailquery.do"
 
 - (AFHTTPRequestOperation *)amtdetailqueryMoblieNum:(NSString*)mobileNum acNo:(NSString*)acNo beginDate:(NSDate*)beginDate endDate:(NSDate*)endDate
                                    success:(void (^)(AFHTTPRequestOperation *task, id responseObject))success
