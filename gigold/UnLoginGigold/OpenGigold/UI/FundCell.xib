@@ -16,7 +16,7 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yqd-PX-2Qb">
                         <rect key="frame" x="10" y="14" width="304" height="450"/>
-                        <mutableString key="text">汇添富全额宝货币基金主要投资银行存款和短期债券等具有良好流动性的固定收益产品，不以任何形式参与股票类资产，不受股票市场波动影响，力求在满足安全性、流动性需要的基础上实现更高的收益率。
+                        <string key="text">汇添富全额宝货币基金主要投资银行存款和短期债券等具有良好流动性的固定收益产品，不以任何形式参与股票类资产，不受股票市场波动影响，力求在满足安全性、流动性需要的基础上实现更高的收益率。
 基金名称 汇添富全额宝货币市场基金
 基金代码 000397
 基金类别 货币市场基金
@@ -24,7 +24,7 @@
 成立时间 2013年12月13日
 基金规模 11,238,713,827.42元(截止2015年6月30日)
 基金托管 中国民生银行股份有限公司
-－ 基金经理 汤丛珊，管理学硕士，2008年5月加入汇添富基金管理有限公司任固定收益交易员、固定收益交易主管。 陆文磊，华东师范大学金融学博士，曾任上海申银万国证券研究所有限公司高级分析师。2007年8月加入汇添富基金管理有限公司任固定收益高级经理，现任固定收益投资副总监。2008年3月6日至今任汇添富增强收益债券型证券投资基金的基金经理，2009年1月21日至2011年6月21日任汇添富货币市场基金的基金经理，2011年1月26日至2013年2月7日任汇添富保本混合型证券投资基金的基金经理，2012年7月26日至今任汇添富季季红定期开放债券型证券投资基金的基金经理。</mutableString>
+－ 基金经理 汤丛珊，管理学硕士，2008年5月加入汇添富基金管理有限公司任固定收益交易员、固定收益交易主管。 陆文磊，华东师范大学金融学博士，曾任上海申银万国证券研究所有限公司高级分析师。2007年8月加入汇添富基金管理有限公司任固定收益高级经理，现任固定收益投资副总监。2008年3月6日至今任汇添富增强收益债券型证券投资基金的基金经理，2009年1月21日至2011年6月21日任汇添富货币市场基金的基金经理，2011年1月26日至2013年2月7日任汇添富保本混合型证券投资基金的基金经理，2012年7月26日至今任汇添富季季红定期开放债券型证券投资基金的基金经理。</string>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.34901960784313724" green="0.34901960784313724" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>

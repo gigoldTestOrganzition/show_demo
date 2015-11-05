@@ -28,4 +28,9 @@
     UIGraphicsEndImageContext();
     return image;
 }
++(void)registerGestures:(UIView *)view target:(id)target action:(SEL)action{
+    UITapGestureRecognizer* gestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:target action:action];
+    view.userInteractionEnabled = YES;
+    [view addGestureRecognizer:gestureRecognizer];
+}
 @end

@@ -99,12 +99,14 @@
 }
 //选择支付类型
 -(void)selectPayType{
+    [amountField resignFirstResponder];
     if (!selectPayView) {
         selectPayView = [[SelectPayTypeView alloc]init];
         selectPayView.delegate = self;
         selectPayView.dataSource = self;
     }
     [selectPayView showDialog:self.view];
+    
     
 }
 //选择银联支付

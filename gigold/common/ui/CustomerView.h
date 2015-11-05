@@ -20,7 +20,9 @@
 typedef NS_ENUM(NSInteger,PullViewStyle){
     PullViewDown = 1 << 0,
     PullViewTop = 1 << 1,
-    PullViewCenter = 1 << 2
+    PullViewCenter = 1 << 2,
+    PullViewLeft = 1 << 3,
+    PullviewRight = 1 << 4
 };
 @interface CustomerView : UIView
 @property(nonatomic,assign)PullViewStyle pullStyle;
@@ -38,7 +40,9 @@ typedef NS_ENUM(NSInteger,PullViewStyle){
 -(void)showDialog:(UIView*)view;
 -(void)showDialogByBaseLine:(CGFloat)baseLineValue view:(UIView*)view;
 -(void)showDialogByViewBottom:(UIView*)view;
--(void)showDialogByVIewTop:(UIView*)view;
+-(void)showDialogByViewTop:(UIView*)view;
+-(void)showDialogByViewLeft:(UIView *)view;
+-(void)showDialogByViewRight:(UIView *)view;
 //关闭
 -(void)stopDialog;
 

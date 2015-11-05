@@ -13,5 +13,6 @@
 +(UIBarButtonItem*)getBackButtonItemWithImage:(UIImage*)image frame:(CGRect)frame target:(id)target sel:(SEL)sel;
 /*uicolor 转为 uiimage*/
 +(UIImage*)UIColorTransferUIImage:(UIColor*)color rect:(CGRect)rect;
-
+/*为view添加手势动作*/
++(void)registerGestures:(UIView*)view target:(id)target action:(SEL)action;
 @end

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1j8-jH-G5H" customClass="OpenGigoldSenvenRateView">
+            <rect key="frame" x="0.0" y="0.0" width="336" height="210"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K2L-qo-bKc">
+                    <rect key="frame" x="0.0" y="10" width="336" height="200"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" misplaced="YES" text="七日年化收益率（％）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tf5-MH-Dkk">
+                            <rect key="frame" x="10" y="16" width="314" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <color key="textColor" red="0.62745098040000002" green="0.62745098040000002" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o5Q-zm-vhs">
+                            <rect key="frame" x="10" y="44" width="314" height="150"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="150" id="1l9-xo-fQL"/>
+                                <constraint firstAttribute="height" constant="150" id="idB-Ju-ylW"/>
+                                <constraint firstAttribute="height" constant="106" id="nBZ-8e-HTe"/>
+                                <constraint firstAttribute="height" constant="150" id="qJa-tc-3fY"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="1l9-xo-fQL"/>
+                                    <exclude reference="nBZ-8e-HTe"/>
+                                    <exclude reference="qJa-tc-3fY"/>
+                                </mask>
+                            </variation>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="tf5-MH-Dkk" firstAttribute="top" secondItem="K2L-qo-bKc" secondAttribute="top" constant="15" id="9gk-l4-ATk"/>
+                        <constraint firstItem="o5Q-zm-vhs" firstAttribute="leading" secondItem="K2L-qo-bKc" secondAttribute="leading" constant="10" id="X7r-c6-IOX"/>
+                        <constraint firstAttribute="trailing" secondItem="o5Q-zm-vhs" secondAttribute="trailing" constant="10" id="aJ2-0i-GWH"/>
+                        <constraint firstAttribute="bottom" secondItem="o5Q-zm-vhs" secondAttribute="bottom" constant="15" id="eL5-LN-0B3"/>
+                        <constraint firstItem="o5Q-zm-vhs" firstAttribute="top" secondItem="tf5-MH-Dkk" secondAttribute="bottom" constant="5" id="ewy-IN-oCb"/>
+                        <constraint firstItem="tf5-MH-Dkk" firstAttribute="leading" secondItem="K2L-qo-bKc" secondAttribute="leading" constant="10" id="zYk-FE-A7l"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jRw-pI-wDo">
+                    <rect key="frame" x="0.0" y="10" width="336" height="1"/>
+                    <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="GIV-ps-0Oy"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DJv-7r-pvX">
+                    <rect key="frame" x="0.0" y="209" width="336" height="1"/>
+                    <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="zkE-B1-e8K"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cds-lq-i0x">
+                    <rect key="frame" x="0.0" y="0.0" width="340" height="10"/>
+                    <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="JaW-NF-SyZ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="jRw-pI-wDo" firstAttribute="top" secondItem="1j8-jH-G5H" secondAttribute="top" constant="10" id="4cV-Oh-VJi"/>
+                <constraint firstAttribute="trailing" secondItem="DJv-7r-pvX" secondAttribute="trailing" id="8gd-3f-qE5"/>
+                <constraint firstAttribute="trailing" secondItem="jRw-pI-wDo" secondAttribute="trailing" id="EMD-ov-tsi"/>
+                <constraint firstAttribute="bottom" secondItem="DJv-7r-pvX" secondAttribute="bottom" id="Et6-F5-M8O"/>
+                <constraint firstItem="K2L-qo-bKc" firstAttribute="top" secondItem="jRw-pI-wDo" secondAttribute="bottom" id="JLB-IO-woZ"/>
+                <constraint firstAttribute="trailing" secondItem="Cds-lq-i0x" secondAttribute="trailing" id="KAR-74-ufU"/>
+                <constraint firstItem="Cds-lq-i0x" firstAttribute="top" secondItem="1j8-jH-G5H" secondAttribute="top" id="Z1O-aU-ter"/>
+                <constraint firstItem="jRw-pI-wDo" firstAttribute="leading" secondItem="1j8-jH-G5H" secondAttribute="leading" id="diO-VH-ULu"/>
+                <constraint firstItem="Cds-lq-i0x" firstAttribute="leading" secondItem="1j8-jH-G5H" secondAttribute="leading" id="eIt-BE-vQm"/>
+                <constraint firstItem="K2L-qo-bKc" firstAttribute="leading" secondItem="1j8-jH-G5H" secondAttribute="leading" id="fdt-FJ-eXn"/>
+                <constraint firstItem="DJv-7r-pvX" firstAttribute="leading" secondItem="1j8-jH-G5H" secondAttribute="leading" id="hd6-MI-6aX"/>
+                <constraint firstItem="jRw-pI-wDo" firstAttribute="top" secondItem="Cds-lq-i0x" secondAttribute="bottom" id="kWm-Aa-8K4"/>
+                <constraint firstItem="DJv-7r-pvX" firstAttribute="top" secondItem="K2L-qo-bKc" secondAttribute="bottom" id="kXS-yg-rnQ"/>
+                <constraint firstAttribute="trailing" secondItem="K2L-qo-bKc" secondAttribute="trailing" id="tls-kn-Lut"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="4cV-Oh-VJi"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="sevenRateChartView" destination="o5Q-zm-vhs" id="ovU-Tw-QkW"/>
+            </connections>
+            <point key="canvasLocation" x="40" y="-493"/>
+        </view>
+    </objects>
+</document>

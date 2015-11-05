@@ -31,9 +31,7 @@
 }
 //关闭
 -(void)close{
-    UIViewController* specifiedViewController = [self.navigationController viewControllers][1];
-    [self.navigationController popToViewController:specifiedViewController animated:YES];
-    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

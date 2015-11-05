@@ -14,6 +14,12 @@
 		5C394BFC1BCF597E009AC0AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C394BFA1BCF597E009AC0AC /* LaunchScreen.storyboard */; };
 		5C447C6C1BD77A3700A049D9 /* BankCardValidateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C447C6A1BD77A3700A049D9 /* BankCardValidateViewController.m */; };
 		5C447C6D1BD77A3700A049D9 /* BankCardValidateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C447C6B1BD77A3700A049D9 /* BankCardValidateViewController.xib */; };
+		5C44D9E31BEAEA6C00BA0B69 /* OpenGigoldHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C44D9E21BEAEA6C00BA0B69 /* OpenGigoldHeadView.xib */; settings = {ASSET_TAGS = (); }; };
+		5C44D9E51BEAEFA400BA0B69 /* OpenGigoldSenvenRateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C44D9E41BEAEFA400BA0B69 /* OpenGigoldSenvenRateView.xib */; settings = {ASSET_TAGS = (); }; };
+		5C44D9E81BEAF48A00BA0B69 /* OpenGigoldHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C44D9E71BEAF48A00BA0B69 /* OpenGigoldHeadView.m */; settings = {ASSET_TAGS = (); }; };
+		5C44D9EB1BEAF5FF00BA0B69 /* OpenGigoldSenvenRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C44D9EA1BEAF5FF00BA0B69 /* OpenGigoldSenvenRateView.m */; settings = {ASSET_TAGS = (); }; };
+		5C44D9ED1BEB337400BA0B69 /* OpenBankCardSelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C44D9EC1BEB337400BA0B69 /* OpenBankCardSelectView.xib */; settings = {ASSET_TAGS = (); }; };
+		5C44D9F01BEB33A600BA0B69 /* OpenBankCardSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C44D9EF1BEB33A600BA0B69 /* OpenBankCardSelectView.m */; settings = {ASSET_TAGS = (); }; };
 		5C54B7B71BE1C690008EB92C /* PasswordRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C54B7B61BE1C690008EB92C /* PasswordRequest.m */; };
 		5C5A2DC71BD6115D00C4AE1D /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D961BD6115D00C4AE1D /* HelpViewController.m */; };
 		5C5A2DC81BD6115D00C4AE1D /* LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D9B1BD6115D00C4AE1D /* LoginRequest.m */; };
@@ -327,6 +333,15 @@
 		5C447C691BD77A3700A049D9 /* BankCardValidateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardValidateViewController.h; sourceTree = "<group>"; };
 		5C447C6A1BD77A3700A049D9 /* BankCardValidateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardValidateViewController.m; sourceTree = "<group>"; };
 		5C447C6B1BD77A3700A049D9 /* BankCardValidateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardValidateViewController.xib; sourceTree = "<group>"; };
+		5C44D9E21BEAEA6C00BA0B69 /* OpenGigoldHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpenGigoldHeadView.xib; sourceTree = "<group>"; };
+		5C44D9E41BEAEFA400BA0B69 /* OpenGigoldSenvenRateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpenGigoldSenvenRateView.xib; sourceTree = "<group>"; };
+		5C44D9E61BEAF48A00BA0B69 /* OpenGigoldHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGigoldHeadView.h; sourceTree = "<group>"; };
+		5C44D9E71BEAF48A00BA0B69 /* OpenGigoldHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGigoldHeadView.m; sourceTree = "<group>"; };
+		5C44D9E91BEAF5FF00BA0B69 /* OpenGigoldSenvenRateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGigoldSenvenRateView.h; sourceTree = "<group>"; };
+		5C44D9EA1BEAF5FF00BA0B69 /* OpenGigoldSenvenRateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGigoldSenvenRateView.m; sourceTree = "<group>"; };
+		5C44D9EC1BEB337400BA0B69 /* OpenBankCardSelectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpenBankCardSelectView.xib; sourceTree = "<group>"; };
+		5C44D9EE1BEB33A600BA0B69 /* OpenBankCardSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenBankCardSelectView.h; sourceTree = "<group>"; };
+		5C44D9EF1BEB33A600BA0B69 /* OpenBankCardSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenBankCardSelectView.m; sourceTree = "<group>"; };
 		5C54B7B51BE1C690008EB92C /* PasswordRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordRequest.h; sourceTree = "<group>"; };
 		5C54B7B61BE1C690008EB92C /* PasswordRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordRequest.m; sourceTree = "<group>"; };
 		5C5A2D951BD6115D00C4AE1D /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
@@ -1482,6 +1497,15 @@
 				5C6D1F831BE85B6B00B57025 /* OpenGigoldViewController.xib */,
 				5C6D1F841BE85B6B00B57025 /* RiskCell.xib */,
 				5C6D1F851BE85B6B00B57025 /* TimelimitCell.xib */,
+				5C44D9E61BEAF48A00BA0B69 /* OpenGigoldHeadView.h */,
+				5C44D9E71BEAF48A00BA0B69 /* OpenGigoldHeadView.m */,
+				5C44D9E21BEAEA6C00BA0B69 /* OpenGigoldHeadView.xib */,
+				5C44D9E91BEAF5FF00BA0B69 /* OpenGigoldSenvenRateView.h */,
+				5C44D9EA1BEAF5FF00BA0B69 /* OpenGigoldSenvenRateView.m */,
+				5C44D9E41BEAEFA400BA0B69 /* OpenGigoldSenvenRateView.xib */,
+				5C44D9EC1BEB337400BA0B69 /* OpenBankCardSelectView.xib */,
+				5C44D9EE1BEB33A600BA0B69 /* OpenBankCardSelectView.h */,
+				5C44D9EF1BEB33A600BA0B69 /* OpenBankCardSelectView.m */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -3591,6 +3615,7 @@
 				5CA673C01BD9D63C00BED35A /* password_eye_1@3x.png in Resources */,
 				5C93B8EB1BD8CB0500E8A8AA /* InfoFinishedViewController.xib in Resources */,
 				5C6D206C1BE85C8500B57025 /* safe_ico@3x.png in Resources */,
+				5C44D9ED1BEB337400BA0B69 /* OpenBankCardSelectView.xib in Resources */,
 				5C6A5AA41BDB46D0000CA77D /* login_down_arrow@3x.png in Resources */,
 				5CA673CA1BD9D63C00BED35A /* top_return_but_2@3x.png in Resources */,
 				5CC44B2A1BDA30F00071B668 /* user_menu_ico_2@3x.png in Resources */,
@@ -3603,6 +3628,7 @@
 				5C6D1FA81BE85B6B00B57025 /* ico_statement_3@3x.png in Resources */,
 				5C6D1FED1BE85B6B00B57025 /* jyq_shisuan_round@3x.png in Resources */,
 				5C6D1FD01BE85B6B00B57025 /* jiyouqian_ico@2x.png in Resources */,
+				5C44D9E51BEAEFA400BA0B69 /* OpenGigoldSenvenRateView.xib in Resources */,
 				5C6D205D1BE85C8500B57025 /* main_correct_ico@2x.png in Resources */,
 				5C6D1FDD1BE85B6B00B57025 /* NoteCell.xib in Resources */,
 				5CA673C81BD9D63C00BED35A /* top_return_but_1@3x.png in Resources */,
@@ -3621,6 +3647,7 @@
 				5CC44B401BDA35A30071B668 /* box_but_arrow@2x.png in Resources */,
 				5CB6FF6C1BE09B4D00D666D0 /* ico_statement_2@2x.png in Resources */,
 				5C93B8FB1BD8DA5A00E8A8AA /* PasswordWriteViewController.xib in Resources */,
+				5C44D9E31BEAEA6C00BA0B69 /* OpenGigoldHeadView.xib in Resources */,
 				5C394BFC1BCF597E009AC0AC /* LaunchScreen.storyboard in Resources */,
 				5C00F8FD1BE0A428009EAA73 /* PayPwdValidateViewController.xib in Resources */,
 				5C6D1FB11BE85B6B00B57025 /* ico_submit_2_1@3x.png in Resources */,
@@ -3720,11 +3747,13 @@
 				5C6D20CE1BE85CBD00B57025 /* CommonUtil.m in Sources */,
 				5C6A5A931BDB247A000CA77D /* SettingsViewController.m in Sources */,
 				5C6D1FC71BE85B6B00B57025 /* TenThousandData.m in Sources */,
+				5C44D9EB1BEAF5FF00BA0B69 /* OpenGigoldSenvenRateView.m in Sources */,
 				5C6D1FC61BE85B6B00B57025 /* SenvenIncomeRateViewController.m in Sources */,
 				5C5A2DD71BD6115D00C4AE1D /* PasswordManagerViewController.m in Sources */,
 				5C6D21241BE8633300B57025 /* AddressCell.m in Sources */,
 				5CA673AE1BD9C61000BED35A /* UIView+Sizes.m in Sources */,
 				5C6D206F1BE85C8500B57025 /* AutomaticArcView.m in Sources */,
+				5C44D9E81BEAF48A00BA0B69 /* OpenGigoldHeadView.m in Sources */,
 				5C6D20711BE85C8500B57025 /* CustomerProgressLableView.m in Sources */,
 				5C6D21261BE8633300B57025 /* AddressManagerViewController.m in Sources */,
 				5C6D20CB1BE85CBD00B57025 /* STDbHandle.m in Sources */,
@@ -3736,6 +3765,7 @@
 				5C6D20511BE85C8500B57025 /* Region.m in Sources */,
 				5CC9C33E1BE0634600C2269A /* ServiceTextViewController.m in Sources */,
 				5C6D20721BE85C8500B57025 /* CustomerView.m in Sources */,
+				5C44D9F01BEB33A600BA0B69 /* OpenBankCardSelectView.m in Sources */,
 				5C6D1FBF1BE85B6B00B57025 /* RollOutViewController.m in Sources */,
 				5C6D21231BE8633300B57025 /* Address.m in Sources */,
 				5C6D1FDE1BE85B6B00B57025 /* OpenGigoldViewController.m in Sources */,
@@ -3973,6 +4003,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = www.gigold.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -3995,6 +4026,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = www.gigold.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 			};

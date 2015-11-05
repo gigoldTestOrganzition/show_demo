@@ -55,10 +55,20 @@
     CGFloat baseLine = view.frame.size.height+view.frame.origin.y;
     [self showDialogByBaseLine:baseLine view:[view superview]];
 }
--(void)showDialogByVIewTop:(UIView *)view{
+-(void)showDialogByViewTop:(UIView *)view{
     self.pullStyle = PullViewDown;
     CGFloat baseLine = view.frame.origin.y;
     [self showDialogByBaseLine:baseLine view:[view superview]];
+}
+-(void)showDialogByViewLeft:(UIView *)view{
+    self.pullStyle = PullviewRight;
+    CGFloat baseLine = view.frame.origin.x;
+    [self showDialogByBaseLine:baseLine view:view];
+}
+-(void)showDialogByViewRight:(UIView *)view{
+    self.pullStyle = PullViewLeft;
+    CGFloat baseLine = view.frame.origin.x+view.frame.size.width;
+    [self showDialogByBaseLine:baseLine view:view];
 }
 
 -(void)stopDialog{
@@ -101,6 +111,30 @@
         case PullViewCenter:
             _showView.center = CGPointMake(mainScreenWidth/2,mainScreenHeight/2);
             break;
+        case PullViewLeft:{
+            if (_baseLineValue != 0){
+                self.frame =
+                CGRectMake(_baseLineValue,0,mainScreenWidth-_baseLineValue,mainScreenHeight);
+            }else{
+                self.frame =
+                CGRectMake(0,0,mainScreenWidth,mainScreenHeight);
+                
+            }
+            _showView.frame = CGRectMake(0-_showView.frame.size.width,_showView.frame.origin.y,_showView.frame.size.width,_showView.frame.size.height);
+        }
+            break;
+        case PullviewRight:{
+            if (_baseLineValue != 0){
+                self.frame =
+                CGRectMake(0,0,_baseLineValue,mainScreenHeight);
+            }else{
+                self.frame =
+                CGRectMake(0,0,mainScreenWidth,mainScreenHeight);
+                
+            }
+            _showView.frame = CGRectMake(self.frame.size.width,_showView.frame.origin.y,_showView.frame.size.width,_showView.frame.size.height);
+        }
+            break;
         default:{
             if (_baseLineValue!=0) {
                 self.frame =
@@ -127,6 +161,12 @@
                 _showView.frame = CGRectMake(_showView.frame.origin.x,self.frame.size.height-_showView.frame.size.height, _showView.frame.size.width,_showView.frame.size.height);
                 break;
             case PullViewCenter:
+                break;
+            case PullViewLeft:
+                _showView.frame = CGRectMake(0,_showView.frame.origin.y,_showView.frame.size.width,_showView.frame.size.height);
+                break;
+            case PullviewRight:
+                _showView.frame = CGRectMake(self.frame.size.width-_showView.frame.size.width,_showView.frame.origin.y,_showView.frame.size.width,_showView.frame.size.height);
                 break;
             default:
                 _showView.frame = CGRectMake(_showView.frame.origin.x,self.frame.size.height-_showView.frame.size.height, _showView.frame.size.width,_showView.frame.size.height);

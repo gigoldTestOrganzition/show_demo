@@ -8,10 +8,11 @@
 
 #import "AddOpenBankCardViewController.h"
 #import "VerificationCodeWriteViewController.h"
-#import "SelectPayTypeView.h"
-#import "BankCell.h"
 #import "Bank.h"
 #import "StringUtil.h"
+#import "OpenBankCardSelectView.h"
+#import "ViewUtil.h"
+#import "LimitInstructionsViewController.h"
 @interface AddOpenBankCardViewController ()<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>{
     NSMutableArray* datas;
     
@@ -26,7 +27,7 @@
     __weak IBOutlet UIButton *nextBtn;
     __weak IBOutlet NSLayoutConstraint *topLayoutConstraint;
     
-    SelectPayTypeView* selectBankView;
+    CustomerView* selectBankView;
 }
 @end
 
@@ -80,12 +81,25 @@
 /*选择银行*/
 -(void)selectBank{
     if (!selectBankView) {
-        selectBankView = [[SelectPayTypeView alloc]init];
-        selectBankView.delegate = self;
-        selectBankView.dataSource = self;
-        selectBankView.titleStr = @"请选择银行";
+        selectBankView = [[CustomerView alloc]init];
+        selectBankView.pullStyle = PullviewRight;
+        OpenBankCardSelectView* bankCardView = [[[NSBundle mainBundle]loadNibNamed:@"OpenBankCardSelectView" owner:self options:nil]firstObject];
+        bankCardView.frame = CGRectMake(40.f,44.f+STATUSBAR_OFFSET,mainScreenWidth-40.f, mainScreenHeight);
+        bankCardView.selectTableView.tableFooterView = [UIView new];
+        bankCardView.selectTableView.layoutMargins = UIEdgeInsetsZero;
+        bankCardView.backgroundColor = back_ground_color;
+        bankCardView.selectTableView.backgroundColor = back_ground_color;
+        bankCardView.selectTableView.delegate = self;
+        bankCardView.selectTableView.dataSource = self;
+        [ViewUtil registerGestures:bankCardView.limitInstructions target:self action:@selector(intoLimitInstructions)];
+        selectBankView.showView = bankCardView;
     }
     [selectBankView showDialog:self.view];
+}
+//进入限额说明
+-(void)intoLimitInstructions{
+    LimitInstructionsViewController* limitInstructionsViewController = [[LimitInstructionsViewController alloc]init];
+    [self.navigationController pushViewController:limitInstructionsViewController animated:YES];
 }
 #pragma mark -textfield
 -(void)textFieldDidEndEditing:(UITextField *)textField{
@@ -153,16 +167,29 @@
     return [datas count];
 }
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    BankCell* cell  = (BankCell*)[[NSBundle mainBundle] loadNibNamed:@"PayTypeCell" owner:self options:nil][1];
+    
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    }
+
     Bank* bankItem = datas[indexPath.row];
-    cell.name.text = bankItem.name;
-    cell.blance.text = bankItem.blance;
+    cell.imageView.image = [UIImage imageNamed:@"bank_logo_cmb"];
+    cell.textLabel.text = bankItem.name;
+    cell.textLabel.textColor  = main_text_color;
+    cell.textLabel.font = main_font;
+    if(indexPath.row == datas.count - 1){
+        cell.separatorInset = UIEdgeInsetsZero;
+        cell.layoutMargins  = UIEdgeInsetsZero;
+    }else{
+       cell.separatorInset = UIEdgeInsetsMake(0.f,10.f,0.f,0.f);
+    }
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [selectBankView stopDialog];
     Bank* bankItem = datas[indexPath.row];
-    bank.text = [NSString stringWithFormat:@"%@(%@)", bankItem.name,bankItem.blance];
+    bank.text = bankItem.name;
     [self isNextEnable];
 }
 @end

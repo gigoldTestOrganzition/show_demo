@@ -26,25 +26,33 @@
 #import "SenvenIncomeRateViewController.h"
 #import "IncomeRrialViewController.h"
 #import "UUChart.h"
+#import "OpenGigoldHeadView.h"
+#import "OpenGigoldSenvenRateView.h"
+#import "ViewUtil.h"
 @interface OpenGigoldViewController ()<UITableViewDataSource,UITableViewDelegate,UUChartDataSource>{
-    __weak IBOutlet UIScrollView *scrollView;
-    //contentView
-    __weak IBOutlet UIView *contentView;
-    // 万份收益
-    __weak IBOutlet UIView *tenThousandView;
-    //收益试算
-    __weak IBOutlet UIView *incomeCalculateView;
-    //七日年化率
-    __weak IBOutlet UIView *sevenDayRateView;
-    //七日年化率图
-    __weak IBOutlet UIView *sevenRateChartView;
-    UUChart* sevenRateChart;
     
+//    // 万份收益
+//    __weak IBOutlet UIView *tenThousandView;
+//    //收益试算
+//    __weak IBOutlet UIView *incomeCalculateView;
+//    //七日年化率
+//    __weak IBOutlet UIView *sevenDayRateView;
+//    //七日年化率图
+//    __weak IBOutlet UIView *sevenRateChartView;
+//    UUChart* sevenRateChart;
+    
+    
+    __weak IBOutlet NSLayoutConstraint *topLayoutConstraint;
     
     __weak IBOutlet UITableView *functionTableView;
+    //head
+    OpenGigoldHeadView* gigoldHeadView;
+    //seven rate
+    OpenGigoldSenvenRateView* gigoldSevenRateView;
     //数据
     NSMutableArray* datas;
 }
+
 @end
 
 @implementation OpenGigoldViewController
@@ -57,33 +65,15 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"收益说明" style:UIBarButtonItemStyleDone target:self action:@selector(incomeInstructions)];
     NSDictionary* attributesDic = [NSDictionary dictionaryWithObjectsAndKeys:main_font,NSFontAttributeName,nil];
     [[UIBarButtonItem appearance] setTitleTextAttributes:attributesDic forState:0];
-    
-    
-    //七年年华率图标
-    sevenRateChart = [[UUChart alloc]initwithUUChartDataFrame:CGRectMake(0.f,0.f,mainScreenWidth-20.f,150.f) withSource:self withStyle:UUChartLineStyle];
-    [sevenRateChart showInView:sevenRateChartView];
-    //contentView
-    UITapGestureRecognizer* thenthousandGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(intoTenthousand)];
-    tenThousandView.userInteractionEnabled = YES;
-    [tenThousandView addGestureRecognizer:thenthousandGestureRecognizer];
-    
-    UITapGestureRecognizer* incomeCalculateGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(intoIncomeCalculate)];
-    incomeCalculateView.userInteractionEnabled = YES;
-    [incomeCalculateView addGestureRecognizer:incomeCalculateGestureRecognizer];
-    
-    UITapGestureRecognizer* sevenDayGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(intoServenDayRate)];
-    sevenDayRateView.userInteractionEnabled = YES;
-    [sevenDayRateView addGestureRecognizer:sevenDayGestureRecognizer];
-    
+    topLayoutConstraint.constant = 44.f+STATUSBAR_OFFSET;
     //tableview
-    functionTableView.estimatedRowHeight = 100.f;
+    functionTableView.estimatedSectionHeaderHeight = 45.f;
+    functionTableView.estimatedRowHeight = 500.f;
     functionTableView.tableFooterView = [UIView new];
     functionTableView.backgroundColor = back_ground_color;
     functionTableView.separatorColor = [UIColor clearColor];
-    functionTableView.scrollEnabled = NO;
-    
 }
-
+#pragma mark -数据初始化
 -(void)initDatas{
     if (!datas) {
         datas = [NSMutableArray new];
@@ -123,6 +113,25 @@
     [datas addObject:dec5];
 }
 
+#pragma mark -ui初始化
+-(UITableViewCell*)getGigoldHeadView{
+    if (!gigoldHeadView) {
+        gigoldHeadView = [[[NSBundle mainBundle]loadNibNamed:@"OpenGigoldHeadView" owner:self options:nil]firstObject];
+        [ViewUtil registerGestures:gigoldHeadView.tenThousandView target:self action:@selector(intoTenthousand)];
+        [ViewUtil registerGestures:gigoldHeadView.incomeCalculate target:self action:@selector(intoIncomeCalculate)];
+    }
+    return gigoldHeadView;
+}
+-(UITableViewCell*)getGigoldSevenRatwView{
+    if (!gigoldSevenRateView) {
+        gigoldSevenRateView = [[[NSBundle mainBundle]loadNibNamed:@"OpenGigoldSenvenRateView" owner:self options:nil]firstObject];
+        UUChart* sevenRateChart = [[UUChart alloc]initwithUUChartDataFrame:CGRectMake(0.f,0.f,mainScreenWidth-20.f,150.f) withSource:self withStyle:UUChartLineStyle];
+        [sevenRateChart showInView:gigoldSevenRateView.sevenRateChartView];
+        [ViewUtil registerGestures:gigoldSevenRateView.sevenRateChartView target:self action:@selector(intoServenDayRate)];
+    }
+    return gigoldSevenRateView;
+}
+#pragma mark -事件跳转
 //收益说明
 -(void)incomeInstructions{
     IncomeInstructionViewController* incomeInstructionViewController = (IncomeInstructionViewController*)storyboard_controller_identity(@"GigoldTreasureHome", @"struction");
@@ -161,40 +170,71 @@
 
 #pragma mark -tableView协议
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return [datas count];
+    return [datas count]+2;
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    GigoldDeclaration* gigoldDeclaration = datas[section];
-    if (gigoldDeclaration.isLook) {
-        return 1;
+    if (section > 1) {
+        GigoldDeclaration* gigoldDeclaration = datas[section-2];
+        if (gigoldDeclaration.isLook) {
+            return 1;
+        }else{
+            return 0;
+        }
     }else{
-        return 0;
+        return 1;
     }
 }
 -(UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    GiglodsDeclarationView* headView = [[[NSBundle mainBundle]loadNibNamed:@"GiglodsDeclaration" owner:nil options:nil] firstObject];
-    GigoldDeclaration* declaration = datas[section];
-    headView.title.text = declaration.title;
-    if(declaration.isLook){
-        headView.lookImg.image = [UIImage imageNamed:@"list_open_arrow"];
-        headView.lookImg.transform  = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(180));
-        headView.bottomLineLeadingLayoutConstraint.constant = 10.f;
+    
+    if (section > 1) {
+        GiglodsDeclarationView* headView = [[[NSBundle mainBundle]loadNibNamed:@"GiglodsDeclaration" owner:nil options:nil] firstObject];
+        GigoldDeclaration* declaration = datas[section-2];
+        headView.title.text = declaration.title;
+        if(declaration.isLook){
+            headView.lookImg.image = [UIImage   imageNamed:@"list_open_arrow"];
+            headView.lookImg.transform  = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(180));
+            headView.bottomLineLeadingLayoutConstraint.constant = 10.f;
+        }else{
+            headView.lookImg.image = [UIImage imageNamed:@"list_open_arrow"];
+            headView.bottomLineLeadingLayoutConstraint.constant = 0.f;
+        }
+        headView.tag = section-2;
+        UITapGestureRecognizer* lookGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(lookDeclaration:)];
+        headView.userInteractionEnabled = YES;
+        [headView addGestureRecognizer:lookGestureRecognizer];
+        return headView;
     }else{
-        headView.lookImg.image = [UIImage imageNamed:@"list_open_arrow"];
-        headView.bottomLineLeadingLayoutConstraint.constant = 0.f;
+        return nil;
     }
-    headView.tag = section;
-    UITapGestureRecognizer* lookGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(lookDeclaration:)];
-    headView.userInteractionEnabled = YES;
-    [headView addGestureRecognizer:lookGestureRecognizer];
-    return headView;
 }
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    GigoldDeclaration* gigoldDeclaration = datas[indexPath.section];
-    return [[[NSBundle mainBundle] loadNibNamed:gigoldDeclaration.type owner:self options:nil] firstObject];
+    UITableViewCell* cell = nil;
+    if (indexPath.section > 1) {
+        GigoldDeclaration* gigoldDeclaration = datas[indexPath.section-2];
+        cell = [[[NSBundle mainBundle] loadNibNamed:gigoldDeclaration.type owner:self options:nil] firstObject];
+    }else{
+        switch (indexPath.section) {
+            case 0:
+                cell =  [self getGigoldHeadView];
+                break;
+            case 1:
+                cell =  [self getGigoldSevenRatwView];
+                break;
+            default:
+                cell =  [self getGigoldHeadView];
+                break;
+        }
+
+    }
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    return cell;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 45.f;
+    if (section > 1) {
+        return 45.f;
+    }else{
+        return 0;
+    }
 }
 
 /*展开或关闭*/
@@ -204,9 +244,7 @@
     GigoldDeclaration* gigoldDeclaration = datas[index];
     gigoldDeclaration.isLook = !gigoldDeclaration.isLook;
     [functionTableView reloadData];
-    [self calculateTableViewHeight];
-    
-   
+    //[self calculateTableViewHeight];
 }
 //计算tableview高度
 -(void)calculateTableViewHeight{
@@ -222,9 +260,8 @@
             totalHeight+=rowHeight;
         }
     }
-   CGFloat addHeightValue = totalHeight-functionTableView.frame.size.height;
-    scrollView.contentSize = CGSizeMake(scrollView.contentSize.width,scrollView.contentSize.height+addHeightValue);
-    functionTableView.frame = CGRectMake(functionTableView.frame.origin.x, functionTableView.frame.origin.y,functionTableView.frame.size.width,totalHeight);
+   //CGFloat addHeightValue = totalHeight-functionTableView.frame.size.height;
+   functionTableView.frame = CGRectMake(functionTableView.frame.origin.x, functionTableView.frame.origin.y,functionTableView.frame.size.width,totalHeight);
 }
 #pragma mark -UUChart协议
 -(CGRange)UUChartChooseRangeInLineChart:(UUChart *)chart{
