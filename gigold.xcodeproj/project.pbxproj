@@ -468,7 +468,6 @@
 		5C6D1F9D1BE85B6B00B57025 /* IncomeRrialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncomeRrialViewController.h; sourceTree = "<group>"; };
 		5C6D1F9E1BE85B6B00B57025 /* IncomeRrialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncomeRrialViewController.m; sourceTree = "<group>"; };
 		5C6D1F9F1BE85B6B00B57025 /* IncomeRrialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IncomeRrialViewController.xib; sourceTree = "<group>"; };
-		5C6D1FF21BE85C8500B57025 /* appliacation_attribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = appliacation_attribute.h; sourceTree = "<group>"; };
 		5C6D1FF31BE85C8500B57025 /* AppUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppUtils.h; sourceTree = "<group>"; };
 		5C6D1FF41BE85C8500B57025 /* AppUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppUtils.m; sourceTree = "<group>"; };
 		5C6D1FF51BE85C8500B57025 /* Bank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bank.h; sourceTree = "<group>"; };
@@ -1597,7 +1596,6 @@
 		5C6D1FF11BE85C8500B57025 /* data */ = {
 			isa = PBXGroup;
 			children = (
-				5C6D1FF21BE85C8500B57025 /* appliacation_attribute.h */,
 				5C6D1FF31BE85C8500B57025 /* AppUtils.h */,
 				5C6D1FF41BE85C8500B57025 /* AppUtils.m */,
 				5C6D1FF51BE85C8500B57025 /* Bank.h */,
@@ -3975,7 +3973,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = www.gigold.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -3997,7 +3995,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = www.gigold.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;

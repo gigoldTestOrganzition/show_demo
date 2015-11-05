@@ -12,7 +12,6 @@
     NSTimer* animationTimer;
     CGFloat currentRadian;
     BOOL add;
-    
 }
 @end
 @implementation AutomaticArcView
