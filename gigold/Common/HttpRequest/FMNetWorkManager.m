@@ -145,7 +145,8 @@
         NSLog(@"allHTTPHeaderFields:%@ %@",operation.request.allHTTPHeaderFields,operation.response.allHeaderFields);
         success (operation,responseObject);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-         failure(operation,error,nil);
+        NSLog(@"error%@",error);
+        failure(operation,error,nil);
     }];
     
     return operation;

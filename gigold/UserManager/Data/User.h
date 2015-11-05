@@ -6,6 +6,7 @@
 //  Copyright © 2015年 wsc. All rights reserved.
 //
 
+//用户对象
 #import <Foundation/Foundation.h>
 #import "BaseClass.h"
 

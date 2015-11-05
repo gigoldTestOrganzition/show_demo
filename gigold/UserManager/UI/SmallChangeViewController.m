@@ -9,6 +9,8 @@
 #import "SmallChangeViewController.h"
 #import "SmallChangeTableViewCell.h"
 #import "StringUtil.h"
+#import "UserInfoRequest.h"
+#import "User_SmallChange.h"
 
 @interface SmallChangeViewController ()
 
@@ -115,27 +117,49 @@
     menuTitles = [[NSMutableArray alloc] initWithObjects:@"全部",@"收入",@"支出", nil];
     menuImages = [[NSMutableArray alloc] initWithObjects:@"ico_statement_1",@"ico_statement_2",@"ico_statement_3", nil];
     
-    NSDictionary* dict1 = [NSDictionary dictionaryWithObjectsAndKeys:@"2015-10-10",@"time",@"账户充值",@"style",@"80",@"smallChange",@"80",@"money",@"+",@"fuhao", nil];
-    NSDictionary* dict2 = [NSDictionary dictionaryWithObjectsAndKeys:@"2015-10-11",@"time",@"账户充值",@"style",@"160",@"smallChange",@"80",@"money",@"+",@"fuhao", nil];
-    NSDictionary* dict3 = [NSDictionary dictionaryWithObjectsAndKeys:@"2015-10-12",@"time",@"账户充值",@"style",@"360",@"smallChange",@"200",@"money",@"+",@"fuhao", nil];
-    NSDictionary* dict4 = [NSDictionary dictionaryWithObjectsAndKeys:@"2015-10-13",@"time",@"提现",@"style",@"260",@"smallChange",@"100",@"money",@"-",@"fuhao", nil];
-    NSDictionary* dict5 = [NSDictionary dictionaryWithObjectsAndKeys:@"2015-10-15",@"time",@"商品消费",@"style",@"140",@"smallChange",@"120",@"money",@"-",@"fuhao", nil];
-    
-//    dataArray = [[NSMutableArray alloc] init];
-    dataArray = [[NSMutableArray alloc] initWithObjects:dict5,dict4,dict3,dict2,dict1, nil];
+    dataArray = [[NSMutableArray alloc] init];
     
     self.mTableView.delegate = self;
     self.mTableView.dataSource = self;
     
     
-    if (dataArray.count > 0) {
-        self.noneView.hidden = YES;
-        self.mTableView.hidden = NO;
-    }else{
-        self.noneView.hidden = NO;
-        self.mTableView.hidden = YES;
-    }
     
+    [[UserInfoRequest sharedUserInfoRequest] amtdetailqueryPageNum:1 beginDate:nil endDate:nil success:^(AFHTTPRequestOperation * operation, id responseObject) {
+        NSString* rspCd = [responseObject objectForKey:@"rspCd"];
+        NSString* rspInf = [responseObject objectForKey:@"rspInf"];
+        if ([rspCd isEqualToString:SUCCESS]) {
+            NSDictionary* pageinfo = [responseObject objectForKey:@"pageinfo"];
+            NSInteger prePage = [[pageinfo objectForKey:@"prePage"] integerValue];
+            if (prePage == 0 || prePage == 1) {
+                [dataArray removeAllObjects];
+            }
+            
+            NSArray* list = [pageinfo objectForKey:@"list"];
+            
+            for (NSDictionary* smallChangDict  in list) {
+                User_SmallChange* user_smallChange = [User_SmallChange objectWithKeyValues:smallChangDict];
+                if (user_smallChange) {
+                    [dataArray addObject:user_smallChange];
+                }
+            }
+            
+            if (dataArray.count > 0) {
+                self.noneView.hidden = YES;
+                self.mTableView.hidden = NO;
+            }else{
+                self.noneView.hidden = NO;
+                self.mTableView.hidden = YES;
+            }
+            
+            [self.mTableView reloadData];
+            
+        }else{
+            [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
+        }
+        
+    }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
+        
+    }];
     
     // Do any additional setup after loading the view from its nib.
 }
@@ -165,14 +189,17 @@
         cell= [[[NSBundle mainBundle]loadNibNamed:@"SmallChangeTableViewCell" owner:nil options:nil] firstObject];
     }
     
-    cell.styleLabel.text = [[dataArray objectAtIndex:indexPath.row] objectForKey:@"style"];
-    cell.timeLabel.text = [[dataArray objectAtIndex:indexPath.row] objectForKey:@"time"];
-    cell.smallChangeLabel.text = [NSString stringWithFormat:@"余额：%@",[[dataArray objectAtIndex:indexPath.row] objectForKey:@"smallChange"]];
-    cell.moneyLabel.text = [NSString stringWithFormat:@"%@%@",[[dataArray objectAtIndex:indexPath.row] objectForKey:@"fuhao"],[[dataArray objectAtIndex:indexPath.row] objectForKey:@"money"]];;
+    User_SmallChange* user_smallChange = [dataArray objectAtIndex:indexPath.row];
+    cell.styleLabel.text = [NSString stringWithFormat:@"%@",user_smallChange.ordTyp];
+    cell.timeLabel.text = user_smallChange.oldTxTm;
+    cell.smallChangeLabel.text = [NSString stringWithFormat:@"余额：%ld",user_smallChange.bal];
     
-    if ([[[dataArray objectAtIndex:indexPath.row] objectForKey:@"fuhao"]isEqualToString:@"+"]) {
+    
+    if (user_smallChange.drAmt == 0) {
+        cell.moneyLabel.text = [NSString stringWithFormat:@"+%ld",user_smallChange.crAmt];
         cell.moneyLabel.textColor = theme_color;
     }else{
+        cell.moneyLabel.text = [NSString stringWithFormat:@"-%ld",user_smallChange.drAmt];
         cell.moneyLabel.textColor = UIColorFromRGB(0xE56767);
     }
     

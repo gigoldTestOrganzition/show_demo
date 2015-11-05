@@ -59,13 +59,17 @@ static UserInfoRequest *userInfoRequest = nil;
 //用户收支明细查询
 //"sign":"签名算法:将参数按ASII码排序，然后加上密钥串进行MD5加密，例如：sign=MD5(mobileNum=13576543876+MWD76D29KKAS8912SK)" /*签名*/
 
-- (AFHTTPRequestOperation *)amtdetailqueryMoblieNum:(NSString*)mobileNum acNo:(NSString*)acNo beginDate:(NSDate*)beginDate endDate:(NSDate*)endDate
+- (AFHTTPRequestOperation *)amtdetailqueryPageNum:(NSInteger)pageNum beginDate:(NSDate*)beginDate endDate:(NSDate*)endDate
                                    success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                                    failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error, id responseObject))failure{
     
     NSString* urlString = [NSString stringWithFormat:@"%@%@%@%@",HTTP_HEAD,MF_URL_HOST,FUNC_URL,AMTDETAIL_QUERY_URL];
     
-    return [[FMNetWorkManager sharedInstance] requestURL:urlString httpMethod:@"POST" parameters:nil success:^(AFHTTPRequestOperation * operation, id responseObject) {
+    NSDictionary* pageinfo = [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"%ld",(long)pageNum],@"pageNum", nil];
+    NSDictionary* params = [NSDictionary dictionaryWithObjectsAndKeys:pageinfo,@"pageinfo", nil];
+    
+    
+    return [[FMNetWorkManager sharedInstance] requestURL:urlString httpMethod:@"POST" parameters:params success:^(AFHTTPRequestOperation * operation, id responseObject) {
         success(operation, responseObject);
         
     }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {

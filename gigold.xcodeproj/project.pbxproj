@@ -266,6 +266,7 @@
 		5CB6FF6D1BE09B4D00D666D0 /* ico_statement_2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CB6FF671BE09B4D00D666D0 /* ico_statement_2@3x.png */; };
 		5CB6FF6E1BE09B4D00D666D0 /* ico_statement_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CB6FF681BE09B4D00D666D0 /* ico_statement_3@2x.png */; };
 		5CB6FF6F1BE09B4D00D666D0 /* ico_statement_3@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CB6FF691BE09B4D00D666D0 /* ico_statement_3@3x.png */; };
+		5CB9C29D1BEB457A009BE943 /* User_SmallChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CB9C29C1BEB457A009BE943 /* User_SmallChange.m */; };
 		5CBE16E81BD76D0400692B0A /* BankCardManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE16E61BD76D0400692B0A /* BankCardManagerViewController.m */; };
 		5CBE16E91BD76D0400692B0A /* BankCardManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CBE16E71BD76D0400692B0A /* BankCardManagerViewController.xib */; };
 		5CBE16ED1BD76F9F00692B0A /* AddBankCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CBE16EB1BD76F9F00692B0A /* AddBankCardViewController.m */; };
@@ -706,6 +707,8 @@
 		5CB6FF671BE09B4D00D666D0 /* ico_statement_2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_statement_2@3x.png"; sourceTree = "<group>"; };
 		5CB6FF681BE09B4D00D666D0 /* ico_statement_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_statement_3@2x.png"; sourceTree = "<group>"; };
 		5CB6FF691BE09B4D00D666D0 /* ico_statement_3@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_statement_3@3x.png"; sourceTree = "<group>"; };
+		5CB9C29B1BEB457A009BE943 /* User_SmallChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User_SmallChange.h; sourceTree = "<group>"; };
+		5CB9C29C1BEB457A009BE943 /* User_SmallChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User_SmallChange.m; sourceTree = "<group>"; };
 		5CBE16E51BD76D0400692B0A /* BankCardManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardManagerViewController.h; sourceTree = "<group>"; };
 		5CBE16E61BD76D0400692B0A /* BankCardManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardManagerViewController.m; sourceTree = "<group>"; };
 		5CBE16E71BD76D0400692B0A /* BankCardManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardManagerViewController.xib; sourceTree = "<group>"; };
@@ -3360,6 +3363,8 @@
 			children = (
 				5CD0BFEC1BE354C90036ED42 /* User.h */,
 				5CD0BFED1BE354C90036ED42 /* User.m */,
+				5CB9C29B1BEB457A009BE943 /* User_SmallChange.h */,
+				5CB9C29C1BEB457A009BE943 /* User_SmallChange.m */,
 			);
 			name = Data;
 			path = gigold/UserManager/Data;
@@ -3793,6 +3798,7 @@
 				5C6D20C21BE85CBD00B57025 /* SXPAppDelegate.m in Sources */,
 				5C1DFAFE1BDA195A00E0BB97 /* PayPasswordViewController.m in Sources */,
 				5C6D20C51BE85CBD00B57025 /* HttpEvent.m in Sources */,
+				5CB9C29D1BEB457A009BE943 /* User_SmallChange.m in Sources */,
 				5C6D20731BE85C8500B57025 /* LoadView.m in Sources */,
 				5C6D20C71BE85CBD00B57025 /* MBProgressHUD.m in Sources */,
 				5C6D1FB81BE85B6B00B57025 /* LimitInstructionsViewController.m in Sources */,
@@ -3957,8 +3963,8 @@
 			baseConfigurationReference = 660292318B52F537CA48DCED /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: wangsucheng0715@163.com (QLLFXP8PFL)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: wangsucheng0715@163.com (QLLFXP8PFL)";
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/gigold/Common/Data/PrefixHeader.pch";
 				INFOPLIST_FILE = gigold/Info.plist;
@@ -3981,8 +3987,8 @@
 			baseConfigurationReference = 05C9FF4D315E838F911D2C11 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: wangsucheng0715@163.com (QLLFXP8PFL)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: wangsucheng0715@163.com (QLLFXP8PFL)";
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/gigold/Common/Data/PrefixHeader.pch";
 				INFOPLIST_FILE = gigold/Info.plist;
