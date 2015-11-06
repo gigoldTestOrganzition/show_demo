@@ -9,8 +9,9 @@
 #import "BaseViewController.h"
 #import "CustomerView.h"
 #import "PulRefresh.h"
+#import "PageTableviewdragloading.h"
 
-@interface SmallChangeViewController : BaseViewController <UITableViewDataSource,UITableViewDelegate,PulRefreshdelegate>
+@interface SmallChangeViewController : BaseViewController <UITableViewDataSource,UITableViewDelegate,PulRefreshdelegate,PageTableViewdragdelegate>
 {
     NSMutableArray* dataArray;
     
@@ -25,6 +26,9 @@
     
     PulRefresh     *pullfresh;
     BOOL _reloading;
+    
+    // 上拉加载
+    PageTableviewdragloading   *pagetabledrag;
     
     UIView* noneView;
     

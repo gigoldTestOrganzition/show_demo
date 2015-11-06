@@ -26,6 +26,7 @@
 		5C5643611BEC44AF00367FB8 /* pullup.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5643561BEC44AF00367FB8 /* pullup.m */; };
 		5C5643621BEC44AF00367FB8 /* PulRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5643581BEC44AF00367FB8 /* PulRefresh.m */; };
 		5C5643711BEC92F000367FB8 /* ServiceText.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C5643701BEC92F000367FB8 /* ServiceText.plist */; };
+		5C5643751BEC964500367FB8 /* PageTableviewdragloading.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5643741BEC964500367FB8 /* PageTableviewdragloading.m */; };
 		5C5A2DC71BD6115D00C4AE1D /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D961BD6115D00C4AE1D /* HelpViewController.m */; };
 		5C5A2DC81BD6115D00C4AE1D /* LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D9B1BD6115D00C4AE1D /* LoginRequest.m */; };
 		5C5A2DC91BD6115D00C4AE1D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D9F1BD6115D00C4AE1D /* LoginViewController.m */; };
@@ -357,6 +358,8 @@
 		5C5643571BEC44AF00367FB8 /* PulRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulRefresh.h; sourceTree = "<group>"; };
 		5C5643581BEC44AF00367FB8 /* PulRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PulRefresh.m; sourceTree = "<group>"; };
 		5C5643701BEC92F000367FB8 /* ServiceText.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ServiceText.plist; sourceTree = "<group>"; };
+		5C5643731BEC964500367FB8 /* PageTableviewdragloading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageTableviewdragloading.h; sourceTree = "<group>"; };
+		5C5643741BEC964500367FB8 /* PageTableviewdragloading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageTableviewdragloading.m; sourceTree = "<group>"; };
 		5C5A2D951BD6115D00C4AE1D /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
 		5C5A2D961BD6115D00C4AE1D /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
 		5C5A2D9A1BD6115D00C4AE1D /* LoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginRequest.h; sourceTree = "<group>"; };
@@ -855,6 +858,8 @@
 				5C5643561BEC44AF00367FB8 /* pullup.m */,
 				5C5643571BEC44AF00367FB8 /* PulRefresh.h */,
 				5C5643581BEC44AF00367FB8 /* PulRefresh.m */,
+				5C5643731BEC964500367FB8 /* PageTableviewdragloading.h */,
+				5C5643741BEC964500367FB8 /* PageTableviewdragloading.m */,
 			);
 			path = Pull;
 			sourceTree = "<group>";
@@ -3762,6 +3767,7 @@
 				5C6D1FD91BE85B6B00B57025 /* CustomerSlider.m in Sources */,
 				5C6D204E1BE85C8500B57025 /* AppUtils.m in Sources */,
 				5C6D1FBC1BE85B6B00B57025 /* RollInViewController.m in Sources */,
+				5C5643751BEC964500367FB8 /* PageTableviewdragloading.m in Sources */,
 				5C6D1FC01BE85B6B00B57025 /* SenvenIncomeRateData.m in Sources */,
 				5C6D1FCB1BE85B6B00B57025 /* TradingCell.m in Sources */,
 				5C6D1FEE1BE85B6B00B57025 /* IncomeRrialViewController.m in Sources */,

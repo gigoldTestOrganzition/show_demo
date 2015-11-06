@@ -103,7 +103,6 @@
     }else{
         markImageView.transform = CGAffineTransformMakeRotation((0.0f * M_PI) / 180.0f);
     }
-    [self requestMoreData];
 }
 
 -(void)labelPress:(UITapGestureRecognizer*)gesture{
@@ -150,6 +149,9 @@
     }
     
     [self requestData];
+    
+    pagetabledrag = [[PageTableviewdragloading alloc] initWithTableView:self.mTableView];
+    pagetabledrag.delegate = self;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -180,6 +182,10 @@
 
 -(void)requestData{
     pageNum = 1;
+    [pagetabledrag stopLoad];
+    [pagetabledrag reset];
+    [dataArray removeAllObjects];
+    [self.mTableView reloadData];
     [[UserInfoRequest sharedUserInfoRequest] amtdetailqueryPageNum:pageNum queryType:queryType success:^(AFHTTPRequestOperation * operation, id responseObject) {
         [self doneLoadingTableViewData];
         NSString* rspCd = [responseObject objectForKey:@"rspCd"];
@@ -188,6 +194,8 @@
             NSDictionary* pageinfo = [responseObject objectForKey:@"pageinfo"];
             pageNum = [[pageinfo objectForKey:@"pageNum"] integerValue];
             pages = [[pageinfo objectForKey:@"pages"] integerValue];
+            pagetabledrag.pages = pages;
+            pagetabledrag.pagenum = pageNum;
             if (pageNum == 0 || pageNum == 1) {
                 [dataArray removeAllObjects];
             }
@@ -221,13 +229,15 @@
 -(void)requestMoreData{
     pageNum ++;
     [[UserInfoRequest sharedUserInfoRequest] amtdetailqueryPageNum:pageNum queryType:queryType success:^(AFHTTPRequestOperation * operation, id responseObject) {
-        [self doneLoadingTableViewData];
+        [pagetabledrag stopLoad];
         NSString* rspCd = [responseObject objectForKey:@"rspCd"];
         NSString* rspInf = [responseObject objectForKey:@"rspInf"];
         if ([rspCd isEqualToString:SUCCESS]) {
             NSDictionary* pageinfo = [responseObject objectForKey:@"pageinfo"];
             pageNum = [[pageinfo objectForKey:@"pageNum"] integerValue];
             pages = [[pageinfo objectForKey:@"pages"] integerValue];
+            pagetabledrag.pages = pages;
+            pagetabledrag.pagenum = pageNum;
             if (pageNum == 0 || pageNum == 1) {
                 [dataArray removeAllObjects];
             }
@@ -254,8 +264,15 @@
         }
         
     }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
+        [pagetabledrag stopLoad];
         [self doneLoadingTableViewData];
     }];
+}
+
+#pragma mark - 上拉加载更多
+
+-(void)startPaging:(NSInteger)currentPage withSize:(NSInteger)pageSize{
+    [self requestMoreData];
 }
 
 #pragma mark - pullfresh delegate
@@ -292,6 +309,10 @@
         NSLog(@"%f",scrollView.contentOffset.y);
         NSLog(@"%f",scrollView.contentInset.top);
         [pullfresh RefreshScrollViewDidScroll:scrollView];
+    }
+    
+    if (self.mTableView.contentOffset.y > 0 && self.mTableView.contentOffset.y >= self.mTableView.contentSize.height-self.mTableView.frame.size.height){
+        [pagetabledrag scrollViewDidEndDragging:scrollView willDecelerate:YES];
     }
 }
 
