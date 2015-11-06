@@ -35,31 +35,31 @@
     if ([_ordTyp isEqualToString:@"0"]) {
         return @"远程消费";
     }
-    else if ([_ordTyp isEqualToString:@"1"]){
+    else if ([_ordTyp isEqualToString:@"01"]){
         return @"充值";
     }
-    else if ([_ordTyp isEqualToString:@"2"]){
+    else if ([_ordTyp isEqualToString:@"02"]){
         return @"提现";
     }
-    else if ([_ordTyp isEqualToString:@"3"]){
+    else if ([_ordTyp isEqualToString:@"03"]){
         return @"缴话费";
     }
-    else if ([_ordTyp isEqualToString:@"4"]){
+    else if ([_ordTyp isEqualToString:@"04"]){
         return @"缴公共事业费";
     }
-    else if ([_ordTyp isEqualToString:@"5"]){
+    else if ([_ordTyp isEqualToString:@"05"]){
         return @"现场联机";
     }
-    else if ([_ordTyp isEqualToString:@"6"]){
+    else if ([_ordTyp isEqualToString:@"06"]){
         return @"现场脱机";
     }
-    else if ([_ordTyp isEqualToString:@"7"]){
+    else if ([_ordTyp isEqualToString:@"07"]){
         return @"圈存";
     }
-    else if ([_ordTyp isEqualToString:@"8"]){
+    else if ([_ordTyp isEqualToString:@"08"]){
         return @"转账";
     }
-    else if ([_ordTyp isEqualToString:@"9"]){
+    else if ([_ordTyp isEqualToString:@"09"]){
         return @"手工调账";
     }
     return @"未知类型";

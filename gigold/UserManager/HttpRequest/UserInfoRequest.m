@@ -59,13 +59,13 @@ static UserInfoRequest *userInfoRequest = nil;
 //用户收支明细查询
 //"sign":"签名算法:将参数按ASII码排序，然后加上密钥串进行MD5加密，例如：sign=MD5(mobileNum=13576543876+MWD76D29KKAS8912SK)" /*签名*/
 
-- (AFHTTPRequestOperation *)amtdetailqueryPageNum:(NSInteger)pageNum beginDate:(NSDate*)beginDate endDate:(NSDate*)endDate
+- (AFHTTPRequestOperation *)amtdetailqueryPageNum:(NSInteger)pageNum queryType:(NSInteger)queryType
                                    success:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                                    failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error, id responseObject))failure{
     
     NSString* urlString = [NSString stringWithFormat:@"%@%@%@%@",HTTP_HEAD,MF_URL_HOST,FUNC_URL,AMTDETAIL_QUERY_URL];
     
-    NSDictionary* pageinfo = [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"%ld",(long)pageNum],@"pageNum", nil];
+    NSDictionary* pageinfo = [NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"%ld",(long)pageNum],@"pageNum",[NSString stringWithFormat:@"%ld",(long)queryType],@"queryType", nil];
     NSDictionary* params = [NSDictionary dictionaryWithObjectsAndKeys:pageinfo,@"pageinfo", nil];
     
     

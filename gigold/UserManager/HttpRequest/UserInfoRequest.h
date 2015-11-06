@@ -43,7 +43,7 @@
 
 #define AMTDETAIL_QUERY_URL   @"/user/amtdetailquery.do"
 
-- (AFHTTPRequestOperation *)amtdetailqueryPageNum:(NSInteger)pageNum beginDate:(NSDate*)beginDate endDate:(NSDate*)endDate
+- (AFHTTPRequestOperation *)amtdetailqueryPageNum:(NSInteger)pageNum queryType:(NSInteger)queryType 
                                    success:(void (^)(AFHTTPRequestOperation *task, id responseObject))success
                                    failure:(void (^)(AFHTTPRequestOperation *task, NSError *error, id responseObject))failure;
 

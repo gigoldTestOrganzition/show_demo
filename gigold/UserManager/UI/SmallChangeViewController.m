@@ -34,14 +34,14 @@
     titleLabel.backgroundColor = [UIColor clearColor];
     titleLabel.font = title_or_btn_font;
     titleLabel.textColor = [UIColor whiteColor];
-        
+    
     [navTitleView addSubview:titleLabel];
-        
+    
     markImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"top_menu_but_arrow"]];
     [navTitleView addSubview:markImageView];
-        
+    
     UITapGestureRecognizer* oneTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(headTilePress)];
-        [navTitleView addGestureRecognizer:oneTap];
+    [navTitleView addGestureRecognizer:oneTap];
     
     
     navTitleView.frame = CGRectMake(0, 0, width+22, 44);
@@ -53,6 +53,7 @@
 }
 
 -(void)headTilePress{
+    
     NSLog(@"弹出菜单");
     if (!popView) {
         UIView* showView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, mainScreenWidth, 45*menuTitles.count)];
@@ -80,6 +81,8 @@
             UITapGestureRecognizer* oneTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelPress:)];
             [menuLabel addGestureRecognizer:oneTap];
             
+            menuLabel.tag = 100+i;
+            
             [menuLabel addSubview:shadowView];
         }
         
@@ -92,14 +95,15 @@
         [popView stopDialog];
     }else{
         [popView showDialogByBaseLine:44+STATUSBAR_OFFSET view:self.view];
-         [popView showDialog:self.view];
+        [popView showDialog:self.view];
     }
     
     if (markImageView.transform.a == 1) {
-         markImageView.transform = CGAffineTransformMakeRotation((180.0f * M_PI) / 180.0f);
+        markImageView.transform = CGAffineTransformMakeRotation((180.0f * M_PI) / 180.0f);
     }else{
-         markImageView.transform = CGAffineTransformMakeRotation((0.0f * M_PI) / 180.0f);
+        markImageView.transform = CGAffineTransformMakeRotation((0.0f * M_PI) / 180.0f);
     }
+    [self requestMoreData];
 }
 
 -(void)labelPress:(UITapGestureRecognizer*)gesture{
@@ -107,6 +111,8 @@
     NSString* titleString = [label.text componentsSeparatedByString:@" "].lastObject;
     self.title = titleString;
     [self headTilePress];
+    queryType = gesture.view.tag -100;
+    [self requestData];
 }
 
 - (void)viewDidLoad {
@@ -119,18 +125,70 @@
     
     dataArray = [[NSMutableArray alloc] init];
     
+    User_SmallChange* user_small = [[User_SmallChange alloc] init];
+    
+    user_small.ordTyp = @"1";
+    user_small.oldTxTm = @"2015-10-29";
+    user_small.bal = 100;
+    
+    user_small.drAmt = 100;
+    user_small.crAmt = 0;
+    
+    
+    //    for (NSInteger i = 0 ; i < 10; i++) {
+    //        [dataArray addObject:user_small];
+    //    }
+    
     self.mTableView.delegate = self;
     self.mTableView.dataSource = self;
     
+    if (pullfresh == nil) {
+        pullfresh = [[PulRefresh alloc] initWithFrame:CGRectMake(0, 0-self.mTableView.frame.size.height, self.mTableView.frame.size.width, self.mTableView.frame.size.height)];
+        pullfresh.delegate = self;
+        [self.mTableView insertSubview:pullfresh atIndex:0];
+        [pullfresh refreshLastUpdatedDate];
+    }
     
+    [self requestData];
+    // Do any additional setup after loading the view from its nib.
+}
+
+-(void)showNoneView{
+    if (!noneView) {
+        noneView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, mainScreenWidth, 165)];
+        noneView.backgroundColor = [UIColor clearColor];
+        
+        UILabel* noneLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, noneView.frame.size.height-15, noneView.frame.size.width, 15)];
+        noneLabel.backgroundColor = [UIColor clearColor];
+        noneLabel.textAlignment = NSTextAlignmentCenter;
+        noneLabel.text = @"暂无任何记录";
+        noneLabel.textColor = main_text_color;
+        noneLabel.font = main_font;
+        [noneView addSubview:noneLabel];
+        
+        UIImageView* imageView = [[UIImageView alloc] initWithFrame:CGRectMake((noneView.frame.size.width-60)/2, noneView.frame.size.height-90, 60, 60)];
+        imageView.image = [UIImage imageNamed:@"no_data_ico"];
+        [noneView addSubview:imageView];
+    }
     
-    [[UserInfoRequest sharedUserInfoRequest] amtdetailqueryPageNum:1 beginDate:nil endDate:nil success:^(AFHTTPRequestOperation * operation, id responseObject) {
+    self.mTableView.tableHeaderView = noneView;
+}
+
+-(void)hiddenNoneView{
+    self.mTableView.tableHeaderView = nil;
+}
+
+-(void)requestData{
+    pageNum = 1;
+    [[UserInfoRequest sharedUserInfoRequest] amtdetailqueryPageNum:pageNum queryType:queryType success:^(AFHTTPRequestOperation * operation, id responseObject) {
+        [self doneLoadingTableViewData];
         NSString* rspCd = [responseObject objectForKey:@"rspCd"];
         NSString* rspInf = [responseObject objectForKey:@"rspInf"];
         if ([rspCd isEqualToString:SUCCESS]) {
             NSDictionary* pageinfo = [responseObject objectForKey:@"pageinfo"];
-            NSInteger prePage = [[pageinfo objectForKey:@"prePage"] integerValue];
-            if (prePage == 0 || prePage == 1) {
+            pageNum = [[pageinfo objectForKey:@"pageNum"] integerValue];
+            pages = [[pageinfo objectForKey:@"pages"] integerValue];
+            if (pageNum == 0 || pageNum == 1) {
                 [dataArray removeAllObjects];
             }
             
@@ -144,11 +202,9 @@
             }
             
             if (dataArray.count > 0) {
-                self.noneView.hidden = YES;
-                self.mTableView.hidden = NO;
+                [self hiddenNoneView];
             }else{
-                self.noneView.hidden = NO;
-                self.mTableView.hidden = YES;
+                [self showNoneView];
             }
             
             [self.mTableView reloadData];
@@ -158,10 +214,92 @@
         }
         
     }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
-        
+        [self doneLoadingTableViewData];
     }];
-    
-    // Do any additional setup after loading the view from its nib.
+}
+
+-(void)requestMoreData{
+    pageNum ++;
+    [[UserInfoRequest sharedUserInfoRequest] amtdetailqueryPageNum:pageNum queryType:queryType success:^(AFHTTPRequestOperation * operation, id responseObject) {
+        [self doneLoadingTableViewData];
+        NSString* rspCd = [responseObject objectForKey:@"rspCd"];
+        NSString* rspInf = [responseObject objectForKey:@"rspInf"];
+        if ([rspCd isEqualToString:SUCCESS]) {
+            NSDictionary* pageinfo = [responseObject objectForKey:@"pageinfo"];
+            pageNum = [[pageinfo objectForKey:@"pageNum"] integerValue];
+            pages = [[pageinfo objectForKey:@"pages"] integerValue];
+            if (pageNum == 0 || pageNum == 1) {
+                [dataArray removeAllObjects];
+            }
+            
+            NSArray* list = [pageinfo objectForKey:@"list"];
+            
+            for (NSDictionary* smallChangDict  in list) {
+                User_SmallChange* user_smallChange = [User_SmallChange objectWithKeyValues:smallChangDict];
+                if (user_smallChange) {
+                    [dataArray addObject:user_smallChange];
+                }
+            }
+            
+            if (dataArray.count > 0) {
+                [self hiddenNoneView];
+            }else{
+                [self showNoneView];
+            }
+            
+            [self.mTableView reloadData];
+            
+        }else{
+            [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
+        }
+        
+    }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
+        [self doneLoadingTableViewData];
+    }];
+}
+
+#pragma mark - pullfresh delegate
+//下拉刷新
+
+-(NSDate*)RefreshTableHeaderDataSourceLastUpdated:(PulRefresh *)view{
+    return [NSDate date];
+}
+//请求数据了
+-(void)RefreshTableHeaderDidTriggerRefresh:(PulRefresh *)view{
+    [self requestData];
+}
+
+-(BOOL)RefreshTableHeaderDataSourceIsLoading:(PulRefresh *)view{
+    return _reloading;
+}
+
+
+-(void)reloadTableViewDataSource{
+    _reloading = YES;
+}
+
+
+-(void)doneLoadingTableViewData{
+    _reloading = NO;
+    [pullfresh RefreshScrollViewDataSourceDidFinishedLoading:self.mTableView];
+}
+
+#pragma mark - scrollview delegate ------
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (scrollView == self.mTableView){
+        NSLog(@"%f",scrollView.contentOffset.y);
+        NSLog(@"%f",scrollView.contentInset.top);
+        [pullfresh RefreshScrollViewDidScroll:scrollView];
+    }
+}
+
+-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    if (scrollView == self.mTableView) {
+        [pullfresh RefreshScrollViewDidEndDragging:scrollView];
+    }
 }
 
 #pragma mark ---- UITableViewDataSource,UITableViewDelegate --------
@@ -191,15 +329,15 @@
     
     User_SmallChange* user_smallChange = [dataArray objectAtIndex:indexPath.row];
     cell.styleLabel.text = [NSString stringWithFormat:@"%@",user_smallChange.ordTyp];
-    cell.timeLabel.text = user_smallChange.oldTxTm;
-    cell.smallChangeLabel.text = [NSString stringWithFormat:@"余额：%ld",user_smallChange.bal];
+    cell.timeLabel.text = user_smallChange.oldTxDt;
+    cell.smallChangeLabel.text = [NSString stringWithFormat:@"余额：%ld",(long)user_smallChange.bal];
     
     
     if (user_smallChange.drAmt == 0) {
-        cell.moneyLabel.text = [NSString stringWithFormat:@"+%ld",user_smallChange.crAmt];
+        cell.moneyLabel.text = [NSString stringWithFormat:@"+%ld",(long)user_smallChange.crAmt];
         cell.moneyLabel.textColor = theme_color;
     }else{
-        cell.moneyLabel.text = [NSString stringWithFormat:@"-%ld",user_smallChange.drAmt];
+        cell.moneyLabel.text = [NSString stringWithFormat:@"-%ld",(long)user_smallChange.drAmt];
         cell.moneyLabel.textColor = UIColorFromRGB(0xE56767);
     }
     
@@ -217,13 +355,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

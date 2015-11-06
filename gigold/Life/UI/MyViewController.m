@@ -99,7 +99,8 @@
 -(void)topup{
     TopUpViewController* topupViewController = (TopUpViewController*)storyboard_controller(@"topUpStoryboard");
     topupViewController.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:topupViewController animated:YES];
+//    ((UINavigationController*)Etappdelegate.window.rootViewController)
+    [((UINavigationController*)Etappdelegate.window.rootViewController) pushViewController:topupViewController animated:YES];
    
     
 }

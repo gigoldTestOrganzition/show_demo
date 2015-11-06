@@ -45,6 +45,8 @@
     
     [self showMainView];
     
+    [NSThread sleepForTimeInterval:1.0];
+    
     //设置Window为主窗口并显示出来
     [self.window makeKeyAndVisible];
     
