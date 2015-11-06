@@ -13,6 +13,7 @@
 #import "appliacation_attribute.h"
 #import "MyViewController.h"
 #import "RootViewController.h"
+#import "LaunchViewController.h"
 
 @interface AppDelegate ()
 
@@ -28,9 +29,6 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(showMainViewNotification:)name:@"showMainView" object:nil];
-    
-    
     NSLog(@"%f %f",mainScreenWidth,mainScreenHeight);
 
     
@@ -43,9 +41,8 @@
                                                            NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
-    [self showMainView];
-    
-    [NSThread sleepForTimeInterval:1.0];
+    [self showCustomLaunchView];
+//    [self showMainView];
     
     //设置Window为主窗口并显示出来
     [self.window makeKeyAndVisible];
@@ -53,10 +50,18 @@
     return YES;
 }
 
-//接受显示主界面的通知
--(void)showMainViewNotification:(NSNotification *)notification{
-    [self showMainView];
+-(void)showCustomLaunchView{
+    LaunchViewController* launchView = [[LaunchViewController alloc] init];
+    launchView.delegate = self;
+    self.window.rootViewController = launchView;
 }
+
+-(void)UIViewControllerBack:(BaseViewController *)baseViewController{
+    if ([baseViewController isKindOfClass:[LaunchViewController class]]) {
+        [self showMainView];
+    }
+}
+
 
 //进入新手指导
 -(void)showHelpView{

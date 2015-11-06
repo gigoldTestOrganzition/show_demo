@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class BaseViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
