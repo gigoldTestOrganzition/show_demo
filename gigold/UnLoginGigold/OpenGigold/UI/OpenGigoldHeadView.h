@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface OpenGigoldHeadView : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIView *bottomView;
 //万分收益lable
 @property (weak, nonatomic) IBOutlet UILabel *tenThousandLabel;
 //万分收益view

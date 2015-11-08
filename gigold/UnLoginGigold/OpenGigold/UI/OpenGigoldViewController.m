@@ -73,6 +73,7 @@
     functionTableView.backgroundColor = back_ground_color;
     functionTableView.separatorColor = [UIColor clearColor];
 }
+
 #pragma mark -数据初始化
 -(void)initDatas{
     if (!datas) {
@@ -116,7 +117,7 @@
 #pragma mark -ui初始化
 -(UITableViewCell*)getGigoldHeadView{
     if (!gigoldHeadView) {
-        gigoldHeadView = [[[NSBundle mainBundle]loadNibNamed:@"OpenGigoldHeadView" owner:self options:nil]firstObject];
+        gigoldHeadView = [[NSBundle mainBundle]loadNibNamed:@"OpenGigoldHeadView" owner:nil options:nil][0];
         [ViewUtil registerGestures:gigoldHeadView.tenThousandView target:self action:@selector(intoTenthousand)];
         [ViewUtil registerGestures:gigoldHeadView.incomeCalculate target:self action:@selector(intoIncomeCalculate)];
     }
@@ -214,11 +215,14 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:gigoldDeclaration.type owner:self options:nil] firstObject];
     }else{
         switch (indexPath.section) {
-            case 0:
+            case 0:{
                 cell =  [self getGigoldHeadView];
+                
+            }
                 break;
             case 1:
                 cell =  [self getGigoldSevenRatwView];
+                
                 break;
             default:
                 cell =  [self getGigoldHeadView];

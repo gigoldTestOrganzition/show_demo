@@ -14,6 +14,7 @@ typedef enum _PayPwdType
     RollInPayPwdType = 1 << 2,
     RollOutPayPwdType = 1 << 3
     
+    
 } PayPwdType;
 
 #import "BaseViewController.h"

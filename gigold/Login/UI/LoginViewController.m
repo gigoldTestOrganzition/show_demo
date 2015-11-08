@@ -112,33 +112,41 @@
     }else{
         [loadView showDialog:self.view];
     }
-    [[LoginRequest sharedLoginRequest] loginRequestMobileNum:self.accountTextField.text pwd:self.passwordTextField.text success:^(AFHTTPRequestOperation * operation, id responseObject) {
-        [loadView stopDialog];
-        NSString* rspCd = [responseObject objectForKey:@"rspCd"];
-        NSString* rspInf = [responseObject objectForKey:@"rspInf"];
-        if ([rspCd isEqualToString:@"U0000"]) {
-            [self loginRespond];
-            
-            
-            [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
-            
-            [self performSelector:@selector(delayMethod) withObject:nil afterDelay:2.0f];
-            
-            User* user = [User objectWithKeyValues:[responseObject objectForKey:@"user"]];
-            [[AppUtils shareAppUtils] saveUserId:user.mobile];
-            [[AppUtils shareAppUtils] saveUserData:[responseObject objectForKey:@"user"]];
-            [self loginRespond];
-            NSLog(@"user%@",user);
-        }else{
-            [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
-        }
-        
-    }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
-        [loadView stopDialog];
-        [[AppUtils shareAppUtils] showHUD:@"登录失败" andView:self.view];
-    }];
+    
+    [self loginRespond];
+    [self performSelector:@selector(delayMethod) withObject:nil afterDelay:2.0f];
+
+    
+//    [[LoginRequest sharedLoginRequest] loginRequestMobileNum:self.accountTextField.text pwd:self.passwordTextField.text success:^(AFHTTPRequestOperation * operation, id responseObject) {
+//        [loadView stopDialog];
+//        NSString* rspCd = [responseObject objectForKey:@"rspCd"];
+//        NSString* rspInf = [responseObject objectForKey:@"rspInf"];
+//        if ([rspCd isEqualToString:@"U0000"]) {
+//            [self loginRespond];
+//            
+//            
+//            [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
+//            
+//            [self performSelector:@selector(delayMethod) withObject:nil afterDelay:2.0f];
+//            
+//            User* user = [User objectWithKeyValues:[responseObject objectForKey:@"user"]];
+//            [[AppUtils shareAppUtils] saveUserId:user.mobile];
+//            [[AppUtils shareAppUtils] saveUserData:[responseObject objectForKey:@"user"]];
+//            [self loginRespond];
+//            NSLog(@"user%@",user);
+//        }else{
+//            [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
+//        }
+//        
+//    }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
+//        [loadView stopDialog];
+//        [[AppUtils shareAppUtils] showHUD:@"登录失败" andView:self.view];
+//    }];
     
 }
+
+
+
 
 -(void)delayMethod{
     [self dismissViewControllerAnimated:YES completion:^{}];

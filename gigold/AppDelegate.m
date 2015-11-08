@@ -11,7 +11,6 @@
 #import "LoginViewController.h"
 #import "MyAccountViewController.h"
 #import "appliacation_attribute.h"
-#import "MyViewController.h"
 #import "RootViewController.h"
 
 @interface AppDelegate ()
@@ -64,8 +63,8 @@
 }
 
 -(void)showMainView{
-    RootViewController* rootView = [[RootViewController alloc] init];
-    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:rootView];
+   // RootViewController* rootView = [[RootViewController alloc] init];
+    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:[RootViewController shareInstance]];
     self.window.rootViewController = nav;
   
 }

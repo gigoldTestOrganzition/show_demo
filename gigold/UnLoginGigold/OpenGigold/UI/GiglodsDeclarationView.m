@@ -13,6 +13,7 @@
 @synthesize title = _title;
 @synthesize lookImg = _lookImg;
 @synthesize bottomLineLeadingLayoutConstraint=_bottomLineLeadingLayoutConstraint;
+@synthesize topLayoutConstraint=_topLayoutConstraint;
 
 /*
 // Only override drawRect: if you perform custom drawing.

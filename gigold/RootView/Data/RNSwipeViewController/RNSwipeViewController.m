@@ -27,7 +27,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "RNDirectionPanGestureRecognizer.h"
 #import "UIView+Sizes.h"
-#import "MyViewController.h"
+
 
 NSString * const RNSwipeViewControllerLeftWillAppear = @"com.whoisryannystrom.RNSwipeViewControllerLeftWillAppear";
 NSString * const RNSwipeViewControllerLeftDidAppear = @"com.whoisryannystrom.RNSwipeViewControllerLeftDidAppear";

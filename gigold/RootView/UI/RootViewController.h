@@ -10,5 +10,5 @@
 #import "MyAccountViewController.h"
 
 @interface RootViewController : RNSwipeViewController
-
++(RootViewController*)shareInstance;
 @end

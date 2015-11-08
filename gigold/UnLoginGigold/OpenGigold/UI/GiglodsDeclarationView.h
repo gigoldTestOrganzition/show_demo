@@ -13,4 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *title;
 @property (weak, nonatomic) IBOutlet UIImageView *lookImg;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bottomLineLeadingLayoutConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topLayoutConstraint;
+
 @end

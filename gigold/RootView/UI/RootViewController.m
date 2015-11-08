@@ -8,9 +8,8 @@
 
 #import "RootViewController.h"
 #import <UIKit/UIKit.h>
-#import "MyViewController.h"
 #import "appliacation_attribute.h"
-
+#import "ContentViewController.h"
 @interface RootViewController ()
 
 @end
@@ -20,25 +19,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[UIApplication sharedApplication] setApplicationSupportsShakeToEdit:YES];
-
     [self becomeFirstResponder];
     
-    
-    
-    UINavigationController* lifeNavigationController = [[UINavigationController alloc]initWithRootViewController:(MyViewController*)storyboard_controller(@"MyViewController")];
-    self.centerViewController = lifeNavigationController;
-    
+    self.centerViewController =[[ContentViewController alloc]init];
     [self becomeFirstResponder];
-    
-    
-
-    
     
     MyAccountViewController* myAccountView1= [[MyAccountViewController alloc] init];
     self.leftViewController = myAccountView1;
     self.leftVisibleWidth = self.view.bounds.size.width -50;
-    
     // Do any additional setup after loading the view.
+}
++(RootViewController *)shareInstance{
+    static RootViewController* rootViewController = nil;
+    static dispatch_once_t once;
+    dispatch_once(&once, ^{
+        rootViewController = [[RootViewController alloc]init];
+    });
+    return rootViewController;
 }
 
 //切换首页中间和右侧筛选页面，左侧关注页面永远不变

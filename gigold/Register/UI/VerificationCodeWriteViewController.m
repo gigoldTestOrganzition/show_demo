@@ -142,6 +142,17 @@
 }
 
 -(void)nextBtnPress{
+    
+    if (self.flowType == OpenGigoldType) {
+        ResultShowView * resultShowView = [ResultShowView showResult:ResultTypeCorrect];
+        resultShowView.desc.text = @"吉有钱开通成功";
+        resultShowView.desc.textColor = main_text_color;
+        resultShowView.deleget = self;
+        [resultShowView showDialog:self.view];
+        return;
+    }
+
+    
     NSLog(@"下一步");
     [self.validateTextField resignFirstResponder];
     
@@ -272,6 +283,12 @@
 
 #pragma mark ---- ResultShowViewSureDeleget --------
 -(void)sure{
+    if (self.flowType == OpenGigoldType) {
+        [self.navigationController popToRootViewControllerAnimated:NO];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"open" object:nil];
+               return;
+    }
+    
     [self.navigationController popViewControllerAnimated:NO];
     if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
         [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
