@@ -14,7 +14,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="home_page_banner1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ve8-6d-pxC">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="home_page_banner1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ve8-6d-pxC">
                         <rect key="frame" x="10" y="10" width="75" height="60"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="60" id="5Zt-dF-UEc"/>
@@ -86,6 +86,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="home_page_banner1.png" width="320" height="110"/>
+        <image name="home_page_banner1.jpg" width="320" height="110"/>
     </resources>
 </document>

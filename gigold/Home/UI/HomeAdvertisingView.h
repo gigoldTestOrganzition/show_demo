@@ -11,9 +11,13 @@
 @interface HomeAdvertisingView : UIView
 //展示的广告数组
 @property(nonatomic,strong)NSArray* imgArray;
+//轮放时间
+@property(nonatomic,assign)CGFloat loopTime;
 //滑动
 @property (strong, nonatomic) UIScrollView *imageScrollView;
 @property (strong, nonatomic) UIPageControl *pageController;
 //更新frame
 -(void)updataFrame:(CGRect)frame;
+//循环播放
+-(void)loopContent;
 @end

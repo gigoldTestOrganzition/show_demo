@@ -9,15 +9,20 @@
 #import "HomeAdvertisingView.h"
 @interface HomeAdvertisingView()<UIScrollViewDelegate>{
     NSMutableArray* imageDatas;
+    NSInteger currenPage;
+    NSTimer* timer;
 }
 @end
 @implementation HomeAdvertisingView
 @synthesize imgArray=_imgArray;
+@synthesize loopTime=_loopTime;
 @synthesize imageScrollView=_imageScrollView;
 @synthesize pageController=_pageController;
 
 
 -(void)setImgArray:(NSArray *)imgArray{
+    currenPage = 0;
+    self.loopTime = 3.f;
     _imageScrollView.contentSize=CGSizeMake(imgArray.count*_imageScrollView.frame.size.width,_imageScrollView.frame.size.height);
     _pageController.numberOfPages =imgArray.count;
     for (int i = 0;i < [imgArray count];i++){
@@ -61,6 +66,23 @@
         [self getCurrentImageView].frame = currentImageViewFrame;
     }
 }
+
+//循环内容
+-(void)loopContent{
+    timer = [NSTimer scheduledTimerWithTimeInterval:_loopTime target:self selector:@selector(changePage) userInfo:nil repeats:YES];
+}
+
+//改变页码
+-(void)changePage{
+    currenPage++;
+    if (currenPage > imageDatas.count-1) {
+        currenPage = 0;
+    }
+    CGPoint point = _imageScrollView.contentOffset;
+    point.x = currenPage*_imageScrollView.frame.size.width;
+    _imageScrollView.contentOffset = point;
+}
+
 //获得当前的imageView视图
 -(UIImageView*)getCurrentImageView{
     NSInteger estimatedPage =  _imageScrollView.contentOffset.x/_imageScrollView.frame.size.width;
@@ -72,25 +94,24 @@
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     NSInteger estimatedPage =  scrollView.contentOffset.x/scrollView.frame.size.width;
     NSInteger addPage =(scrollView.contentOffset.x-estimatedPage*scrollView.frame.size.width)/(scrollView.frame.size.width/2);
-    NSInteger page = estimatedPage+addPage;
+    NSInteger page = estimatedPage + addPage;
+    currenPage = page;
     _pageController.currentPage  = page;
 }
 
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
-    NSInteger estimatedPage =  scrollView.contentOffset.x/scrollView.frame.size.width;
-    NSInteger addPage =(scrollView.contentOffset.x-estimatedPage*scrollView.frame.size.width)/(scrollView.frame.size.width/2);
-    NSInteger page = estimatedPage+addPage;
     CGPoint point = scrollView.contentOffset;
-    point.x = page*scrollView.frame.size.width;
+    point.x = currenPage*scrollView.frame.size.width;
     scrollView.contentOffset = point;
-
+}
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    [timer invalidate];
+    timer = nil;
 }
 -(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
-    NSInteger estimatedPage =  scrollView.contentOffset.x/scrollView.frame.size.width;
-    NSInteger addPage =(scrollView.contentOffset.x-estimatedPage*scrollView.frame.size.width)/(scrollView.frame.size.width/2);
-    NSInteger page = estimatedPage+addPage;
     CGPoint point = scrollView.contentOffset;
-    point.x = page*scrollView.frame.size.width;
+    point.x = currenPage*scrollView.frame.size.width;
     scrollView.contentOffset = point;
+    [self loopContent];
 }
 @end

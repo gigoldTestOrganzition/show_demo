@@ -125,6 +125,7 @@
     //设置rightitem
     [self setRightItem];
     [self.view addSubview:[self getHomeAdvertisingView]];
+    [homeAdvertisingView loopContent];
     topLayoutConstraint.constant = homeAdvertisingView.frame.size.height+homeAdvertisingView.frame.origin.y;
     homeTableView.estimatedRowHeight = 100.f;
     homeTableView.backgroundColor = back_ground_color;
@@ -188,7 +189,7 @@
     if (!homeAdvertisingView){
         homeAdvertisingView = [[HomeAdvertisingView alloc]init];
         [homeAdvertisingView updataFrame:CGRectMake(0.f,44.f+STATUSBAR_OFFSET,mainScreenWidth,ADVERTISING_HEIGHT)];
-        homeAdvertisingView.imgArray = [[NSArray alloc]initWithObjects:[UIImage imageNamed:@"home_page_banner1"],[UIImage imageNamed:@"home_page_banner2"],[UIImage imageNamed:@"home_page_banner3"],[UIImage imageNamed:@"home_page_banner1"],nil];
+        homeAdvertisingView.imgArray = [[NSArray alloc]initWithObjects:[UIImage imageNamed:@"home_page_banner1.jpg"],[UIImage imageNamed:@"home_page_banner2.jpg"],[UIImage imageNamed:@"home_page_banner3.jpg"],nil];
     }
     return homeAdvertisingView;
 }
