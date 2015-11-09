@@ -330,6 +330,7 @@
 		5C76ADCB1BF0382800740DD4 /* BillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C76ADC91BF0382800740DD4 /* BillViewController.m */; };
 		5C76ADCC1BF0382800740DD4 /* BillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C76ADCA1BF0382800740DD4 /* BillViewController.xib */; };
 		5C76ADCE1BF045D400740DD4 /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C76ADCD1BF045D400740DD4 /* OrderCell.xib */; };
+		5C76ADD21BF075BF00740DD4 /* NumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C76ADD11BF075BF00740DD4 /* NumberView.m */; };
 		5C93B8E01BD8913600E8A8AA /* IncomeAEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C93B8DE1BD8913600E8A8AA /* IncomeAEViewController.m */; };
 		5C93B8E11BD8913600E8A8AA /* IncomeAEViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C93B8DF1BD8913600E8A8AA /* IncomeAEViewController.xib */; };
 		5C93B8EA1BD8CB0500E8A8AA /* InfoFinishedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C93B8E81BD8CB0500E8A8AA /* InfoFinishedViewController.m */; };
@@ -870,6 +871,8 @@
 		5C76ADC91BF0382800740DD4 /* BillViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BillViewController.m; sourceTree = "<group>"; };
 		5C76ADCA1BF0382800740DD4 /* BillViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BillViewController.xib; sourceTree = "<group>"; };
 		5C76ADCD1BF045D400740DD4 /* OrderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderCell.xib; sourceTree = "<group>"; };
+		5C76ADD01BF075BF00740DD4 /* NumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberView.h; sourceTree = "<group>"; };
+		5C76ADD11BF075BF00740DD4 /* NumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberView.m; sourceTree = "<group>"; };
 		5C93B8DD1BD8913600E8A8AA /* IncomeAEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncomeAEViewController.h; sourceTree = "<group>"; };
 		5C93B8DE1BD8913600E8A8AA /* IncomeAEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncomeAEViewController.m; sourceTree = "<group>"; };
 		5C93B8DF1BD8913600E8A8AA /* IncomeAEViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IncomeAEViewController.xib; sourceTree = "<group>"; };
@@ -1903,6 +1906,7 @@
 		5C6D20201BE85C8500B57025 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				5C76ADCF1BF0756900740DD4 /* NumberView */,
 				5C6D20211BE85C8500B57025 /* AutomaticArcView.h */,
 				5C6D20221BE85C8500B57025 /* AutomaticArcView.m */,
 				5C6D20231BE85C8500B57025 /* BaseViewController.h */,
@@ -2487,6 +2491,16 @@
 			);
 			path = UI;
 			sourceTree = "<group>";
+		};
+		5C76ADCF1BF0756900740DD4 /* NumberView */ = {
+			isa = PBXGroup;
+			children = (
+				5C76ADD01BF075BF00740DD4 /* NumberView.h */,
+				5C76ADD11BF075BF00740DD4 /* NumberView.m */,
+			);
+			name = NumberView;
+			path = gigold/Common/UI/NumberView;
+			sourceTree = SOURCE_ROOT;
 		};
 		5C93B8DB1BD88FBD00E8A8AA /* PasswordManager */ = {
 			isa = PBXGroup;
@@ -4374,6 +4388,7 @@
 				5CA673AF1BD9C61000BED35A /* UIViewController+RNSwipeViewController.m in Sources */,
 				5C6D20D51BE85CBD00B57025 /* Position.m in Sources */,
 				5C6D20D71BE85CBD00B57025 /* TimeUtil.m in Sources */,
+				5C76ADD21BF075BF00740DD4 /* NumberView.m in Sources */,
 				5C6D1FAD1BE85B6B00B57025 /* IncomeInstructionViewController.m in Sources */,
 				5C5A2DC81BD6115D00C4AE1D /* LoginRequest.m in Sources */,
 				5CA41C481BC8E688000A3484 /* main.m in Sources */,

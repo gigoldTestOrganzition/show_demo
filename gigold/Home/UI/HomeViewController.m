@@ -33,6 +33,7 @@
 #import "OpenGigoldViewController.h"
 #import "GigoldTreasureHomeViewController.h"
 #import "TopUpViewController.h"
+#import "LifeCell.h"
 
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate,UUChartDataSource>{
     //功能数据
@@ -42,6 +43,7 @@
     //首页tableView
     __weak IBOutlet UITableView *homeTableView;
     HomeAdvertisingView* homeAdvertisingView;
+    LifeCell* lifeView;
     BankingCell* bankingView;
     
     UIView* titleView;
@@ -202,7 +204,19 @@
     }
     return homeAdvertisingView;
 }
-
+/*
+ * 获取生活信息
+ */
+-(LifeCell*)getLifeView{
+    if (!lifeView) {
+        lifeView = [[[NSBundle mainBundle]loadNibNamed:@"life_cell" owner:nil options:nil]firstObject];
+        lifeView.businessOwnerNumberView.drawString = @"1123";
+        [lifeView.businessOwnerNumberView draw];
+       
+        lifeView.businessOwnerNumberViewWidthLayoutConstraint.constant = lifeView.businessOwnerNumberView.frame.size.width;
+    }
+    return lifeView;
+}
 /*
  *获取bankingView
  */
@@ -304,10 +318,11 @@
         UITableViewCell* cell;
         switch (indexPath.section) {
             case 0:
-               cell =  [[[NSBundle mainBundle] loadNibNamed:gigoldDeclaration.type owner:nil options:nil]firstObject];
+                
+                cell =  [self getLifeView];
                 break;
             case 1:
-               cell =   [self getBankingView];
+                cell =  [self getBankingView];
                 break;
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;

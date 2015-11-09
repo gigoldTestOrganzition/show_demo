@@ -9,7 +9,8 @@
 #import "LifeCell.h"
 
 @implementation LifeCell
-
+@synthesize businessOwnerNumberView=_businessOwnerNumberView;
+@synthesize businessOwnerNumberViewWidthLayoutConstraint=_businessOwnerNumberViewWidthLayoutConstraint;
 - (void)awakeFromNib {
     // Initialization code
 }

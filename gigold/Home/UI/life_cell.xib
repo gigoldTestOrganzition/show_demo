@@ -38,12 +38,14 @@
                                 <color key="textColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RVS-bb-zXO">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RVS-bb-zXO" customClass="NumberView">
                                 <rect key="frame" x="113" y="66" width="50" height="15"/>
-                                <color key="backgroundColor" red="0.1764705882" green="0.63921568630000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="1hh-1g-gG3"/>
                                     <constraint firstAttribute="height" constant="15" id="4ef-Jh-rPG"/>
                                     <constraint firstAttribute="width" constant="50" id="DLg-84-4hI"/>
+                                    <constraint firstAttribute="width" constant="50" id="iqC-IB-tRM"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -52,7 +54,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="名业主使用" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrw-lG-NYQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="名业主使用" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrw-lG-NYQ">
                                 <rect key="frame" x="166" y="63" width="64" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="1Hg-gi-JNW"/>
@@ -68,7 +70,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="立即开通" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64Z-uL-qSv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="立即开通" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="64Z-uL-qSv">
                                 <rect key="frame" x="232" y="63" width="64" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="5tU-nR-mlT"/>
@@ -298,6 +300,10 @@
                     </mask>
                 </variation>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="businessOwnerNumberView" destination="RVS-bb-zXO" id="oSw-gN-emn"/>
+                <outlet property="businessOwnerNumberViewWidthLayoutConstraint" destination="iqC-IB-tRM" id="Bt6-hf-R35"/>
+            </connections>
             <point key="canvasLocation" x="97" y="274.5"/>
         </tableViewCell>
     </objects>
