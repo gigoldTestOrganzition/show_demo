@@ -41,12 +41,15 @@
     NSMutableString* textString = [NSMutableString stringWithString:textField.text];
     [textString replaceCharactersInRange:range withString:string];
     if ((textField == self.passwordTextField1 && self.passwordTextField2.text.length > 0) || (textField == self.passwordTextField2 && self.passwordTextField1.text.length > 0)) {
-        if (textString.length == 0) {
+        if (textString.length  < 6) {
             self.nextBtn.backgroundColor = unable_tap_color;
             self.nextBtn.enabled = NO;
         }else{
             self.nextBtn.backgroundColor = theme_color;
             self.nextBtn.enabled = YES;
+            if (textString > 20) {
+                return NO;
+            }
         }
     }else{
         self.nextBtn.backgroundColor = unable_tap_color;
@@ -112,8 +115,8 @@
     
     [[PasswordRequest sharedPasswordRequest] updateLoginPwd:self.passwordTextField1.text newLoginPwd:self.passwordTextField2.text success:^(AFHTTPRequestOperation * operation, id responseObject) {
         [loadView stopDialog];
-        NSString* rspCd = [responseObject objectForKey:@"rspCd"];
-        NSString* rspInf = [responseObject objectForKey:@"rspInf"];
+        NSString* rspCd = [responseObject ObjectForKey:@"rspCd"];
+        NSString* rspInf = [responseObject ObjectForKey:@"rspInf"];
         if ([rspCd isEqualToString:SUCCESS]){
             ResultShowView * resultShowView = [ResultShowView showResult:ResultTypeCorrect];
             resultShowView.desc.text = @"登录密码修改成功";

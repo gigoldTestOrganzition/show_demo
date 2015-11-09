@@ -89,15 +89,6 @@
     if ([[AppUtils shareAppUtils] getTokenId]) {
         [params setObject:[[AppUtils shareAppUtils] getTokenId] forKey:@"tokenId"];
     }
-//    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-//    dic[@"jsessionid"] = @"7e0fe3fa6180157d032b4ebba5ca36fa";
-//    
-//    NSError *serialError = nil;
-//    NSMutableURLRequest *urlRequest = [self.requestSerializer requestWithMethod:@"GET" URLString:URLString parameters:dic error:&serialError];
-//    NSString *theUrl = [urlRequest.URL absoluteString];
-//    
-//    NSError *serializationError = nil;
-//    NSMutableURLRequest *request = [self.requestSerializer requestWithMethod:method URLString:[[NSURL URLWithString:theUrl relativeToURL:self.baseURL] absoluteString] parameters:nil error:&serializationError];
 
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     //申明返回的结果是json类型
@@ -105,24 +96,6 @@
     //申明请求的数据是json类型
     manager.requestSerializer=[AFJSONRequestSerializer serializer];
     manager.requestSerializer.HTTPShouldHandleCookies = YES;
-    
-
-//    NSArray *cookies = [NSKeyedUnarchiver unarchiveObjectWithData: [[NSUserDefaults standardUserDefaults] objectForKey: @"sessionCookies"]];
-//    NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
-//
-
-    //如果报接受类型不一致请替换一致text/html或别的
-//    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-//    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html",@"text/json",@"text/javascript", nil];
-//    manager.requestSerializer.HTTPRequestHeaders
-//    [manager ]
-    //传入的参数
-//    NSDictionary *parameters = @{@"1":@"XXXX",@"2":@"XXXX",@"3":@"XXXXX"};
-    //你的接口地址
-    //发送请求
-//    [manager.requestSerializer setValue:@"application/json"forHTTPHeaderField:@"Accept"];
-//    [manager.requestSerializer setValue:@"application/json;charset=utf-8;"forHTTPHeaderField:@"Content-Type"];
-//    [manager.requestSerializer setValue:@"text/plain"forHTTPHeaderField:@"Content-Type"];
     
     
     NSString* GID =  [[AppUtils shareAppUtils] getGID];

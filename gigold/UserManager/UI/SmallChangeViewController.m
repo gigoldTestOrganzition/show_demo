@@ -188,19 +188,20 @@
     [self.mTableView reloadData];
     [[UserInfoRequest sharedUserInfoRequest] amtdetailqueryPageNum:pageNum queryType:queryType success:^(AFHTTPRequestOperation * operation, id responseObject) {
         [self doneLoadingTableViewData];
-        NSString* rspCd = [responseObject objectForKey:@"rspCd"];
-        NSString* rspInf = [responseObject objectForKey:@"rspInf"];
+        [pagetabledrag stopLoad];
+        NSString* rspCd = [responseObject ObjectForKey:@"rspCd"];
+        NSString* rspInf = [responseObject ObjectForKey:@"rspInf"];
         if ([rspCd isEqualToString:SUCCESS]) {
-            NSDictionary* pageinfo = [responseObject objectForKey:@"pageinfo"];
-            pageNum = [[pageinfo objectForKey:@"pageNum"] integerValue];
-            pages = [[pageinfo objectForKey:@"pages"] integerValue];
+            NSDictionary* pageinfo = [responseObject ObjectForKey:@"pageinfo"];
+            pageNum = [[pageinfo ObjectForKey:@"pageNum"] integerValue];
+            pages = [[pageinfo ObjectForKey:@"pages"] integerValue];
             pagetabledrag.pages = pages;
             pagetabledrag.pagenum = pageNum;
             if (pageNum == 0 || pageNum == 1) {
                 [dataArray removeAllObjects];
             }
             
-            NSArray* list = [pageinfo objectForKey:@"list"];
+            NSArray* list = [pageinfo ObjectForKey:@"list"];
             
             for (NSDictionary* smallChangDict  in list) {
                 User_SmallChange* user_smallChange = [User_SmallChange objectWithKeyValues:smallChangDict];
@@ -222,6 +223,7 @@
         }
         
     }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
+        [pagetabledrag stopLoad];
         [self doneLoadingTableViewData];
     }];
 }
@@ -230,19 +232,19 @@
     pageNum ++;
     [[UserInfoRequest sharedUserInfoRequest] amtdetailqueryPageNum:pageNum queryType:queryType success:^(AFHTTPRequestOperation * operation, id responseObject) {
         [pagetabledrag stopLoad];
-        NSString* rspCd = [responseObject objectForKey:@"rspCd"];
-        NSString* rspInf = [responseObject objectForKey:@"rspInf"];
+        NSString* rspCd = [responseObject ObjectForKey:@"rspCd"];
+        NSString* rspInf = [responseObject ObjectForKey:@"rspInf"];
         if ([rspCd isEqualToString:SUCCESS]) {
-            NSDictionary* pageinfo = [responseObject objectForKey:@"pageinfo"];
-            pageNum = [[pageinfo objectForKey:@"pageNum"] integerValue];
-            pages = [[pageinfo objectForKey:@"pages"] integerValue];
+            NSDictionary* pageinfo = [responseObject ObjectForKey:@"pageinfo"];
+            pageNum = [[pageinfo ObjectForKey:@"pageNum"] integerValue];
+            pages = [[pageinfo ObjectForKey:@"pages"] integerValue];
             pagetabledrag.pages = pages;
             pagetabledrag.pagenum = pageNum;
             if (pageNum == 0 || pageNum == 1) {
                 [dataArray removeAllObjects];
             }
             
-            NSArray* list = [pageinfo objectForKey:@"list"];
+            NSArray* list = [pageinfo ObjectForKey:@"list"];
             
             for (NSDictionary* smallChangDict  in list) {
                 User_SmallChange* user_smallChange = [User_SmallChange objectWithKeyValues:smallChangDict];

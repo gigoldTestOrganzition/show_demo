@@ -41,25 +41,12 @@
                                                            NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
-    [self showCustomLaunchView];
-//    [self showMainView];
+    [self showMainView];
     
     //设置Window为主窗口并显示出来
     [self.window makeKeyAndVisible];
     
     return YES;
-}
-
--(void)showCustomLaunchView{
-    LaunchViewController* launchView = [[LaunchViewController alloc] init];
-    launchView.delegate = self;
-    self.window.rootViewController = launchView;
-}
-
--(void)UIViewControllerBack:(BaseViewController *)baseViewController{
-    if ([baseViewController isKindOfClass:[LaunchViewController class]]) {
-        [self showMainView];
-    }
 }
 
 

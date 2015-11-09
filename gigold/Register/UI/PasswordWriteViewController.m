@@ -48,6 +48,8 @@
         self.markLabel.hidden = YES;
         self.titleLabel.text = @"新密码";
         self.titleLabelWidth.constant = 45;
+    }else if (self.flowType == LoginPasswordType){
+        self.markLabel.text = @"该手机号已注册，请直接登录";
     }
     
     self.passwordTextField.delegate = self;
@@ -66,12 +68,15 @@
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     NSMutableString* textString = [NSMutableString stringWithString:textField.text];
     [textString replaceCharactersInRange:range withString:string];
-    if (textString.length == 0) {
+    if (textString.length < 6) {
         self.nextBtn.backgroundColor = unable_tap_color;
         self.nextBtn.enabled = NO;
     }else{
         self.nextBtn.backgroundColor = theme_color;
         self.nextBtn.enabled = YES;
+        if (textString.length > 20) {
+            return NO;
+        }
     }
     return YES;
 }
@@ -123,14 +128,14 @@
     if (self.flowType == RegisterType) {
         [[RegisterRequest sharedRegisterRequest] registerRequestLoginPwd:self.passwordTextField.text success:^(AFHTTPRequestOperation * operation, id responseObject) {
             [loadView stopDialog];
-            NSString* subrspCd = [responseObject objectForKey:@"rspCd"];
-            NSString* subrspInf = [responseObject objectForKey:@"rspInf"];
+            NSString* subrspCd = [responseObject ObjectForKey:@"rspCd"];
+            NSString* subrspInf = [responseObject ObjectForKey:@"rspInf"];
             if ([subrspCd isEqualToString:SUCCESS]) {
                 self.backType = FinishType;
                 User* user = [[User alloc] init];
-                user.mobile = [responseObject objectForKey:@"mobile"];
+                user.mobile = [responseObject ObjectForKey:@"mobile"];
                 [[AppUtils shareAppUtils] saveUserId:user.mobile];
-                [[AppUtils shareAppUtils] saveUserInfo:[responseObject objectForKey:@"userInfo"]];
+                [[AppUtils shareAppUtils] saveUserInfo:[responseObject ObjectForKey:@"userInfo"]];
                 [self loginRespond];
                 ResultShowView * resultShowView = [ResultShowView showResult:ResultTypeCorrect];
                 resultShowView.desc.text = @"注册成功，系统将自动登录";
@@ -149,8 +154,8 @@
     else if (self.flowType == ResetPasswordType){
         [[PasswordRequest sharedPasswordRequest] resetLoginPwd:self.passwordTextField.text success:^(AFHTTPRequestOperation * operation, id responseObject) {
             [loadView stopDialog];
-            NSString* subrspCd = [responseObject objectForKey:@"rspCd"];
-            NSString* subrspInf = [responseObject objectForKey:@"rspInf"];
+            NSString* subrspCd = [responseObject ObjectForKey:@"rspCd"];
+            NSString* subrspInf = [responseObject ObjectForKey:@"rspInf"];
             if ([subrspCd isEqualToString:SUCCESS]) {
                 [[AppUtils shareAppUtils] saveGID:@""];
                 self.backType = FinishType;
@@ -172,14 +177,14 @@
     else if (self.flowType == LoginPasswordType){
         [[LoginRequest sharedLoginRequest] loginRequestMobileNum:self.moblieNum pwd:self.passwordTextField.text success:^(AFHTTPRequestOperation * operation, id responseObject) {
             [loadView stopDialog];
-            NSString* rspCd = [responseObject objectForKey:@"rspCd"];
-            NSString* rspInf = [responseObject objectForKey:@"rspInf"];
+            NSString* rspCd = [responseObject ObjectForKey:@"rspCd"];
+            NSString* rspInf = [responseObject ObjectForKey:@"rspInf"];
             if ([rspCd isEqualToString:SUCCESS]) {
                 self.backType = FinishType;
                 User* user = [[User alloc] init];
-                user.mobile = [responseObject objectForKey:@"mobile"];
+                user.mobile = [responseObject ObjectForKey:@"mobile"];
                 [[AppUtils shareAppUtils] saveUserId:user.mobile];
-                [[AppUtils shareAppUtils] saveUserInfo:[responseObject objectForKey:@"userInfo"]];
+                [[AppUtils shareAppUtils] saveUserInfo:[responseObject ObjectForKey:@"userInfo"]];
                 [self loginRespond];
                 ResultShowView * resultShowView = [ResultShowView showResult:ResultTypeCorrect];
                 resultShowView.desc.text = @"登录成功";

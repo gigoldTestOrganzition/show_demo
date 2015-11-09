@@ -70,6 +70,7 @@
     NSLog(@"去找回密码");
     MoblieWriteViewController* moblieWriteView = [[MoblieWriteViewController alloc] init];
     moblieWriteView.delegate = self;
+    moblieWriteView.mobileTextField.text = self.accountTextField.text;
     moblieWriteView.flowType = ResetPasswordType;
     [self.navigationController pushViewController:moblieWriteView animated:YES];
 }
@@ -80,6 +81,7 @@
 
     MoblieWriteViewController* moblieWriteView = [[MoblieWriteViewController alloc] init];
     moblieWriteView.delegate = self;
+    moblieWriteView.mobileTextField.text = self.accountTextField.text;
     moblieWriteView.flowType = RegisterType;
     [self.navigationController pushViewController:moblieWriteView animated:YES];
 }
@@ -113,8 +115,8 @@
     }
     [[LoginRequest sharedLoginRequest] loginRequestMobileNum:self.accountTextField.text pwd:self.passwordTextField.text success:^(AFHTTPRequestOperation * operation, id responseObject) {
         [loadView stopDialog];
-        NSString* rspCd = [responseObject objectForKey:@"rspCd"];
-        NSString* rspInf = [responseObject objectForKey:@"rspInf"];
+        NSString* rspCd = [responseObject ObjectForKey:@"rspCd"];
+        NSString* rspInf = [responseObject ObjectForKey:@"rspInf"];
         if ([rspCd isEqualToString:SUCCESS]) {
             [self loginRespond];
             
@@ -124,9 +126,9 @@
             [self performSelector:@selector(delayMethod) withObject:nil afterDelay:2.0f];
             
             User* user = [[User alloc] init];
-            user.mobile = [responseObject objectForKey:@"mobile"];
+            user.mobile = [responseObject ObjectForKey:@"mobile"];
             [[AppUtils shareAppUtils] saveUserId:user.mobile];
-            [[AppUtils shareAppUtils] saveUserInfo:[responseObject objectForKey:@"userInfo"]];
+            [[AppUtils shareAppUtils] saveUserInfo:[responseObject ObjectForKey:@"userInfo"]];
             [self loginRespond];
         }else{
             [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];

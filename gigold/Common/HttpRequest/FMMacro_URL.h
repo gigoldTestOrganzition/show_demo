@@ -19,14 +19,14 @@
 #define HTTP_HEAD @"http://"     //http https
 
 #ifdef DEBUG
-//#define MF_URL_HOST @"182.92.170.189:8081"  //测试环境的HOST
-#define MF_URL_HOST @"192.168.2.23:8080"  //测试环境的HOST
+#define MF_URL_HOST @"182.92.170.189:8081"  //测试环境的HOST
+//#define MF_URL_HOST @"192.168.2.23:8080"  //测试环境的HOST
 #else
 #define MF_URL_HOST @""  //正式环境的HOST
 #endif
 
-//#define FUNC_URL @""   //功能url
-#define FUNC_URL @"/foundation-web"   //功能url
+#define FUNC_URL @""   //功能url
+//#define FUNC_URL @"/foundation-web"   //功能url
 
 
 //全局返回码定义

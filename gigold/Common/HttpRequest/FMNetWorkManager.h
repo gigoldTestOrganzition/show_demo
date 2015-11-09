@@ -9,6 +9,7 @@
 #import "AFHTTPSessionManager.h"
 #import "AFHTTPRequestOperationManager.h"
 #import "FMMacro_URL.h"
+#import "NSDictionary+Optimize.h"
 @interface FMNetWorkManager : AFHTTPSessionManager
 
 + (instancetype)sharedInstance;

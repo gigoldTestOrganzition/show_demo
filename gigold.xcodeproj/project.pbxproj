@@ -29,10 +29,10 @@
 		5C5643751BEC964500367FB8 /* PageTableviewdragloading.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5643741BEC964500367FB8 /* PageTableviewdragloading.m */; };
 		5C56437B1BECA16400367FB8 /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5643791BECA16400367FB8 /* LaunchViewController.m */; };
 		5C56437C1BECA16400367FB8 /* LaunchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C56437A1BECA16400367FB8 /* LaunchViewController.xib */; };
-		5C5643811BECA32F00367FB8 /* Default-480h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C56437D1BECA32F00367FB8 /* Default-480h@2x.png */; };
-		5C5643821BECA32F00367FB8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C56437E1BECA32F00367FB8 /* Default-568h@2x.png */; };
-		5C5643831BECA32F00367FB8 /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C56437F1BECA32F00367FB8 /* Default-667h@2x.png */; };
-		5C5643841BECA32F00367FB8 /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C5643801BECA32F00367FB8 /* Default-736h@3x.png */; };
+		5C5643811BECA32F00367FB8 /* launch-480h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C56437D1BECA32F00367FB8 /* launch-480h@2x.png */; };
+		5C5643821BECA32F00367FB8 /* launch-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C56437E1BECA32F00367FB8 /* launch-568h@2x.png */; };
+		5C5643831BECA32F00367FB8 /* launch-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C56437F1BECA32F00367FB8 /* launch-667h@2x.png */; };
+		5C5643841BECA32F00367FB8 /* launch-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C5643801BECA32F00367FB8 /* launch-736h@3x.png */; };
 		5C5A2DC71BD6115D00C4AE1D /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D961BD6115D00C4AE1D /* HelpViewController.m */; };
 		5C5A2DC81BD6115D00C4AE1D /* LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D9B1BD6115D00C4AE1D /* LoginRequest.m */; };
 		5C5A2DC91BD6115D00C4AE1D /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2D9F1BD6115D00C4AE1D /* LoginViewController.m */; };
@@ -43,6 +43,9 @@
 		5C5A2DD61BD6115D00C4AE1D /* MyAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2DBD1BD6115D00C4AE1D /* MyAccountViewController.xib */; };
 		5C5A2DD71BD6115D00C4AE1D /* PasswordManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A2DBF1BD6115D00C4AE1D /* PasswordManagerViewController.m */; };
 		5C5A2DD81BD6115D00C4AE1D /* PasswordManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C5A2DC01BD6115D00C4AE1D /* PasswordManagerViewController.xib */; };
+		5C63AC381BF03E5A00633B64 /* NSArray+Optimize.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C63AC331BF03E5A00633B64 /* NSArray+Optimize.m */; };
+		5C63AC391BF03E5A00633B64 /* NSDictionary+Optimize.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C63AC351BF03E5A00633B64 /* NSDictionary+Optimize.m */; };
+		5C63AC3A1BF03E5A00633B64 /* NSString+Optimize.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C63AC371BF03E5A00633B64 /* NSString+Optimize.m */; };
 		5C6A5A931BDB247A000CA77D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A5A911BDB247A000CA77D /* SettingsViewController.m */; };
 		5C6A5A941BDB247A000CA77D /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C6A5A921BDB247A000CA77D /* SettingsViewController.xib */; };
 		5C6A5AA21BDB46D0000CA77D /* login_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C6A5A971BDB46D0000CA77D /* login_background.png */; };
@@ -370,10 +373,10 @@
 		5C5643781BECA16400367FB8 /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
 		5C5643791BECA16400367FB8 /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
 		5C56437A1BECA16400367FB8 /* LaunchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchViewController.xib; sourceTree = "<group>"; };
-		5C56437D1BECA32F00367FB8 /* Default-480h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-480h@2x.png"; sourceTree = "<group>"; };
-		5C56437E1BECA32F00367FB8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		5C56437F1BECA32F00367FB8 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
-		5C5643801BECA32F00367FB8 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
+		5C56437D1BECA32F00367FB8 /* launch-480h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch-480h@2x.png"; sourceTree = "<group>"; };
+		5C56437E1BECA32F00367FB8 /* launch-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch-568h@2x.png"; sourceTree = "<group>"; };
+		5C56437F1BECA32F00367FB8 /* launch-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch-667h@2x.png"; sourceTree = "<group>"; };
+		5C5643801BECA32F00367FB8 /* launch-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch-736h@3x.png"; sourceTree = "<group>"; };
 		5C5A2D951BD6115D00C4AE1D /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
 		5C5A2D961BD6115D00C4AE1D /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
 		5C5A2D9A1BD6115D00C4AE1D /* LoginRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginRequest.h; sourceTree = "<group>"; };
@@ -391,6 +394,12 @@
 		5C5A2DBE1BD6115D00C4AE1D /* PasswordManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PasswordManagerViewController.h; sourceTree = "<group>"; };
 		5C5A2DBF1BD6115D00C4AE1D /* PasswordManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PasswordManagerViewController.m; sourceTree = "<group>"; };
 		5C5A2DC01BD6115D00C4AE1D /* PasswordManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordManagerViewController.xib; sourceTree = "<group>"; };
+		5C63AC321BF03E5A00633B64 /* NSArray+Optimize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Optimize.h"; sourceTree = "<group>"; };
+		5C63AC331BF03E5A00633B64 /* NSArray+Optimize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Optimize.m"; sourceTree = "<group>"; };
+		5C63AC341BF03E5A00633B64 /* NSDictionary+Optimize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Optimize.h"; sourceTree = "<group>"; };
+		5C63AC351BF03E5A00633B64 /* NSDictionary+Optimize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Optimize.m"; sourceTree = "<group>"; };
+		5C63AC361BF03E5A00633B64 /* NSString+Optimize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Optimize.h"; sourceTree = "<group>"; };
+		5C63AC371BF03E5A00633B64 /* NSString+Optimize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Optimize.m"; sourceTree = "<group>"; };
 		5C6A5A901BDB247A000CA77D /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		5C6A5A911BDB247A000CA77D /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		5C6A5A921BDB247A000CA77D /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
@@ -1124,6 +1133,19 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		5C63AC311BF03E5A00633B64 /* Data+Optimize */ = {
+			isa = PBXGroup;
+			children = (
+				5C63AC321BF03E5A00633B64 /* NSArray+Optimize.h */,
+				5C63AC331BF03E5A00633B64 /* NSArray+Optimize.m */,
+				5C63AC341BF03E5A00633B64 /* NSDictionary+Optimize.h */,
+				5C63AC351BF03E5A00633B64 /* NSDictionary+Optimize.m */,
+				5C63AC361BF03E5A00633B64 /* NSString+Optimize.h */,
+				5C63AC371BF03E5A00633B64 /* NSString+Optimize.m */,
+			);
+			path = "Data+Optimize";
+			sourceTree = "<group>";
+		};
 		5C6A5A8F1BDB244E000CA77D /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -1694,6 +1716,7 @@
 				5C6D1FFB1BE85C8500B57025 /* PrefixHeader.pch */,
 				5C6D1FFC1BE85C8500B57025 /* Region.h */,
 				5C6D1FFD1BE85C8500B57025 /* Region.m */,
+				5C63AC311BF03E5A00633B64 /* Data+Optimize */,
 				5C56434B1BEC44AF00367FB8 /* Pull */,
 			);
 			path = data;
@@ -1747,10 +1770,10 @@
 				5C6D201D1BE85C8500B57025 /* safe_ico@3x.png */,
 				5C6D201E1BE85C8500B57025 /* top_menu_but_arrow@2x.png */,
 				5C6D201F1BE85C8500B57025 /* top_menu_but_arrow@3x.png */,
-				5C56437D1BECA32F00367FB8 /* Default-480h@2x.png */,
-				5C56437E1BECA32F00367FB8 /* Default-568h@2x.png */,
-				5C56437F1BECA32F00367FB8 /* Default-667h@2x.png */,
-				5C5643801BECA32F00367FB8 /* Default-736h@3x.png */,
+				5C56437D1BECA32F00367FB8 /* launch-480h@2x.png */,
+				5C56437E1BECA32F00367FB8 /* launch-568h@2x.png */,
+				5C56437F1BECA32F00367FB8 /* launch-667h@2x.png */,
+				5C5643801BECA32F00367FB8 /* launch-736h@3x.png */,
 				5CE45F161BECA74600C2BE00 /* login_pic@1080w.jpg */,
 			);
 			path = Images;
@@ -3640,10 +3663,10 @@
 				5CB6FF6F1BE09B4D00D666D0 /* ico_statement_3@3x.png in Resources */,
 				5C6D20F01BE85DA200B57025 /* pop_close_but@3x.png in Resources */,
 				5C6D20661BE85C8500B57025 /* pop_loading_pci@3x.png in Resources */,
-				5C5643811BECA32F00367FB8 /* Default-480h@2x.png in Resources */,
+				5C5643811BECA32F00367FB8 /* launch-480h@2x.png in Resources */,
 				5C6A5AAA1BDB46D0000CA77D /* login_ico_3@3x.png in Resources */,
 				5C6D1FD51BE85B6B00B57025 /* list_open_arrow@3x.png in Resources */,
-				5C5643841BECA32F00367FB8 /* Default-736h@3x.png in Resources */,
+				5C5643841BECA32F00367FB8 /* launch-736h@3x.png in Resources */,
 				5C6D205E1BE85C8500B57025 /* main_correct_ico@3x.png in Resources */,
 				5CA88B311BE069DB00E50D0D /* user_faces_1@3x.png in Resources */,
 				5CC9C3381BE062E700C2269A /* BankCardTableViewCell.xib in Resources */,
@@ -3676,7 +3699,7 @@
 				5C6D21251BE8633300B57025 /* AddressCell.xib in Resources */,
 				5C5A2DD61BD6115D00C4AE1D /* MyAccountViewController.xib in Resources */,
 				5C56437C1BECA16400367FB8 /* LaunchViewController.xib in Resources */,
-				5C5643831BECA32F00367FB8 /* Default-667h@2x.png in Resources */,
+				5C5643831BECA32F00367FB8 /* launch-667h@2x.png in Resources */,
 				5CC44B461BDA3AFB0071B668 /* MyAccountTableViewCell.xib in Resources */,
 				5C6D212B1BE88E2000B57025 /* user_menu_ico_6@3x.png in Resources */,
 				5C6D1FD31BE85B6B00B57025 /* jyq_shisuan_ico1@3x.png in Resources */,
@@ -3736,7 +3759,7 @@
 				5C394BFC1BCF597E009AC0AC /* LaunchScreen.storyboard in Resources */,
 				5C00F8FD1BE0A428009EAA73 /* PayPwdValidateViewController.xib in Resources */,
 				5C6D1FB11BE85B6B00B57025 /* ico_submit_2_1@3x.png in Resources */,
-				5C5643821BECA32F00367FB8 /* Default-568h@2x.png in Resources */,
+				5C5643821BECA32F00367FB8 /* launch-568h@2x.png in Resources */,
 				5C6D20611BE85C8500B57025 /* main_error_ico@2x.png in Resources */,
 				5CC44B321BDA30F00071B668 /* user_menu_set_ico@3x.png in Resources */,
 				5C6D20F61BE85DA200B57025 /* topUpStoryboard.storyboard in Resources */,
@@ -3817,6 +3840,7 @@
 				5CD0BFEE1BE354C90036ED42 /* User.m in Sources */,
 				5C6D1FA11BE85B6B00B57025 /* GigoldTreasureHomeViewController.m in Sources */,
 				5C6D20C41BE85CBD00B57025 /* HttpClientManager.mm in Sources */,
+				5C63AC381BF03E5A00633B64 /* NSArray+Optimize.m in Sources */,
 				5C93B8EA1BD8CB0500E8A8AA /* InfoFinishedViewController.m in Sources */,
 				5C6D20CE1BE85CBD00B57025 /* CommonUtil.m in Sources */,
 				5C6A5A931BDB247A000CA77D /* SettingsViewController.m in Sources */,
@@ -3839,6 +3863,7 @@
 				5CC9C33E1BE0634600C2269A /* ServiceTextViewController.m in Sources */,
 				5C6D20721BE85C8500B57025 /* CustomerView.m in Sources */,
 				5C6D1FBF1BE85B6B00B57025 /* RollOutViewController.m in Sources */,
+				5C63AC3A1BF03E5A00633B64 /* NSString+Optimize.m in Sources */,
 				5C6D21231BE8633300B57025 /* Address.m in Sources */,
 				5C6D1FDE1BE85B6B00B57025 /* OpenGigoldViewController.m in Sources */,
 				5C6D20CA1BE85CBD00B57025 /* STDb.m in Sources */,
@@ -3916,6 +3941,7 @@
 				5C6D1FDC1BE85B6B00B57025 /* GiglodsDeclarationView.m in Sources */,
 				5C6D1FC81BE85B6B00B57025 /* TenThousandCell.m in Sources */,
 				5C93B8F51BD8DA3900E8A8AA /* VerificationCodeWriteViewController.m in Sources */,
+				5C63AC391BF03E5A00633B64 /* NSDictionary+Optimize.m in Sources */,
 				5C5A2DC91BD6115D00C4AE1D /* LoginViewController.m in Sources */,
 				5C5A2DC71BD6115D00C4AE1D /* HelpViewController.m in Sources */,
 				5C6D210F1BE85F2100B57025 /* FonctionCell.m in Sources */,

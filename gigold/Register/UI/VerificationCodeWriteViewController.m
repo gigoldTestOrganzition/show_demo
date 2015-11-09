@@ -55,21 +55,27 @@
     UITapGestureRecognizer* serveTextViewTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(goServeTextView)];
     [self.serveTextView addGestureRecognizer:serveTextViewTap];
     
-    
+    [self startTime];
     // Do any additional setup after loading the view from its nib.
 }
 
 #pragma mark ---- UITextFieldDelegate --------
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
-    NSMutableString* textString = [NSMutableString stringWithString:textField.text];
-    [textString replaceCharactersInRange:range withString:string];
-    if (textString.length == 0) {
+    if (isAgree) {
+        NSMutableString* textString = [NSMutableString stringWithString:textField.text];
+        [textString replaceCharactersInRange:range withString:string];
+        if (textString.length == 0) {
+            self.nextBtn.backgroundColor = unable_tap_color;
+            self.nextBtn.enabled = NO;
+        }else{
+            self.nextBtn.backgroundColor = theme_color;
+            self.nextBtn.enabled = YES;
+        }
+    }else{
         self.nextBtn.backgroundColor = unable_tap_color;
         self.nextBtn.enabled = NO;
-    }else{
-        self.nextBtn.backgroundColor = theme_color;
-        self.nextBtn.enabled = YES;
     }
+    
     return YES;
 }
 
@@ -80,8 +86,8 @@
 
 -(void)startTime{
     [[RegisterRequest sharedRegisterRequest] validateMoblieNum:self.moblieNum BusinessType:self.flowType  success:^(AFHTTPRequestOperation * operation, id responseObject) {
-        NSString* rspCd = [responseObject objectForKey:@"rspCd"];
-//        NSString* rspInf = [responseObject objectForKey:@"rspInf"];
+        NSString* rspCd = [responseObject ObjectForKey:@"rspCd"];
+//        NSString* rspInf = [responseObject ObjectForKey:@"rspInf"];
         if ([rspCd isEqualToString:SUCCESS]) {
             [[AppUtils shareAppUtils] showHUD:@"重新发送成功" andView:self.view];
             timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerValue) userInfo:nil repeats:YES];
@@ -126,9 +132,19 @@
 
 -(void)agreeBtnPress{
     isAgree = !isAgree;
+    
     if (isAgree) {
         [self.agreeBtn setImage:[UIImage imageNamed:@"protocol_but_1"] forState:UIControlStateNormal];
+        if (self.validateTextField.text.length == 0) {
+            self.nextBtn.backgroundColor = unable_tap_color;
+            self.nextBtn.enabled = NO;
+        }else{
+            self.nextBtn.backgroundColor = theme_color;
+            self.nextBtn.enabled = YES;
+        }
     }else{
+        self.nextBtn.backgroundColor = unable_tap_color;
+        self.nextBtn.enabled = NO;
         [self.agreeBtn setImage:[UIImage imageNamed:@"protocol_but_2"] forState:UIControlStateNormal];
     }
 }
@@ -158,14 +174,14 @@
         [loadView showDialog:self.view];
     }
     [[RegisterRequest sharedRegisterRequest] validateSmsCode:self.validateTextField.text BusinessType:self.flowType success:^(AFHTTPRequestOperation * operation, id responseObject) {
-        NSString* rspCd = [responseObject objectForKey:@"rspCd"];
-        NSString* rspInf = [responseObject objectForKey:@"rspInf"];
+        NSString* rspCd = [responseObject ObjectForKey:@"rspCd"];
+        NSString* rspInf = [responseObject ObjectForKey:@"rspInf"];
         if ([rspCd isEqualToString:SUCCESS]) {
             if (self.flowType == RegisterType || self.flowType == ResetPasswordType) {
                 [[RegisterRequest sharedRegisterRequest] ValidateUserRequestMoblieNum:self.moblieNum success:^(AFHTTPRequestOperation * operation, id responseObject) {
                     [loadView stopDialog];
-                    NSString* subrspCd = [responseObject objectForKey:@"rspCd"];
-                    NSString* subrspInf = [responseObject objectForKey:@"rspInf"];
+                    NSString* subrspCd = [responseObject ObjectForKey:@"rspCd"];
+                    NSString* subrspInf = [responseObject ObjectForKey:@"rspInf"];
                     NSLog(@"subrspInf%@",subrspInf);
                     BOOL isshowSuccess = YES;
                     if (self.flowType == RegisterType) {

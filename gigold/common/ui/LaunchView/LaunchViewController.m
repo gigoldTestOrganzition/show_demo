@@ -14,11 +14,19 @@
 
 @implementation LaunchViewController
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"%@",[NSString stringWithFormat:@"Default-%fh",mainScreenHeight]);
-    self.defaultImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"Default-%.0fh",mainScreenHeight]];
+    self.view.backgroundColor = [UIColor clearColor];
+    
+    NSLog(@"%@",[NSString stringWithFormat:@"launch-%fh",mainScreenHeight]);
+    self.defaultImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"launch-%.0fh",mainScreenHeight]];
     
     if (mainScreenHeight == 480) {
         self.launchHeight.constant = 220/2.0f;
@@ -32,7 +40,7 @@
 
     self.launchImageView.image = [UIImage imageNamed:@"login_pic@1080w.jpg"];
     
-    self.launchImageView.alpha = 0;
+    self.launchImageView.alpha = 0.1;
     
     [UIView animateWithDuration:1 animations:^{
         self.launchImageView.alpha = 1;
@@ -44,15 +52,20 @@
 }
 
 -(void)launchBack{
-    [UIView animateWithDuration:0.5 animations:^{
-        self.launchImageView.alpha = 0;
-        self.defaultImageView.alpha = 0;
+    [self performSelector:@selector(reallyBack) withObject:nil afterDelay:0.8];
+    [UIView animateWithDuration:1 animations:^{
+        self.launchImageView.alpha = 0.2;
+        self.defaultImageView.alpha  = 0.2;
     } completion:^(BOOL finished) {
-        if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
-            [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
-        }
     }];
     
+}
+
+-(void)reallyBack{
+    [self.navigationController popViewControllerAnimated:NO];
+    if ([self.delegate respondsToSelector:@selector(UIViewControllerBack:)]) {
+        [self.delegate performSelector:@selector(UIViewControllerBack:) withObject:self];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

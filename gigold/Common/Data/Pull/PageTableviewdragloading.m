@@ -110,7 +110,7 @@
 -(void)setPagenum:(NSInteger)pagenum{
     _pagenum = pagenum;
     if (self.pages == 0){
-        footView.labelView.text = @"无数据";
+        footView.labelView.text = @"";
     }else{
         if (self.pagenum < self.pages) {
             footView.labelView.text=@"向上拖动加载更多";

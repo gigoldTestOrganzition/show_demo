@@ -102,8 +102,8 @@
     }else{
         NSLog(@"去退出");
         [[LoginRequest sharedLoginRequest] logoutRequestMobileNum:@"" success:^(AFHTTPRequestOperation * operation, id responseObject) {
-            NSString* rspCd = [responseObject objectForKey:@"rspCd"];
-            NSString* rspInf = [responseObject objectForKey:@"rspInf"];
+            NSString* rspCd = [responseObject ObjectForKey:@"rspCd"];
+            NSString* rspInf = [responseObject ObjectForKey:@"rspInf"];
             if ([rspCd isEqualToString:SUCCESS]) {
                 [self logoutRespond];
                 [self.navigationController popViewControllerAnimated:YES];
