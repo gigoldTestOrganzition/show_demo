@@ -17,7 +17,18 @@ typedef NS_ENUM(NSInteger,OrderType){
     //快速转出
     OrderTypeFastRollOut,
     //收益
-    OrderTypeIncome
+    OrderTypeIncome,
+    //物业
+    OrderTypeProperty,
+    //停车费
+    OrderTypeStopCarfees,
+    //电费
+    OrderTypeElectricityfees,
+    //水费
+    OrderTypeWaterfees,
+    //转账
+    OrderTypeTransferAccounts
+    
 };
 //转入转出流程进度
 typedef NS_ENUM(NSInteger,RollFlowProcess){
@@ -29,9 +40,11 @@ typedef NS_ENUM(NSInteger,RollFlowProcess){
     RollFlowProcessEnd
 };
 @interface Order : NSObject
-
 @property(nonatomic,assign)OrderType orderType;
 @property(nonatomic,assign)RollFlowProcess rollFlowProcess;
-@property(nonatomic,copy)NSString*  timeStr;
+@property(nonatomic,copy)NSString* desc;
+@property(nonatomic,copy)NSString* timeStr;
 @property(nonatomic,copy)NSString* amountStr;
+//获得订单类型描述
++(NSString*)getOrderTypeDesc:(OrderType)orderType;
 @end

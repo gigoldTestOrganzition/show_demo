@@ -635,8 +635,8 @@
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fb4-S1-ndd">
                                 <rect key="frame" x="0.0" y="60" width="320" height="170"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="InD-Ei-8ue">
-                                        <rect key="frame" x="0.0" y="30" width="320" height="74"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="InD-Ei-8ue">
+                                        <rect key="frame" x="0.0" y="30" width="320" height="0.0"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W4d-Vw-oLb">
                                                 <rect key="frame" x="30" y="0.0" width="2" height="49"/>
@@ -655,7 +655,7 @@
                                                 <color key="textColor" red="0.2901960784" green="0.79215686269999996" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10-23 14:23:56 招商银行（尾号4567）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5M-aJ-3FJ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10-23 14:23:56 招商银行（尾号4567）" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5M-aJ-3FJ">
                                                 <rect key="frame" x="52" y="20" width="227" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" red="0.62745098040000002" green="0.62745098040000002" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -777,6 +777,28 @@
                                     <constraint firstAttribute="trailing" secondItem="CF2-Yh-O9u" secondAttribute="trailing" id="mrV-1A-TLK"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lyn-AM-9vG">
+                                <rect key="frame" x="40" y="256" width="240" height="40"/>
+                                <color key="backgroundColor" red="0.29019607843137252" green="0.792156862745098" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="XWs-YO-mW0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="立即付款">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Tj-nZ-6f7">
+                                <rect key="frame" x="40" y="316" width="240" height="40"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ELT-Bb-xpf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="删除">
+                                    <color key="titleColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -784,14 +806,24 @@
                             <constraint firstItem="rpg-Xz-zwH" firstAttribute="leading" secondItem="bUE-fV-meW" secondAttribute="leading" id="2NT-dH-S3b"/>
                             <constraint firstItem="Fb4-S1-ndd" firstAttribute="leading" secondItem="bUE-fV-meW" secondAttribute="leading" id="CoV-U4-uGH"/>
                             <constraint firstItem="Cnh-te-GYj" firstAttribute="top" secondItem="Fb4-S1-ndd" secondAttribute="bottom" id="HW0-f2-cQH"/>
+                            <constraint firstAttribute="trailing" secondItem="Lyn-AM-9vG" secondAttribute="trailing" constant="40" id="R8z-O2-XZk"/>
                             <constraint firstAttribute="trailing" secondItem="Cnh-te-GYj" secondAttribute="trailing" id="Vj4-n1-FYM"/>
+                            <constraint firstItem="1Tj-nZ-6f7" firstAttribute="leading" secondItem="bUE-fV-meW" secondAttribute="leading" constant="40" id="byC-7e-q2z"/>
+                            <constraint firstItem="Lyn-AM-9vG" firstAttribute="top" secondItem="Cnh-te-GYj" secondAttribute="bottom" constant="25" id="fvd-oa-zqn"/>
+                            <constraint firstItem="1Tj-nZ-6f7" firstAttribute="top" secondItem="Lyn-AM-9vG" secondAttribute="bottom" priority="750" constant="20" id="il4-T4-Vr6"/>
                             <constraint firstAttribute="trailing" secondItem="Fb4-S1-ndd" secondAttribute="trailing" id="j2U-Ps-HJT"/>
                             <constraint firstItem="Cnh-te-GYj" firstAttribute="leading" secondItem="bUE-fV-meW" secondAttribute="leading" id="nII-kU-qbw"/>
+                            <constraint firstItem="Lyn-AM-9vG" firstAttribute="leading" secondItem="bUE-fV-meW" secondAttribute="leading" constant="40" id="uca-UH-pnY"/>
                             <constraint firstItem="Fb4-S1-ndd" firstAttribute="top" secondItem="rpg-Xz-zwH" secondAttribute="bottom" id="vMC-gs-hDr"/>
+                            <constraint firstAttribute="trailing" secondItem="1Tj-nZ-6f7" secondAttribute="trailing" constant="40" id="vcn-sk-Q38"/>
+                            <constraint firstItem="1Tj-nZ-6f7" firstAttribute="top" secondItem="Cnh-te-GYj" secondAttribute="bottom" constant="25" id="vxW-Ej-1xq"/>
                             <constraint firstItem="rpg-Xz-zwH" firstAttribute="top" secondItem="RJ0-Q2-2eS" secondAttribute="bottom" id="wew-YH-4yh"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="delectToPayLayoutConstraint" destination="il4-T4-Vr6" id="Xu8-LC-3EH"/>
+                        <outlet property="delectToViewLayoutConstraint" destination="vxW-Ej-1xq" id="ddP-FD-GvI"/>
+                        <outlet property="deleteBtn" destination="1Tj-nZ-6f7" id="iS5-9x-Kgv"/>
                         <outlet property="flow1Desc" destination="1MD-xV-RF4" id="qSH-8m-gZn"/>
                         <outlet property="flow1Time" destination="E5M-aJ-3FJ" id="ATX-ch-o3h"/>
                         <outlet property="flow2Desc" destination="mXm-lH-bxW" id="oep-p6-S3b"/>
@@ -799,6 +831,7 @@
                         <outlet property="flow2Time" destination="Qsg-DB-UQC" id="o4R-7d-KJp"/>
                         <outlet property="flowLine1" destination="W4d-Vw-oLb" id="ynp-4x-pIq"/>
                         <outlet property="flowLine2" destination="VYO-1p-nfA" id="oN8-an-5nQ"/>
+                        <outlet property="payBtn" destination="Lyn-AM-9vG" id="kOk-pi-Qos"/>
                         <outlet property="rollOutAmount" destination="QFP-hQ-JaX" id="Zcq-DW-YIc"/>
                         <outlet property="rollOutTime" destination="ELe-LM-Smb" id="aFO-fh-6tP"/>
                         <outlet property="rollOutType" destination="AlK-d0-FV8" id="MAM-8H-AGs"/>

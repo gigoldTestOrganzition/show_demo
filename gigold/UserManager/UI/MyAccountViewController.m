@@ -14,6 +14,11 @@
 #import "LoginViewController.h"
 #import "SmallChangeViewController.h"
 #import "AddressManagerViewController.h"
+#import "StringUtil.h"
+#import "RuntimeContext.h"
+#import "OpenGigoldViewController.h"
+#import "GigoldTreasureHomeViewController.h"
+#import "appliacation_attribute.h"
 @interface MyAccountViewController ()
 
 @end
@@ -35,8 +40,8 @@
     
     self.view.backgroundColor = [UIColor colorWithRed:72/255. green:202/255. blue:226/255. alpha:1];
     
-    titleArray = [[NSMutableArray alloc] initWithObjects:@"吉有钱",@"零钱",@"银行卡",@"交易记录",@"密码管理",@"地址管理", nil];
-    imageArray = [[NSMutableArray alloc] initWithObjects:@"user_menu_ico_1",@"user_menu_ico_2",@"user_menu_ico_3",@"user_menu_ico_4",@"user_menu_ico_5",@"user_menu_ico_5",nil];
+    titleArray = [[NSMutableArray alloc] initWithObjects:@"吉有钱",@"零钱",@"银行卡",@"密码管理",@"地址管理", nil];
+    imageArray = [[NSMutableArray alloc] initWithObjects:@"user_menu_ico_1",@"user_menu_ico_2",@"user_menu_ico_3",@"user_menu_ico_5",@"user_menu_ico_5",nil];
     
     [self.settingBtn addTarget:self action:@selector(settingBtnPress) forControlEvents:UIControlEventTouchUpInside];
     
@@ -127,7 +132,19 @@
     [self.navigationController pushViewController:settingView animated:YES];
 }
 
-
+//进入吉有钱
+-(void)intoJiyouqian{
+    NSString* openMark =  [[RuntimeContext getInstane]getData:@"open"];
+    if (![StringUtil isEmpty:openMark]) {
+        GigoldTreasureHomeViewController* giyouqianViewController = storyboard_controller_identity(@"GigoldTreasureHome", @"home");
+        //self.hidesBottomBarWhenPushed=YES;
+        [self.navigationController pushViewController:giyouqianViewController animated:YES];
+    }else{
+        OpenGigoldViewController* openJiyouqianViewController = [[OpenGigoldViewController alloc]init];
+        //self.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:openJiyouqianViewController animated:YES];
+    }
+}
 
 #pragma mark ---- UITableViewDataSource,UITableViewDelegate --------
 
@@ -172,6 +189,7 @@
     NSString* menuTitle = [titleArray objectAtIndex:indexPath.row];
     NSLog(@"去%@",menuTitle);
     if ([menuTitle isEqualToString:@"吉有钱"]) {
+        [self intoJiyouqian];
     }
     else if ([menuTitle isEqualToString:@"零钱"]){
         if (![[AppUtils shareAppUtils] getIsLogin]) {

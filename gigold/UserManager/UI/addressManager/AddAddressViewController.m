@@ -9,6 +9,8 @@
 #import "AddAddressViewController.h"
 #import "OutView.h"
 #import "SelectRegionView.h"
+#import "StringUtil.h"
+#import "MBProgressHUDManager.h"
 
 @interface AddAddressViewController ()<CustomerViewClickDeleget>{
 
@@ -100,13 +102,15 @@
 //保存地址
 -(void)savaAdress{
     NSLog(@"sava address");
-    if(_deleget){
+    if ([StringUtil isEmpty:region.text]||[StringUtil isEmpty:detailAddress.text]||[StringUtil isEmpty:familyAddress.text]) {
+        [MBProgressHUDManager showMessage:@"请完整填写信息" view:self.view];
+    }else if(_deleget){
         Address* address = [[Address alloc]init];
         address.estimatedAddress = region.text;
         address.detailAddress =  [NSString stringWithFormat:@"%@%@",detailAddress.text,familyAddress.text];
         [_deleget addAddress:address];
+        [self.navigationController popViewControllerAnimated:YES];
     }
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 //选择地区

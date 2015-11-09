@@ -10,6 +10,7 @@
                 <outlet property="jiyouqianBtn" destination="uvI-VO-IJw" id="1KR-ch-4zm"/>
                 <outlet property="jiyouqianBtnHeight" destination="tww-nt-Y6B" id="Jbm-dN-9s0"/>
                 <outlet property="sevenRateView" destination="ae8-Kr-ULP" id="kis-p7-n58"/>
+                <outlet property="smallChangeView" destination="Oh8-ve-g2l" id="exp-e8-HJs"/>
                 <outlet property="tenthouSandView" destination="1q1-o2-EKt" id="U9s-Zb-ZlH"/>
                 <outlet property="topLayoutConstraint" destination="ReU-kz-lYW" id="iB0-qI-10h"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -23,7 +24,7 @@
                 <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E53-M2-aEG">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finance_ico_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nld-6c-cUL">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="finance_ico_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nld-6c-cUL">
                             <rect key="frame" x="15" y="15" width="40" height="40"/>
                         </imageView>
                         <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MdU-Xc-JNU">

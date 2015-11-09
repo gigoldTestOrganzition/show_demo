@@ -26,6 +26,14 @@
 #import "appliacation_attribute.h"
 #import "RuntimeContext.h"
 #import "UUChart.h"
+#import "BillViewController.h"
+#import "RuntimeContext.h"
+#import "appliacation_attribute.h"
+#import "StringUtil.h"
+#import "OpenGigoldViewController.h"
+#import "GigoldTreasureHomeViewController.h"
+#import "TopUpViewController.h"
+
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate,UUChartDataSource>{
     //功能数据
     NSMutableArray* datas;
@@ -167,7 +175,8 @@
 }
 //进入账单
 -(void)intoBill{
-
+    BillViewController* billViewController = [[BillViewController alloc]init];
+    [self.navigationController pushViewController:billViewController animated:YES];
 }
 
 
@@ -224,33 +233,36 @@
 }
 //进入零钱
 -(void)intoSmallChange{
-    NSLog(@"intoSmallChange");
+    TopUpViewController* topViewController = storyboard_controller_identity(@"topUpStoryboard",@"topup");
+    [self.navigationController pushViewController:topViewController animated:YES];
+    //NSLog(@"intoSmallChange");
 }
 //进入花费
 -(void)intoCost{
      NSLog(@"intoCost");
 
 }
-
+//选择进入不同的tabar选项
+-(void)selectTabBar:(id)sender{
+   UITapGestureRecognizer* gestureRecognizer = sender;
+   NSInteger index = gestureRecognizer.view.tag;
+   self.tabBarController.selectedIndex = index;
+    
+}
 
 #pragma mark -tableview 协议
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return [datas count];
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-   GigoldDeclaration* gigoldDeclaration = datas[section];
-   // if (gigoldDeclaration.isLook) {
-        if (section == datas.count - 1) {
-            return [merchantsDatas count];
-        }else{
-            return 1;
-        }
-   // }else{
-   //     return 1;
-   // }
+    if (section == datas.count - 1) {
+        return [merchantsDatas count];
+    }else{
+        return 1;
+    }
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    if(section>0){
+    if(section > 0){
         return 45.f;
     }else{
         return 35.f;
@@ -264,18 +276,11 @@
         declarationView.topLayoutConstraint.constant = 0.f;
     }
     GigoldDeclaration* gigoldDeclaration = datas[section];
-    if(gigoldDeclaration.isLook){
-        declarationView.lookImg.image = [UIImage imageNamed:@"list_open_arrow"];
-        declarationView.lookImg.transform  = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(180));
-        declarationView.bottomLineLeadingLayoutConstraint.constant = 0.f;
-    }else{
-        declarationView.lookImg.image = [UIImage imageNamed:@"list_open_arrow"];
-        declarationView.bottomLineLeadingLayoutConstraint.constant = 0.f;
-    }   declarationView.title.text = gigoldDeclaration.title;
-    declarationView.tag = section;
-    //[ViewUtil registerGestures:declarationView target:self action:@selector(look:)];
+    declarationView.lookImg.image = [UIImage imageNamed:@"home_page_but_arrow.png"];
+    declarationView.title.text = gigoldDeclaration.title;
+    declarationView.tag = section+1;
+    [ViewUtil registerGestures:declarationView target:self action:@selector(selectTabBar:)];
     return declarationView;
-    
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

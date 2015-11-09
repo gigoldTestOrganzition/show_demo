@@ -14,6 +14,8 @@
 #import "GigoldTreasureHomeViewController.h"
 #import "StringUtil.h"
 #import "SenvenIncomeRateViewController.h"
+#import "TopUpViewController.h"
+#import "appliacation_attribute.h"
 @interface BankViewController (){
     __weak IBOutlet NSLayoutConstraint *topLayoutConstraint;
     
@@ -21,6 +23,9 @@
     __weak IBOutlet UIView *tenthouSandView;
     __weak IBOutlet UIButton *jiyouqianBtn;
     __weak IBOutlet NSLayoutConstraint *jiyouqianBtnHeight;
+    //零钱
+    __weak IBOutlet UIView *smallChangeView;
+    
 }
 @end
 
@@ -41,6 +46,8 @@
     jiyouqianBtn.layer.borderWidth = 1.f;
     jiyouqianBtn.layer.borderColor = theme_color.CGColor;
     [ViewUtil registerGestures:jiyouqianBtn target:self action:@selector(intoGiyouqian)];
+    //零钱
+    [ViewUtil registerGestures:smallChangeView target:self action:@selector(intoSmallChange)];
     
     
     // Do any additional setup after loading the view from its nib.
@@ -74,5 +81,10 @@
     }
 
 
+}
+//进入零钱
+-(void)intoSmallChange{
+    TopUpViewController* topViewController = storyboard_controller_identity(@"topUpStoryboard",@"topup");
+    [self.navigationController pushViewController:topViewController animated:YES];
 }
 @end

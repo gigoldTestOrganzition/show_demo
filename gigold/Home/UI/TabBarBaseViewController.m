@@ -18,8 +18,8 @@
     [super viewDidLoad];
     UIButton* btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(0, 0, 44, 44);
-    [btn setImage:[UIImage imageNamed:@"top_return_but_1"] forState:UIControlStateNormal];
-    [btn setImage:[UIImage imageNamed:@"top_return_but_2"] forState:UIControlStateHighlighted];
+    [btn setImage:[UIImage imageNamed:@"main_top_user_ico"] forState:UIControlStateNormal];
+    [btn setImage:[UIImage imageNamed:@"main_top_user_ico"] forState:UIControlStateHighlighted];
     btn.imageEdgeInsets = UIEdgeInsetsMake(0, -30, 0, 0);
     [btn addTarget:self action:@selector(backSlideMenu) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem* item = [[UIBarButtonItem alloc] initWithCustomView:btn];

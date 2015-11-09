@@ -37,8 +37,6 @@
 #define green_arc_color kColorWithRGB(92,214,50,1)
 //进度颜色
 #define progress_color kColorWithRGB(200,214,217,1)
-
-
-
-
+//状态描述颜色
+#define status_dec_yellow_color kColorWithRGB(245,166,35,1)
 #endif
