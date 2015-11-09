@@ -46,6 +46,8 @@
 		5C63AC381BF03E5A00633B64 /* NSArray+Optimize.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C63AC331BF03E5A00633B64 /* NSArray+Optimize.m */; };
 		5C63AC391BF03E5A00633B64 /* NSDictionary+Optimize.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C63AC351BF03E5A00633B64 /* NSDictionary+Optimize.m */; };
 		5C63AC3A1BF03E5A00633B64 /* NSString+Optimize.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C63AC371BF03E5A00633B64 /* NSString+Optimize.m */; };
+		5C63AC3D1BF08BB500633B64 /* user_menu_but@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C63AC3B1BF08BB500633B64 /* user_menu_but@2x.png */; };
+		5C63AC3E1BF08BB500633B64 /* user_menu_but@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C63AC3C1BF08BB500633B64 /* user_menu_but@3x.png */; };
 		5C6A5A931BDB247A000CA77D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C6A5A911BDB247A000CA77D /* SettingsViewController.m */; };
 		5C6A5A941BDB247A000CA77D /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C6A5A921BDB247A000CA77D /* SettingsViewController.xib */; };
 		5C6A5AA21BDB46D0000CA77D /* login_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C6A5A971BDB46D0000CA77D /* login_background.png */; };
@@ -400,6 +402,8 @@
 		5C63AC351BF03E5A00633B64 /* NSDictionary+Optimize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Optimize.m"; sourceTree = "<group>"; };
 		5C63AC361BF03E5A00633B64 /* NSString+Optimize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Optimize.h"; sourceTree = "<group>"; };
 		5C63AC371BF03E5A00633B64 /* NSString+Optimize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Optimize.m"; sourceTree = "<group>"; };
+		5C63AC3B1BF08BB500633B64 /* user_menu_but@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_menu_but@2x.png"; sourceTree = "<group>"; };
+		5C63AC3C1BF08BB500633B64 /* user_menu_but@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_menu_but@3x.png"; sourceTree = "<group>"; };
 		5C6A5A901BDB247A000CA77D /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		5C6A5A911BDB247A000CA77D /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		5C6A5A921BDB247A000CA77D /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
@@ -1112,6 +1116,8 @@
 				5CB6FF671BE09B4D00D666D0 /* ico_statement_2@3x.png */,
 				5CB6FF681BE09B4D00D666D0 /* ico_statement_3@2x.png */,
 				5CB6FF691BE09B4D00D666D0 /* ico_statement_3@3x.png */,
+				5C63AC3B1BF08BB500633B64 /* user_menu_but@2x.png */,
+				5C63AC3C1BF08BB500633B64 /* user_menu_but@3x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -3731,6 +3737,7 @@
 				5C6D1FB91BE85B6B00B57025 /* LimitInstructionsViewController.xib in Resources */,
 				5C6D1FC31BE85B6B00B57025 /* ico_statement_5@2x.png in Resources */,
 				5C6D1FA81BE85B6B00B57025 /* ico_statement_3@3x.png in Resources */,
+				5C63AC3E1BF08BB500633B64 /* user_menu_but@3x.png in Resources */,
 				5C6D212A1BE88E2000B57025 /* user_menu_ico_6@2x.png in Resources */,
 				5C6D1FED1BE85B6B00B57025 /* jyq_shisuan_round@3x.png in Resources */,
 				5C6D1FD01BE85B6B00B57025 /* jiyouqian_ico@2x.png in Resources */,
@@ -3757,6 +3764,7 @@
 				5C93B8FB1BD8DA5A00E8A8AA /* PasswordWriteViewController.xib in Resources */,
 				5C56435A1BEC44AF00367FB8 /* arrow_up@.png in Resources */,
 				5C394BFC1BCF597E009AC0AC /* LaunchScreen.storyboard in Resources */,
+				5C63AC3D1BF08BB500633B64 /* user_menu_but@2x.png in Resources */,
 				5C00F8FD1BE0A428009EAA73 /* PayPwdValidateViewController.xib in Resources */,
 				5C6D1FB11BE85B6B00B57025 /* ico_submit_2_1@3x.png in Resources */,
 				5C5643821BECA32F00367FB8 /* launch-568h@2x.png in Resources */,
