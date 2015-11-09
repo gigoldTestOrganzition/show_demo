@@ -109,6 +109,9 @@
                 [self.navigationController popViewControllerAnimated:YES];
             }else{
                 [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
+                if ([rspCd isEqualToString:SESSION_FAIL]){
+                    [self sessionFailure];
+                }
             }
         }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
             [[AppUtils shareAppUtils] showHUD:@"登出失败" andView:self.view];

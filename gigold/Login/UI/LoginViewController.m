@@ -120,7 +120,6 @@
         if ([rspCd isEqualToString:SUCCESS]) {
             [self loginRespond];
             
-            
             [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
             
             [self performSelector:@selector(delayMethod) withObject:nil afterDelay:2.0f];
@@ -132,6 +131,9 @@
             [self loginRespond];
         }else{
             [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
+            if ([rspCd isEqualToString:SESSION_FAIL]){
+                [self sessionFailure];
+            }
         }
         
     }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {

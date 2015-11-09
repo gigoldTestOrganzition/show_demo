@@ -70,4 +70,7 @@ typedef enum BackType
 
 - (void)showLoginView:(LoginType)loginType;
 
+//当会话实效后调用
+- (void)sessionFailure;
+
 @end

@@ -52,4 +52,7 @@
 #define SMS_GET_CODE_FAIL     @"S0002" //获取短信验证码失败
 #define SMS_VERIFY_CODE_FAIL  @"S0003" //短信验证码校验失败
 
+//会话失效
+#define SESSION_FAIL          @"30002" //会话失效
+
 #endif

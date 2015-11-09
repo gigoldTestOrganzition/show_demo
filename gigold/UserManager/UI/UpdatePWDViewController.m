@@ -47,7 +47,7 @@
         }else{
             self.nextBtn.backgroundColor = theme_color;
             self.nextBtn.enabled = YES;
-            if (textString > 20) {
+            if (textString.length > 20) {
                 return NO;
             }
         }
@@ -125,6 +125,9 @@
             [resultShowView showDialog:self.view];
         }else{
             [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
+            if ([rspCd isEqualToString:SESSION_FAIL]){
+                [self sessionFailure];
+            }
         }
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {

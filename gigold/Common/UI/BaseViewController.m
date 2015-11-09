@@ -33,6 +33,7 @@
     self.navigationItem.leftBarButtonItem = item;
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
+    
 }
 
 - (void)backBtnPress{
@@ -62,6 +63,8 @@
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = back_ground_color;
+    
+    
     // Do any additional setup after loading the view.
 }
 
@@ -72,6 +75,12 @@
     loginView.loginType = loginType;
     UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:loginView];
     [self presentViewController:nav animated:YES completion:^{}];
+}
+
+//当会话实效后调用
+- (void)sessionFailure{
+    [self logoutRespond];
+    [self showLoginView:OnlyLogin];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -94,6 +94,9 @@
             [self timerValue];
         }else{
             [[AppUtils shareAppUtils] showHUD:@"重新发送失败" andView:self.view];
+            if ([rspCd isEqualToString:SESSION_FAIL]){
+                [self sessionFailure];
+            }
         }
         
     }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
@@ -207,6 +210,9 @@
                                 [[AppUtils shareAppUtils] showHUD:subrspInf andView:self.view];
                                 isshowSuccess = NO;
                                 [self performSelector:@selector(cancelView) withObject:nil afterDelay:1];
+                                if ([rspCd isEqualToString:SESSION_FAIL]){
+                                    [self sessionFailure];
+                                }
                             }
                         }
                         

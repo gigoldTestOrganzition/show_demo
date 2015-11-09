@@ -144,6 +144,9 @@
                 [resultShowView showDialog:self.view];
             }else{
                 [[AppUtils shareAppUtils] showHUD:subrspInf andView:self.view];
+                if ([subrspInf isEqualToString:SESSION_FAIL]){
+                    [self sessionFailure];
+                }
             }
             
         }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
@@ -166,6 +169,9 @@
                 [resultShowView showDialog:self.view];
             }else{
                 [[AppUtils shareAppUtils] showHUD:subrspInf andView:self.view];
+                if ([subrspInf isEqualToString:SESSION_FAIL]){
+                    [self sessionFailure];
+                }
             }
             
             
@@ -193,6 +199,9 @@
                 [resultShowView showDialog:self.view];
             }else{
                 [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
+                if ([rspCd isEqualToString:SESSION_FAIL]){
+                    [self sessionFailure];
+                }
             }
             
         }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
