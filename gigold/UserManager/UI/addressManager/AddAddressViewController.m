@@ -47,7 +47,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     //top
-    topLayoutConstraint.constant = 44.f+STATUSBAR_OFFSET+15.f;
+    topLayoutConstraint.constant = 15.f;
     //ui
     [self initUI];
     //event

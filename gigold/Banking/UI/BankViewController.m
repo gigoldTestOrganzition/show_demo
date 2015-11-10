@@ -26,6 +26,18 @@
     //零钱
     __weak IBOutlet UIView *smallChangeView;
     
+    //线
+    __weak IBOutlet NSLayoutConstraint *line1;
+    __weak IBOutlet NSLayoutConstraint *line2;
+    __weak IBOutlet NSLayoutConstraint *line3;
+    __weak IBOutlet NSLayoutConstraint *line4;
+    __weak IBOutlet NSLayoutConstraint *line5;
+    
+    __weak IBOutlet NSLayoutConstraint *line6;
+    
+    __weak IBOutlet NSLayoutConstraint *line7;
+    
+    
 }
 @end
 
@@ -34,7 +46,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"金融";
-    topLayoutConstraint.constant = 44.f+STATUSBAR_OFFSET;
+    topLayoutConstraint.constant = 0.f;//44.f+STATUSBAR_OFFSET;
+    
+    
     
     [ViewUtil registerGestures:tenthouSandView target:self action:@selector(intoTenthousand)];
     [ViewUtil registerGestures:sevenRateView target:self action:@selector(intoSevenrate)];
@@ -50,20 +64,41 @@
     [ViewUtil registerGestures:smallChangeView target:self action:@selector(intoSmallChange)];
     
     
+    [self setLine];
+    
+    
     // Do any additional setup after loading the view from its nib.
+}
+-(void)setLine{
+    line1.constant = 0.5;
+    line2.constant = 0.5;
+
+    line3.constant = 0.5;
+
+    line4.constant = 0.5;
+
+    line5.constant = 0.5;
+
+    line6.constant = 0.5;
+
+    line7.constant = 0.5;
+
 }
 //进入万分收益
 -(void)intoTenthousand{
     SenvenIncomeRateViewController* senvenIncomeRateViewController  = (SenvenIncomeRateViewController*)storyboard_controller_identity(@"GigoldTreasureHome", @"senverIncome");
     senvenIncomeRateViewController.showType = IRShowTypeTenthousand;
-    [self.navigationController pushViewController:senvenIncomeRateViewController animated:YES];
+     [((UINavigationController*)Etappdelegate.window.rootViewController) pushViewController:senvenIncomeRateViewController animated:YES];
+    
+    //[self.navigationController pushViewController:senvenIncomeRateViewController animated:YES];
 
 }
 //进入七日年化率
 -(void)intoSevenrate{
     SenvenIncomeRateViewController* senvenIncomeRateViewController  = (SenvenIncomeRateViewController*)storyboard_controller_identity(@"GigoldTreasureHome", @"senverIncome");
     senvenIncomeRateViewController.showType = IRShowTypeSeven;
-    [self.navigationController pushViewController:senvenIncomeRateViewController animated:YES];
+     [((UINavigationController*)Etappdelegate.window.rootViewController) pushViewController:senvenIncomeRateViewController animated:YES];
+    //[self.navigationController pushViewController:senvenIncomeRateViewController animated:YES];
     
 
 }
@@ -72,12 +107,14 @@
     NSString* openMark =  [[RuntimeContext getInstane]getData:@"open"];
     if (![StringUtil isEmpty:openMark]) {
         GigoldTreasureHomeViewController* giyouqianViewController = storyboard_controller_identity(@"GigoldTreasureHome", @"home");
+        [((UINavigationController*)Etappdelegate.window.rootViewController) pushViewController:giyouqianViewController animated:YES];
         //self.hidesBottomBarWhenPushed=YES;
-        [self.navigationController pushViewController:giyouqianViewController animated:YES];
+        //[self.navigationController pushViewController:giyouqianViewController animated:YES];
     }else{
         OpenGigoldViewController* openJiyouqianViewController = [[OpenGigoldViewController alloc]init];
+        [((UINavigationController*)Etappdelegate.window.rootViewController) pushViewController:openJiyouqianViewController animated:YES];
         //self.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:openJiyouqianViewController animated:YES];
+        //[self.navigationController pushViewController:openJiyouqianViewController animated:YES];
     }
 
 
@@ -85,6 +122,7 @@
 //进入零钱
 -(void)intoSmallChange{
     TopUpViewController* topViewController = storyboard_controller_identity(@"topUpStoryboard",@"topup");
-    [self.navigationController pushViewController:topViewController animated:YES];
+    [((UINavigationController*)Etappdelegate.window.rootViewController) pushViewController:topViewController animated:YES];
+    //[self.navigationController pushViewController:topViewController animated:YES];
 }
 @end

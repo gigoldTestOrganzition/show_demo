@@ -8,7 +8,15 @@
 
 #import "RNSwipeViewController.h"
 #import "MyAccountViewController.h"
+#import "LaunchViewController.h"
 
-@interface RootViewController : RNSwipeViewController
+@class BaseViewController;
+
+@interface RootViewController : RNSwipeViewController <BaseViewControllerDelegate>
+{
+    LaunchViewController* launchView;
+}
+
+@property (nonatomic, assign) BOOL isShowLauchView;
 +(RootViewController*)shareInstance;
 @end

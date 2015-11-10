@@ -148,16 +148,16 @@
     titleLabel.font = title_or_btn_font;
     titleLabel.textColor = [UIColor whiteColor];
     titleLabel.text = @"御溪国际";
-    CGFloat titleWidth = [StringUtil getStringWidth:titleLabel.text font:titleLabel.font size:CGSizeMake(mainScreenWidth-80, 44.f)];
+    CGFloat titleWidth = [StringUtil getStringWidth:titleLabel.text font:titleLabel.font size:CGSizeMake(mainScreenWidth-80,44.f)];
     CGFloat titleHeight =  [StringUtil getStringHeight:titleLabel.text font:titleLabel.font size:CGSizeMake(mainScreenWidth-80, 44.f)];
     titleLabel.frame = CGRectMake(0,0,titleWidth,titleHeight);
     [titleView addSubview:titleLabel];
     
     markImg = [[UIImageView alloc]init];
     markImg.image = [UIImage imageNamed:@"top_menu_but_arrow.png"];
-    markImg.frame = CGRectMake(titleLabel.frame.origin.x+titleLabel.frame.size.width+5.f,titleLabel.center.y-10.f,20,20);
+    markImg.frame = CGRectMake(titleLabel.frame.origin.x+titleLabel.frame.size.width+5.f,titleLabel.center.y-8.f,16,16);
     [titleView addSubview:markImg];
-    titleView.frame = CGRectMake(0,0.f,titleWidth+20.f,titleHeight+10);
+    titleView.frame = CGRectMake(0,0.f,titleWidth+20.f,titleHeight);
     UITapGestureRecognizer* selectShowTypeGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(selectRegion)];
     titleView.userInteractionEnabled = YES;
     [titleView addGestureRecognizer:selectShowTypeGestureRecognizer];
@@ -178,7 +178,9 @@
 //进入账单
 -(void)intoBill{
     BillViewController* billViewController = [[BillViewController alloc]init];
-    [self.navigationController pushViewController:billViewController animated:YES];
+    [((UINavigationController*)Etappdelegate.window.rootViewController) pushViewController:billViewController animated:YES];
+    
+    //[self.navigationController pushViewController:billViewController animated:YES];
 }
 
 
@@ -199,7 +201,7 @@
 -(HomeAdvertisingView*)getHomeAdvertisingView{
     if (!homeAdvertisingView){
         homeAdvertisingView = [[HomeAdvertisingView alloc]init];
-        [homeAdvertisingView updataFrame:CGRectMake(0.f,44.f+STATUSBAR_OFFSET,mainScreenWidth,ADVERTISING_HEIGHT)];
+        [homeAdvertisingView updataFrame:CGRectMake(0.f,0.f,mainScreenWidth,ADVERTISING_HEIGHT)];
         homeAdvertisingView.imgArray = [[NSArray alloc]initWithObjects:[UIImage imageNamed:@"home_page_banner1.jpg"],[UIImage imageNamed:@"home_page_banner2.jpg"],[UIImage imageNamed:@"home_page_banner3.jpg"],nil];
     }
     return homeAdvertisingView;
@@ -238,17 +240,20 @@
     if (![StringUtil isEmpty:openMark]) {
         GigoldTreasureHomeViewController* giyouqianViewController = storyboard_controller_identity(@"GigoldTreasureHome", @"home");
        //self.hidesBottomBarWhenPushed=YES;
-       [self.navigationController pushViewController:giyouqianViewController animated:YES];
+         [((UINavigationController*)Etappdelegate.window.rootViewController) pushViewController:giyouqianViewController animated:YES];
+      // [self.navigationController pushViewController:giyouqianViewController animated:YES];
     }else{
         OpenGigoldViewController* openJiyouqianViewController = [[OpenGigoldViewController alloc]init];
         //self.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:openJiyouqianViewController animated:YES];
+         [((UINavigationController*)Etappdelegate.window.rootViewController) pushViewController:openJiyouqianViewController animated:YES];
+        //[self.navigationController pushViewController:openJiyouqianViewController animated:YES];
     }
 }
 //进入零钱
 -(void)intoSmallChange{
     TopUpViewController* topViewController = storyboard_controller_identity(@"topUpStoryboard",@"topup");
-    [self.navigationController pushViewController:topViewController animated:YES];
+     [((UINavigationController*)Etappdelegate.window.rootViewController) pushViewController:topViewController animated:YES];
+    //[self.navigationController pushViewController:topViewController animated:YES];
     //NSLog(@"intoSmallChange");
 }
 //进入花费
@@ -353,10 +358,10 @@
 if (scrollView == homeTableView) {
     CGFloat y = scrollView.contentOffset.y;
     if (y < 0) {
-       [homeAdvertisingView updataFrame:CGRectMake(0.f,44.f+STATUSBAR_OFFSET, mainScreenWidth,ADVERTISING_HEIGHT+ABS(y))];
+       [homeAdvertisingView updataFrame:CGRectMake(0.f,0.f, mainScreenWidth,ADVERTISING_HEIGHT+ABS(y))];
     }else{
        
-        [homeAdvertisingView updataFrame:CGRectMake(0.f,44.f+STATUSBAR_OFFSET,mainScreenWidth,ADVERTISING_HEIGHT)];
+        [homeAdvertisingView updataFrame:CGRectMake(0.f,0.f,mainScreenWidth,ADVERTISING_HEIGHT)];
     }
 }
 }

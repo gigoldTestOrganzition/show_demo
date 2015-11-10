@@ -101,19 +101,24 @@
         
     }else{
         NSLog(@"去退出");
-        [[LoginRequest sharedLoginRequest] logoutRequestMobileNum:@"" success:^(AFHTTPRequestOperation * operation, id responseObject) {
-            NSString* rspCd = [responseObject objectForKey:@"rspCd"];
-            NSString* rspInf = [responseObject objectForKey:@"rspInf"];
-            if ([rspCd isEqualToString:@"U0000"]) {
-                [self logoutRespond];
-                [self.navigationController popViewControllerAnimated:YES];
-                [[AppUtils shareAppUtils] saveGID:@""];
-            }else{
-                [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
-            }
-        }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
-            [[AppUtils shareAppUtils] showHUD:@"登出失败" andView:self.view];
-        }];
+        [self logoutRespond];
+        [self.navigationController popViewControllerAnimated:YES];
+        [[AppUtils shareAppUtils] saveGID:@""];
+        
+        
+        //        [[LoginRequest sharedLoginRequest] logoutRequestMobileNum:@"" success:^(AFHTTPRequestOperation * operation, id responseObject) {
+        //            NSString* rspCd = [responseObject objectForKey:@"rspCd"];
+        //            NSString* rspInf = [responseObject objectForKey:@"rspInf"];
+        //            if ([rspCd isEqualToString:@"U0000"]) {
+        //                [self logoutRespond];
+        //                [self.navigationController popViewControllerAnimated:YES];
+        //                [[AppUtils shareAppUtils] saveGID:@""];
+        //            }else{
+        //                [[AppUtils shareAppUtils] showHUD:rspInf andView:self.view];
+        //            }
+        //        }failure:^(AFHTTPRequestOperation *operation, NSError *error, id responseObject) {
+        //            [[AppUtils shareAppUtils] showHUD:@"登出失败" andView:self.view];
+        //        }];
         
         
     }
@@ -152,7 +157,7 @@
     cell.textLabel.textColor = main_text_color;
     cell.textLabel.text = [[dataArray objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-
+    
     return cell;
 }
 
@@ -166,13 +171,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

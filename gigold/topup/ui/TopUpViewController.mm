@@ -39,6 +39,7 @@
     [self initData];
     [self initUi];
     
+    //self.navigationController.navigationBar.translucent = NO;
     // Do any additional setup after loading the view.
 }
 
@@ -190,7 +191,6 @@
     }
     return YES;
 }
-
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];

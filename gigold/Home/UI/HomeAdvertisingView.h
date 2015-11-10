@@ -13,6 +13,8 @@
 @property(nonatomic,strong)NSArray* imgArray;
 //轮放时间
 @property(nonatomic,assign)CGFloat loopTime;
+//滑动时间
+@property(nonatomic,assign)CGFloat slidingTime;
 //滑动
 @property (strong, nonatomic) UIScrollView *imageScrollView;
 @property (strong, nonatomic) UIPageControl *pageController;

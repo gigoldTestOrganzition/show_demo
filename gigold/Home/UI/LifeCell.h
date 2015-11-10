@@ -12,4 +12,10 @@
 //业主数量
 @property (weak, nonatomic) IBOutlet NumberView *businessOwnerNumberView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *businessOwnerNumberViewWidthLayoutConstraint;
+
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *line1;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *line2;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *line3;
 @end

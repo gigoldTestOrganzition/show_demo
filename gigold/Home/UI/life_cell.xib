@@ -303,6 +303,9 @@
             <connections>
                 <outlet property="businessOwnerNumberView" destination="RVS-bb-zXO" id="oSw-gN-emn"/>
                 <outlet property="businessOwnerNumberViewWidthLayoutConstraint" destination="iqC-IB-tRM" id="Bt6-hf-R35"/>
+                <outlet property="line1" destination="9HR-iO-NiE" id="LT7-lK-Wfo"/>
+                <outlet property="line2" destination="9z8-f4-Apt" id="tkR-nR-4QH"/>
+                <outlet property="line3" destination="kIF-P9-knn" id="Vxn-H8-Ssl"/>
             </connections>
             <point key="canvasLocation" x="97" y="274.5"/>
         </tableViewCell>

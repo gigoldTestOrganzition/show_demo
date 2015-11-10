@@ -22,7 +22,7 @@
     self.navigationItem.title = @"限额说明";
     NSDictionary* attributesDic = [NSDictionary dictionaryWithObjectsAndKeys:main_font,NSFontAttributeName,nil];
     [[UIBarButtonItem appearance] setTitleTextAttributes:attributesDic forState:0];
-    topLayoutConstraint.constant = 44.f+STATUSBAR_OFFSET+30.f;
+    topLayoutConstraint.constant = 30.f;
     // Do any additional setup after loading the view from its nib.
 }
 

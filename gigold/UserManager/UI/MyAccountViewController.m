@@ -41,7 +41,7 @@
     self.view.backgroundColor = [UIColor colorWithRed:72/255. green:202/255. blue:226/255. alpha:1];
     
     titleArray = [[NSMutableArray alloc] initWithObjects:@"吉有钱",@"零钱",@"银行卡",@"密码管理",@"地址管理", nil];
-    imageArray = [[NSMutableArray alloc] initWithObjects:@"user_menu_ico_1",@"user_menu_ico_2",@"user_menu_ico_3",@"user_menu_ico_5",@"user_menu_ico_5",nil];
+    imageArray = [[NSMutableArray alloc] initWithObjects:@"user_menu_ico_1",@"user_menu_ico_2",@"user_menu_ico_3",@"user_menu_ico_5",@"perimeter_position_ico",nil];
     
     [self.settingBtn addTarget:self action:@selector(settingBtnPress) forControlEvents:UIControlEventTouchUpInside];
     

@@ -15,6 +15,11 @@
     
     __weak IBOutlet UICollectionView *collectionView;
     NSMutableArray* lifeDatas;
+    
+    
+    __weak IBOutlet NSLayoutConstraint *bottomLine;
+    
+    
 }
 @end
 
@@ -23,12 +28,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"生活";
-    topLayoutConstraint.constant = 44.f+STATUSBAR_OFFSET;
+    topLayoutConstraint.constant = 0.f;//44.f+STATUSBAR_OFFSET;
     [self initDatas];
     UINib * nib = [UINib nibWithNibName:@"LifeCell" bundle:nil];
     [collectionView registerNib:nib forCellWithReuseIdentifier:@"cell"];
+    
+    UICollectionViewFlowLayout* layout = [[UICollectionViewFlowLayout alloc]init];
+    layout.minimumInteritemSpacing=0.5f;
+    layout.minimumLineSpacing = 0.5f;
+    collectionView.collectionViewLayout = layout;
     collectionView.scrollEnabled = NO;
     // Do any additional setup after loading the view from its nib.
+    bottomLine.constant = 0.5f;
 }
 
 //初始化数据
@@ -54,7 +65,7 @@
     return [lifeDatas count];
 }
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout  sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    return CGSizeMake(mainScreenWidth/3-1, mainScreenWidth/3-1);
+    return CGSizeMake(mainScreenWidth/3-0.5, mainScreenWidth/3-0.5);
 }
 -(UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     LifeItemCell* lifeCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];

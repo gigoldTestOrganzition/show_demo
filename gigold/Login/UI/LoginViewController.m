@@ -46,9 +46,9 @@
     //测试数据
     
     self.accountTextField.text = [[AppUtils shareAppUtils] getUserId];
-    self.passwordTextField.text = @"111111";
+    //self.passwordTextField.text = @"111111";
     
-    NSLog(@"md5%@",[[AppUtils shareAppUtils] md5:@"13511407383+yyyyyyyyy"]);
+    //NSLog(@"md5%@",[[AppUtils shareAppUtils] md5:@"13511407383+yyyyyyyyy"]);
 }
 
 
@@ -113,8 +113,11 @@
         [loadView showDialog:self.view];
     }
     
-    [self loginRespond];
+   
+    [[AppUtils shareAppUtils] saveUserId:self.accountTextField.text];
+    [[AppUtils shareAppUtils] saveUserData:[NSDictionary dictionaryWithObject:self.accountTextField.text forKey:@"mobile"]];
     [self performSelector:@selector(delayMethod) withObject:nil afterDelay:2.0f];
+     [self loginRespond];
 
     
 //    [[LoginRequest sharedLoginRequest] loginRequestMobileNum:self.accountTextField.text pwd:self.passwordTextField.text success:^(AFHTTPRequestOperation * operation, id responseObject) {

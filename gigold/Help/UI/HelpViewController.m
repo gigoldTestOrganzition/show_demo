@@ -13,6 +13,7 @@
 @end
 
 @implementation HelpViewController
+@synthesize isShowLaunchView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -20,7 +21,14 @@
     
     images = [[NSArray alloc] initWithObjects:@"",@"",@"",@"",@"", nil];
     
-    
+    [self showMainView];
+ 
+    if (isShowLaunchView) {
+        [self showCustomLaunchView];
+    }
+}
+
+-(void)showMainView{
     UIScrollView* mScrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     mScrollView.contentSize = CGSizeMake(images.count*mScrollView.frame.size.width, mScrollView.frame.size.height);
     mScrollView.pagingEnabled = YES;
@@ -55,7 +63,19 @@
 }
 
 -(void)backBtnPress{
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"showLoginView" object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"showMainView" object:nil];
+}
+
+-(void)showCustomLaunchView{
+    launchView = [[LaunchViewController alloc] init];
+    launchView.delegate = self;
+    launchView.view.frame = CGRectMake(0, 0, mainScreenWidth, mainScreenHeight);
+    [self.view addSubview:launchView.view];
+}
+
+
+-(void)UIViewControllerBack:(BaseViewController *)baseViewController{
+    [launchView.view removeFromSuperview];
 }
 
 - (void)didReceiveMemoryWarning {

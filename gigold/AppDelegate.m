@@ -12,6 +12,7 @@
 #import "MyAccountViewController.h"
 #import "appliacation_attribute.h"
 #import "RootViewController.h"
+#import "LaunchViewController.h"
 
 @interface AppDelegate ()
 
@@ -27,14 +28,15 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(showMainViewNotification:)name:@"showMainView" object:nil];
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showMainViewNotification:) name:@"showMainView" object:nil];
     
     NSLog(@"%f %f",mainScreenWidth,mainScreenHeight);
 
     
     //设置NavigationBar背景颜色
     [[UINavigationBar appearance] setBarTintColor:theme_color];
+    [[UINavigationBar appearance] setTranslucent:NO];
+//    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
 //    [[UINavigationBar appearance] setBackgroundColor:theme_color];
     //@{}代表Dictionary
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSFontAttributeName:title_or_btn_font,
@@ -42,7 +44,11 @@
                                                            NSForegroundColorAttributeName:[UIColor whiteColor]}];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
-    [self showMainView];
+    if ([[AppUtils shareAppUtils] getIsFirstRun]) {
+        [self showHelpView];
+    }else{
+        [self showMainView:YES];
+    }
     
     //设置Window为主窗口并显示出来
     [self.window makeKeyAndVisible];
@@ -50,21 +56,23 @@
     return YES;
 }
 
-//接受显示主界面的通知
--(void)showMainViewNotification:(NSNotification *)notification{
-    [self showMainView];
+//跳转首页监听
+-(void)showMainViewNotification:(NSNotification*)notification{
+    [self showMainView:NO];
 }
 
 //进入新手指导
 -(void)showHelpView{
     [[AppUtils shareAppUtils] saveIsFirstRun:NO];
     HelpViewController* helpView = [[HelpViewController alloc] init];
+    helpView.isShowLaunchView = YES;
     self.window.rootViewController = helpView;
 }
 
--(void)showMainView{
-   // RootViewController* rootView = [[RootViewController alloc] init];
-    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:[RootViewController shareInstance]];
+-(void)showMainView:(BOOL)showLaunchView{
+    RootViewController* rootView = [RootViewController shareInstance];
+    rootView.isShowLauchView = showLaunchView;
+    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:rootView];
     self.window.rootViewController = nav;
   
 }

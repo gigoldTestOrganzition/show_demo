@@ -331,6 +331,16 @@
 		5C76ADCC1BF0382800740DD4 /* BillViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C76ADCA1BF0382800740DD4 /* BillViewController.xib */; };
 		5C76ADCE1BF045D400740DD4 /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C76ADCD1BF045D400740DD4 /* OrderCell.xib */; };
 		5C76ADD21BF075BF00740DD4 /* NumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C76ADD11BF075BF00740DD4 /* NumberView.m */; };
+		5C76ADD71BF092FF00740DD4 /* launch-480h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C76ADD31BF092FF00740DD4 /* launch-480h@2x.png */; };
+		5C76ADD81BF092FF00740DD4 /* launch-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C76ADD41BF092FF00740DD4 /* launch-568h@2x.png */; };
+		5C76ADD91BF092FF00740DD4 /* launch-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C76ADD51BF092FF00740DD4 /* launch-667h@2x.png */; };
+		5C76ADDA1BF092FF00740DD4 /* launch-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C76ADD61BF092FF00740DD4 /* launch-736h@3x.png */; };
+		5C76ADDF1BF0934400740DD4 /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C76ADDD1BF0934400740DD4 /* LaunchViewController.m */; };
+		5C76ADE01BF0934400740DD4 /* LaunchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C76ADDE1BF0934400740DD4 /* LaunchViewController.xib */; };
+		5C76ADE31BF094D100740DD4 /* user_menu_but@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C76ADE11BF094D100740DD4 /* user_menu_but@2x.png */; };
+		5C76ADE41BF094D100740DD4 /* user_menu_but@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C76ADE21BF094D100740DD4 /* user_menu_but@3x.png */; };
+		5C76ADE71BF0AF9F00740DD4 /* perimeter_position_ico@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C76ADE51BF0AF9F00740DD4 /* perimeter_position_ico@2x.png */; };
+		5C76ADE81BF0AF9F00740DD4 /* perimeter_position_ico@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C76ADE61BF0AF9F00740DD4 /* perimeter_position_ico@3x.png */; };
 		5C93B8E01BD8913600E8A8AA /* IncomeAEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C93B8DE1BD8913600E8A8AA /* IncomeAEViewController.m */; };
 		5C93B8E11BD8913600E8A8AA /* IncomeAEViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C93B8DF1BD8913600E8A8AA /* IncomeAEViewController.xib */; };
 		5C93B8EA1BD8CB0500E8A8AA /* InfoFinishedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C93B8E81BD8CB0500E8A8AA /* InfoFinishedViewController.m */; };
@@ -873,6 +883,17 @@
 		5C76ADCD1BF045D400740DD4 /* OrderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderCell.xib; sourceTree = "<group>"; };
 		5C76ADD01BF075BF00740DD4 /* NumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberView.h; sourceTree = "<group>"; };
 		5C76ADD11BF075BF00740DD4 /* NumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberView.m; sourceTree = "<group>"; };
+		5C76ADD31BF092FF00740DD4 /* launch-480h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "launch-480h@2x.png"; path = "gigold/Common/Images/launch-480h@2x.png"; sourceTree = SOURCE_ROOT; };
+		5C76ADD41BF092FF00740DD4 /* launch-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "launch-568h@2x.png"; path = "gigold/Common/Images/launch-568h@2x.png"; sourceTree = SOURCE_ROOT; };
+		5C76ADD51BF092FF00740DD4 /* launch-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "launch-667h@2x.png"; path = "gigold/Common/Images/launch-667h@2x.png"; sourceTree = SOURCE_ROOT; };
+		5C76ADD61BF092FF00740DD4 /* launch-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "launch-736h@3x.png"; path = "gigold/Common/Images/launch-736h@3x.png"; sourceTree = SOURCE_ROOT; };
+		5C76ADDC1BF0934400740DD4 /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
+		5C76ADDD1BF0934400740DD4 /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
+		5C76ADDE1BF0934400740DD4 /* LaunchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchViewController.xib; sourceTree = "<group>"; };
+		5C76ADE11BF094D100740DD4 /* user_menu_but@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_menu_but@2x.png"; sourceTree = "<group>"; };
+		5C76ADE21BF094D100740DD4 /* user_menu_but@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_menu_but@3x.png"; sourceTree = "<group>"; };
+		5C76ADE51BF0AF9F00740DD4 /* perimeter_position_ico@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "perimeter_position_ico@2x.png"; sourceTree = "<group>"; };
+		5C76ADE61BF0AF9F00740DD4 /* perimeter_position_ico@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "perimeter_position_ico@3x.png"; sourceTree = "<group>"; };
 		5C93B8DD1BD8913600E8A8AA /* IncomeAEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncomeAEViewController.h; sourceTree = "<group>"; };
 		5C93B8DE1BD8913600E8A8AA /* IncomeAEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncomeAEViewController.m; sourceTree = "<group>"; };
 		5C93B8DF1BD8913600E8A8AA /* IncomeAEViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IncomeAEViewController.xib; sourceTree = "<group>"; };
@@ -1224,6 +1245,8 @@
 		5C5A2DB91BD6115D00C4AE1D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				5C76ADE51BF0AF9F00740DD4 /* perimeter_position_ico@2x.png */,
+				5C76ADE61BF0AF9F00740DD4 /* perimeter_position_ico@3x.png */,
 				5CC9C3D51BE0688900C2269A /* user_faces_1@2x.png */,
 				5CC9C3D61BE0688900C2269A /* user_faces_1@3x.png */,
 				5CC44B1B1BDA30F00071B668 /* user_menu_ico_1@2x.png */,
@@ -1248,6 +1271,8 @@
 				5CB6FF671BE09B4D00D666D0 /* ico_statement_2@3x.png */,
 				5CB6FF681BE09B4D00D666D0 /* ico_statement_3@2x.png */,
 				5CB6FF691BE09B4D00D666D0 /* ico_statement_3@3x.png */,
+				5C76ADE11BF094D100740DD4 /* user_menu_but@2x.png */,
+				5C76ADE21BF094D100740DD4 /* user_menu_but@3x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -1899,6 +1924,10 @@
 				5C6D201D1BE85C8500B57025 /* safe_ico@3x.png */,
 				5C6D201E1BE85C8500B57025 /* top_menu_but_arrow@2x.png */,
 				5C6D201F1BE85C8500B57025 /* top_menu_but_arrow@3x.png */,
+				5C76ADD31BF092FF00740DD4 /* launch-480h@2x.png */,
+				5C76ADD41BF092FF00740DD4 /* launch-568h@2x.png */,
+				5C76ADD51BF092FF00740DD4 /* launch-667h@2x.png */,
+				5C76ADD61BF092FF00740DD4 /* launch-736h@3x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -1921,6 +1950,7 @@
 				5C6D20351BE85C8500B57025 /* securityPromptView */,
 				5C6D20391BE85C8500B57025 /* selectPayTypeView */,
 				5C6D203D1BE85C8500B57025 /* selectRegionView */,
+				5C76ADDB1BF0934400740DD4 /* LaunchView */,
 				5C6D20411BE85C8500B57025 /* UUChart */,
 			);
 			path = ui;
@@ -2501,6 +2531,17 @@
 			name = NumberView;
 			path = gigold/Common/UI/NumberView;
 			sourceTree = SOURCE_ROOT;
+		};
+		5C76ADDB1BF0934400740DD4 /* LaunchView */ = {
+			isa = PBXGroup;
+			children = (
+				5C76ADDC1BF0934400740DD4 /* LaunchViewController.h */,
+				5C76ADDD1BF0934400740DD4 /* LaunchViewController.m */,
+				5C76ADDE1BF0934400740DD4 /* LaunchViewController.xib */,
+			);
+			name = LaunchView;
+			path = UUChart/LaunchView;
+			sourceTree = "<group>";
 		};
 		5C93B8DB1BD88FBD00E8A8AA /* PasswordManager */ = {
 			isa = PBXGroup;
@@ -4026,9 +4067,11 @@
 				5C6D20621BE85C8500B57025 /* main_error_ico@3x.png in Resources */,
 				5C6D1FAF1BE85B6B00B57025 /* ico_submit_1_1@3x.png in Resources */,
 				5C76AD271BED8D7A00740DD4 /* home_page_pic_2@2x.png in Resources */,
+				5C76ADE01BF0934400740DD4 /* LaunchViewController.xib in Resources */,
 				5C6D20601BE85C8500B57025 /* main_error_ico2@3x.png in Resources */,
 				5C76ACF31BEC517E00740DD4 /* main_menu_ico3_2@2x.png in Resources */,
 				5C6D20531BE85C8500B57025 /* bank_logo_ccb@2x.png in Resources */,
+				5C76ADE71BF0AF9F00740DD4 /* perimeter_position_ico@2x.png in Resources */,
 				5C76AD771BEDEB1C00740DD4 /* life_ico_8@2x.png in Resources */,
 				5CB6FF6D1BE09B4D00D666D0 /* ico_statement_2@3x.png in Resources */,
 				5C6D1FAE1BE85B6B00B57025 /* ico_submit_1_1@2x.png in Resources */,
@@ -4109,6 +4152,7 @@
 				5C6D1FB21BE85B6B00B57025 /* ico_submit_2_2@2x.png in Resources */,
 				5C76AD711BEDEB1C00740DD4 /* life_ico_5@2x.png in Resources */,
 				5C76ADB61BEF404700740DD4 /* ico_android_144w.png in Resources */,
+				5C76ADD91BF092FF00740DD4 /* launch-667h@2x.png in Resources */,
 				5C6D20541BE85C8500B57025 /* bank_logo_ccb@3x.png in Resources */,
 				5C6D205B1BE85C8500B57025 /* main_correct_ico2@2x.png in Resources */,
 				5C76AD801BEE2A6700740DD4 /* finance_ico_4@3x.png in Resources */,
@@ -4126,6 +4170,7 @@
 				5C76ADB81BEF404700740DD4 /* ico_ios@120w.png in Resources */,
 				5C76AD811BEE2A6700740DD4 /* finance_ico_5@2x.png in Resources */,
 				5C6D1FB01BE85B6B00B57025 /* ico_submit_2_1@2x.png in Resources */,
+				5C76ADE81BF0AF9F00740DD4 /* perimeter_position_ico@3x.png in Resources */,
 				5C76ACDC1BEC501B00740DD4 /* LifeViewController.xib in Resources */,
 				5C6D1FE11BE85B6B00B57025 /* TimelimitCell.xib in Resources */,
 				5C6D1FA51BE85B6B00B57025 /* ico_statement_2@2x.png in Resources */,
@@ -4161,6 +4206,7 @@
 				5C6A5AA81BDB46D0000CA77D /* login_ico_2@3x.png in Resources */,
 				5CBE16EE1BD76F9F00692B0A /* AddBankCardViewController.xib in Resources */,
 				5C6D1FE31BE85B6B00B57025 /* PerfectPersonInformationViewController.xib in Resources */,
+				5C76ADE31BF094D100740DD4 /* user_menu_but@2x.png in Resources */,
 				5C76ACE91BEC516900740DD4 /* main_menu_ico2_1@2x.png in Resources */,
 				5C6D1FCE1BE85B6B00B57025 /* AddOpenBankCardViewController.xib in Resources */,
 				5C76AD9D1BEECF5D00740DD4 /* perimeter_ico_6@2x.png in Resources */,
@@ -4185,8 +4231,11 @@
 				5C6D20571BE85C8500B57025 /* bank_logo_unionpay@2x.png in Resources */,
 				5C6A5A941BDB247A000CA77D /* SettingsViewController.xib in Resources */,
 				5C76ADBE1BEF689600740DD4 /* home_page_banner2@3x.jpg in Resources */,
+				5C76ADE41BF094D100740DD4 /* user_menu_but@3x.png in Resources */,
 				5C6D20781BE85C8500B57025 /* ResultShowView.xib in Resources */,
+				5C76ADD81BF092FF00740DD4 /* launch-568h@2x.png in Resources */,
 				5C6D1FEA1BE85B6B00B57025 /* jyq_shisuan_ico4@2x.png in Resources */,
+				5C76ADDA1BF092FF00740DD4 /* launch-736h@3x.png in Resources */,
 				5C76AD051BEC745F00740DD4 /* bank_cell.xib in Resources */,
 				5C6D1FB91BE85B6B00B57025 /* LimitInstructionsViewController.xib in Resources */,
 				5C6D1FC31BE85B6B00B57025 /* ico_statement_5@2x.png in Resources */,
@@ -4230,6 +4279,7 @@
 				5C6D20611BE85C8500B57025 /* main_error_ico@2x.png in Resources */,
 				5CC44B321BDA30F00071B668 /* user_menu_set_ico@3x.png in Resources */,
 				5C76AD761BEDEB1C00740DD4 /* life_ico_7@3x.png in Resources */,
+				5C76ADD71BF092FF00740DD4 /* launch-480h@2x.png in Resources */,
 				5C6D20F61BE85DA200B57025 /* topUpStoryboard.storyboard in Resources */,
 				5C76AD351BEDA0E000740DD4 /* finance_ico_3@2x.png in Resources */,
 				5C6D20581BE85C8500B57025 /* bank_logo_unionpay@3x.png in Resources */,
@@ -4431,6 +4481,7 @@
 				5C6D207B1BE85C8500B57025 /* BankCell.m in Sources */,
 				5C76ACD61BEC4FD500740DD4 /* AroundViewController.m in Sources */,
 				5C6D1FDC1BE85B6B00B57025 /* GiglodsDeclarationView.m in Sources */,
+				5C76ADDF1BF0934400740DD4 /* LaunchViewController.m in Sources */,
 				5C6D1FC81BE85B6B00B57025 /* TenThousandCell.m in Sources */,
 				5C93B8F51BD8DA3900E8A8AA /* VerificationCodeWriteViewController.m in Sources */,
 				5C5A2DC91BD6115D00C4AE1D /* LoginViewController.m in Sources */,
@@ -4582,8 +4633,9 @@
 			baseConfigurationReference = 660292318B52F537CA48DCED /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: xiaoping.shan@foxmail.com (LP5KMM68EJ)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/gigold/Common/Data/PrefixHeader.pch";
@@ -4608,6 +4660,7 @@
 			baseConfigurationReference = 05C9FF4D315E838F911D2C11 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;

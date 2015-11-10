@@ -63,6 +63,8 @@
             <connections>
                 <outlet property="bottomLine" destination="Z2m-YS-kq2" id="ETI-2K-Et6"/>
                 <outlet property="bottomLineLeadingLayoutConstraint" destination="km9-yw-0R5" id="pfv-rk-a4i"/>
+                <outlet property="line1" destination="zih-Cu-QGY" id="fw3-8P-Rz8"/>
+                <outlet property="line2" destination="IGH-0g-H8W" id="wxO-6s-eRV"/>
                 <outlet property="lookImg" destination="ntq-4y-TaX" id="eKQ-nF-uMB"/>
                 <outlet property="title" destination="NoY-sk-rrn" id="vYU-Vl-zbd"/>
                 <outlet property="topLayoutConstraint" destination="W9t-Cj-kDx" id="22b-H3-kKZ"/>

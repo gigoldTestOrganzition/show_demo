@@ -19,7 +19,7 @@
     
     self = [super init];
     if (self) {
-        self.frame = CGRectMake(0,0,mainScreenWidth,mainScreenHeight);
+        self.frame = CGRectMake(0,0,mainScreenWidth,mainScreenHeight-44.f-STATUSBAR_OFFSET);
         self.layer.masksToBounds = YES;
         self.animationTime = 0.5f;
         self.baseLineValue = 0.f;
@@ -79,6 +79,7 @@
 }
 //添加内容
 -(void)addContentView{
+    
     [self initContentView];
     [self addSubview:_showView];
 }
@@ -87,10 +88,10 @@
         case PullViewTop:{
             if (_baseLineValue!=0) {
                 self.frame =
-                CGRectMake(0,_baseLineValue,mainScreenWidth,mainScreenHeight-_baseLineValue);
+                CGRectMake(0,_baseLineValue,mainScreenWidth,mainScreenHeight-_baseLineValue-44.f-STATUSBAR_OFFSET);
             }else{
                 self.frame =
-                CGRectMake(0,0,mainScreenWidth,mainScreenHeight);
+                CGRectMake(0,0,mainScreenWidth,mainScreenHeight-44.f-STATUSBAR_OFFSET);
                 
             }
             _showView.frame = CGRectMake(_showView.frame.origin.x,0 -_showView.frame.size.height, _showView.frame.size.width,_showView.frame.size.height);
@@ -102,22 +103,22 @@
                 CGRectMake(0,0,mainScreenWidth,_baseLineValue);
             }else{
                 self.frame =
-                CGRectMake(0,0,mainScreenWidth,mainScreenHeight);
+                CGRectMake(0,0,mainScreenWidth,mainScreenHeight-44.f-STATUSBAR_OFFSET);
                 
             }
             _showView.frame = CGRectMake(_showView.frame.origin.x,self.frame.size.height,_showView.frame.size.width,_showView.frame.size.height);
         }
             break;
         case PullViewCenter:
-            _showView.center = CGPointMake(mainScreenWidth/2,mainScreenHeight/2);
+            _showView.center = CGPointMake(mainScreenWidth/2,(mainScreenHeight-44.f-STATUSBAR_OFFSET)/2);
             break;
         case PullViewLeft:{
             if (_baseLineValue != 0){
                 self.frame =
-                CGRectMake(_baseLineValue,0,mainScreenWidth-_baseLineValue,mainScreenHeight);
+                CGRectMake(_baseLineValue,0,mainScreenWidth-_baseLineValue,mainScreenHeight-44.f-STATUSBAR_OFFSET);
             }else{
                 self.frame =
-                CGRectMake(0,0,mainScreenWidth,mainScreenHeight);
+                CGRectMake(0,0,mainScreenWidth,mainScreenHeight-44.f-STATUSBAR_OFFSET);
                 
             }
             _showView.frame = CGRectMake(0-_showView.frame.size.width,_showView.frame.origin.y,_showView.frame.size.width,_showView.frame.size.height);
@@ -126,10 +127,10 @@
         case PullviewRight:{
             if (_baseLineValue != 0){
                 self.frame =
-                CGRectMake(0,0,_baseLineValue,mainScreenHeight);
+                CGRectMake(0,0,_baseLineValue,mainScreenHeight-44.f-STATUSBAR_OFFSET);
             }else{
                 self.frame =
-                CGRectMake(0,0,mainScreenWidth,mainScreenHeight);
+                CGRectMake(0,0,mainScreenWidth,mainScreenHeight-44.f-STATUSBAR_OFFSET);
                 
             }
             _showView.frame = CGRectMake(self.frame.size.width,_showView.frame.origin.y,_showView.frame.size.width,_showView.frame.size.height);
@@ -141,7 +142,7 @@
                 CGRectMake(0,0,mainScreenWidth,_baseLineValue);
             }else{
                 self.frame =
-                CGRectMake(0,0,mainScreenWidth,mainScreenHeight);
+                CGRectMake(0,0,mainScreenWidth,mainScreenHeight-44.f-STATUSBAR_OFFSET);
             
             }
             _showView.frame = CGRectMake(_showView.frame.origin.x,self.frame.size.height,_showView.frame.size.width,_showView.frame.size.height);

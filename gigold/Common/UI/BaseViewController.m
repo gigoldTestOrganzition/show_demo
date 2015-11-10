@@ -52,7 +52,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = back_ground_color;
-    
     UIButton* btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(0, 0, 44, 44);
     [btn setImage:[UIImage imageNamed:@"top_return_but_1"] forState:UIControlStateNormal];

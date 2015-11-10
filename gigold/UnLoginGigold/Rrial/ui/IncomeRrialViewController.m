@@ -34,7 +34,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    topLayoutConstraint.constant = 44.f+STATUSBAR_OFFSET;
+    topLayoutConstraint.constant = 0.f;//44.f+STATUSBAR_OFFSET;
     self.navigationItem.title = @"预期收益试算";
     progressValue = 10;
     sliderValue = 10;

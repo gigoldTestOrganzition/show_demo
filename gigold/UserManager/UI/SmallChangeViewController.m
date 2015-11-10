@@ -89,7 +89,7 @@
     if (popView.superview) {
         [popView stopDialog];
     }else{
-        [popView showDialogByBaseLine:44+STATUSBAR_OFFSET view:self.view];
+        [popView showDialogByBaseLine:0.f view:self.view];
          [popView showDialog:self.view];
     }
     

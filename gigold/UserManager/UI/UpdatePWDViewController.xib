@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UpdatePWDViewController">
@@ -25,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cWE-wL-cif">
-                    <rect key="frame" x="0.0" y="94" width="600" height="46"/>
+                    <rect key="frame" x="0.0" y="30" width="600" height="46"/>
                     <subviews>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="6-20位字母、数字组合" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="JVT-GG-1K4">
                             <rect key="frame" x="95" y="8" width="495" height="30"/>
@@ -86,7 +86,7 @@
                     </variation>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eiv-qf-HpH">
-                    <rect key="frame" x="0.0" y="140" width="600" height="46"/>
+                    <rect key="frame" x="0.0" y="76" width="600" height="46"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新登录密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tz-DF-ncX">
                             <rect key="frame" x="10" y="0.0" width="75" height="46"/>
@@ -145,7 +145,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLC-8H-0iE">
-                    <rect key="frame" x="40" y="211" width="520" height="40"/>
+                    <rect key="frame" x="40" y="147" width="520" height="40"/>
                     <color key="backgroundColor" red="0.80784313730000001" green="0.80784313730000001" blue="0.80784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="I4i-gj-bF3"/>
@@ -169,7 +169,7 @@
                 <constraint firstAttribute="trailing" secondItem="eiv-qf-HpH" secondAttribute="trailing" id="OYN-Bl-41i"/>
                 <constraint firstItem="cWE-wL-cif" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="P87-Me-5Qu"/>
                 <constraint firstItem="yLC-8H-0iE" firstAttribute="top" secondItem="eiv-qf-HpH" secondAttribute="bottom" constant="25" id="ToK-a9-0Ub"/>
-                <constraint firstItem="cWE-wL-cif" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="94" id="baT-7p-XCK"/>
+                <constraint firstItem="cWE-wL-cif" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="baT-7p-XCK"/>
                 <constraint firstAttribute="trailing" secondItem="cWE-wL-cif" secondAttribute="trailing" id="cmt-Hd-W8A"/>
                 <constraint firstItem="eiv-qf-HpH" firstAttribute="leading" secondItem="cWE-wL-cif" secondAttribute="trailing" constant="-600" id="n7l-w4-VbT"/>
                 <constraint firstAttribute="trailing" secondItem="yLC-8H-0iE" secondAttribute="trailing" constant="40" id="wEf-3j-CEA"/>

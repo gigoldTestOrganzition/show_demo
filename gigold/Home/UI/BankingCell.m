@@ -7,13 +7,23 @@
 //
 
 #import "BankingCell.h"
+@interface BankingCell(){
 
+    __weak IBOutlet NSLayoutConstraint *line2;
+    __weak IBOutlet NSLayoutConstraint *line1;
+    
+    __weak IBOutlet NSLayoutConstraint *line3;
+    
+}
+@end
 @implementation BankingCell
 @synthesize jiyouqianView=_jiyouqianView;
 @synthesize smallChangeView=_smallChangeView;
 @synthesize costView=_costView;
-- (void)awakeFromNib {
-    // Initialization code
+- (void)awakeFromNib{
+    line1.constant = 0.5;
+    line2.constant = 0.5;
+    line3.constant = 0.5;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

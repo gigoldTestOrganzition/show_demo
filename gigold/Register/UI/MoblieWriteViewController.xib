@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoblieWriteViewController">
@@ -20,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="15O-XZ-DI4">
-                    <rect key="frame" x="0.0" y="94" width="600" height="46"/>
+                    <rect key="frame" x="0.0" y="30" width="600" height="46"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEy-dO-okY">
                             <rect key="frame" x="10" y="0.0" width="50" height="46"/>
@@ -79,7 +79,7 @@
                     </variation>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebQ-5Y-h3s">
-                    <rect key="frame" x="40" y="165" width="520" height="40"/>
+                    <rect key="frame" x="40" y="101" width="520" height="40"/>
                     <color key="backgroundColor" red="0.80784313725490198" green="0.80784313725490198" blue="0.80784313725490198" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="9wh-t6-wO2"/>
@@ -101,7 +101,7 @@
                 <constraint firstAttribute="trailing" secondItem="15O-XZ-DI4" secondAttribute="trailing" id="1s5-Y7-h7M"/>
                 <constraint firstAttribute="trailing" secondItem="ebQ-5Y-h3s" secondAttribute="trailing" constant="40" id="2TH-jw-LRX"/>
                 <constraint firstItem="ebQ-5Y-h3s" firstAttribute="top" secondItem="15O-XZ-DI4" secondAttribute="bottom" constant="25" id="2xD-a2-gIO"/>
-                <constraint firstItem="15O-XZ-DI4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="94" id="b7v-b7-fBs"/>
+                <constraint firstItem="15O-XZ-DI4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="b7v-b7-fBs"/>
                 <constraint firstItem="ebQ-5Y-h3s" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="elB-0b-FPq"/>
                 <constraint firstItem="15O-XZ-DI4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qdz-MP-DWH"/>
             </constraints>

@@ -25,7 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    topLayoutConstraint.constant = 44.f+STATUSBAR_OFFSET+25.f;
+    topLayoutConstraint.constant = 25.f;
     self.navigationItem.title = @"完善个人信息";
     nextBtn.enabled = NO;
     nextBtn.layer.cornerRadius = nextBtn.frame.size.height/2;

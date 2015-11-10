@@ -13,6 +13,9 @@
 @synthesize businessOwnerNumberViewWidthLayoutConstraint=_businessOwnerNumberViewWidthLayoutConstraint;
 - (void)awakeFromNib {
     // Initialization code
+    self.line1.constant=0.5;
+    self.line2.constant=0.5;
+    self.line3.constant=0.5;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

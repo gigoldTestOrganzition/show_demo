@@ -7,7 +7,14 @@
 //
 
 #import "GiglodsDeclarationView.h"
-
+@interface GiglodsDeclarationView(){
+    
+    __weak IBOutlet NSLayoutConstraint *line1;
+    
+    __weak IBOutlet NSLayoutConstraint *line2;
+    
+}
+@end
 @implementation GiglodsDeclarationView
 @synthesize bottomLine=_bottomLine;
 @synthesize title = _title;
@@ -22,5 +29,8 @@
     // Drawing code
 }
 */
-
+-(void)awakeFromNib{
+    line1.constant = 0.5f;
+    line2.constant = 0.5f;
+}
 @end

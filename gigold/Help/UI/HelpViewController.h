@@ -7,10 +7,14 @@
 //
 
 #import "BaseViewController.h"
+#import "LaunchViewController.h"
 
-@interface HelpViewController : BaseViewController
+@interface HelpViewController : BaseViewController <BaseViewControllerDelegate>
 {
     NSArray* images;
+    LaunchViewController* launchView;
 }
+
+@property (nonatomic, assign) BOOL isShowLaunchView;
 
 @end

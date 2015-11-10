@@ -37,7 +37,7 @@
     [super viewDidLoad];
     [self initData];
     
-    topLayoutConstraint.constant = 44.f+STATUSBAR_OFFSET+25.f;
+    topLayoutConstraint.constant = 25.f;
     self.title = @"添加银行卡";
     nameLabel.text = _name;
     
@@ -84,7 +84,7 @@
         selectBankView = [[CustomerView alloc]init];
         selectBankView.pullStyle = PullviewRight;
         OpenBankCardSelectView* bankCardView = [[[NSBundle mainBundle]loadNibNamed:@"OpenBankCardSelectView" owner:self options:nil]firstObject];
-        bankCardView.frame = CGRectMake(40.f,44.f+STATUSBAR_OFFSET,mainScreenWidth-40.f, mainScreenHeight);
+        bankCardView.frame = CGRectMake(40.f,0.f,mainScreenWidth-40.f, mainScreenHeight);
         bankCardView.selectTableView.tableFooterView = [UIView new];
         bankCardView.selectTableView.layoutMargins = UIEdgeInsetsZero;
         bankCardView.backgroundColor = back_ground_color;

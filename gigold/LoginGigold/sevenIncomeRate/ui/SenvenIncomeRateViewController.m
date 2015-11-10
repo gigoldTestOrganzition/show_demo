@@ -113,7 +113,7 @@
     if ([showTypeDialog isShow]) {
         [showTypeDialog stopDialog];
     }else{
-        [showTypeDialog showDialogByBaseLine:44.f+STATUSBAR_OFFSET view:self.view];
+        [showTypeDialog showDialogByBaseLine:0.f view:self.view];
     }
 
 }

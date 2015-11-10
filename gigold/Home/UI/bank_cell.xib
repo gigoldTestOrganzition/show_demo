@@ -17,10 +17,10 @@
                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h2D-El-3dY">
                         <rect key="frame" x="0.0" y="0.0" width="160" height="200"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rQO-NW-w1Q">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rQO-NW-w1Q">
                                 <rect key="frame" x="0.0" y="0.0" width="160" height="69"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" misplaced="YES" image="finance_ico_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="o6M-k9-bDL">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" ambiguous="YES" misplaced="YES" image="finance_ico_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="o6M-k9-bDL">
                                         <rect key="frame" x="31" y="20" width="45" height="41"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="吉有钱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qY9-d3-N7q">
@@ -92,7 +92,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g5v-7D-5Z9">
-                        <rect key="frame" x="160" y="0.0" width="160" height="100"/>
+                        <rect key="frame" x="160" y="0.0" width="160" height="99"/>
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bO2-iG-Mdv">
                                 <rect key="frame" x="4" y="0.0" width="152" height="69"/>
@@ -287,7 +287,7 @@
                     <constraint firstItem="h2D-El-3dY" firstAttribute="top" secondItem="ijl-4a-yHB" secondAttribute="top" id="jnT-B4-HVS"/>
                     <constraint firstItem="1Mk-Ok-BKe" firstAttribute="leading" secondItem="h2D-El-3dY" secondAttribute="trailing" id="lbm-h3-407"/>
                     <constraint firstAttribute="bottom" secondItem="K7I-Yt-oBL" secondAttribute="bottom" id="mg3-rD-AJu"/>
-                    <constraint firstAttribute="bottom" secondItem="whk-JT-WrU" secondAttribute="bottom" constant="-1" id="oVw-5T-iNw"/>
+                    <constraint firstAttribute="bottom" secondItem="whk-JT-WrU" secondAttribute="bottom" id="oVw-5T-iNw"/>
                     <constraint firstAttribute="trailing" secondItem="g5v-7D-5Z9" secondAttribute="trailing" id="vnB-sE-tQA"/>
                     <constraint firstAttribute="trailing" secondItem="whk-JT-WrU" secondAttribute="trailing" id="xpB-rc-5Ix"/>
                     <constraint firstItem="h2D-El-3dY" firstAttribute="leading" secondItem="ijl-4a-yHB" secondAttribute="leading" id="yrn-Rd-2V6"/>
@@ -297,6 +297,9 @@
             <connections>
                 <outlet property="costView" destination="cdj-5c-wdB" id="dKi-t2-6Sb"/>
                 <outlet property="jiyouqianView" destination="h2D-El-3dY" id="BaZ-jB-Jmt"/>
+                <outlet property="line1" destination="bOw-nN-qZ5" id="2Mx-xO-Zp6"/>
+                <outlet property="line2" destination="gdg-Vs-Byw" id="xKB-jw-Coo"/>
+                <outlet property="line3" destination="RtP-ln-cQ9" id="5yU-Xp-53V"/>
                 <outlet property="rateChartView" destination="gfu-Qs-M5v" id="jbg-1M-c1O"/>
                 <outlet property="smallChangeView" destination="g5v-7D-5Z9" id="DF7-i0-Zh6"/>
             </connections>

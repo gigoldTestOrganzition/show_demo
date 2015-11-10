@@ -65,7 +65,7 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"收益说明" style:UIBarButtonItemStyleDone target:self action:@selector(incomeInstructions)];
     NSDictionary* attributesDic = [NSDictionary dictionaryWithObjectsAndKeys:main_font,NSFontAttributeName,nil];
     [[UIBarButtonItem appearance] setTitleTextAttributes:attributesDic forState:0];
-    topLayoutConstraint.constant = 44.f+STATUSBAR_OFFSET;
+    topLayoutConstraint.constant = 0.f;//44.f+STATUSBAR_OFFSET;
     //tableview
     functionTableView.estimatedSectionHeaderHeight = 45.f;
     functionTableView.estimatedRowHeight = 500.f;
