@@ -78,6 +78,7 @@
     headImageView = [[UIImageView alloc] initWithFrame:CGRectMake(15, headerView.frame.size.height-55, 45, 45)];
     [headImageView sd_setImageWithURL:nil placeholderImage:[UIImage imageNamed:@"user_faces_1"]];
     headImageView.layer.cornerRadius = headImageView.frame.size.height/2;
+    headImageView.clipsToBounds = YES;
     
     [headerView addSubview:headImageView];
     

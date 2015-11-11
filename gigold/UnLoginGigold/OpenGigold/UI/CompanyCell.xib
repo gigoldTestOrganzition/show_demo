@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -17,17 +17,21 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsz-2T-ptp">
                         <rect key="frame" x="8" y="15" width="310" height="366"/>
-                        <string key="text">汇添富基金全额宝由汇添富基金公司提供，可通过基金公司客服电话：400-888-9918，官网链接：http://www.99fund.com，关注微信公众账号：汇添富基金，了解更多详情。
+                        <mutableString key="text">汇添富基金全额宝由汇添富基金公司提供，可通过基金公司客服电话：400-888-9918，官网链接：http://www.99fund.com，关注微信公众账号：汇添富基金，了解更多详情。
+
 一、股权结构
 汇添富基金股东由东方证券股份有限公司、中国东方航空集团、文汇新民联合报业集团组成，持有股权分别占比47%、26.5%、26.5%。
+
 法人代表：林利军
 总经理：林利军
+
 二、基本情况
 汇添富基金公司成立于2005年2月，注册资本1亿元。公司总部位于上海，公司现已形成公募、专户、国际、养老金四大块业务领域以及股票、固定收益、被动投资、海外投资、另类投资五大块投资领域协同发展的格局。基金产品涵盖股票型、指数型、混合型、债券型以及货币市场基金，形成了覆盖高、中、低各类风险收益特征的较为完善的产品线。截止1季度末，公募资产管理规模超过1000亿，公募基金中排名第八，是上海最大的基金公司。其中股票型规模366.71亿元，位于前十，货币基金规模572.21亿，位于前十。
+
 三、投资能力
 在权益投资方面，汇添富立志于做中国证券市场的选股专家。旗下基金业绩历经市场牛熊考验，整体表现优秀。在近三年中，汇添富基金旗下的股混型基金全部战胜沪深300指数，几乎全部位于同列基金前二分之一，平均业绩超越同期沪深300指数近40个百分点，总体收益位于60多家基金公司前十分之一水平，表现非常出色。其平均波动率也低于同类基金平均水平，风格非常稳健。汇添富基金重视内部培养，其权益类投资团队流失极少，表现极为稳定。汇添富基金的QDII业绩稳健，在QDII投资的品种上有所突破，发行了国内相对稀缺的大宗商品基金，丰富了投资者的选择。
 汇添富较为重视固定收益领域产品的发展，货币+债券产品的个数占到全公司公募产品数的一半。公司投研团队稳定，人员配置整体较强，拿券能力突出，中长期看，在固收领域的发展值得期待。
-汇添富创新能力得到行业认可，成功发行了中国首只场内T+0货币基金、理财基金、上证综合指数基金、贵金属基金、逆向投资基金、民营企业基金和第一张货币基金关联还款的信用卡。2011年，公司获得上海市金融创新一等奖，成为有史以来获得该奖项的首家基金公司。</string>
+汇添富创新能力得到行业认可，成功发行了中国首只场内T+0货币基金、理财基金、上证综合指数基金、贵金属基金、逆向投资基金、民营企业基金和第一张货币基金关联还款的信用卡。2011年，公司获得上海市金融创新一等奖，成为有史以来获得该奖项的首家基金公司。</mutableString>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.34901960784313724" green="0.34901960784313724" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>

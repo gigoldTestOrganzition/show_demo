@@ -63,7 +63,7 @@
 
 //进入新手指导
 -(void)showHelpView{
-    [[AppUtils shareAppUtils] saveIsFirstRun:NO];
+//    [[AppUtils shareAppUtils] saveIsFirstRun:NO];
     HelpViewController* helpView = [[HelpViewController alloc] init];
     helpView.isShowLaunchView = YES;
     self.window.rootViewController = helpView;

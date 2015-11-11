@@ -17,11 +17,13 @@
 #import "RollInViewController.h"
 #import "IncomeRrialViewController.h"
 #import "UUChart.h"
+#import "ViewUtil.h"
 @interface GigoldTreasureHomeViewController ()<UUChartDataSource>{
     //昨日收益
     __weak IBOutlet UILabel *yesterdayLabel;
     //总金额
     __weak IBOutlet UILabel *totalAmount;
+    __weak IBOutlet UIView *totalAmountView;
     //收益试算
     __weak IBOutlet UIView *calculateIncomeView;
     
@@ -73,6 +75,8 @@
     UITapGestureRecognizer* totalAmountRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tradingDetail)];
     totalAmount.userInteractionEnabled = YES;
     [totalAmount addGestureRecognizer:totalAmountRecognizer];
+    totalAmountView.userInteractionEnabled = YES;
+    [totalAmountView addGestureRecognizer:totalAmountRecognizer];
     
     UITapGestureRecognizer* calculateIncomeGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(calculateIncome)];
     calculateIncomeView.userInteractionEnabled = YES;

@@ -410,6 +410,7 @@
 		5CC7E4131BF313F100E77A62 /* merchants1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CC7E40F1BF313F100E77A62 /* merchants1.png */; };
 		5CC7E4141BF313F100E77A62 /* merchants2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CC7E4101BF313F100E77A62 /* merchants2.png */; };
 		5CC7E4151BF313F100E77A62 /* merchants3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CC7E4111BF313F100E77A62 /* merchants3.png */; };
+		5CC7E4181BF3255500E77A62 /* FundCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC7E4171BF3255500E77A62 /* FundCell.m */; };
 		5CC9C3371BE062E700C2269A /* BankCardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC9C3321BE062E700C2269A /* BankCardTableViewCell.m */; };
 		5CC9C3381BE062E700C2269A /* BankCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CC9C3331BE062E700C2269A /* BankCardTableViewCell.xib */; };
 		5CC9C3391BE062E700C2269A /* SmallChangeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC9C3351BE062E700C2269A /* SmallChangeTableViewCell.m */; };
@@ -992,6 +993,8 @@
 		5CC7E40F1BF313F100E77A62 /* merchants1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = merchants1.png; sourceTree = "<group>"; };
 		5CC7E4101BF313F100E77A62 /* merchants2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = merchants2.png; sourceTree = "<group>"; };
 		5CC7E4111BF313F100E77A62 /* merchants3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = merchants3.png; sourceTree = "<group>"; };
+		5CC7E4161BF3255500E77A62 /* FundCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FundCell.h; sourceTree = "<group>"; };
+		5CC7E4171BF3255500E77A62 /* FundCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FundCell.m; sourceTree = "<group>"; };
 		5CC9C3311BE062E700C2269A /* BankCardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardTableViewCell.h; sourceTree = "<group>"; };
 		5CC9C3321BE062E700C2269A /* BankCardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardTableViewCell.m; sourceTree = "<group>"; };
 		5CC9C3331BE062E700C2269A /* BankCardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardTableViewCell.xib; sourceTree = "<group>"; };
@@ -1689,6 +1692,8 @@
 			children = (
 				5C6D1F6C1BE85B6B00B57025 /* GigoldDeclaration.h */,
 				5C6D1F6D1BE85B6B00B57025 /* GigoldDeclaration.m */,
+				5CC7E4161BF3255500E77A62 /* FundCell.h */,
+				5CC7E4171BF3255500E77A62 /* FundCell.m */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -4491,6 +4496,7 @@
 				5CA673B21BD9C65900BED35A /* RootViewController.m in Sources */,
 				5C5A2DD41BD6115D00C4AE1D /* UserInfoRequest.m in Sources */,
 				5C6D20501BE85C8500B57025 /* BaseClass.m in Sources */,
+				5CC7E4181BF3255500E77A62 /* FundCell.m in Sources */,
 				5C6D1FE21BE85B6B00B57025 /* PerfectPersonInformationViewController.m in Sources */,
 				5C6D20F51BE85DA200B57025 /* TopUpShowViewController.mm in Sources */,
 				5C6D20CD1BE85CBD00B57025 /* SXPViewController.m in Sources */,
