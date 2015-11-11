@@ -27,12 +27,19 @@
     self.shadowHeight1.constant = 0.5;
     self.shadowHeight2.constant = 0.5;
     
-    self.mobileTextField.text = [[AppUtils shareAppUtils] getUserId];
     self.mobileTextField.delegate = self;
     [self.mobileTextField becomeFirstResponder];
+    self.mobileTextField.text = self.mobileNum;
     
     [self.nextBtn addTarget:self action:@selector(nextBtnPress) forControlEvents:UIControlEventTouchUpInside];
-    self.nextBtn.enabled = NO;
+
+    if (self.mobileTextField.text.length != 11) {
+        self.nextBtn.backgroundColor = unable_tap_color;
+        self.nextBtn.enabled = NO;
+    }else{
+        self.nextBtn.backgroundColor = theme_color;
+        self.nextBtn.enabled = YES;
+    }
     
     // Do any additional setup after loading the view from its nib.
 }
@@ -41,7 +48,7 @@
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     NSMutableString* textString = [NSMutableString stringWithString:textField.text];
     [textString replaceCharactersInRange:range withString:string];
-    if (textString.length == 0) {
+    if (textString.length != 11) {
         self.nextBtn.backgroundColor = unable_tap_color;
         self.nextBtn.enabled = NO;
     }else{

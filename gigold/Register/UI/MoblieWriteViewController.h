@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *nextBtn;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *shadowHeight1;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *shadowHeight2;
+@property (strong, nonatomic) NSString* mobileNum;
 
 
 @property (assign, nonatomic) FlowType flowType;

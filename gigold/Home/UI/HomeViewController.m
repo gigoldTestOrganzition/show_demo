@@ -154,9 +154,9 @@
     
     markImg = [[UIImageView alloc]init];
     markImg.image = [UIImage imageNamed:@"top_menu_but_arrow.png"];
-    markImg.frame = CGRectMake(titleLabel.frame.origin.x+titleLabel.frame.size.width+5.f,titleLabel.center.y-8.f,16,16);
+    markImg.frame = CGRectMake(titleLabel.frame.origin.x+titleLabel.frame.size.width+5.f,titleLabel.center.y-6.f,12.f,12.f);
     [titleView addSubview:markImg];
-    titleView.frame = CGRectMake(0,0.f,titleWidth+20.f,titleHeight);
+    titleView.frame = CGRectMake(0,0.f,titleWidth+12.f,titleHeight);
     UITapGestureRecognizer* selectShowTypeGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(selectRegion)];
     titleView.userInteractionEnabled = YES;
     [titleView addGestureRecognizer:selectShowTypeGestureRecognizer];

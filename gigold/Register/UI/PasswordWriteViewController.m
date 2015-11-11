@@ -54,6 +54,8 @@
         self.markLabel.hidden = YES;
         self.titleLabel.text = @"新密码";
         self.titleLabelWidth.constant = 45;
+    }else if (self.flowType == LoginPasswordType){
+        self.markLabel.text = @"该手机号已注册，请直接登录";
     }
     
     self.passwordTextField.delegate = self;
@@ -72,12 +74,15 @@
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     NSMutableString* textString = [NSMutableString stringWithString:textField.text];
     [textString replaceCharactersInRange:range withString:string];
-    if (textString.length == 0) {
+    if (textString.length < 6) {
         self.nextBtn.backgroundColor = unable_tap_color;
         self.nextBtn.enabled = NO;
     }else{
         self.nextBtn.backgroundColor = theme_color;
         self.nextBtn.enabled = YES;
+        if (textString.length > 20) {
+            return NO;
+        }
     }
     return YES;
 }

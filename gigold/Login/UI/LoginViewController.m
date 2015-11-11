@@ -72,6 +72,7 @@
     MoblieWriteViewController* moblieWriteView = [[MoblieWriteViewController alloc] init];
     moblieWriteView.delegate = self;
     moblieWriteView.flowType = ResetPasswordType;
+    moblieWriteView.mobileNum = self.accountTextField.text;
     [self.navigationController pushViewController:moblieWriteView animated:YES];
 }
 
@@ -82,6 +83,7 @@
     MoblieWriteViewController* moblieWriteView = [[MoblieWriteViewController alloc] init];
     moblieWriteView.delegate = self;
     moblieWriteView.flowType = RegisterType;
+    moblieWriteView.mobileNum = self.accountTextField.text;
     [self.navigationController pushViewController:moblieWriteView animated:YES];
 }
 

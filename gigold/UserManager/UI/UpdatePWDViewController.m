@@ -41,12 +41,15 @@
     NSMutableString* textString = [NSMutableString stringWithString:textField.text];
     [textString replaceCharactersInRange:range withString:string];
     if ((textField == self.passwordTextField1 && self.passwordTextField2.text.length > 0) || (textField == self.passwordTextField2 && self.passwordTextField1.text.length > 0)) {
-        if (textString.length == 0) {
+        if (textString.length  < 6) {
             self.nextBtn.backgroundColor = unable_tap_color;
             self.nextBtn.enabled = NO;
         }else{
             self.nextBtn.backgroundColor = theme_color;
             self.nextBtn.enabled = YES;
+            if (textString.length > 20) {
+                return NO;
+            }
         }
     }else{
         self.nextBtn.backgroundColor = unable_tap_color;
