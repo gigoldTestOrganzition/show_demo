@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#define UN_CONTENT_CLIP_STOP @"un_content_clip_stop"
 #define default_background kColorWithRGB(0.f,0.f,0.f,0.4)
 
 /*自定义view点击事件协议*/

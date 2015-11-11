@@ -14,20 +14,26 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="home_page_banner1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Ve8-6d-pxC">
-                        <rect key="frame" x="10" y="10" width="75" height="60"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" misplaced="YES" image="merchants0.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ve8-6d-pxC">
+                        <rect key="frame" x="8" y="10" width="75" height="60"/>
                         <constraints>
+                            <constraint firstAttribute="height" constant="60" id="25i-dx-ju9"/>
                             <constraint firstAttribute="height" constant="60" id="5Zt-dF-UEc"/>
                             <constraint firstAttribute="height" constant="60" id="DCy-sy-rlE"/>
                             <constraint firstAttribute="width" constant="75" id="QhB-XQ-Yzz"/>
+                            <constraint firstAttribute="width" constant="75" id="Ve7-b5-GiO"/>
+                            <constraint firstAttribute="height" constant="60" id="htM-3E-FBP"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="5Zt-dF-UEc"/>
+                                <exclude reference="DCy-sy-rlE"/>
+                                <exclude reference="QhB-XQ-Yzz"/>
+                                <exclude reference="htM-3E-FBP"/>
                             </mask>
                         </variation>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="重庆千川渔火锅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JA4-fM-q2u">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="248" ambiguous="YES" misplaced="YES" text="重庆千川渔火锅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JA4-fM-q2u">
                         <rect key="frame" x="95" y="9" width="121" height="21"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                         <color key="textColor" red="0.34901960784313724" green="0.34901960784313724" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
@@ -37,12 +43,6 @@
                         <rect key="frame" x="95" y="28" width="190" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="9.7折" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wsa-kW-HgI">
-                        <rect key="frame" x="95" y="50" width="55" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                        <color key="textColor" red="0.89803921568627454" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="100m" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SC6-s7-czH">
@@ -57,9 +57,16 @@
                         <color key="textColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="9.7折" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wsa-kW-HgI">
+                        <rect key="frame" x="95" y="50" width="55" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.89803921568627454" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Ve8-6d-pxC" firstAttribute="top" secondItem="Sb6-N2-dXu" secondAttribute="top" constant="10" id="1Zh-vu-o6t"/>
+                    <constraint firstAttribute="bottom" secondItem="Ve8-6d-pxC" secondAttribute="bottom" constant="10" id="25i-l1-Tdj"/>
                     <constraint firstItem="hT6-zi-RvI" firstAttribute="centerY" secondItem="Wsa-kW-HgI" secondAttribute="centerY" id="5KQ-4L-HlJ"/>
                     <constraint firstItem="xrq-BC-frk" firstAttribute="leading" secondItem="JA4-fM-q2u" secondAttribute="leading" id="6EH-9e-o1w"/>
                     <constraint firstAttribute="bottom" secondItem="Wsa-kW-HgI" secondAttribute="bottom" constant="10" id="Ac0-cd-BtU"/>
@@ -68,24 +75,37 @@
                     <constraint firstItem="Wsa-kW-HgI" firstAttribute="leading" secondItem="Ve8-6d-pxC" secondAttribute="trailing" constant="10" id="JT2-Sn-H91"/>
                     <constraint firstItem="JA4-fM-q2u" firstAttribute="top" secondItem="Sb6-N2-dXu" secondAttribute="top" constant="10" id="LzJ-hj-FBR"/>
                     <constraint firstAttribute="trailing" secondItem="SC6-s7-czH" secondAttribute="trailing" constant="10" id="MRf-GE-c2S"/>
-                    <constraint firstItem="Wsa-kW-HgI" firstAttribute="top" secondItem="xrq-BC-frk" secondAttribute="bottom" constant="20" id="RT3-1K-9XH"/>
+                    <constraint firstItem="Wsa-kW-HgI" firstAttribute="top" secondItem="xrq-BC-frk" secondAttribute="bottom" constant="10" id="RT3-1K-9XH"/>
+                    <constraint firstItem="Ve8-6d-pxC" firstAttribute="top" secondItem="Sb6-N2-dXu" secondAttribute="top" constant="10" id="bkm-XF-bho"/>
+                    <constraint firstItem="Ve8-6d-pxC" firstAttribute="centerY" secondItem="Sb6-N2-dXu" secondAttribute="centerY" id="eHs-Ja-4VI"/>
                     <constraint firstAttribute="bottom" secondItem="Ve8-6d-pxC" secondAttribute="bottom" constant="10" id="edi-Vi-CEo"/>
+                    <constraint firstAttribute="bottom" secondItem="Wsa-kW-HgI" secondAttribute="bottom" constant="10" id="fpK-aK-x4G"/>
                     <constraint firstItem="JA4-fM-q2u" firstAttribute="leading" secondItem="Ve8-6d-pxC" secondAttribute="trailing" constant="10" id="j48-oD-NTe"/>
                     <constraint firstItem="SC6-s7-czH" firstAttribute="centerY" secondItem="JA4-fM-q2u" secondAttribute="centerY" id="oE0-xi-KdL"/>
                     <constraint firstItem="Ve8-6d-pxC" firstAttribute="leading" secondItem="Sb6-N2-dXu" secondAttribute="leading" constant="10" id="xqT-r9-jVf"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="1Zh-vu-o6t"/>
+                        <exclude reference="25i-l1-Tdj"/>
+                        <exclude reference="bkm-XF-bho"/>
+                        <exclude reference="edi-Vi-CEo"/>
+                        <exclude reference="Ac0-cd-BtU"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <connections>
                 <outlet property="adress" destination="xrq-BC-frk" id="zTL-Lc-gEN"/>
                 <outlet property="disCount" destination="Wsa-kW-HgI" id="TD8-hR-JbP"/>
                 <outlet property="distance" destination="SC6-s7-czH" id="Nvf-fz-mmh"/>
                 <outlet property="evaluate" destination="hT6-zi-RvI" id="bfJ-Ja-6e3"/>
+                <outlet property="merchantImg" destination="Ve8-6d-pxC" id="yc3-Bd-Twe"/>
                 <outlet property="merchantsName" destination="JA4-fM-q2u" id="1cg-2m-i22"/>
             </connections>
             <point key="canvasLocation" x="281" y="341"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="home_page_banner1.jpg" width="320" height="110"/>
+        <image name="merchants0.png" width="849" height="534"/>
     </resources>
 </document>

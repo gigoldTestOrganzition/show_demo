@@ -186,6 +186,8 @@
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
         AroundCell* aroundCell = [[[NSBundle mainBundle] loadNibNamed:@"around_cell" owner:nil options:nil]firstObject];
         AroundData* aroundData = recommendedDatas[indexPath.row];
+        NSString* imagePath = [NSString stringWithFormat:@"merchants%li.png",indexPath.row%4];
+        aroundCell.merchantImg.image = [UIImage imageNamed:imagePath];
         aroundCell.merchantsName.text = aroundData.merchantName;
         aroundCell.adress.text = aroundData.address;
         aroundCell.disCount.text = aroundData.discount;

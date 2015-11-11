@@ -19,7 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    images = [[NSArray alloc] initWithObjects:@"",@"",@"",@"",@"", nil];
+    images = [[NSArray alloc] initWithObjects:@"guide_p1@1080w.png",@"guide_p2@1080w.png",@"guide_p3@1080w.png",@"guide_p4@1080w.png",nil];
     
     [self showMainView];
  
@@ -31,6 +31,8 @@
 -(void)showMainView{
     UIScrollView* mScrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
     mScrollView.contentSize = CGSizeMake(images.count*mScrollView.frame.size.width, mScrollView.frame.size.height);
+    mScrollView.showsHorizontalScrollIndicator = NO;
+    mScrollView.showsVerticalScrollIndicator = NO;
     mScrollView.pagingEnabled = YES;
     mScrollView.bounces = NO;
     
@@ -39,22 +41,20 @@
     for (NSInteger i = 0; i < images.count ; i++) {
         UIImageView* imageView = [[UIImageView alloc] initWithFrame:CGRectMake(mScrollView.frame.size.width*i, 0, mScrollView.frame.size.width, mScrollView.frame.size.height)];
         imageView.userInteractionEnabled = YES;
-        
-        if ( i%2 == 0) {
-            imageView.backgroundColor = [UIColor redColor];
-        }else{
-            imageView.backgroundColor = [UIColor greenColor];
-        }
-        
+        imageView.image = [UIImage imageNamed:images[i]];
         [mScrollView addSubview:imageView];
         
         if (i == images.count - 1) {
             UIButton* backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-            backBtn.frame = CGRectMake(80, imageView.frame.size.height-50, imageView.frame.size.width-2*80, 30);
-            backBtn.layer.borderWidth = 1;
-            backBtn.layer.borderColor = [UIColor whiteColor].CGColor;
-            backBtn.layer.cornerRadius = 10;
-            [backBtn setTitle:@"知道了" forState:UIControlStateNormal];
+            backBtn.frame = CGRectMake(62.5f, imageView.frame.size.height-100.f, imageView.frame.size.width-125.f,40.f);
+          
+            backBtn.layer.cornerRadius = 20.f;
+            
+            [backBtn setTitleColor:guide_btn_color forState:UIControlStateNormal];
+            backBtn.titleLabel.font = title_or_btn_font;
+            [backBtn setTitle:@"立即开启" forState:UIControlStateNormal];
+            
+            backBtn.backgroundColor = guide_btn_background_color;
             [backBtn addTarget:self action:@selector(backBtnPress) forControlEvents:UIControlEventTouchUpInside];
             
             [imageView addSubview:backBtn];

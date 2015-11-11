@@ -44,7 +44,7 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_ico_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="ab5-4G-jsJ">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_ico_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="ab5-4G-jsJ">
                             <rect key="frame" x="10" y="10" width="20" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="HIV-OA-qRW"/>
@@ -189,6 +189,7 @@
     <resources>
         <image name="login_background.png" width="1080" height="1920"/>
         <image name="login_down_arrow.png" width="23" height="23"/>
+        <image name="login_ico_1.png" width="23" height="23"/>
         <image name="login_ico_2.png" width="23" height="23"/>
     </resources>
 </document>

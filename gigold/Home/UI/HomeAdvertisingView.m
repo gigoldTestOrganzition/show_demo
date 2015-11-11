@@ -39,10 +39,11 @@
     }
    UIImageView* lastImageView =[[UIImageView alloc]initWithImage:imgArray[0]];
    lastImageView.frame = CGRectMake(imgArray.count*_imageScrollView.frame.size.width,0.f,_imageScrollView.frame.size.width,_imageScrollView.frame.size.height);
-   [_imageScrollView addSubview:lastImageView];
+    lastImageView.contentMode = UIViewContentModeScaleAspectFill;
+    [_imageScrollView addSubview:lastImageView];
    [imageDatas addObject:lastImageView];
 }
--(void)updataFrame:(CGRect)frame{
+-(void)updataFrame:(CGRect)frame all:(BOOL)isAll{
     self.frame = frame;
     if (!_imageScrollView) {
         self.imageScrollView = [[UIScrollView alloc]init];
@@ -65,16 +66,34 @@
         _pageController.frame = CGRectMake(0.f, self.frame.size.height-25.f,self.frame.size.width,30.f);
     }
     if(imageDatas) {
-        CGRect currentImageViewFrame = [self getCurrentImageView].frame;
-        currentImageViewFrame.size.height = frame.size.height;
-        [self getCurrentImageView].frame = currentImageViewFrame;
+        if(isAll) {
+            [self setImageArrayFrame:frame];
+        }else{
+            CGRect currentImageViewFrame = [self getCurrentImageView].frame;
+            currentImageViewFrame.size.height = frame.size.height;
+            [self getCurrentImageView].frame = currentImageViewFrame;
+        }
     }
 }
+-(void)setImageArrayFrame:(CGRect)frame{
+    for (UIImageView* imageView in imageDatas) {
+        CGRect imageFrame = imageView.frame;
+        imageFrame.size.height = frame.size.height;
+        imageView.frame = imageFrame;
+    }
+}
+
 
 //循环内容
 -(void)loopContent{
     if (!timer){
         timer = [NSTimer scheduledTimerWithTimeInterval:_loopTime target:self selector:@selector(changePage) userInfo:nil repeats:YES];
+    }
+}
+-(void)stopLoop{
+    if (timer) {
+        [timer invalidate];
+        timer = nil;
     }
 }
 //改变页码

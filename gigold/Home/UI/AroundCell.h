@@ -10,6 +10,7 @@
 
 @interface AroundCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *merchantImg;
 @property (weak, nonatomic) IBOutlet UILabel *merchantsName;
 @property (weak, nonatomic) IBOutlet UILabel *adress;
 

@@ -1512,7 +1512,7 @@
                                         <color key="textColor" red="0.34901960784313724" green="0.34901960784313724" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="200.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jux-tk-HBy">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="200.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jux-tk-HBy">
                                         <rect key="frame" x="109" y="58" width="102" height="37"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                         <color key="textColor" red="0.29019607843137252" green="0.792156862745098" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
@@ -2129,6 +2129,7 @@
                     <connections>
                         <outlet property="desc1" destination="yzZ-rz-vTx" id="vof-JD-fPi"/>
                         <outlet property="desc2" destination="FJ5-a4-a0D" id="8XL-UY-l8z"/>
+                        <outlet property="incomeCalculateBtn" destination="rfA-Vc-uU1" id="qkw-3n-as0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fpY-es-ZSQ" userLabel="First Responder" sceneMemberID="firstResponder"/>

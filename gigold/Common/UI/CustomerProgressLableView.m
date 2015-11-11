@@ -24,6 +24,7 @@
 @synthesize leftlabelFont = _leftlabelFont;
 @synthesize flowlabelColor = _flowlabelColor;
 @synthesize flowlabelFont = _flowlabelFont;
+@synthesize isRate =_isRate;
 - (instancetype)init{
     self = [super init];
     if (self) {
@@ -58,7 +59,7 @@
     self.leftlabelColor = [UIColor whiteColor];
     self.leftlabelFont = a_few_font;
     
-    self.flowlabelStr = [NSString stringWithFormat:@"%lf",_progressValue];
+    self.flowlabelStr = [NSString stringWithFormat:@"%.2lf",_progressValue];
     self.flowlabelColor = [UIColor whiteColor];
     self.flowlabelFont = a_few_font;
 }
@@ -81,13 +82,16 @@
         leftLabel.textColor = _leftlabelColor;
         leftLabel.text  = _leftlabelStr;
         [self addSubview:leftLabel];
-    
+        if (_isRate) {
+            self.flowlabelStr = [NSString stringWithFormat:@"%.4lf%@",_progressValue,@"%"];
+        }else{
+            self.flowlabelStr = [NSString stringWithFormat:@"%.4lf",_progressValue];
+        }
         CGFloat flowLabelHeight = [StringUtil getStringHeight:_flowlabelStr font:_flowlabelFont size:viewSize];
         CGFloat flowLabelWidth = [StringUtil getStringWidth:_flowlabelStr font:_flowlabelFont size:viewSize];
-        UILabel* flowLabel = [[UILabel alloc]initWithFrame:CGRectMake(progeressWidth - flowLabelWidth, (viewSize.height-flowLabelHeight)/2,flowLabelWidth, flowLabelHeight)];
+        UILabel* flowLabel = [[UILabel alloc]initWithFrame:CGRectMake(progeressWidth - flowLabelWidth-10.f, (viewSize.height-flowLabelHeight)/2,flowLabelWidth, flowLabelHeight)];
         flowLabel.font = _flowlabelFont;
         flowLabel.textColor = _flowlabelColor;
-        self.flowlabelStr = [NSString stringWithFormat:@"%lf",_progressValue];
         flowLabel.text  = _flowlabelStr;
         [self addSubview:flowLabel];
 }

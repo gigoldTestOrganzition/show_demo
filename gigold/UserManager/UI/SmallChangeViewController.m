@@ -10,7 +10,7 @@
 #import "SmallChangeTableViewCell.h"
 #import "StringUtil.h"
 
-@interface SmallChangeViewController ()
+@interface SmallChangeViewController ()<CustomerViewClickDeleget>
 
 @end
 
@@ -84,6 +84,7 @@
         popView = [[CustomerView alloc] init];
         popView.showView = showView;
         popView.pullStyle = PullViewTop;
+        popView.clickDeleget = self;
     }
     
     if (popView.superview) {
@@ -188,7 +189,15 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
+-(void)click:(NSString *)tag{
+    if ([tag isEqualToString:UN_CONTENT_CLIP_STOP]) {
+        if (markImageView.transform.a == 1) {
+            markImageView.transform = CGAffineTransformMakeRotation((180.0f * M_PI) / 180.0f);
+        }else{
+            markImageView.transform = CGAffineTransformMakeRotation((0.0f * M_PI) / 180.0f);
+        }
+    }
+}
 /*
 #pragma mark - Navigation
 

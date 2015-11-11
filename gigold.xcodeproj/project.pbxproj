@@ -341,6 +341,10 @@
 		5C76ADE41BF094D100740DD4 /* user_menu_but@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C76ADE21BF094D100740DD4 /* user_menu_but@3x.png */; };
 		5C76ADE71BF0AF9F00740DD4 /* perimeter_position_ico@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C76ADE51BF0AF9F00740DD4 /* perimeter_position_ico@2x.png */; };
 		5C76ADE81BF0AF9F00740DD4 /* perimeter_position_ico@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C76ADE61BF0AF9F00740DD4 /* perimeter_position_ico@3x.png */; };
+		5C76ADFE1BF1DE0700740DD4 /* guide_p1@1080w.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C76ADFA1BF1DE0700740DD4 /* guide_p1@1080w.png */; };
+		5C76ADFF1BF1DE0700740DD4 /* guide_p2@1080w.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C76ADFB1BF1DE0700740DD4 /* guide_p2@1080w.png */; };
+		5C76AE001BF1DE0700740DD4 /* guide_p3@1080w.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C76ADFC1BF1DE0700740DD4 /* guide_p3@1080w.png */; };
+		5C76AE011BF1DE0700740DD4 /* guide_p4@1080w.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C76ADFD1BF1DE0700740DD4 /* guide_p4@1080w.png */; };
 		5C93B8E01BD8913600E8A8AA /* IncomeAEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C93B8DE1BD8913600E8A8AA /* IncomeAEViewController.m */; };
 		5C93B8E11BD8913600E8A8AA /* IncomeAEViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C93B8DF1BD8913600E8A8AA /* IncomeAEViewController.xib */; };
 		5C93B8EA1BD8CB0500E8A8AA /* InfoFinishedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C93B8E81BD8CB0500E8A8AA /* InfoFinishedViewController.m */; };
@@ -402,6 +406,10 @@
 		5CC44B411BDA35A30071B668 /* box_but_arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CC44B3F1BDA35A30071B668 /* box_but_arrow@3x.png */; };
 		5CC44B451BDA3AFB0071B668 /* MyAccountTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC44B431BDA3AFB0071B668 /* MyAccountTableViewCell.m */; };
 		5CC44B461BDA3AFB0071B668 /* MyAccountTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CC44B441BDA3AFB0071B668 /* MyAccountTableViewCell.xib */; };
+		5CC7E4121BF313F100E77A62 /* merchants0.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CC7E40E1BF313F100E77A62 /* merchants0.png */; };
+		5CC7E4131BF313F100E77A62 /* merchants1.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CC7E40F1BF313F100E77A62 /* merchants1.png */; };
+		5CC7E4141BF313F100E77A62 /* merchants2.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CC7E4101BF313F100E77A62 /* merchants2.png */; };
+		5CC7E4151BF313F100E77A62 /* merchants3.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CC7E4111BF313F100E77A62 /* merchants3.png */; };
 		5CC9C3371BE062E700C2269A /* BankCardTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC9C3321BE062E700C2269A /* BankCardTableViewCell.m */; };
 		5CC9C3381BE062E700C2269A /* BankCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5CC9C3331BE062E700C2269A /* BankCardTableViewCell.xib */; };
 		5CC9C3391BE062E700C2269A /* SmallChangeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC9C3351BE062E700C2269A /* SmallChangeTableViewCell.m */; };
@@ -894,6 +902,10 @@
 		5C76ADE21BF094D100740DD4 /* user_menu_but@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user_menu_but@3x.png"; sourceTree = "<group>"; };
 		5C76ADE51BF0AF9F00740DD4 /* perimeter_position_ico@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "perimeter_position_ico@2x.png"; sourceTree = "<group>"; };
 		5C76ADE61BF0AF9F00740DD4 /* perimeter_position_ico@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "perimeter_position_ico@3x.png"; sourceTree = "<group>"; };
+		5C76ADFA1BF1DE0700740DD4 /* guide_p1@1080w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guide_p1@1080w.png"; sourceTree = "<group>"; };
+		5C76ADFB1BF1DE0700740DD4 /* guide_p2@1080w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guide_p2@1080w.png"; sourceTree = "<group>"; };
+		5C76ADFC1BF1DE0700740DD4 /* guide_p3@1080w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guide_p3@1080w.png"; sourceTree = "<group>"; };
+		5C76ADFD1BF1DE0700740DD4 /* guide_p4@1080w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guide_p4@1080w.png"; sourceTree = "<group>"; };
 		5C93B8DD1BD8913600E8A8AA /* IncomeAEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncomeAEViewController.h; sourceTree = "<group>"; };
 		5C93B8DE1BD8913600E8A8AA /* IncomeAEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncomeAEViewController.m; sourceTree = "<group>"; };
 		5C93B8DF1BD8913600E8A8AA /* IncomeAEViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IncomeAEViewController.xib; sourceTree = "<group>"; };
@@ -976,6 +988,10 @@
 		5CC44B421BDA3AFB0071B668 /* MyAccountTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAccountTableViewCell.h; sourceTree = "<group>"; };
 		5CC44B431BDA3AFB0071B668 /* MyAccountTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAccountTableViewCell.m; sourceTree = "<group>"; };
 		5CC44B441BDA3AFB0071B668 /* MyAccountTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyAccountTableViewCell.xib; sourceTree = "<group>"; };
+		5CC7E40E1BF313F100E77A62 /* merchants0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = merchants0.png; sourceTree = "<group>"; };
+		5CC7E40F1BF313F100E77A62 /* merchants1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = merchants1.png; sourceTree = "<group>"; };
+		5CC7E4101BF313F100E77A62 /* merchants2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = merchants2.png; sourceTree = "<group>"; };
+		5CC7E4111BF313F100E77A62 /* merchants3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = merchants3.png; sourceTree = "<group>"; };
 		5CC9C3311BE062E700C2269A /* BankCardTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankCardTableViewCell.h; sourceTree = "<group>"; };
 		5CC9C3321BE062E700C2269A /* BankCardTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankCardTableViewCell.m; sourceTree = "<group>"; };
 		5CC9C3331BE062E700C2269A /* BankCardTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BankCardTableViewCell.xib; sourceTree = "<group>"; };
@@ -1061,33 +1077,10 @@
 		5C5A2D901BD6115D00C4AE1D /* Help */ = {
 			isa = PBXGroup;
 			children = (
-				5C5A2D911BD6115D00C4AE1D /* Data */,
-				5C5A2D921BD6115D00C4AE1D /* HttpRequest */,
-				5C5A2D931BD6115D00C4AE1D /* Images */,
+				5C76ADF91BF1DE0700740DD4 /* Image */,
 				5C5A2D941BD6115D00C4AE1D /* UI */,
 			);
 			path = Help;
-			sourceTree = "<group>";
-		};
-		5C5A2D911BD6115D00C4AE1D /* Data */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		5C5A2D921BD6115D00C4AE1D /* HttpRequest */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = HttpRequest;
-			sourceTree = "<group>";
-		};
-		5C5A2D931BD6115D00C4AE1D /* Images */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 		5C5A2D941BD6115D00C4AE1D /* UI */ = {
@@ -2468,6 +2461,10 @@
 			isa = PBXGroup;
 			children = (
 				5C76ADC41BF0345800740DD4 /* home_page_but_arrow@2x.png */,
+				5CC7E40E1BF313F100E77A62 /* merchants0.png */,
+				5CC7E40F1BF313F100E77A62 /* merchants1.png */,
+				5CC7E4101BF313F100E77A62 /* merchants2.png */,
+				5CC7E4111BF313F100E77A62 /* merchants3.png */,
 				5C76ADC51BF0345800740DD4 /* home_page_but_arrow@3x.png */,
 				5C76ADC21BF033EF00740DD4 /* main_top_user_ico@2x.png */,
 				5C76ADBA1BEF689600740DD4 /* home_page_banner1@3x.jpg */,
@@ -2541,6 +2538,17 @@
 			);
 			name = LaunchView;
 			path = UUChart/LaunchView;
+			sourceTree = "<group>";
+		};
+		5C76ADF91BF1DE0700740DD4 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				5C76ADFA1BF1DE0700740DD4 /* guide_p1@1080w.png */,
+				5C76ADFB1BF1DE0700740DD4 /* guide_p2@1080w.png */,
+				5C76ADFC1BF1DE0700740DD4 /* guide_p3@1080w.png */,
+				5C76ADFD1BF1DE0700740DD4 /* guide_p4@1080w.png */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 		5C93B8DB1BD88FBD00E8A8AA /* PasswordManager */ = {
@@ -4030,6 +4038,7 @@
 				5C6D20691BE85C8500B57025 /* pop_safe_ico_2@2x.png in Resources */,
 				5C93B8F61BD8DA3900E8A8AA /* VerificationCodeWriteViewController.xib in Resources */,
 				5C6D1FD41BE85B6B00B57025 /* list_open_arrow@2x.png in Resources */,
+				5CC7E4131BF313F100E77A62 /* merchants1.png in Resources */,
 				5C6D207E1BE85C8500B57025 /* SelectRegionView.xib in Resources */,
 				5C76AD031BEC744E00740DD4 /* life_cell.xib in Resources */,
 				5CB6FF6A1BE09B4D00D666D0 /* ico_statement_1@2x.png in Resources */,
@@ -4039,6 +4048,7 @@
 				5CC44B291BDA30F00071B668 /* user_menu_ico_2@2x.png in Resources */,
 				5C76ACFB1BEC518E00740DD4 /* main_menu_ico4_2@2x.png in Resources */,
 				5C76AD9C1BEECF5D00740DD4 /* perimeter_ico_5@3x.png in Resources */,
+				5C76ADFE1BF1DE0700740DD4 /* guide_p1@1080w.png in Resources */,
 				5C76AD6B1BEDEB1C00740DD4 /* life_ico_2@2x.png in Resources */,
 				5C76AD731BEDEB1C00740DD4 /* life_ico_6@2x.png in Resources */,
 				5C76AD741BEDEB1C00740DD4 /* life_ico_6@3x.png in Resources */,
@@ -4052,11 +4062,13 @@
 				5C6D205C1BE85C8500B57025 /* main_correct_ico2@3x.png in Resources */,
 				5C76ADA21BEECF5D00740DD4 /* perimeter_ico_8@3x.png in Resources */,
 				5CC9C33A1BE062E700C2269A /* SmallChangeTableViewCell.xib in Resources */,
+				5CC7E4151BF313F100E77A62 /* merchants3.png in Resources */,
 				5C76ACD71BEC4FD500740DD4 /* AroundViewController.xib in Resources */,
 				5C76AD721BEDEB1C00740DD4 /* life_ico_5@3x.png in Resources */,
 				5C76AD981BEECF5D00740DD4 /* perimeter_ico_3@3x.png in Resources */,
 				5C76AD821BEE2A6700740DD4 /* finance_ico_5@3x.png in Resources */,
 				5CC44B2E1BDA30F00071B668 /* user_menu_ico_4@3x.png in Resources */,
+				5C76AE001BF1DE0700740DD4 /* guide_p3@1080w.png in Resources */,
 				5CC44B2C1BDA30F00071B668 /* user_menu_ico_3@3x.png in Resources */,
 				5C6D1FB71BE85B6B00B57025 /* ico_submit_3_2@3x.png in Resources */,
 				5C6D20671BE85C8500B57025 /* pop_safe_ico_1@2x.png in Resources */,
@@ -4068,6 +4080,7 @@
 				5C6D1FAF1BE85B6B00B57025 /* ico_submit_1_1@3x.png in Resources */,
 				5C76AD271BED8D7A00740DD4 /* home_page_pic_2@2x.png in Resources */,
 				5C76ADE01BF0934400740DD4 /* LaunchViewController.xib in Resources */,
+				5C76AE011BF1DE0700740DD4 /* guide_p4@1080w.png in Resources */,
 				5C6D20601BE85C8500B57025 /* main_error_ico2@3x.png in Resources */,
 				5C76ACF31BEC517E00740DD4 /* main_menu_ico3_2@2x.png in Resources */,
 				5C6D20531BE85C8500B57025 /* bank_logo_ccb@2x.png in Resources */,
@@ -4141,6 +4154,7 @@
 				5C76AD9E1BEECF5D00740DD4 /* perimeter_ico_6@3x.png in Resources */,
 				5C6D1FD51BE85B6B00B57025 /* list_open_arrow@3x.png in Resources */,
 				5C6D205E1BE85C8500B57025 /* main_correct_ico@3x.png in Resources */,
+				5CC7E4121BF313F100E77A62 /* merchants0.png in Resources */,
 				5CA88B311BE069DB00E50D0D /* user_faces_1@3x.png in Resources */,
 				5CC9C3381BE062E700C2269A /* BankCardTableViewCell.xib in Resources */,
 				5C76AD311BEDA0E000740DD4 /* finance_ico_1@2x.png in Resources */,
@@ -4185,6 +4199,7 @@
 				5C76ACF91BEC518E00740DD4 /* main_menu_ico4_1@2x.png in Resources */,
 				5C6D21251BE8633300B57025 /* AddressCell.xib in Resources */,
 				5C76ACE21BEC515600740DD4 /* main_menu_ico1_1@3x.png in Resources */,
+				5CC7E4141BF313F100E77A62 /* merchants2.png in Resources */,
 				5C5A2DD61BD6115D00C4AE1D /* MyAccountViewController.xib in Resources */,
 				5C76ADB91BEF404700740DD4 /* ico_ios@180w.png in Resources */,
 				5CC44B461BDA3AFB0071B668 /* MyAccountTableViewCell.xib in Resources */,
@@ -4241,6 +4256,7 @@
 				5C6D1FC31BE85B6B00B57025 /* ico_statement_5@2x.png in Resources */,
 				5C6D1FA81BE85B6B00B57025 /* ico_statement_3@3x.png in Resources */,
 				5C6D1FED1BE85B6B00B57025 /* jyq_shisuan_round@3x.png in Resources */,
+				5C76ADFF1BF1DE0700740DD4 /* guide_p2@1080w.png in Resources */,
 				5C6D1FD01BE85B6B00B57025 /* jiyouqian_ico@2x.png in Resources */,
 				5C44D9E51BEAEFA400BA0B69 /* OpenGigoldSenvenRateView.xib in Resources */,
 				5C6D205D1BE85C8500B57025 /* main_correct_ico@2x.png in Resources */,

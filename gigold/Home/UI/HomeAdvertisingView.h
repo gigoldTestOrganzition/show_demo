@@ -19,7 +19,11 @@
 @property (strong, nonatomic) UIScrollView *imageScrollView;
 @property (strong, nonatomic) UIPageControl *pageController;
 //更新frame
--(void)updataFrame:(CGRect)frame;
+-(void)updataFrame:(CGRect)frame all:(BOOL)isAll;
 //循环播放
 -(void)loopContent;
+//停止轮询
+-(void)stopLoop;
+
+
 @end

@@ -68,6 +68,7 @@
 
     for (int i=0; i<5; i++) {
         UUChartLabel * label = [[UUChartLabel alloc] initWithFrame:CGRectMake(0.0,chartCavanHeight-i*levelHeight+5, UUYLabelwidth, UULabelHeight)];
+        label.textColor  = white_auxiliary_color;
 		label.text = [NSString stringWithFormat:@"%d",(int)(level * i+_yValueMin)];
 		[self addSubview:label];
     }
@@ -115,6 +116,7 @@
     for (int i=0; i<xLabels.count; i++) {
         NSString *labelText = xLabels[i];
         UUChartLabel * label = [[UUChartLabel alloc] initWithFrame:CGRectMake(i * _xLabelWidth+UUYLabelwidth, self.frame.size.height - UULabelHeight, _xLabelWidth, UULabelHeight)];
+        label.textColor = white_auxiliary_color;
         label.text = labelText;
         [self addSubview:label];
         

@@ -15,7 +15,8 @@
 #import "appliacation_attribute.h"
 #import "RollInDetailViewController.h"
 #import "RollOutDetailViewController.h"
-@interface IncomeDetailViewController ()<UITableViewDataSource,UITableViewDelegate>{
+#import "ViewUtil.h"
+@interface IncomeDetailViewController ()<UITableViewDataSource,UITableViewDelegate,CustomerViewClickDeleget>{
     //数据
     NSMutableArray* allDatas;
     NSMutableArray* currenDatas;
@@ -38,6 +39,9 @@
     __weak IBOutlet NSLayoutConstraint *tableViewTotopLayoutConstraint;
     
     __weak IBOutlet NSLayoutConstraint *tableViewToincomeLayoutConstraint;
+    
+    
+    CGFloat transValue;
 }
 
 @end
@@ -47,10 +51,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    transValue = 180;
     [self getCurrentDatas];
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self creatContentView];
+    [self setCheckType:_checkType];
     incomeDetailTableView.tableFooterView = [UIView new];
+    
     // Do any additional setup after loading the view.
 }
 //数据初始化
@@ -58,63 +66,63 @@
     allDatas = [NSMutableArray new];
     Order* data = [Order new];
     data.timeStr = @"2015-02-12 12:34:11";
-    data.amountStr = @"100";
+    data.amountStr = @"100.00";
     data.orderType = OrderTypeNomalRollIn;
     data.rollFlowProcess = RollFlowProcessStart;
     
     Order* data2 = [Order new];
     data2.timeStr = @"2015-03-12 11:34:11";
-    data2.amountStr = @"200";
+    data2.amountStr = @"200.00";
     data2.orderType = OrderTypeNomalRollIn;
     data2.rollFlowProcess = RollFlowProcessEnd;
     
     
     Order* data3 = [Order new];
     data3.timeStr = @"2015-05-11 10:34:11";
-    data3.amountStr = @"1400";
+    data3.amountStr = @"1400.00";
     data3.orderType = OrderTypeFastRollOut;
     data3.rollFlowProcess = RollFlowProcessStart;
     
     Order* data4 = [Order new];
     data4.timeStr = @"2015-05-12 12:54:11";
-    data4.amountStr = @"200";
+    data4.amountStr = @"200.00";
     data4.orderType = OrderTypeIncome;
     
     Order* data5 = [Order new];
     data5.timeStr = @"2015-07-12 09:34:11";
-    data5.amountStr = @"50";
+    data5.amountStr = @"50.00";
     data5.orderType = OrderTypeFastRollIn;
     data5.rollFlowProcess = RollFlowProcessCalculate;
     
     Order* data6 = [Order new];
     data6.timeStr = @"2015-08-12 08:34:11";
-    data6.amountStr = @"80";
+    data6.amountStr = @"80.00";
     data6.orderType = OrderTypeIncome;
     
     
     Order* data7 = [Order new];
     data7.timeStr = @"2015-08-12 05:34:01";
-    data7.amountStr = @"80";
+    data7.amountStr = @"80.00";
     data7.orderType = OrderTypeFastRollIn;
     data7.rollFlowProcess = RollFlowProcessCalculate;
 
     
     Order* data8 = [Order new];
     data8.timeStr = @"2015-08-12 07:34:11";
-    data8.amountStr = @"80";
+    data8.amountStr = @"80.00";
     data8.orderType = OrderTypeNomalRollOut;
     data8.rollFlowProcess = RollFlowProcessEnd;
 
     
     Order* data9 = [Order new];
     data9.timeStr = @"2015-08-12 12:03:11";
-    data9.amountStr = @"80";
+    data9.amountStr = @"80.00";
     data9.orderType = OrderTypeIncome;
 
     
     Order* data10 = [Order new];
     data10.timeStr = @"2015-08-12 02:34:11";
-    data10.amountStr = @"80";
+    data10.amountStr = @"80.00";
     data10.orderType = OrderTypeFastRollOut;
     data10.rollFlowProcess = RollFlowProcessEnd;
 
@@ -239,9 +247,9 @@
         
         markImg = [[UIImageView alloc]init];
         markImg.image = [UIImage imageNamed:@"top_menu_but_arrow.png"];
-        markImg.frame = CGRectMake(titleLable.frame.origin.x+titleLable.frame.size.width+5.f,titleLable.center.y-10.f,20,20);
+        markImg.frame = CGRectMake(titleLable.frame.origin.x+titleLable.frame.size.width+5.f,titleLable.center.y-6.f,12,12);
         [contentView addSubview:markImg];
-        contentView.frame = CGRectMake(0,0.f,titleWidth+20.f,titleHeight+10);
+        contentView.frame = CGRectMake(0,0.f,titleWidth+12.f,titleHeight);
         UITapGestureRecognizer* selectShowTypeGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(selectCheckType)];
         contentView.userInteractionEnabled = YES;
         [contentView addGestureRecognizer:selectShowTypeGestureRecognizer];
@@ -257,8 +265,8 @@
     CGFloat titleWidth = [StringUtil getStringWidth:titleLable.text font:titleLable.font size:CGSizeMake(mainScreenWidth-80, 44.f)];
     CGFloat titleHeight =  [StringUtil getStringHeight:titleLable.text font:titleLable.font size:CGSizeMake(mainScreenWidth-80, 44.f)];
     titleLable.frame = CGRectMake(0,0,titleWidth,titleHeight);
-    markImg.frame = CGRectMake(titleLable.frame.origin.x+titleLable.frame.size.width+5.f,titleLable.center.y-10.f,20,20);
-    contentView.frame = CGRectMake(0.f,0.f,titleWidth+20.f,titleHeight+5);
+    markImg.frame = CGRectMake(titleLable.frame.origin.x+titleLable.frame.size.width+5.f,titleLable.center.y-6.f,12,12);
+    contentView.frame = CGRectMake(0.f,0.f,titleWidth+12.f,titleHeight);
     self.navigationItem.titleView = nil;
     self.navigationItem.titleView = contentView;
     
@@ -267,9 +275,12 @@
 //旋转指示图标
 -(void)rotatingMarkImg{
     [self creatContentView];
-    static CGFloat transValue = 180;
     markImg.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(transValue));
-    transValue+=180;
+    if (transValue == 180) {
+        transValue = 0;
+    }else{
+        transValue = 180;
+    }
 }
 
 -(void)creatSelectShowTypeTableView{
@@ -292,7 +303,9 @@
         showTypeDialog = [[CustomerView alloc]init];
         [self creatSelectShowTypeTableView];
         showTypeDialog.showView = selectShowTypeTableView;
+        showTypeDialog.clickDeleget = self;
         showTypeDialog.pullStyle = PullViewTop;
+        
     }
     [self rotatingMarkImg];
     if ([showTypeDialog isShow]) {
@@ -327,6 +340,8 @@
         showTypeCell.textLabel.textColor = main_text_color;
         showTypeCell.textLabel.font = main_font;
         showTypeCell.separatorInset = UIEdgeInsetsMake(0, 10, 0, 0);
+        showTypeCell.tag = indexPath.row;
+        [ViewUtil registerGestures:showTypeCell target:self action:@selector(selectCheckType:)];
         return showTypeCell;
     }else{
         OrderlCell* cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
@@ -340,9 +355,13 @@
         }else{
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
         return cell;
     }
 }
+
+
 //获得订单金额描述
 -(NSString*)getAmountDesc:(OrderType)orderType amount:(NSString*)amountStr{
     switch (orderType) {
@@ -391,7 +410,7 @@
                 break;
         }
         [self changeTitleItem];
-        [self rotatingMarkImg];
+        //[self rotatingMarkImg];
         [self getCurrentDatas];
         [incomeDetailTableView reloadData];
     }else{
@@ -400,6 +419,31 @@
             [self intoDetail:order];
         }
     }
+}
+-(void)selectCheckType:(id)sender{
+    UITapGestureRecognizer* gestureRecognizer = sender;
+    NSInteger index = gestureRecognizer.view.tag;
+    [showTypeDialog stopDialog];
+    switch (index){
+        case 0:
+            self.checkType = CheckTypeRollInOut;
+            break;
+            
+        case 1:
+            self.checkType = CheckTypeRollOut;
+            break;
+        case 2:
+            self.checkType = CheckTypeRollIn;
+            break;
+        case 3:
+            self.checkType = CheckTypeInCome;
+            break;
+    }
+    [self changeTitleItem];
+    //[self rotatingMarkImg];
+    [self getCurrentDatas];
+    [incomeDetailTableView reloadData];
+    
 }
 /*
  *进入详情
@@ -424,5 +468,9 @@
     }
 }
 
-
+-(void)click:(NSString *)tag{
+    if ([tag isEqualToString:UN_CONTENT_CLIP_STOP]) {
+        [self rotatingMarkImg];
+    }
+}
 @end

@@ -13,6 +13,8 @@
 #import "OpenBankCardSelectView.h"
 #import "ViewUtil.h"
 #import "LimitInstructionsViewController.h"
+#import "NSString+Mobile.h"
+#import "MBProgressHUDManager.h"
 @interface AddOpenBankCardViewController ()<UITableViewDataSource,UITableViewDelegate,UITextFieldDelegate>{
     NSMutableArray* datas;
     
@@ -20,6 +22,9 @@
     //选择银行
     __weak IBOutlet UIView *bankView;
     __weak IBOutlet UITextField *bank;
+    __weak IBOutlet UIImageView *bankImg;
+    
+    __weak IBOutlet NSLayoutConstraint *bankNameToImageLayoutConstraint;
     //信息收集
     __weak IBOutlet UITextField *cardNumber;
     __weak IBOutlet UITextField *phoneNumber;
@@ -71,6 +76,11 @@
 //下一步
 
 - (IBAction)next:(id)sender {
+    if ([phoneNumber.text isMobileNumber] ==MHMobileNubmerType_NONE) {
+        [MBProgressHUDManager showMessage:@"请输入正确的手机号" view:self.view];
+        return;
+    }
+    
     VerificationCodeWriteViewController* verificationCodeWriteViewController = [[VerificationCodeWriteViewController alloc]init];
     verificationCodeWriteViewController.moblieNum = phoneNumber.text;
     verificationCodeWriteViewController.flowType = OpenGigoldType;
@@ -91,6 +101,7 @@
         bankCardView.selectTableView.backgroundColor = back_ground_color;
         bankCardView.selectTableView.delegate = self;
         bankCardView.selectTableView.dataSource = self;
+        
         [ViewUtil registerGestures:bankCardView.limitInstructions target:self action:@selector(intoLimitInstructions)];
         selectBankView.showView = bankCardView;
     }
@@ -106,7 +117,8 @@
     NSLog(@"ss");
 }
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
-    if ([StringUtil isEmpty:string]) {
+     NSInteger value = textField.text.length-range.length+string.length;
+    if (value <= 0) {
         nextBtn.enabled = NO;
     }else{
         nextBtn.enabled = [self isNextEnable:textField];
@@ -116,7 +128,7 @@
     }else{
         nextBtn.backgroundColor = unable_tap_color;
     }
-    NSInteger value = textField.text.length-range.length+string.length;
+   
     if (textField == phoneNumber) {
         if(value > 11){
             return NO;
@@ -184,12 +196,25 @@
     }else{
        cell.separatorInset = UIEdgeInsetsMake(0.f,10.f,0.f,0.f);
     }
+    cell.tag = indexPath.row;
+    [ViewUtil registerGestures:cell target:self action:@selector(selectBank:)];
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [selectBankView stopDialog];
     Bank* bankItem = datas[indexPath.row];
     bank.text = bankItem.name;
+    [self isNextEnable];
+}
+
+//选择银行
+-(void)selectBank:(id)sender{
+    UITapGestureRecognizer* gestureRecognizer = sender;
+    [selectBankView stopDialog];
+    Bank* bankItem = datas[gestureRecognizer.view.tag];
+    bank.text = bankItem.name;
+    bankImg.image = [UIImage imageNamed:@"bank_logo_cmb.png"];
+    bankNameToImageLayoutConstraint.constant = 10.f;
     [self isNextEnable];
 }
 @end

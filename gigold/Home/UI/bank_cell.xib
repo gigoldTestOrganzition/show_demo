@@ -70,7 +70,7 @@
                                 <rect key="frame" x="15" y="159" width="131" height="33"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="66" id="KTZ-qC-xWv"/>
+                                    <constraint firstAttribute="height" constant="70" id="KTZ-qC-xWv"/>
                                 </constraints>
                             </view>
                         </subviews>

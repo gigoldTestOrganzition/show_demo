@@ -13,7 +13,8 @@
 #import "StringUtil.h"
 #import "MathUtil.h"
 #import "CustomerView.h"
-@interface SenvenIncomeRateViewController ()<UITableViewDataSource,UITableViewDelegate>{
+#import "ViewUtil.h"
+@interface SenvenIncomeRateViewController ()<UITableViewDataSource,UITableViewDelegate,CustomerViewClickDeleget>{
 
     __weak IBOutlet UITableView *senvenIncomeRateTableView;
     
@@ -23,6 +24,8 @@
     
     UIView* contentView;
     UILabel* titleLable;
+    
+    CGFloat transValue;
     UIImageView* markImg;
     
     UITableView* selectShowTypeTableView;
@@ -30,9 +33,6 @@
     CustomerView* showTypeDialog;
     
     NSMutableArray* datas;
-    
-    
-    
 }
 @end
 
@@ -91,9 +91,9 @@
         
         markImg = [[UIImageView alloc]init];
         markImg.image = [UIImage imageNamed:@"top_menu_but_arrow.png"];
-        markImg.frame = CGRectMake(titleLable.frame.origin.x+titleLable.frame.size.width+5.f,titleLable.center.y-10.f,20,20);
+        markImg.frame = CGRectMake(titleLable.frame.origin.x+titleLable.frame.size.width+5.f,titleLable.center.y-6.f,12,12);
         [contentView addSubview:markImg];
-        contentView.frame = CGRectMake(0,0.f,titleWidth+20.f,titleHeight+10);
+        contentView.frame = CGRectMake(0,0.f,titleWidth+12.f,titleHeight);
         UITapGestureRecognizer* selectShowTypeGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(selectShowType)];
         contentView.userInteractionEnabled = YES;
         [contentView addGestureRecognizer:selectShowTypeGestureRecognizer];
@@ -108,6 +108,7 @@
         [self creatSelectShowTypeTableView];
         showTypeDialog.showView = selectShowTypeTableView;
         showTypeDialog.pullStyle = PullViewTop;
+        showTypeDialog.clickDeleget = self;
     }
     [self rotatingMarkImg];
     if ([showTypeDialog isShow]) {
@@ -119,10 +120,13 @@
 }
 //旋转指示图标
 -(void)rotatingMarkImg{
-    static CGFloat transValue = 180;
     [self creatContentView];
     markImg.transform = CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(transValue));
-    transValue+=180;
+    if(transValue == 180){
+        transValue = 0;
+    }else{
+        transValue = 180;
+    }
 }
 //改变标题
 -(void)changeTitleStr{
@@ -144,8 +148,8 @@
     titleLable.frame = CGRectMake(0,0,titleWidth,titleHeight);
     
 
-    markImg.frame = CGRectMake(titleLable.frame.origin.x+titleLable.frame.size.width+5.f,titleLable.center.y-10.f,20,20);
-    contentView.frame = CGRectMake(0.f,0.f,titleWidth+20.f,titleHeight+5);
+    markImg.frame = CGRectMake(titleLable.frame.origin.x+titleLable.frame.size.width+5.f,titleLable.center.y-6.f,12,12);
+    contentView.frame = CGRectMake(0.f,0.f,titleWidth+12.f,titleHeight);
     self.navigationItem.titleView = nil;
     self.navigationItem.titleView = contentView;
     
@@ -154,7 +158,7 @@
 // 设置显示数据
 -(void)setShowTypeData{
     [self changeTitleStr];
-    [self rotatingMarkImg];
+    //[self rotatingMarkImg];
     [self initDatas];
     [self calculateIncome];
 }
@@ -164,18 +168,25 @@
     for (SenvenIncomeRateData* data in datas) {
         total += data.rate;
     }
-    totalIncome.text = [NSString stringWithFormat:@"%lf%@",total,@"%"];
+    
+    if (_showType == IRShowTypeSeven) {
+         totalIncome.text = [NSString stringWithFormat:@"%.4lf%@",total/datas.count,@"%"];
+    }else{
+        totalIncome.text = [NSString stringWithFormat:@"%.4lf",total/datas.count];
+    }
+   
 }
 
 
 //数据初始化
 -(void)initDatas{
+    transValue = 180;
     if (!datas) {
         datas = [NSMutableArray new];
     }
     SenvenIncomeRateData* data = [SenvenIncomeRateData new];
     data.time=@"2015-08-01";
-    data.rate = 3.9;
+    data.rate = 3.8;
     
     SenvenIncomeRateData* data1 = [SenvenIncomeRateData new];
     data1.time=@"2014-04-01";
@@ -257,12 +268,19 @@
         showTypeCell.textLabel.textColor = main_text_color;
         showTypeCell.textLabel.font = main_font;
         showTypeCell.separatorInset = UIEdgeInsetsMake(0, 10, 0, 0);
+        showTypeCell.tag = indexPath.row;
+        [ViewUtil registerGestures:showTypeCell target:self action:@selector(selectShowType:)];
         return showTypeCell;
     }else{
         CustomerProgressLableView* cell = [[CustomerProgressLableView alloc]initWithFrame:CGRectMake(0, 0, mainScreenWidth-20.f,35.f)];
         SenvenIncomeRateData* data = datas[indexPath.section];
         if (indexPath.section == 0) {
             cell.progressColor = theme_color;
+        }
+        if (_showType == IRShowTypeSeven) {
+            cell.isRate = YES;
+        }else{
+            cell.isRate = NO;
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.leftlabelStr = data.time;
@@ -285,7 +303,30 @@
                 break;
         }
         [self setShowTypeData];
+        [self calculateIncome];
+        [senvenIncomeRateTableView reloadData];
     }
 }
-
+-(void)selectShowType:(id)sender{
+    UITapGestureRecognizer* gestureRecognizer  = sender;
+    NSInteger index = gestureRecognizer.view.tag;
+    [showTypeDialog stopDialog];
+    switch (index) {
+        case 0:
+            self.showType = IRShowTypeSeven;
+            break;
+            
+        case 1:
+            self.showType = IRShowTypeTenthousand;
+            break;
+    }
+    [self setShowTypeData];
+    [self calculateIncome];
+    [senvenIncomeRateTableView reloadData];
+}
+-(void)click:(NSString *)tag{
+    if ([tag isEqualToString:UN_CONTENT_CLIP_STOP]) {
+        [self rotatingMarkImg];
+    }
+}
 @end

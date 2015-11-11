@@ -65,14 +65,15 @@
 }
 #pragma mark -uitextfield 协议
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
-    if ([StringUtil isEmpty:string]) {
-        nextBtn.enabled = NO;
-        nextBtn.backgroundColor = unable_tap_color;
-    }else{
+
+    NSInteger value = textField.text.length-range.length+string.length;
+    if (value > 0) {
         nextBtn.enabled = YES;
         nextBtn.backgroundColor = theme_color;
+    }else{
+        nextBtn.enabled = NO;
+        nextBtn.backgroundColor = unable_tap_color;
     }
-    NSInteger value = textField.text.length-range.length+string.length;
     if (value > 10) {
         return NO;
     }else{

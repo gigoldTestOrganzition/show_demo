@@ -59,7 +59,8 @@
         rollOutTime.textColor =  status_dec_yellow_color;
         rollOutTime.text = _order.desc;
     }
-    rollOutAmount.text = [NSString stringWithFormat:@"-%@",_order.amountStr];
+    rollOutAmount.textColor  = [self getAmoutColor];
+    rollOutAmount.text = [self getAmountDesc:_order.amountStr];
     [self setFlowStatus];
     
     payBtn.layer.cornerRadius = payBtn.frame.size.height/2;
@@ -68,6 +69,36 @@
     deleteBtn.layer.borderWidth = 1.f;
     
     [self setPayBtnAndDelectBtn];
+}
+//获得金额描述
+-(NSString*)getAmountDesc:(NSString*)amoutStr{
+    switch (_order.orderType) {
+        case OrderTypeProperty:
+        case OrderTypeStopCarfees:
+        case OrderTypeElectricityfees:
+        case OrderTypeWaterfees:
+        case OrderTypeFastRollOut:
+        case OrderTypeNomalRollOut:
+            return [NSString stringWithFormat:@"-%@",amoutStr];
+        case OrderTypeTransferAccounts:
+            return [NSString stringWithFormat:@"+%@",amoutStr];
+    }
+    return [NSString stringWithFormat:@"+%@",amoutStr];
+}
+//获得金额颜色
+-(UIColor*)getAmoutColor{
+    switch (_order.orderType) {
+        case OrderTypeProperty:
+        case OrderTypeStopCarfees:
+        case OrderTypeElectricityfees:
+        case OrderTypeWaterfees:
+        case OrderTypeFastRollOut:
+        case OrderTypeNomalRollOut:
+            return warning_red_color;
+        case OrderTypeTransferAccounts:
+            return theme_color;
+    }
+    return theme_color;
 }
 -(NSString*)getTitle{
     switch (_order.orderType) {

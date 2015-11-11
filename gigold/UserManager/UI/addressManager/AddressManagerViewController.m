@@ -124,8 +124,8 @@
         [tableView registerNib:nib forCellReuseIdentifier:cellName];
         cell = [[nib instantiateWithOwner:nil options:nil] objectAtIndex:0];
         
-        
     }
+    cell.separatorInset = UIEdgeInsetsZero;
     Address* adress = datas[indexPath.row];
     cell.estimatedAddress.text = adress.estimatedAddress;
     cell.detailAddress.text = adress.detailAddress;

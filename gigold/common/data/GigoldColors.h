@@ -39,4 +39,8 @@
 #define progress_color kColorWithRGB(200,214,217,1)
 //状态描述颜色
 #define status_dec_yellow_color kColorWithRGB(245,166,35,1)
+//引导字体颜色
+#define guide_btn_color kColorWithRGB(87, 102, 229, 1)
+//引导按钮背景颜色
+#define guide_btn_background_color kColorWithRGB(255,255,255,0.8)
 #endif

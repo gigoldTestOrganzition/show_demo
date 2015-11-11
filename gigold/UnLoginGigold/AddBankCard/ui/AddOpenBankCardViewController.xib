@@ -8,6 +8,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddOpenBankCardViewController">
             <connections>
                 <outlet property="bank" destination="NmC-V7-Y7z" id="rxk-ag-rh7"/>
+                <outlet property="bankImg" destination="7ax-ml-sgN" id="5nD-b1-UK4"/>
+                <outlet property="bankNameToImageLayoutConstraint" destination="vjh-3K-ag2" id="SE9-nh-tDh"/>
                 <outlet property="bankView" destination="90l-PS-PQO" id="ZU8-64-79f"/>
                 <outlet property="cardNumber" destination="0Z9-BY-vDJ" id="pm4-LB-7bQ"/>
                 <outlet property="nameLabel" destination="aA7-W9-V4i" id="UbH-06-e7p"/>
@@ -83,7 +85,10 @@
                             <color key="textColor" red="0.34901960780000002" green="0.34901960780000002" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请选择银行" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NmC-V7-Y7z">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ax-ml-sgN">
+                            <rect key="frame" x="49" y="18" width="0.0" height="20"/>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请选择银行" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NmC-V7-Y7z">
                             <rect key="frame" x="82" y="11" width="87" height="29"/>
                             <color key="textColor" red="0.34901960784313724" green="0.34901960784313724" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -99,9 +104,11 @@
                         <constraint firstItem="EPb-oa-7Ba" firstAttribute="centerY" secondItem="90l-PS-PQO" secondAttribute="centerY" id="4L5-Je-ybA"/>
                         <constraint firstItem="Dr1-nS-EjX" firstAttribute="centerY" secondItem="90l-PS-PQO" secondAttribute="centerY" id="8N3-cB-iti"/>
                         <constraint firstItem="EPb-oa-7Ba" firstAttribute="leading" secondItem="90l-PS-PQO" secondAttribute="leading" constant="10" id="Kih-XQ-1Mg"/>
-                        <constraint firstItem="NmC-V7-Y7z" firstAttribute="leading" secondItem="EPb-oa-7Ba" secondAttribute="trailing" constant="38" id="VZw-Fe-RQW"/>
+                        <constraint firstItem="7ax-ml-sgN" firstAttribute="centerY" secondItem="90l-PS-PQO" secondAttribute="centerY" id="LYT-sq-yEM"/>
+                        <constraint firstItem="7ax-ml-sgN" firstAttribute="leading" secondItem="EPb-oa-7Ba" secondAttribute="trailing" constant="38" id="Sv5-eK-Pjw"/>
                         <constraint firstAttribute="height" constant="55" id="bzc-32-NX7"/>
                         <constraint firstAttribute="trailing" secondItem="Dr1-nS-EjX" secondAttribute="trailing" constant="10" id="cQ8-Cz-f2n"/>
+                        <constraint firstItem="NmC-V7-Y7z" firstAttribute="leading" secondItem="7ax-ml-sgN" secondAttribute="trailing" id="vjh-3K-ag2"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h4G-gx-BQp">

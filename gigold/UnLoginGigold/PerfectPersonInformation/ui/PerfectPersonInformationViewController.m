@@ -39,7 +39,8 @@
 }
 #pragma  mark -tableView
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
-    if ([StringUtil isEmpty:string]) {
+    NSInteger value = textField.text.length-range.length+string.length;
+    if (value <= 0) {
         nextBtn.backgroundColor = unable_tap_color;
     }else{
         if(textField == name) {
@@ -61,7 +62,7 @@
         }
     }
     
-    NSInteger value = textField.text.length-range.length+string.length;
+    
     if (value > 15) {
         return NO;
     }else{

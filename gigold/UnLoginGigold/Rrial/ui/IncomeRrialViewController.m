@@ -9,6 +9,7 @@
 #import "IncomeRrialViewController.h"
 #import "appliacation_attribute.h"
 #import "RollInViewController.h"
+#import "IncomeRrialViewController.h"
 @interface IncomeRrialViewController (){
 
     
@@ -20,9 +21,13 @@
     __weak IBOutlet UILabel *minAmount;
     __weak IBOutlet UILabel *maxAmount;
     
+   
+    CGFloat jiyouqianRate;
     __weak IBOutlet UILabel *jiyouqianIncome;
     
+    CGFloat bankRate;
     __weak IBOutlet UILabel *bankIncome;
+    
     __weak IBOutlet UIButton *rollInBtn;
     
     int progressValue;
@@ -38,12 +43,17 @@
     self.navigationItem.title = @"预期收益试算";
     progressValue = 10;
     sliderValue = 10;
+    jiyouqianRate = 0.7;
+    bankRate = 0.5;
     [howSilder setThumbImage:[UIImage imageNamed:@"jyq_shisuan_round.png"] forState:UIControlStateNormal];
     [howSilder setThumbImage:[UIImage imageNamed:@"jyq_shisuan_round.png"] forState:UIControlStateHighlighted];
     
     [howSilder addTarget:self action:@selector(changeAmount:) forControlEvents:UIControlEventValueChanged];
     [howSilder addTarget:self action:@selector(setSliderProgress) forControlEvents:UIControlEventTouchUpInside];
     rollInBtn.layer.cornerRadius = rollInBtn.frame.size.height/2;
+    
+    [self calculateIncome:progressValue*100000/100];
+    
 }
 //滑动改变金额
 -(void)changeAmount:(id)sender{
@@ -52,7 +62,19 @@
     [self filterValue:slider.value];
     int currentValue = progressValue*100000/100;
     amountNumber.text = [NSString stringWithFormat:@"%i",currentValue];
+    [self calculateIncome:currentValue];
     sliderValue = slider.value;
+}
+
+//计算收益
+-(void)calculateIncome:(CGFloat)value{
+    CGFloat jiyouqianNumber = value*(jiyouqianRate/12/30);
+    jiyouqianIncome.text = [NSString stringWithFormat:@"%.2lf",jiyouqianNumber];
+    
+    CGFloat bankNumber = value*(bankRate/12/30);
+    bankIncome.text = [NSString stringWithFormat:@"%.2lf",bankNumber];
+    
+
 }
 //设置进度
 -(void)setSliderProgress{

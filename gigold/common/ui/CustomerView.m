@@ -6,8 +6,9 @@
 //  Copyright © 2015年 wsc. All rights reserved.
 //
 
-#import "CustomerView.h"
 
+#import "CustomerView.h"
+#import "ViewUtil.h"
 @implementation CustomerView
 @synthesize backGroundColor=_backGroundColor;
 @synthesize pullStyle = _pullStyle;
@@ -25,6 +26,8 @@
         self.baseLineValue = 0.f;
         self.pullStyle = PullViewDown;
         self.backGroundColor = default_background;
+        
+        [ViewUtil registerGestures:self target:self action:@selector(stopDialog)];
     }
     return self;
 }
@@ -76,12 +79,15 @@
         [self removeFromSuperview];
         [_showView removeFromSuperview];
     }];
+    if(_clickDeleget){
+        [_clickDeleget click:UN_CONTENT_CLIP_STOP];
+    }
 }
 //添加内容
 -(void)addContentView{
-    
     [self initContentView];
     [self addSubview:_showView];
+    [ViewUtil registerGestures:_showView target:self action:@selector(stopDialog)];
 }
 -(void)initContentView{
     switch (_pullStyle){

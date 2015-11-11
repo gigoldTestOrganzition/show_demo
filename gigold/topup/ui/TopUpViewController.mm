@@ -19,6 +19,7 @@
 #import "appliacation_attribute.h"
 #import "TopUpResultViewController.h"
 #import "AddBankCardViewController.h"
+#import "ViewUtil.h"
 @interface TopUpViewController ()<UITextFieldDelegate,UITableViewDataSource,UITableViewDelegate,UPPayPluginDelegate>{
     //充值金额
     __weak IBOutlet UITextField *amountField;
@@ -142,7 +143,19 @@
     Bank* bank = bankCards[indexPath.row];
     cell.name.text = bank.name;
     cell.blance.text = bank.blance;
+    cell.tag = indexPath.row;
+    [ViewUtil registerGestures:cell target:self action:@selector(selectBank:)];
     return cell;
+}
+
+-(void)selectBank:(id)sender{
+    UITapGestureRecognizer* gestureRecognizer = sender;
+    NSInteger index = gestureRecognizer.view.tag;
+    Bank* bank = bankCards[index];
+    //NSLog(bank.name);
+    [selectPayView stopDialog];
+    [self startUPPay];
+    
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     Bank* bank = bankCards[indexPath.row];
@@ -172,8 +185,8 @@
 }
 #pragma mark ---- UITextFieldDelegate --------
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
-    
-    if ([StringUtil isEmpty:string]) {
+    NSInteger value = textField.text.length-range.length+string.length;
+    if (value <= 0){
         if (nextBtn.enabled) {
             [nextBtn setBackgroundColor:unable_tap_color];
             nextBtn.enabled  = NO;
@@ -185,7 +198,7 @@
         }
     }
     
-    NSInteger value = textField.text.length-range.length+string.length;
+    
     if (value>15) {
         return NO;
     }

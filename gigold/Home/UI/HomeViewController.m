@@ -34,7 +34,6 @@
 #import "GigoldTreasureHomeViewController.h"
 #import "TopUpViewController.h"
 #import "LifeCell.h"
-
 @interface HomeViewController ()<UITableViewDataSource,UITableViewDelegate,UUChartDataSource>{
     //功能数据
     NSMutableArray* datas;
@@ -201,7 +200,7 @@
 -(HomeAdvertisingView*)getHomeAdvertisingView{
     if (!homeAdvertisingView){
         homeAdvertisingView = [[HomeAdvertisingView alloc]init];
-        [homeAdvertisingView updataFrame:CGRectMake(0.f,0.f,mainScreenWidth,ADVERTISING_HEIGHT)];
+        [homeAdvertisingView updataFrame:CGRectMake(0.f,0.f,mainScreenWidth,ADVERTISING_HEIGHT) all:NO];
         homeAdvertisingView.imgArray = [[NSArray alloc]initWithObjects:[UIImage imageNamed:@"home_page_banner1.jpg"],[UIImage imageNamed:@"home_page_banner2.jpg"],[UIImage imageNamed:@"home_page_banner3.jpg"],nil];
     }
     return homeAdvertisingView;
@@ -225,7 +224,7 @@
 -(BankingCell*)getBankingView{
     if (!bankingView) {
         bankingView = (BankingCell*)[[NSBundle mainBundle] loadNibNamed:@"bank_cell" owner:nil options:nil][0];
-        UUChart* sevenRateChart = [[UUChart alloc]initwithUUChartDataFrame:CGRectMake(0.f, 0.f,mainScreenWidth/2-20.f,66.f) withSource:self withStyle:UUChartLineStyle];
+        UUChart* sevenRateChart = [[UUChart alloc]initwithUUChartDataFrame:CGRectMake(0.f, 0.f,mainScreenWidth/2-20.f,70.f) withSource:self withStyle:UUChartLineStyle];
         [sevenRateChart showInView:bankingView.rateChartView];
 
         [ViewUtil registerGestures:bankingView.jiyouqianView target:self action:@selector(intoJiyouqian)];
@@ -307,6 +306,9 @@
     if (indexPath.section == datas.count-1) {
        AroundCell* aroundCell = [[[NSBundle mainBundle] loadNibNamed:gigoldDeclaration.type owner:nil options:nil]firstObject];
         AroundData* aroundData = merchantsDatas[indexPath.row];
+        NSString* imagePath = [NSString stringWithFormat:@"merchants%li.png",indexPath.row%4];
+       
+        aroundCell.merchantImg.image = [UIImage imageNamed:imagePath];
         aroundCell.merchantsName.text = aroundData.merchantName;
         aroundCell.adress.text = aroundData.address;
         aroundCell.disCount.text = aroundData.discount;
@@ -318,6 +320,7 @@
         }else{
             aroundCell.separatorInset = UIEdgeInsetsMake(0.f, 10.f, 0.f, 0.f);
         }
+        aroundCell.selectionStyle = UITableViewCellSelectionStyleNone;
         return aroundCell;
     }else{
         UITableViewCell* cell;
@@ -355,15 +358,17 @@
 
 #pragma mark - scorrollView
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
-if (scrollView == homeTableView) {
-    CGFloat y = scrollView.contentOffset.y;
-    if (y < 0) {
-       [homeAdvertisingView updataFrame:CGRectMake(0.f,0.f, mainScreenWidth,ADVERTISING_HEIGHT+ABS(y))];
-    }else{
-       
-        [homeAdvertisingView updataFrame:CGRectMake(0.f,0.f,mainScreenWidth,ADVERTISING_HEIGHT)];
+    if (scrollView == homeTableView) {
+        CGFloat y = scrollView.contentOffset.y;
+        if (y < 0) {
+            [homeAdvertisingView stopLoop];
+            [homeAdvertisingView updataFrame:CGRectMake(0.f,0.f, mainScreenWidth,ADVERTISING_HEIGHT+ABS(y)) all:NO];
+        }else{
+            [homeAdvertisingView updataFrame:CGRectMake(0.f,0.f,mainScreenWidth,ADVERTISING_HEIGHT) all:YES];
+            [homeAdvertisingView loopContent];
+        
+        }
     }
-}
 }
 
 #pragma mark -UUChart协议
@@ -386,7 +391,7 @@ if (scrollView == homeTableView) {
     return @[@"19",@"20",@"21",@"22",@"23",@"24",@"25"];
 }
 -(NSArray *)UUChart_yValueArray:(UUChart *)chart{
-    return @[@[@"1.4",@"2.4",@"3.4",@"4.4",@"5.4",@"6",@"6.4"]];
+    return @[@[@"1.2",@"2.2",@"3.2",@"3.4",@"3.5",@"3.6",@"3.7"]];
 }
 
 @end

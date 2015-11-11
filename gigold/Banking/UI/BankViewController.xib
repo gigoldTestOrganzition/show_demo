@@ -31,7 +31,7 @@
                 <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E53-M2-aEG">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finance_ico_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nld-6c-cUL">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="finance_ico_1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nld-6c-cUL">
                             <rect key="frame" x="15" y="15" width="40" height="40"/>
                         </imageView>
                         <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MdU-Xc-JNU">

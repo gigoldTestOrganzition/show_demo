@@ -7,11 +7,14 @@
 //
 
 #import "IncomeInstructionViewController.h"
-
+#import "IncomeRrialViewController.h"
 @interface IncomeInstructionViewController (){
 
     __weak IBOutlet UILabel *desc1;
     __weak IBOutlet UILabel *desc2;
+    
+    __weak IBOutlet UIButton *incomeCalculateBtn;
+    
 }
 @end
 
@@ -21,6 +24,8 @@
     [super viewDidLoad];
     self.navigationItem.title = @"收益说明";
     [self setDesc];
+    
+    [incomeCalculateBtn addTarget:self action:@selector(intoIncomeCalculateBtn) forControlEvents:UIControlEventTouchDown];
     
     // Do any additional setup after loading the view.
 }
@@ -46,7 +51,11 @@
     [attributedString2 addAttribute:NSParagraphStyleAttributeName value:paragraphStyle2 range:NSMakeRange(0, [des2String length])];
     [desc2 setAttributedText:attributedString2];
 }
+//进入收益试算
+-(void)intoIncomeCalculateBtn{
+    [self.navigationController pushViewController:[IncomeRrialViewController new] animated:YES];
 
+}
 /*
 #pragma mark - Navigation
 

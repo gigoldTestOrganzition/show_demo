@@ -142,6 +142,7 @@
 }
 
 -(void)nextBtnPress{
+    [_validateTextField resignFirstResponder];
     
     if (self.flowType == OpenGigoldType) {
         ResultShowView * resultShowView = [ResultShowView showResult:ResultTypeCorrect];

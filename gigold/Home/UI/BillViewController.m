@@ -41,7 +41,7 @@
     order1.orderType = OrderTypeProperty;
     order1.timeStr = @"2015-10-11 12:30:11";
     order1.desc = @"等待付款";
-    order1.amountStr = @"100";
+    order1.amountStr = @"100.00";
     order1.rollFlowProcess = RollFlowProcessStart;
     [billDatas addObject:order1];
     
@@ -49,7 +49,7 @@
     order2.orderType = OrderTypeStopCarfees;
     order2.timeStr = @"2015-09-15 12:30:11";
     //order2.desc = @"等待付款";
-    order2.amountStr = @"200";
+    order2.amountStr = @"200.00";
     order2.rollFlowProcess = RollFlowProcessEnd;
     [billDatas addObject:order2];
     
@@ -58,7 +58,7 @@
     order3.orderType = OrderTypeElectricityfees;
     order3.timeStr = @"2015-11-23 08:25:11";
     //order3.desc = @"等待付款";
-    order3.amountStr = @"58";
+    order3.amountStr = @"58.00";
     order3.rollFlowProcess = RollFlowProcessStart;
     [billDatas addObject:order3];
     
@@ -67,7 +67,7 @@
     order4.orderType = OrderTypeWaterfees;
     order4.timeStr = @"2015-06-09 09:13:27";
     //order4.desc = @"等待付款";
-    order4.amountStr = @"47";
+    order4.amountStr = @"47.00";
     order4.rollFlowProcess = RollFlowProcessEnd;
     [billDatas addObject:order4];
     
@@ -75,7 +75,7 @@
     order5.orderType = OrderTypeTransferAccounts;
     order5.timeStr = @"2015-12-13 15:37:46";
     //order5.desc = @"等待付款";
-    order5.amountStr = @"100";
+    order5.amountStr = @"100.00";
     order5.rollFlowProcess = RollFlowProcessStart;
     [billDatas addObject:order5];
 }
