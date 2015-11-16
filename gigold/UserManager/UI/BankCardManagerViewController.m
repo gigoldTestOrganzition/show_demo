@@ -33,7 +33,7 @@
     
     NSMutableDictionary* dict = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"6120***9009",@"number",@"建设银行",@"type",@"im",@"image", nil];
     
-    dataArray = [[NSMutableArray alloc] initWithObjects:@"吉高宝",@"账户余额",@"银行卡管理",@"密码管理", nil];
+    dataArray = [[NSMutableArray alloc] initWithObjects:@"账户余额",@"银行卡管理",@"密码管理", nil];
     
     self.mTableView.delegate = self;
     self.mTableView.dataSource = self;

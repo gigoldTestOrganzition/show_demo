@@ -76,6 +76,7 @@
             }
             
             UITapGestureRecognizer* oneTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelPress:)];
+            menuLabel.tag = 100+i;
             [menuLabel addGestureRecognizer:oneTap];
             
             [menuLabel addSubview:shadowView];
@@ -106,6 +107,29 @@
     NSString* titleString = [label.text componentsSeparatedByString:@" "].lastObject;
     self.title = titleString;
     [self headTilePress];
+    count = gesture.view.tag-100;
+    [self changeData];
+    
+    
+}
+
+- (void)changeData{
+    [dataArray removeAllObjects];
+    
+    NSDictionary*  dict1 = [NSDictionary dictionaryWithObjectsAndKeys:@"2015-10-10",@"time",@"账户充值",@"style",@"80",@"smallChange",@"80",@"money",@"+",@"fuhao", nil];
+    NSDictionary* dict2 = [NSDictionary dictionaryWithObjectsAndKeys:@"2015-10-11",@"time",@"账户充值",@"style",@"160",@"smallChange",@"80",@"money",@"+",@"fuhao", nil];
+    NSDictionary* dict3 = [NSDictionary dictionaryWithObjectsAndKeys:@"2015-10-12",@"time",@"账户充值",@"style",@"360",@"smallChange",@"200",@"money",@"+",@"fuhao", nil];
+    NSDictionary* dict4 = [NSDictionary dictionaryWithObjectsAndKeys:@"2015-10-13",@"time",@"提现",@"style",@"260",@"smallChange",@"100",@"money",@"-",@"fuhao", nil];
+    NSDictionary* dict5 = [NSDictionary dictionaryWithObjectsAndKeys:@"2015-10-15",@"time",@"商品消费",@"style",@"140",@"smallChange",@"120",@"money",@"-",@"fuhao", nil];
+    
+    if (count == 0) {
+        [dataArray addObjectsFromArray:[NSMutableArray arrayWithObjects:dict1,dict2,dict3,dict4,dict5, nil]];
+    }else if (count == 1){
+        [dataArray addObjectsFromArray:[NSMutableArray arrayWithObjects:dict1,dict2,dict3, nil]];
+    }else if (count == 2){
+        [dataArray addObjectsFromArray:[NSMutableArray arrayWithObjects:dict4,dict5, nil]];
+    }
+    [self.mTableView reloadData];
 }
 
 - (void)viewDidLoad {
@@ -116,7 +140,7 @@
     menuTitles = [[NSMutableArray alloc] initWithObjects:@"全部",@"收入",@"支出", nil];
     menuImages = [[NSMutableArray alloc] initWithObjects:@"ico_statement_1",@"ico_statement_2",@"ico_statement_3", nil];
     
-    NSDictionary* dict1 = [NSDictionary dictionaryWithObjectsAndKeys:@"2015-10-10",@"time",@"账户充值",@"style",@"80",@"smallChange",@"80",@"money",@"+",@"fuhao", nil];
+   NSDictionary*  dict1 = [NSDictionary dictionaryWithObjectsAndKeys:@"2015-10-10",@"time",@"账户充值",@"style",@"80",@"smallChange",@"80",@"money",@"+",@"fuhao", nil];
     NSDictionary* dict2 = [NSDictionary dictionaryWithObjectsAndKeys:@"2015-10-11",@"time",@"账户充值",@"style",@"160",@"smallChange",@"80",@"money",@"+",@"fuhao", nil];
     NSDictionary* dict3 = [NSDictionary dictionaryWithObjectsAndKeys:@"2015-10-12",@"time",@"账户充值",@"style",@"360",@"smallChange",@"200",@"money",@"+",@"fuhao", nil];
     NSDictionary* dict4 = [NSDictionary dictionaryWithObjectsAndKeys:@"2015-10-13",@"time",@"提现",@"style",@"260",@"smallChange",@"100",@"money",@"-",@"fuhao", nil];

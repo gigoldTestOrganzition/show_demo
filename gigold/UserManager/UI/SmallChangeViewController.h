@@ -21,6 +21,9 @@
     NSMutableArray* menuTitles;
     
     CustomerView* popView;
+    
+    NSInteger count;
+
 }
 @property (weak, nonatomic) IBOutlet UIView *noneView;
 @property (weak, nonatomic) IBOutlet UITableView *mTableView;

@@ -163,12 +163,42 @@
             return;
         }
     }
+    
+    if (self.flowType == AddBankCardType || self.flowType == SetPayPWDType || self.flowType == UpdatePassword){
+        if (self.flowType == UpdatePayPWDType) {
+            PayPasswordViewController* payPasswordView = [[PayPasswordViewController alloc] init];
+            payPasswordView.delegate = self;
+            payPasswordView.payPwdType = SetOldPayPwdType;
+            payPasswordView.title = self.title;
+            [self.navigationController pushViewController:payPasswordView animated:YES];
+        }
+        else if (self.flowType == SetPayPWDType) {
+            PayPasswordViewController* payPasswordView = [[PayPasswordViewController alloc] init];
+            payPasswordView.delegate = self;
+            payPasswordView.payPwdType = SetNewPayPwdType;
+            payPasswordView.title = self.title;
+            [self.navigationController pushViewController:payPasswordView animated:YES];
+            return;
+        }
+        else if (self.flowType == AddBankCardType) {
+            ResultShowView * resultShowView = [ResultShowView showResult:ResultTypeCorrect];
+            resultShowView.desc.text = @"快捷支付开通成功";
+            resultShowView.desc.textColor = main_text_color;
+            resultShowView.deleget = self;
+            [resultShowView showDialog:self.view];
+            return;
+        }
+        return;
+    }
+    
     if (!loadView) {
         loadView = [LoadView showLoad:LoadViewTypeJump view:self.view];
         loadView.desc.text = @"短信验证中";
     }else{
         [loadView showDialog:self.view];
     }
+    
+    
     [[RegisterRequest sharedRegisterRequest] validateSmsCode:self.validateTextField.text BusinessType:self.flowType success:^(AFHTTPRequestOperation * operation, id responseObject) {
         NSString* rspCd = [responseObject objectForKey:@"rspCd"];
         NSString* rspInf = [responseObject objectForKey:@"rspInf"];
